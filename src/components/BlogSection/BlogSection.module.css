@@ -1,0 +1,286 @@
+/* Blog Section - Diseño base 1920px */
+.blogSection {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+/* Título principal - top: 5244px, left: 362px, 1196x78px */
+.mainTitle {
+  width: auto;
+  margin: 0 auto 17px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+/* Subtítulo - top: 5339px, left: 444px, 1032x27px */
+.subtitle {
+  width: 100%;
+  max-width: 1032px;
+  margin: 0 auto 80px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FB8C05;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Grid de artículos */
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 443px);
+  gap: 16px;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Card de blog - 443x562px */
+.blogCard {
+  position: relative;
+  width: 443px;
+  height: 562px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  opacity: 1;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* Contenedor de imagen */
+.imageContainer {
+  position: relative;
+  width: 443px;
+  height: 294px;
+  border-radius: 20px 20px 0px 0px;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 443px;
+  height: 294px;
+  object-fit: cover;
+  border-radius: 20px 20px 0px 0px;
+}
+
+/* Badge de categoría - esquina superior izquierda */
+.categoryBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 3px 9px;
+  background: #27A49F;
+  border-radius: 14px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #F3F7F9;
+  opacity: 1;
+}
+
+/* Badge de fecha - esquina superior derecha (solo cuadro 4) */
+.dateBadge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 63px;
+  height: 72px;
+  background: #27A49F;
+  border-radius: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 13px;
+  opacity: 1;
+}
+
+.dateMonth {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  color: #F3F7F9;
+  text-align: center;
+  opacity: 1;
+}
+
+.dateDay {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0px;
+  color: #F3F7F9;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Contenido de la card */
+.cardContent {
+  padding: 21px 28px 28px;
+}
+
+/* Título de la card - 17px/23px */
+.cardTitle {
+  margin: 0 0 17px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 23px;
+  letter-spacing: 0.42px;
+  color: #FB8C05;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Descripción - 14px/25px */
+.cardDescription {
+  margin: 0 0 53px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+  letter-spacing: 0.35px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Link "Saber más +" */
+.readMore {
+  display: inline-block;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 31px;
+  letter-spacing: 0.35px;
+  color: #27A49F;
+  text-align: center;
+  text-decoration: none;
+  opacity: 1;
+  transition: color 0.3s ease;
+}
+
+.readMore:hover {
+  color: #1f8580;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .blogGrid {
+    grid-template-columns: repeat(4, clamp(300px, 23.07vw, 443px));
+    gap: clamp(12px, 0.83vw, 16px);
+    padding: 0 2.6vw;
+  }
+
+  .blogCard {
+    width: 100%;
+    height: clamp(480px, 29.27vw, 562px);
+  }
+
+  .imageContainer {
+    width: 100%;
+    height: clamp(200px, 15.31vw, 294px);
+  }
+
+  .cardImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .cardTitle {
+    font-size: clamp(15px, 0.89vw, 17px);
+    line-height: clamp(20px, 1.20vw, 23px);
+  }
+
+  .cardDescription {
+    font-size: clamp(13px, 0.73vw, 14px);
+    line-height: clamp(22px, 1.30vw, 25px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .blogSection {
+    padding: 80px 0;
+  }
+
+  .mainTitle {
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 60px;
+  }
+
+  .blogGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 900px;
+    gap: 20px;
+  }
+
+  .blogCard {
+    width: 100%;
+    height: auto;
+    min-height: 520px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogSection {
+    padding: 60px 0;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .subtitle {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  .blogGrid {
+    grid-template-columns: 1fr;
+    max-width: 443px;
+  }
+
+  .cardTitle {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .cardDescription {
+    font-size: 14px;
+    line-height: 24px;
+  }
+}
+

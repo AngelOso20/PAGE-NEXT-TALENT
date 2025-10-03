@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import LottieIcon from './LottieIcon'
+import LottieIcon24 from './LottieIcon24'
 import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
@@ -35,12 +36,7 @@ export default function HeroSection() {
       {/* Cuadro naranja - Colombia 90% */}
       <div className={styles.orangeBox}>
         <div className={styles.orangeIcon}>
-          <Image
-            src="/images/Iconos/SVG/Icon-24.svg"
-            alt="Estadísticas"
-            width={98}
-            height={94}
-          />
+          <LottieIcon24 />
         </div>
         <p className={styles.orangeText}>
           <span className={styles.highlightText}>
