@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import LottieIcon from './LottieIcon'
 import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
@@ -54,12 +55,7 @@ export default function HeroSection() {
       {/* Cuadro azul - Agenda tu asesoría */}
       <div className={styles.blueBox}>
         <div className={styles.blueIcon}>
-          <Image
-            src="/images/Iconos/SVG/Icon-26.svg"
-            alt="Asesoría"
-            width={98}
-            height={94}
-          />
+          <LottieIcon />
         </div>
         
         <p className={styles.blueText}>

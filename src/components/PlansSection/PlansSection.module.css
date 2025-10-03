@@ -1,0 +1,416 @@
+/* Plans Section - Diseño base 1920px */
+.plansSection {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+/* Título principal - top: 1182px, left: 732px, 456x78px */
+.mainTitle {
+  width: 100%;
+  max-width: 456px;
+  height: auto;
+  margin: 0 auto 17px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+/* Subtítulo - top: 1277px, left: 444px, 1032x27px */
+.subtitle {
+  width: 100%;
+  max-width: 1032px;
+  height: auto;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FB8C05;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Contenedor de planes */
+.plansContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+/* Cuadro azul con asesora - top: 1384px, left: 50px, 443x778px */
+.advisorBox {
+  position: relative;
+  width: 443px;
+  min-height: 778px;
+  background: #27A49F;
+  border-radius: 20px;
+  opacity: 1;
+  flex-shrink: 0;
+  align-self: stretch;
+}
+
+/* Imagen de asesora - top: 1598px, left: 87px (relativo: 214px, 37px) */
+.advisorImage {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 384px;
+  height: 564px;
+}
+
+.advisorImage img {
+  width: 384px;
+  height: 564px;
+  object-fit: cover;
+}
+
+/* Card de plan - 443x778px */
+.planCard {
+  position: relative;
+  width: 443px;
+  min-height: 778px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 48px 34px 71px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Título del plan - 226x46px */
+.planTitle {
+  width: 100%;
+  max-width: 375px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 39px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  margin: 0 0 36px 0;
+  opacity: 1;
+}
+
+/* "Desde" */
+.planFrom {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: center;
+  margin: 0 0 4px 0;
+  opacity: 1;
+}
+
+/* Precio */
+.planPrice {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #1A1818;
+  text-align: center;
+  margin: 0 0 17px 0;
+  opacity: 1;
+}
+
+/* Empleados */
+.planEmployees {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: center;
+  margin: 0 0 67px 0;
+  opacity: 1;
+}
+
+/* Descripción */
+.planDescription {
+  width: 100%;
+  max-width: 375px;
+  flex-grow: 1;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+.planDescription p {
+  margin: 0 0 15px 0;
+}
+
+.planDescription p:first-child {
+  font-weight: 600;
+  color: #1A1818;
+  margin-bottom: 25px;
+}
+
+.includesLabel {
+  font-weight: bold;
+  margin-top: 15px !important;
+}
+
+.planDescription ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+.planDescription ul li {
+  margin-bottom: 8px;
+  line-height: 25px;
+}
+
+/* Botón del plan - 244x40px */
+.planButton {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 244px;
+  height: 40px;
+  background: #27A49F;
+  border-radius: 20px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.planButton:hover {
+  background: #1f8580;
+}
+
+/* Cuadro naranja inferior - top: 2182px, left: 50px, 1820x127px */
+.orangeBanner {
+  position: relative;
+  width: 1820px;
+  height: 127px;
+  margin: 100px auto 0;
+  background: #FB8C05;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 19px;
+  opacity: 1;
+}
+
+/* Texto del banner - 636x55px */
+.bannerText {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 39px;
+  line-height: 39px;
+  letter-spacing: 0px;
+  color: #F3F7F9;
+  text-align: center;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Botón del banner - 152x40px */
+.bannerButton {
+  width: 152px;
+  height: 40px;
+  background: #27A49F;
+  border-radius: 20px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.bannerButton:hover {
+  background: #1f8580;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .plansContainer {
+    padding: 0 2.6vw;
+    gap: 0.83vw;
+  }
+
+  .advisorBox,
+  .planCard {
+    width: clamp(300px, 23.07vw, 443px);
+    height: clamp(650px, 40.52vw, 778px);
+  }
+
+  .advisorImage {
+    width: clamp(260px, 20vw, 384px);
+    height: clamp(380px, 29.38vw, 564px);
+  }
+
+  .orangeBanner {
+    width: 94.79vw;
+    max-width: 1820px;
+    height: clamp(100px, 6.61vw, 127px);
+  }
+
+  .bannerText {
+    font-size: clamp(24px, 2.03vw, 39px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .plansSection {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+  .mainTitle {
+    width: auto;
+    max-width: 90%;
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .subtitle {
+    width: auto;
+    max-width: 90%;
+    font-size: 18px;
+    margin-bottom: 60px;
+  }
+
+  .plansContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .advisorBox {
+    width: 100%;
+    max-width: 443px;
+    height: 400px;
+  }
+
+  .advisorImage {
+    width: 280px;
+    height: 380px;
+  }
+
+  .planCard {
+    width: 100%;
+    max-width: 443px;
+    height: auto;
+    min-height: 650px;
+  }
+
+  .orangeBanner {
+    width: calc(100% - 40px);
+    max-width: 1820px;
+    height: auto;
+    min-height: 100px;
+    padding: 30px 20px;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bannerText {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 15px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  .planTitle {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .planPrice {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .planDescription {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .bannerText {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .bannerButton {
+    width: 180px;
+  }
+}
+
