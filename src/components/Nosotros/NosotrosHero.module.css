@@ -1,0 +1,162 @@
+/* Nosotros Hero - Diseño base 1920px */
+.nosotrosHero {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding-top: 113px;
+  min-height: 1062px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+  padding-top: 129px;
+}
+
+/* Cuadro azul - top: 129px, left: 50px, 902x933px */
+.blueBox {
+  position: relative;
+  width: 902px;
+  height: 933px;
+  background: #27A49F;
+  border-radius: 20px;
+  padding: 180px 30px 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Título - top: 309px, left: 80px (relativo: 180px, 30px) */
+.title {
+  width: 100%;
+  max-width: 658px;
+  margin: 0 0 34px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 67px;
+  line-height: 75px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Descripción - top: 663px, left: 80px */
+.description {
+  width: 100%;
+  max-width: 812px;
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Imagen - top: 129px, left: 968px, 902x933px */
+.imageBox {
+  position: relative;
+  width: 902px;
+  height: 933px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.imageBox img {
+  width: 902px;
+  height: 933px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 2.6vw;
+    padding-top: clamp(100px, 6.72vw, 129px);
+    gap: 0.83vw;
+  }
+
+  .blueBox,
+  .imageBox {
+    width: clamp(600px, 46.98vw, 902px);
+    height: clamp(650px, 48.59vw, 933px);
+  }
+
+  .title {
+    font-size: clamp(40px, 3.49vw, 67px);
+    line-height: clamp(48px, 3.91vw, 75px);
+  }
+
+  .description {
+    font-size: clamp(20px, 1.46vw, 28px);
+    line-height: clamp(28px, 1.98vw, 38px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .nosotrosHero {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+  }
+
+  .blueBox,
+  .imageBox {
+    width: 100%;
+    max-width: 902px;
+    height: auto;
+    min-height: 600px;
+  }
+
+  .imageBox {
+    aspect-ratio: 902 / 933;
+    min-height: auto;
+  }
+
+  .blueBox {
+    padding: 80px 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding-top: 60px;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .blueBox {
+    padding: 60px 30px;
+  }
+}
+

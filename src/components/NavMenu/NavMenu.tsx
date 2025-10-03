@@ -3,11 +3,11 @@ import styles from './NavMenu.module.css'
 
 export default function NavMenu() {
   const menuItems = [
-    { label: 'Nosotros', href: '#nosotros' },
-    { label: 'Servicios', href: '#servicios' },
-    { label: 'Planes', href: '#planes' },
-    { label: 'Blog y Eventos', href: '#blog' },
-    { label: 'Contacto', href: '#contacto' },
+    { label: 'Nosotros', href: '/nosotros' },
+    { label: 'Servicios', href: '/servicios' },
+    { label: 'Planes', href: '/planes' },
+    { label: 'Blog y Eventos', href: '/blog' },
+    { label: 'Contacto', href: '/contacto' },
   ]
 
   return (
