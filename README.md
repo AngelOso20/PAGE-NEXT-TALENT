@@ -37,6 +37,8 @@
 ✅ **Type Safety** - TypeScript para mayor seguridad en el desarrollo  
 ✅ **CSS Modules** - Estilos aislados y sin conflictos  
 ✅ **Fuente Personalizada** - Adobe Fonts (FinalSix) integrada  
+✅ **Hero Section** - Sección principal con diseño impactante  
+✅ **Cards Informativas** - Cuadros con estadísticas y llamados a la acción  
 ✅ **Build Optimizado** - Producción lista para deploy  
 
 ---
@@ -103,9 +105,13 @@ PAGE-NEXT-TALENT/
 │   │   └── globals.css         # Estilos globales
 │   │
 │   └── 📂 components/           # Componentes reutilizables
-│       └── 📂 NavMenu/          # Componente de navegación
-│           ├── NavMenu.tsx
-│           └── NavMenu.module.css
+│       ├── 📂 NavMenu/          # Componente de navegación
+│       │   ├── NavMenu.tsx
+│       │   └── NavMenu.module.css
+│       │
+│       └── 📂 HeroSection/      # Sección Hero principal
+│           ├── HeroSection.tsx
+│           └── HeroSection.module.css
 │
 ├── 📄 package.json              # Dependencias del proyecto
 ├── 📄 tsconfig.json             # Configuración TypeScript
