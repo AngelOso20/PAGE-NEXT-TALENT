@@ -1,0 +1,188 @@
+/* Problem Section - Diseño base 1920px */
+.problemSection {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Cuadro blanco - top: 2448px, left: 50px, 1055x545px */
+.contentBox {
+  position: relative;
+  width: 1055px;
+  min-height: 545px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 68px 49px 68px;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Título - top: 2516px, left: 99px (relativo: 68px, 49px) */
+.title {
+  width: 100%;
+  max-width: 769px;
+  margin: 0 0 21px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Descripción naranja - top: 2670px, left: 99px */
+.description {
+  width: 100%;
+  max-width: 712px;
+  margin: 0 0 37px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FB8C05;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Lista de problemas - top: 2827px, left: 99px */
+.problemList {
+  width: 100%;
+  max-width: 836px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+.problemList li {
+  margin-bottom: 8px;
+}
+
+/* Imagen del chef - top: 2448px, left: 1121px, 749x545px */
+.imageBox {
+  position: relative;
+  width: 749px;
+  height: 545px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.imageBox img {
+  width: 749px;
+  height: 545px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 2.6vw;
+    gap: 0.83vw;
+  }
+
+  .contentBox {
+    width: clamp(600px, 54.95vw, 1055px);
+    min-height: clamp(450px, 28.39vw, 545px);
+    padding: clamp(40px, 3.54vw, 68px) clamp(30px, 2.55vw, 49px);
+  }
+
+  .title {
+    font-size: clamp(35px, 2.86vw, 55px);
+    line-height: clamp(40px, 2.86vw, 55px);
+  }
+
+  .description {
+    font-size: clamp(17px, 0.99vw, 19px);
+    line-height: clamp(26px, 1.61vw, 31px);
+  }
+
+  .problemList {
+    font-size: clamp(15px, 0.83vw, 16px);
+    line-height: clamp(22px, 1.30vw, 25px);
+  }
+
+  .imageBox {
+    width: clamp(500px, 39.01vw, 749px);
+    height: clamp(360px, 28.39vw, 545px);
+  }
+
+  .imageBox img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .problemSection {
+    padding: 80px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contentBox {
+    width: 100%;
+    max-width: 1055px;
+    min-height: auto;
+  }
+
+  .imageBox {
+    width: 100%;
+    max-width: 749px;
+    height: auto;
+    aspect-ratio: 749 / 545;
+  }
+}
+
+@media (max-width: 768px) {
+  .problemSection {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .problemList {
+    font-size: 15px;
+    line-height: 24px;
+  }
+}
+

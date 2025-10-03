@@ -1,0 +1,352 @@
+/* Savings Section - Diseño base 1920px */
+.savingsSection {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+/* Título principal - centrado */
+.mainTitle {
+  width: 100%;
+  margin: 0 auto 60px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  opacity: 1;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Cuadro izquierdo - top: 4633px, left: 50px, 443x447px */
+.leftBox {
+  position: relative;
+  width: 443px;
+  min-height: 447px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 55px 45px 55px;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.leftTextOrange {
+  margin: 0 0 24px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FB8C05;
+  text-align: left;
+  opacity: 1;
+}
+
+.leftTextGray {
+  margin: 0 0 24px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+.leftResult {
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+.resultLabel {
+  font-weight: bold;
+}
+
+/* Cuadro central - top: 4633px, left: 509px, 902x447px */
+.centerBox {
+  position: relative;
+  width: 902px;
+  min-height: 447px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 46px 43px 43px;
+  opacity: 1;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Tabla de comparación */
+.comparisonTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+
+.comparisonTable thead th {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  padding: 0 10px 0 0;
+}
+
+.comparisonTable tbody td {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 45px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  padding: 0 10px 0 0;
+}
+
+.totalRow td {
+  font-weight: bold;
+}
+
+/* Línea divisoria turquesa */
+.divider {
+  width: 100%;
+  height: 2px;
+  background: #27A49F;
+  margin: 24px 0 30px;
+  opacity: 1;
+}
+
+/* Título del centro */
+.centerTitle {
+  margin: 0 0 13px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 31px;
+  letter-spacing: 0.53px;
+  color: #27A49F;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Descripción del centro */
+.centerDescription {
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Cuadro naranja derecho - top: 4633px, left: 1427px, 443x447px */
+.rightBox {
+  position: relative;
+  width: 443px;
+  min-height: 447px;
+  background: #FB8C05;
+  border-radius: 20px;
+  padding: 115px 38px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Título CTA */
+.ctaTitle {
+  margin: 0 0 20px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 39px;
+  letter-spacing: 0px;
+  color: #F3F7F9;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Descripción CTA */
+.ctaDescription {
+  margin: 0 0 26px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #F3F7F9;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Botón CALCULAR - 244x40px */
+.ctaButton {
+  width: 244px;
+  height: 40px;
+  background: #27A49F;
+  border-radius: 20px;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: background 0.3s ease;
+}
+
+.ctaButton:hover {
+  background: #1f8580;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 2.6vw;
+    gap: 0.83vw;
+  }
+
+  .leftBox,
+  .rightBox {
+    width: clamp(300px, 23.07vw, 443px);
+    min-height: clamp(380px, 23.28vw, 447px);
+  }
+
+  .centerBox {
+    width: clamp(600px, 46.98vw, 902px);
+    min-height: clamp(380px, 23.28vw, 447px);
+  }
+
+  .comparisonTable thead th,
+  .comparisonTable tbody td {
+    font-size: clamp(14px, 0.83vw, 16px);
+  }
+
+  .centerTitle {
+    font-size: clamp(18px, 1.09vw, 21px);
+  }
+
+  .centerDescription {
+    font-size: clamp(14px, 0.83vw, 16px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .savingsSection {
+    padding: 80px 0;
+  }
+
+  .mainTitle {
+    font-size: 45px;
+    line-height: 50px;
+    margin-bottom: 50px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftBox,
+  .centerBox,
+  .rightBox {
+    width: 100%;
+    max-width: 902px;
+    min-height: auto;
+  }
+
+  .comparisonTable {
+    font-size: 14px;
+  }
+
+  .comparisonTable thead th,
+  .comparisonTable tbody td {
+    font-size: 14px;
+    line-height: 35px;
+    padding: 8px 10px 8px 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .savingsSection {
+    padding: 60px 0;
+  }
+
+  .mainTitle {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .leftTextOrange {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .leftTextGray,
+  .leftResult {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .comparisonTable {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .comparisonTable thead th,
+  .comparisonTable tbody td {
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  .ctaTitle {
+    font-size: 28px;
+    line-height: 34px;
+  }
+}
+
