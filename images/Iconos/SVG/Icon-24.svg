@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icon_231" data-name="Icon_23" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100.47 92.73">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #27a49f;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_871">
+    <rect id="Rectangle_150" class="st0" x="10.07" y="12.75" width="80.32" height="67.22"/>
+    <path id="Path_2079" class="st0" d="M45.76,41.21c-2.7,7.14-10.67,10.73-17.81,8.03-7.14-2.7-10.73-10.67-8.03-17.81,1.47-3.88,4.6-6.89,8.53-8.21"/>
+    <path id="Path_2080" class="st0" d="M48.27,36.32h-15.44v-15.44c8.53,0,15.44,6.91,15.44,15.44Z"/>
+    <line id="Line_50" class="st0" x1="19.02" y1="69.9" x2="81.31" y2="69.9"/>
+    <line id="Line_51" class="st0" x1="58.07" y1="24.02" x2="81.32" y2="24.02"/>
+    <line id="Line_52" class="st0" x1="58.07" y1="35.51" x2="81.32" y2="35.51"/>
+    <line id="Line_53" class="st0" x1="58.07" y1="47" x2="81.32" y2="47"/>
+    <line id="Line_54" class="st0" x1="24.69" y1="65.44" x2="24.69" y2="58.71"/>
+    <line id="Line_55" class="st0" x1="34.88" y1="65.44" x2="34.88" y2="60.17"/>
+    <line id="Line_56" class="st0" x1="45.07" y1="65.44" x2="45.07" y2="57.25"/>
+    <line id="Line_57" class="st0" x1="55.26" y1="65.44" x2="55.26" y2="58.71"/>
+    <line id="Line_58" class="st0" x1="65.45" y1="65.44" x2="65.45" y2="61.14"/>
+    <line id="Line_59" class="st0" x1="75.64" y1="65.44" x2="75.64" y2="56.76"/>
+  </g>
+</svg>

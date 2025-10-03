@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icon_24" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100.47 92.73">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #27a49f;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_870">
+    <line id="Line_156" class="st0" x1="57.24" y1="16.54" x2="29.49" y2="16.54"/>
+    <path id="Path_2370" class="st0" d="M20.52,16.54h-4.2c-2.96,0-5.37,2.4-5.37,5.37v43.81c0,2.97,2.4,5.37,5.37,5.37h36.66"/>
+    <path id="Path_2371" class="st0" d="M75.78,43.16v-21.26c0-2.96-2.41-5.37-5.37-5.37h-4.2"/>
+    <line id="Line_157" class="st0" x1="10.94" y1="29.18" x2="75.78" y2="29.18"/>
+    <line id="Line_158" class="st0" x1="25" y1="21.09" x2="25" y2="12.03"/>
+    <line id="Line_159" class="st0" x1="61.73" y1="21.09" x2="61.73" y2="12.03"/>
+    <path id="Path_2372" class="st0" d="M20.51,46.26v-8.91h10.65"/>
+    <path id="Path_2373" class="st0" d="M37.99,46.26v-8.91h10.64"/>
+    <path id="Path_2374" class="st0" d="M55.47,46.26v-8.91h10.64"/>
+    <path id="Path_2375" class="st0" d="M20.51,61.67v-8.91h10.65"/>
+    <path id="Path_2376" class="st0" d="M37.99,61.67v-8.91h10.64"/>
+    <path id="Path_2377" class="st0" d="M89.52,64.36c0,9.02-7.31,16.34-16.34,16.33-9.02,0-16.34-7.31-16.33-16.34,0-9.02,7.31-16.33,16.34-16.33,9.02,0,16.34,7.31,16.34,16.34h0Z"/>
+    <line id="Line_160" class="st0" x1="73.19" y1="64.31" x2="73.19" y2="57.29"/>
+    <line id="Line_161" class="st0" x1="66.53" y1="71.02" x2="73.21" y2="64.34"/>
+  </g>
+</svg>

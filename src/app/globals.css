@@ -1,0 +1,49 @@
+/* Reset y variables globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colores del diseño */
+  --color-background: #F3F7F9;
+  --color-nav-background: #FFFFFF;
+  --color-text-primary: #1A1818;
+  --color-button-primary: #27A49F;
+  --color-button-secondary: #FB8C05;
+  --color-white: #FFFFFF;
+  
+  /* Fuente */
+  --font-family: 'FinalSix', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  
+  /* Ancho base de diseño (1920px) */
+  --design-width: 1920;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: var(--font-family);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Utilidad para convertir px del diseño a unidades fluidas */
+/* Fórmula: clamp(min, preferred, max) */
+

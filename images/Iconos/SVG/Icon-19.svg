@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Icon_19" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100.47 92.73">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: #27a49f;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="Group_771">
+    <line id="Line_61" class="st0" x1="33.28" y1="62.19" x2="33.28" y2="56.44"/>
+    <line id="Line_63" class="st0" x1="33.28" y1="62.19" x2="33.28" y2="56.44"/>
+    <circle id="Ellipse_28" class="st0" cx="33.31" cy="24.84" r="5.19"/>
+    <path id="Path_2082" class="st0" d="M27.16,54.07c-1.92-1.73-3.01-4.2-3.01-6.78v-6.22c0-5.05,4.1-9.15,9.15-9.15h0"/>
+    <line id="Line_60" class="st0" x1="27.16" y1="44.18" x2="27.16" y2="62.19"/>
+    <path id="Path_2083" class="st0" d="M39.4,62.19v-26.34"/>
+    <path id="Path_2084" class="st0" d="M33.31,31.92h15.94c1.09-.03,1.99.83,2.01,1.92.02,1.09-.84,1.99-1.92,2.01-.03,0-.06,0-.09,0h-9.85"/>
+    <path id="Path_2085" class="st0" d="M43.96,24.84h31.32v18.15h-31.32"/>
+    <path id="Path_2086" class="st0" d="M54.9,38.16l4.51-4.51,4.54,3.12,5.93-5.33"/>
+    <path id="Path_2087" class="st0" d="M70.14,34.76v-3.69h-3.69"/>
+    <circle id="Ellipse_29" class="st0" cx="33.31" cy="24.84" r="5.19"/>
+    <path id="Path_2092" class="st0" d="M27.16,54.07c-1.92-1.73-3.01-4.2-3.01-6.78v-6.22c0-5.05,4.1-9.15,9.15-9.15h0"/>
+    <line id="Line_62" class="st0" x1="27.16" y1="44.18" x2="27.16" y2="62.19"/>
+    <path id="Path_2093" class="st0" d="M39.4,62.19v-26.34"/>
+    <path id="Path_2094" class="st0" d="M33.31,31.92h15.94c1.09-.03,1.99.83,2.01,1.92.02,1.09-.84,1.99-1.92,2.01-.03,0-.06,0-.09,0h-9.85"/>
+    <path id="Path_2095" class="st0" d="M43.96,24.84h31.32v18.15h-31.32"/>
+    <path id="Path_2096" class="st0" d="M54.9,38.16l4.51-4.51,4.54,3.12,5.93-5.33"/>
+    <path id="Path_2097" class="st0" d="M70.14,34.76v-3.69h-3.69"/>
+    <path id="Path_2128" class="st0" d="M89.65,69.69V12.15H11.11v57.54"/>
+    <path id="Path_2129" class="st0" d="M81.49,80.57H18.98c-6.01,0-10.88-4.87-10.88-10.88,0,0,0,0,0,0h27.23l5.84,4.3h18.41l5.85-4.3h26.94c0,6.01-4.87,10.88-10.88,10.88Z"/>
+  </g>
+</svg>
