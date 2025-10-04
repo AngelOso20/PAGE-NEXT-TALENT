@@ -3,6 +3,7 @@ import NavMenu from '@/components/NavMenu/NavMenu'
 import NosotrosHero from '@/components/Nosotros/NosotrosHero'
 import DiferencialesSection from '@/components/Nosotros/DiferencialesSection'
 import HistoriaSection from '@/components/Nosotros/HistoriaSection'
+import ValoresSection from '@/components/Nosotros/ValoresSection'
 
 export const metadata: Metadata = {
   title: 'Nosotros - Next Talent Solutions',
@@ -16,6 +17,7 @@ export default function NosotrosPage() {
       <NosotrosHero />
       <DiferencialesSection />
       <HistoriaSection />
+      <ValoresSection />
     </main>
   )
 }

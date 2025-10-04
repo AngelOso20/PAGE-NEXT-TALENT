@@ -1,0 +1,268 @@
+/* Valores Section - Diseño base 1920px */
+.valoresSection {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Cuadro azul largo - 1820x159px */
+.blueBox {
+  position: relative;
+  width: 1820px;
+  height: 159px;
+  background: #27A49F;
+  border-radius: 20px;
+  padding: 41px 370px 38px;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Título azul */
+.blueTitle {
+  margin: 0 0 17px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Subtítulo azul */
+.blueSubtitle {
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FFFFFF;
+  text-align: center;
+  opacity: 1;
+}
+
+/* Sección derecha */
+.rightSection {
+  width: 1820px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Cuadro naranja - 443x304px */
+.orangeBox {
+  position: relative;
+  width: 443px;
+  height: 304px;
+  background: #FB8C05;
+  border-radius: 20px;
+  padding: 86px 52px;
+  opacity: 1;
+}
+
+/* Título naranja */
+.orangeTitle {
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Grid de valores - 3 cards */
+.valoresGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 443px);
+  gap: 16px;
+  flex-grow: 1;
+}
+
+/* Card con icono - 443x304px */
+.valoresCard {
+  position: relative;
+  width: 100%;
+  height: 304px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 93px 40px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 1;
+}
+
+/* Contenedor del icono */
+.cardIconContainer {
+  width: 89px;
+  height: 86px;
+  margin-bottom: 36px;
+  flex-shrink: 0;
+}
+
+/* Texto de la card */
+.cardText {
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Texto en negrita */
+.boldText {
+  font-weight: bold;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 2.6vw;
+    gap: 0.83vw;
+  }
+
+  .blueBox {
+    width: 94.79vw;
+    height: clamp(120px, 8.28vw, 159px);
+    padding: clamp(30px, 2.14vw, 41px) clamp(200px, 19.27vw, 370px) clamp(25px, 1.98vw, 38px);
+  }
+
+  .rightSection {
+    width: 94.79vw;
+  }
+
+  .orangeBox {
+    width: clamp(300px, 23.07vw, 443px);
+    height: clamp(250px, 15.83vw, 304px);
+    padding: clamp(50px, 4.48vw, 86px) clamp(30px, 2.71vw, 52px);
+  }
+
+  .valoresGrid {
+    grid-template-columns: repeat(3, clamp(300px, 23.07vw, 443px));
+    gap: clamp(12px, 0.83vw, 16px);
+  }
+
+  .valoresCard {
+    height: 100%;
+    padding: clamp(50px, 4.84vw, 93px) clamp(30px, 2.08vw, 40px) clamp(40px, 3.33vw, 64px);
+  }
+
+  .blueTitle {
+    font-size: clamp(35px, 2.86vw, 55px);
+    line-height: clamp(40px, 2.86vw, 55px);
+  }
+
+  .blueSubtitle {
+    font-size: clamp(17px, 0.99vw, 19px);
+    line-height: clamp(26px, 1.61vw, 31px);
+  }
+
+  .orangeTitle {
+    font-size: clamp(35px, 2.86vw, 55px);
+    line-height: clamp(40px, 2.86vw, 55px);
+  }
+
+  .cardIconContainer {
+    width: clamp(65px, 4.63vw, 89px);
+    height: clamp(63px, 4.48vw, 86px);
+  }
+
+  .cardText {
+    font-size: clamp(14px, 0.83vw, 16px);
+    line-height: clamp(22px, 1.30vw, 25px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .valoresSection {
+    padding: 80px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blueBox {
+    width: 100%;
+    max-width: 1820px;
+    height: auto;
+    min-height: 159px;
+  }
+
+  .rightSection {
+    width: 100%;
+    max-width: 1820px;
+  }
+
+  .orangeBox {
+    width: 100%;
+    max-width: 443px;
+    height: auto;
+    min-height: 304px;
+  }
+
+  .valoresGrid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1350px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .valoresSection {
+    padding: 60px 0;
+  }
+
+  .blueTitle {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .blueSubtitle {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .orangeTitle {
+    font-size: 40px;
+    line-height: 46px;
+  }
+
+  .valoresGrid {
+    grid-template-columns: 1fr;
+    max-width: 443px;
+  }
+
+  .valoresCard {
+    height: auto;
+    min-height: 280px;
+  }
+}
