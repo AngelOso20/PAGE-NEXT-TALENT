@@ -1,0 +1,225 @@
+/* Sección Hero de Servicios */
+.serviciosHero {
+  width: 100%;
+  background: #F3F7F9;
+  padding: 150px 0 80px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Cuadro blanco con fondo - top: 129px, left: 50px, 1820x933px */
+.heroBox {
+  width: 1820px;
+  height: 933px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+/* Patrón de fondo abstracto */
+.backgroundPattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.backgroundImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  filter: grayscale(100%) brightness(0.8);
+}
+
+/* Contenido de texto */
+.textContent {
+  position: relative;
+  z-index: 2;
+  padding: 211px 0 0 39px;
+  width: 726px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* Título principal - top: 340px, left: 89px, 726x245px */
+.title {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 67px;
+  line-height: 75px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: left;
+  margin: 0 0 36px 0;
+  opacity: 1;
+}
+
+/* Descripción - top: 621px, left: 90px, 672x156px */
+.description {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0px;
+  color: #464749;
+  text-align: left;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Contenedor de imagen */
+.imageContainer {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  width: 992px;
+  height: 913px;
+  z-index: 2;
+  opacity: 1;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .heroBox {
+    width: 100%;
+    max-width: 1820px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .heroBox {
+    height: 800px;
+  }
+  
+  .textContent {
+    padding: 150px 0 0 30px;
+    width: 600px;
+  }
+  
+  .title {
+    font-size: 55px;
+    line-height: 60px;
+  }
+  
+  .description {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .imageContainer {
+    width: 800px;
+    height: 750px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .heroBox {
+    height: auto;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .textContent {
+    position: static;
+    padding: 60px 30px 30px 30px;
+    width: 100%;
+    order: 1;
+  }
+  
+  .imageContainer {
+    position: static;
+    width: 100%;
+    height: 400px;
+    order: 2;
+  }
+  
+  .title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  
+  .description {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .serviciosHero {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .heroBox {
+    border-radius: 15px;
+  }
+  
+  .textContent {
+    padding: 40px 20px 20px 20px;
+  }
+  
+  .title {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .imageContainer {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textContent {
+    padding: 30px 15px 15px 15px;
+  }
+  
+  .title {
+    font-size: 28px;
+    line-height: 32px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .imageContainer {
+    height: 250px;
+  }
+}
