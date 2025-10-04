@@ -5,10 +5,11 @@ import styles from './ValoresSection.module.css'
 
 interface ValoresCardProps {
   iconPath: string
-  text: string
+  title: string
+  description: string
 }
 
-export default function ValoresCard({ iconPath, text }: ValoresCardProps) {
+export default function ValoresCard({ iconPath, title, description }: ValoresCardProps) {
   const iconRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
@@ -40,33 +41,14 @@ export default function ValoresCard({ iconPath, text }: ValoresCardProps) {
     }
   }, [iconPath])
 
-  // Procesar el texto para renderizar negritas
-  const renderText = (htmlText: string) => {
-    const parts = htmlText.split(/(<b>|<\/b>)/)
-    let isBold = false
-
-    return parts.map((part, index) => {
-      if (part === '<b>') {
-        isBold = true
-        return null
-      } else if (part === '</b>') {
-        isBold = false
-        return null
-      } else if (part) {
-        return (
-          <span key={index} className={isBold ? styles.boldText : ''}>
-            {part}
-          </span>
-        )
-      }
-      return null
-    })
-  }
-
   return (
-    <div className={styles.valoresCard}>
-      <div ref={iconRef} className={styles.cardIconContainer} />
-      <p className={styles.cardText}>{renderText(text)}</p>
+    <div className={styles.valorCard}>
+      <div ref={iconRef} className={styles.iconContainer} />
+      <p className={styles.cardText}>
+        <span className={styles.cardTitle}>{title}</span>
+        {' '}
+        <span className={styles.cardDescription}>{description}</span>
+      </p>
     </div>
   )
 }
