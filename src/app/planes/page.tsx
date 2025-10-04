@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import NavMenu from '@/components/NavMenu/NavMenu'
 import PlanesHero from '@/components/Planes/PlanesHero'
 import PlanesCards from '@/components/Planes/PlanesCards'
-import Footer from '@/components/Footer/Footer'
 
 export const metadata: Metadata = {
   title: 'Planes - Next Talent Solutions',
@@ -15,7 +14,6 @@ export default function PlanesPage() {
       <NavMenu />
       <PlanesHero />
       <PlanesCards />
-      <Footer />
     </main>
   )
 }

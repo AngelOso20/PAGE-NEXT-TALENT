@@ -18,6 +18,43 @@
   margin-bottom: 60px;
 }
 
+/* Primera fila: 3 planes + cuadro naranja */
+.cardsGrid > *:nth-child(1) { /* Plan Esencial */
+  grid-row: 1;
+  grid-column: 1;
+}
+
+.cardsGrid > *:nth-child(2) { /* Plan Crecimiento */
+  grid-row: 1;
+  grid-column: 2;
+}
+
+.cardsGrid > *:nth-child(3) { /* Plan Integral */
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.cardsGrid > *:nth-child(4) { /* Cuadro naranja */
+  grid-row: 1;
+  grid-column: 4;
+}
+
+/* Segunda fila: columna de imágenes + 2 planes */
+.cardsGrid > *:nth-child(5) { /* Columna de imágenes apiladas */
+  grid-row: 2;
+  grid-column: 1;
+}
+
+.cardsGrid > *:nth-child(6) { /* Plan Protección Total */
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.cardsGrid > *:nth-child(7) { /* Plan Premium Plus */
+  grid-row: 2;
+  grid-column: 3;
+}
+
 /* Tarjeta de plan - 443x778px */
 .planCard {
   width: 443px;
@@ -276,13 +313,14 @@
   background: #1e8a85;
 }
 
-/* Grid de imágenes adicionales */
-.imagesGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* Columna de imágenes apiladas */
+.imagesColumn {
+  display: flex;
+  flex-direction: column;
   gap: 30px;
-  max-width: 916px;
-  margin: 0 auto;
+  width: 443px;
+  height: 778px;
+  justify-content: flex-start;
 }
 
 /* Tarjeta de imagen - 443x380px */
@@ -323,10 +361,30 @@
     grid-template-columns: repeat(3, 1fr);
   }
   
-  .quoteCard {
-    grid-column: 1 / -1;
-    max-width: 443px;
-    margin: 0 auto;
+  .cardsGrid > *:nth-child(1),
+  .cardsGrid > *:nth-child(2),
+  .cardsGrid > *:nth-child(3) {
+    grid-row: 1;
+  }
+  
+  .cardsGrid > *:nth-child(4) {
+    grid-row: 2;
+    grid-column: 1;
+  }
+  
+  .cardsGrid > *:nth-child(5) {
+    grid-row: 2;
+    grid-column: 2;
+  }
+  
+  .cardsGrid > *:nth-child(6) {
+    grid-row: 2;
+    grid-column: 3;
+  }
+  
+  .cardsGrid > *:nth-child(7) {
+    grid-row: 3;
+    grid-column: 1;
   }
 }
 
@@ -336,15 +394,34 @@
     gap: 20px;
   }
   
+  .cardsGrid > *:nth-child(1),
+  .cardsGrid > *:nth-child(2) {
+    grid-row: 1;
+  }
+  
+  .cardsGrid > *:nth-child(3),
+  .cardsGrid > *:nth-child(4) {
+    grid-row: 2;
+  }
+  
+  .cardsGrid > *:nth-child(5) {
+    grid-row: 3;
+  }
+  
+  .cardsGrid > *:nth-child(6),
+  .cardsGrid > *:nth-child(7) {
+    grid-row: 4;
+  }
+  
   .planCard,
   .quoteCard {
     height: auto;
     min-height: 600px;
   }
   
-  .imagesGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .imagesColumn {
+    height: auto;
+    min-height: 600px;
   }
 }
 
@@ -360,6 +437,11 @@
   .cardsGrid {
     grid-template-columns: 1fr;
     gap: 20px;
+  }
+  
+  .cardsGrid > *:nth-child(n) {
+    grid-row: auto;
+    grid-column: auto;
   }
   
   .planCard,

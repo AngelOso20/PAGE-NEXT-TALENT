@@ -46,6 +46,33 @@ const PlanesCards: React.FC = () => {
         'Acceso al portal de indicadores de gestión.',
         'Procesos digitales y gestión profesional para tu empresa.'
       ]
+    },
+    {
+      id: 4,
+      title: 'Plan Protección Total',
+      price: '$1.423.500 / mes',
+      target: 'Para empresas de riesgo IV y V',
+      description: 'Creado para empresas con riesgo laboral alto que necesitan máxima protección. Incluye todo lo del Plan Integral',
+      features: [
+        'Cumplimiento de 60 estándares SST.',
+        'Acompañamiento virtual SST especializado.',
+        'Acceso a portal de gestión de cargos e indicadores.',
+        'Seguridad total para proteger a tu gente y tu negocio.'
+      ]
+    },
+    {
+      id: 5,
+      title: 'Plan Premium Plus',
+      price: '$3.558.750 / mes',
+      target: 'Para empresas hasta 100 empleados',
+      description: 'Nuestra solución más completa: asesoría estratégica, formación y automatización en un solo ecosistema.',
+      features: [
+        'Cumplimiento de 60 estándares SST.',
+        'Acompañamiento SST extendido.',
+        'Acceso a todas las plataformas de gestión en línea.',
+        'Asesoría estratégica personalizada.',
+        'Todo el respaldo de un departamento interno, sin los altos costos.'
+      ]
     }
   ];
 
@@ -53,24 +80,55 @@ const PlanesCards: React.FC = () => {
     <section className={styles.planesCards}>
       <div className={styles.container}>
         <div className={styles.cardsGrid}>
-          {/* Planes principales */}
-          {plans.map((plan) => (
-            <div key={plan.id} className={styles.planCard}>
-              <h3 className={styles.planTitle}>{plan.title}</h3>
-              <p className={styles.desde}>Desde</p>
-              <p className={styles.price}>{plan.price}</p>
-              <p className={styles.target}>{plan.target}</p>
-              <p className={styles.description}>{plan.description}</p>
-              <p className={styles.includesTitle}>Incluye:</p>
-              <ul className={styles.featuresList}>
-                {plan.features.map((feature, index) => (
-                  <li key={index} className={styles.featureItem}>{feature}</li>
-                ))}
-              </ul>
-              <button className={styles.buyButton}>COMPRAR MI PLAN</button>
-            </div>
-          ))}
-          
+          {/* Primera fila: 3 planes + cuadro naranja */}
+          {/* Plan Esencial */}
+          <div className={styles.planCard}>
+            <h3 className={styles.planTitle}>{plans[0].title}</h3>
+            <p className={styles.desde}>Desde</p>
+            <p className={styles.price}>{plans[0].price}</p>
+            <p className={styles.target}>{plans[0].target}</p>
+            <p className={styles.description}>{plans[0].description}</p>
+            <p className={styles.includesTitle}>Incluye:</p>
+            <ul className={styles.featuresList}>
+              {plans[0].features.map((feature, index) => (
+                <li key={index} className={styles.featureItem}>{feature}</li>
+              ))}
+            </ul>
+            <button className={styles.buyButton}>COMPRAR MI PLAN</button>
+          </div>
+
+          {/* Plan Crecimiento */}
+          <div className={styles.planCard}>
+            <h3 className={styles.planTitle}>{plans[1].title}</h3>
+            <p className={styles.desde}>Desde</p>
+            <p className={styles.price}>{plans[1].price}</p>
+            <p className={styles.target}>{plans[1].target}</p>
+            <p className={styles.description}>{plans[1].description}</p>
+            <p className={styles.includesTitle}>Incluye:</p>
+            <ul className={styles.featuresList}>
+              {plans[1].features.map((feature, index) => (
+                <li key={index} className={styles.featureItem}>{feature}</li>
+              ))}
+            </ul>
+            <button className={styles.buyButton}>COMPRAR MI PLAN</button>
+          </div>
+
+          {/* Plan Integral */}
+          <div className={styles.planCard}>
+            <h3 className={styles.planTitle}>{plans[2].title}</h3>
+            <p className={styles.desde}>Desde</p>
+            <p className={styles.price}>{plans[2].price}</p>
+            <p className={styles.target}>{plans[2].target}</p>
+            <p className={styles.description}>{plans[2].description}</p>
+            <p className={styles.includesTitle}>Incluye:</p>
+            <ul className={styles.featuresList}>
+              {plans[2].features.map((feature, index) => (
+                <li key={index} className={styles.featureItem}>{feature}</li>
+              ))}
+            </ul>
+            <button className={styles.buyButton}>COMPRAR MI PLAN</button>
+          </div>
+
           {/* Cuadro naranja de Cotiza tu plan */}
           <div className={styles.quoteCard}>
             <div className={styles.quoteImage}>
@@ -91,29 +149,65 @@ const PlanesCards: React.FC = () => {
               <button className={styles.calculateButton}>CALCULAR</button>
             </div>
           </div>
-        </div>
-        
-        {/* Imágenes adicionales */}
-        <div className={styles.imagesGrid}>
-          <div className={styles.imageCard}>
-            <Image
-              src="/images/Planes/Couple laundry.webp"
-              alt="Pareja en lavandería"
-              width={443}
-              height={380}
-              className={styles.image}
-              priority
-            />
+
+          {/* Segunda fila: 2 imágenes apiladas + 2 planes */}
+          {/* Columna de imágenes apiladas */}
+          <div className={styles.imagesColumn}>
+            {/* Imagen 1 - Couple laundry */}
+            <div className={styles.imageCard}>
+              <Image
+                src="/images/Planes/Couple laundry.webp"
+                alt="Pareja en lavandería"
+                width={443}
+                height={380}
+                className={styles.image}
+                priority
+              />
+            </div>
+
+            {/* Imagen 2 - Couple warehouse */}
+            <div className={styles.imageCard}>
+              <Image
+                src="/images/Planes/Couple warehouse.webp"
+                alt="Pareja en almacén"
+                width={443}
+                height={380}
+                className={styles.image}
+                priority
+              />
+            </div>
           </div>
-          <div className={styles.imageCard}>
-            <Image
-              src="/images/Planes/Couple warehouse.webp"
-              alt="Pareja en almacén"
-              width={443}
-              height={380}
-              className={styles.image}
-              priority
-            />
+
+          {/* Plan Protección Total */}
+          <div className={styles.planCard}>
+            <h3 className={styles.planTitle}>{plans[3].title}</h3>
+            <p className={styles.desde}>Desde</p>
+            <p className={styles.price}>{plans[3].price}</p>
+            <p className={styles.target}>{plans[3].target}</p>
+            <p className={styles.description}>{plans[3].description}</p>
+            <p className={styles.includesTitle}>Incluye:</p>
+            <ul className={styles.featuresList}>
+              {plans[3].features.map((feature, index) => (
+                <li key={index} className={styles.featureItem}>{feature}</li>
+              ))}
+            </ul>
+            <button className={styles.buyButton}>COMPRAR MI PLAN</button>
+          </div>
+
+          {/* Plan Premium Plus */}
+          <div className={styles.planCard}>
+            <h3 className={styles.planTitle}>{plans[4].title}</h3>
+            <p className={styles.desde}>Desde</p>
+            <p className={styles.price}>{plans[4].price}</p>
+            <p className={styles.target}>{plans[4].target}</p>
+            <p className={styles.description}>{plans[4].description}</p>
+            <p className={styles.includesTitle}>Incluye:</p>
+            <ul className={styles.featuresList}>
+              {plans[4].features.map((feature, index) => (
+                <li key={index} className={styles.featureItem}>{feature}</li>
+              ))}
+            </ul>
+            <button className={styles.buyButton}>COMPRAR MI PLAN</button>
           </div>
         </div>
       </div>
