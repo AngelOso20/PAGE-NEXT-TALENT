@@ -1,0 +1,265 @@
+/* Historia Section - Diseño base 1920px */
+.historiaSection {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1820px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Imagen izquierda - 902x728px */
+.imageBox {
+  position: relative;
+  width: 902px;
+  height: 728px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.imageBox img {
+  width: 902px;
+  height: 728px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Columna derecha */
+.rightColumn {
+  width: 902px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* Cuadro blanco historia - 902x408px */
+.historiaBox {
+  width: 100%;
+  height: 408px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 41px 38px 38px;
+  opacity: 1;
+}
+
+/* Título - turquesa */
+.title {
+  margin: 0 0 30px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Texto naranja */
+.orangeText {
+  margin: 0 0 30px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FB8C05;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Texto gris */
+.grayText {
+  margin: 0 0 15px 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+.grayText:last-child {
+  margin-bottom: 0;
+}
+
+/* Grid de 3 cards - 290x304px cada una */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 290px);
+  gap: 16px;
+  width: 100%;
+}
+
+/* Card pequeña - 290x304px */
+.historiaCard {
+  width: 100%;
+  height: 304px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 84px 40px 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  opacity: 1;
+}
+
+/* Contenedor del icono */
+.cardIconContainer {
+  width: 89px;
+  height: 86px;
+  margin-bottom: 34px;
+  flex-shrink: 0;
+}
+
+/* Texto de la card */
+.cardText {
+  margin: 0;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  opacity: 1;
+}
+
+/* Sistema Responsive */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 2.6vw;
+    gap: 0.83vw;
+  }
+
+  .imageBox {
+    width: clamp(600px, 46.98vw, 902px);
+    height: clamp(480px, 37.92vw, 728px);
+  }
+
+  .imageBox img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .rightColumn {
+    width: clamp(600px, 46.98vw, 902px);
+    gap: clamp(12px, 0.83vw, 16px);
+  }
+
+  .historiaBox {
+    height: clamp(350px, 21.25vw, 408px);
+    padding: clamp(30px, 2.14vw, 41px) clamp(30px, 1.98vw, 38px);
+  }
+
+  .title {
+    font-size: clamp(35px, 2.86vw, 55px);
+    line-height: clamp(40px, 2.86vw, 55px);
+  }
+
+  .orangeText {
+    font-size: clamp(17px, 0.99vw, 19px);
+    line-height: clamp(26px, 1.61vw, 31px);
+  }
+
+  .grayText {
+    font-size: clamp(14px, 0.83vw, 16px);
+    line-height: clamp(22px, 1.30vw, 25px);
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(3, clamp(200px, 15.10vw, 290px));
+    gap: clamp(12px, 0.83vw, 16px);
+  }
+
+  .historiaCard {
+    height: clamp(250px, 15.83vw, 304px);
+    padding: clamp(50px, 4.38vw, 84px) clamp(30px, 2.08vw, 40px) clamp(40px, 3.33vw, 64px);
+  }
+
+  .cardIconContainer {
+    width: clamp(65px, 4.63vw, 89px);
+    height: clamp(63px, 4.48vw, 86px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .historiaSection {
+    padding: 80px 0;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageBox,
+  .rightColumn {
+    width: 100%;
+    max-width: 902px;
+  }
+
+  .imageBox {
+    height: auto;
+    aspect-ratio: 902 / 728;
+  }
+
+  .historiaBox {
+    height: auto;
+    min-height: 350px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .historiaSection {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  .orangeText {
+    font-size: 17px;
+    line-height: 28px;
+  }
+
+  .grayText {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .historiaCard {
+    height: auto;
+    min-height: 280px;
+  }
+}
+
