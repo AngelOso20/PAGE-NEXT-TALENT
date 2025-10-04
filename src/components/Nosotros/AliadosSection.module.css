@@ -1,0 +1,288 @@
+/* Sección Nuestros Aliados */
+.aliadosSection {
+  width: 100%;
+  background: #F3F7F9;
+  padding: 80px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+/* Cuadro azul con texto - top: 4200px, left: 50px, 749x628px */
+.textBox {
+  width: 749px;
+  height: 628px;
+  background: #27A49F;
+  border-radius: 20px;
+  padding: 113px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* Título "Nuestros Aliados" - top: 4313px, left: 90px, 482x78px */
+.title {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: left;
+  margin: 0 0 30px 0;
+  opacity: 1;
+}
+
+/* Texto introductorio - top: 4415px, left: 90px, 613x89px */
+.introText {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FFFFFF;
+  text-align: left;
+  margin: 0 0 30px 0;
+  opacity: 1;
+}
+
+/* Lista de servicios - top: 4549px, left: 90px, 586x173px */
+.servicesList {
+  color: #FFFFFF;
+  text-align: left;
+  letter-spacing: 0.4px;
+  margin: 0;
+  opacity: 1;
+}
+
+.servicesList ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.servicesList li {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #FFFFFF;
+  text-align: left;
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.servicesList li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+/* Contenedor de imágenes del medio */
+.imagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex-shrink: 0;
+}
+
+/* Imagen superior - top: 4200px, left: 815px, 528x304px */
+.topImageBox {
+  width: 528px;
+  height: 304px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+/* Imagen inferior - top: 4526px, left: 815px, 528x304px */
+.bottomImageBox {
+  width: 528px;
+  height: 304px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.serviceImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Imagen grande del lado derecho - top: 4200px, left: 1360px, 510x630px */
+.largeImageBox {
+  width: 510px;
+  height: 630px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.largeImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .textBox {
+    width: 600px;
+    padding: 80px 30px 30px 30px;
+  }
+  
+  .topImageBox,
+  .bottomImageBox {
+    width: 400px;
+    height: 230px;
+  }
+  
+  .largeImageBox {
+    width: 400px;
+    height: 500px;
+  }
+  
+  .title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .textBox {
+    width: 100%;
+    max-width: 749px;
+    height: auto;
+    padding: 60px 30px;
+  }
+  
+  .imagesContainer {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .topImageBox,
+  .bottomImageBox {
+    width: 300px;
+    height: 200px;
+  }
+  
+  .largeImageBox {
+    width: 100%;
+    max-width: 510px;
+    height: 400px;
+  }
+  
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .aliadosSection {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .textBox {
+    padding: 40px 20px;
+  }
+  
+  .title {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  
+  .introText {
+    font-size: 17px;
+    line-height: 28px;
+  }
+  
+  .servicesList li {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  
+  .imagesContainer {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .topImageBox,
+  .bottomImageBox {
+    width: 100%;
+    height: 250px;
+  }
+  
+  .largeImageBox {
+    height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textBox {
+    padding: 30px 15px;
+  }
+  
+  .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+  .introText {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .servicesList li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .topImageBox,
+  .bottomImageBox {
+    height: 200px;
+  }
+  
+  .largeImageBox {
+    height: 300px;
+  }
+}

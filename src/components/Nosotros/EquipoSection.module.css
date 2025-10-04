@@ -1,0 +1,240 @@
+/* Sección Nuestro Equipo */
+.equipoSection {
+  width: 100%;
+  background: #F3F7F9;
+  padding: 80px 0;
+  position: relative;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Cuadro blanco con texto - top: 3337px, left: 50px, 749x728px */
+.textBox {
+  width: 749px;
+  height: 728px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  padding: 55px 54px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  opacity: 1;
+}
+
+/* Título "Nuestro Equipo" - top: 3392px, left: 104px, 432x78px */
+.title {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 55px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: left;
+  margin: 0 0 30px 0;
+  opacity: 1;
+}
+
+/* Texto introductorio - top: 3487px, left: 104px, 627x89px */
+.introText {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 19px;
+  line-height: 31px;
+  letter-spacing: 0.47px;
+  color: #FB8C05;
+  text-align: left;
+  margin: 0 0 30px 0;
+  opacity: 1;
+}
+
+/* Lista del equipo - top: 3600px, left: 102px, 629x398px */
+.teamList {
+  color: #464749;
+  text-align: left;
+  letter-spacing: 0.4px;
+  margin: 0 0 30px 0;
+  opacity: 1;
+}
+
+/* Miembro del equipo */
+.teamMember {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Nombres en negrilla */
+.memberName {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+}
+
+/* Descripciones */
+.memberDescription {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+}
+
+/* Texto de conclusión */
+.conclusionText {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.4px;
+  color: #464749;
+  text-align: left;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Cuadro de imagen - top: 3337px, left: 815px, 1055x728px */
+.imageBox {
+  width: 1055px;
+  height: 728px;
+  border-radius: 20px;
+  overflow: hidden;
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+.teamImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .textBox {
+    width: 600px;
+    padding: 40px 30px;
+  }
+  
+  .imageBox {
+    width: 800px;
+  }
+  
+  .title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .textBox {
+    width: 100%;
+    max-width: 749px;
+    height: auto;
+    padding: 40px 30px;
+  }
+  
+  .imageBox {
+    width: 100%;
+    max-width: 1055px;
+    height: 400px;
+  }
+  
+  .title {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .equipoSection {
+    padding: 60px 0;
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .textBox {
+    padding: 30px 20px;
+  }
+  
+  .title {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  
+  .introText {
+    font-size: 17px;
+    line-height: 28px;
+  }
+  
+  .memberName,
+  .memberDescription,
+  .conclusionText {
+    font-size: 15px;
+    line-height: 23px;
+  }
+  
+  .imageBox {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .textBox {
+    padding: 25px 15px;
+  }
+  
+  .title {
+    font-size: 30px;
+    line-height: 30px;
+  }
+  
+  .introText {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  
+  .memberName,
+  .memberDescription,
+  .conclusionText {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .imageBox {
+    height: 250px;
+  }
+}

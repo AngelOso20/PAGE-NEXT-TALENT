@@ -4,6 +4,8 @@ import NosotrosHero from '@/components/Nosotros/NosotrosHero'
 import DiferencialesSection from '@/components/Nosotros/DiferencialesSection'
 import HistoriaSection from '@/components/Nosotros/HistoriaSection'
 import ValoresSection from '@/components/Nosotros/ValoresSection'
+import EquipoSection from '@/components/Nosotros/EquipoSection'
+import AliadosSection from '@/components/Nosotros/AliadosSection'
 
 export const metadata: Metadata = {
   title: 'Nosotros - Next Talent Solutions',
@@ -18,6 +20,8 @@ export default function NosotrosPage() {
       <DiferencialesSection />
       <HistoriaSection />
       <ValoresSection />
+      <EquipoSection />
+      <AliadosSection />
     </main>
   )
 }
