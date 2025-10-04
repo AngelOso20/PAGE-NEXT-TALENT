@@ -1,0 +1,108 @@
+/* Contenedor de filtros */
+.filtersContainer {
+  width: 100%;
+  background: #F3F7F9;
+  padding: 40px 0 20px 0;
+  display: flex;
+  justify-content: center; /* Centrado como en el mockup */
+}
+
+.filtersBar {
+  max-width: 1400px; /* Ancho más compacto para centrar */
+  width: 100%;
+  padding: 0 50px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center; /* Botones centrados dentro del contenedor */
+  margin: 0 auto; /* Centrado automático */
+}
+
+/* Botón de filtro */
+.filterButton {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.filterButton:hover {
+  color: #1e8a85;
+}
+
+/* Filtro activo */
+.filterButton.active {
+  color: #464749;
+  font-weight: bold;
+}
+
+.filterButton.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #27A49F;
+  border-radius: 1px;
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+  .filtersBar {
+    padding: 0 30px;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .filtersBar {
+    padding: 0 15px;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  
+  .filterButton {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filtersContainer {
+    padding: 30px 0 15px 0;
+  }
+  
+  .filtersBar {
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .filterButton {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .filtersBar {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filterButton {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}

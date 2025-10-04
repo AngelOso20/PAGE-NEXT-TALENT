@@ -1,0 +1,278 @@
+/* Sección Hero de Blog */
+.blogHero {
+  width: 100%;
+  background: #F3F7F9;
+  padding: 150px 0 80px 0; /* Aumentado el padding superior para más separación del NavMenu */
+  position: relative;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+/* Contenido principal - layout lado a lado */
+.heroContent {
+  display: flex;
+  gap: 30px; /* Añadido gap entre la imagen y el cuadro de contenido */
+  align-items: flex-start;
+  width: 100%;
+  justify-content: flex-start; /* Alineado a la izquierda para consistencia */
+}
+
+/* Contenedor de imagen - 910x528px */
+.imageContainer {
+  width: 910px;
+  height: 528px;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Cuadro blanco de contenido - 902x528px */
+.contentCard {
+  width: 902px;
+  height: 528px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contentWrapper {
+  width: 100%;
+  max-width: 706px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Categoría - 10px/34px FinalSix, #FB8C05 */
+.category {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #FB8C05;
+  text-align: left;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+/* Título - 33px/39px FinalSix, #27A49F */
+.title {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 33px;
+  line-height: 39px;
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: left;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Descripción - 28px/38px FinalSix, #464749 */
+.description {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 0px;
+  color: #464749;
+  text-align: left;
+  margin: 0;
+  opacity: 1;
+}
+
+/* Botón - 152x40px, #27A49F */
+.readMoreBtn {
+  width: 152px;
+  height: 40px;
+  background: #27A49F;
+  border-radius: 20px;
+  border: none;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
+}
+
+.readMoreBtn:hover {
+  background: #1e8a85;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1920px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .imageContainer,
+  .contentCard {
+    width: 100%;
+    max-width: 910px;
+  }
+  
+  .heroContent {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .blogHero {
+    padding: 120px 0 60px 0; /* Ajuste de padding para pantallas medianas */
+  }
+  
+  .heroContent {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* Mantener gap cuando se apilan */
+  }
+  
+  .imageContainer {
+    width: 100%;
+    max-width: 910px;
+    height: 400px;
+  }
+  
+  .contentCard {
+    width: 100%;
+    max-width: 910px;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .contentWrapper {
+    padding: 30px;
+  }
+  
+  .title {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  .description {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .blogHero {
+    padding: 100px 0 60px 0; /* Ajuste de padding para pantallas pequeñas */
+  }
+  
+  .container {
+    padding: 0 15px;
+  }
+  
+  .contentWrapper {
+    padding: 25px;
+    gap: 15px;
+  }
+  
+  .title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .description {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  
+  .readMoreBtn {
+    width: 140px;
+    height: 36px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blogHero {
+    padding: 40px 0;
+  }
+  
+  .imageContainer {
+    height: 300px;
+  }
+  
+  .contentCard {
+    min-height: 350px;
+  }
+  
+  .contentWrapper {
+    padding: 20px;
+    gap: 12px;
+  }
+  
+  .category {
+    font-size: 9px;
+    line-height: 30px;
+  }
+  
+  .title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  
+  .readMoreBtn {
+    width: 120px;
+    height: 32px;
+    font-size: 14px;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contentWrapper {
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .title {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  
+  .readMoreBtn {
+    width: 100px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
