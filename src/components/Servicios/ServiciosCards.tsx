@@ -1,6 +1,8 @@
+'use client';
+
 import React from 'react';
 import styles from './ServiciosCards.module.css';
-import AnimatedIcon from './AnimatedIcon';
+import Image from 'next/image';
 
 const ServiciosCards: React.FC = () => {
   const servicios = [
@@ -76,12 +78,13 @@ const ServiciosCards: React.FC = () => {
         <div className={styles.cardsGrid}>
           {servicios.map((servicio) => (
             <div key={servicio.id} className={styles.card}>
-              {/* Icono con animación */}
+              {/* Icono */}
               <div className={styles.iconContainer}>
-                <AnimatedIcon
-                  iconPath={servicio.icon}
-                  animationPath={servicio.animation}
+                <Image
+                  src={servicio.icon}
                   alt={`Icono ${servicio.title}`}
+                  width={79}
+                  height={77}
                   className={styles.icon}
                 />
               </div>

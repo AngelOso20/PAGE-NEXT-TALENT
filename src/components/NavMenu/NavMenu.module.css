@@ -1,6 +1,5 @@
-/* 
-  Sistema de conversión responsive basado en diseño 1920px
-  Usamos calc() con vw para escalar proporcionalmente
+/*
+  NavMenu responsive moderno usando flexbox
 */
 
 .navMenu {
@@ -19,48 +18,47 @@
 }
 
 .navContainer {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
-  max-width: 1920px;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
-/* Logo - Posición exacta: left: 50px, top: 28px, 205x56px */
+/* Logo */
 .logo {
-  position: absolute;
-  left: calc(50px + (100vw - 1920px) * 0.026);
-  top: 28px;
+  flex-shrink: 0;
   width: 205px;
   height: 56px;
 }
 
 .logo img {
-  width: 205px;
-  height: 56px;
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-/* Navegación - top: 45px para todos los items */
+/* Navegación - Escritorio */
 .nav {
-  position: absolute;
-  top: 45px;
-  left: 1105px;
   display: flex;
   align-items: center;
-  height: 23px;
+  flex: 1;
+  justify-content: center;
+  margin: 0 40px;
 }
 
 .menuList {
   display: flex;
   list-style: none;
-  gap: 0;
+  gap: 40px;
   margin: 0;
   padding: 0;
   align-items: center;
 }
 
-/* Ítems del menú con posiciones exactas del CSS original */
 .menuItem {
   margin: 0;
   padding: 0;
@@ -75,57 +73,63 @@
   line-height: 23px;
   letter-spacing: 0px;
   color: #1A1818;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   white-space: nowrap;
   opacity: 1;
   transition: color 0.3s ease;
-}
-
-/* Espaciado exacto entre items basado en las posiciones del CSS */
-.menuItem:nth-child(1) {
-  width: 74px; /* Nosotros */
-}
-
-.menuItem:nth-child(2) {
-  width: 73px; /* Servicios */
-  margin-left: calc(1208px - 1105px - 74px); /* 29px */
-}
-
-.menuItem:nth-child(3) {
-  width: 56px; /* Planes */
-  margin-left: calc(1309px - 1208px - 73px); /* 28px */
-}
-
-.menuItem:nth-child(4) {
-  width: 120px; /* Blog y Eventos */
-  margin-left: calc(1394px - 1309px - 56px); /* 29px */
-}
-
-.menuItem:nth-child(5) {
-  width: 77px; /* Contacto */
-  margin-left: calc(1542px - 1394px - 120px); /* 28px */
+  padding: 8px 12px;
+  border-radius: 8px;
 }
 
 .menuItem a:hover {
   color: #27A49F;
+  background-color: rgba(39, 164, 159, 0.05);
 }
 
 /* Botones de acción */
 .actions {
-  position: absolute;
-  top: 37px;
-  right: calc(1920px - 1838px - 40px); /* Posición desde la derecha */
   display: flex;
   align-items: center;
-  gap: 28px; /* 1838 - 1648 - 162 = 28px */
+  gap: 20px;
+  flex-shrink: 0;
 }
 
-/* Botón Hablemos - 162x40px, left: 1648px, top: 37px */
+/* Desktop - Ocultar menú móvil por defecto */
+.mobileMenu {
+  display: none;
+}
+
+/* Móviles - Mostrar botón hamburguesa y menú móvil */
+@media (max-width: 768px) {
+  /* Ocultar navegación y botones de acción en móviles */
+  .nav {
+    display: none;
+  }
+
+  /* Solo ocultar botones en el nav principal, no en el menú móvil */
+  .actions .buttonHablemos,
+  .actions .buttonUser {
+    display: none !important;
+  }
+
+  /* Mostrar botón hamburguesa */
+  .hamburgerButton {
+    display: flex !important;
+  }
+
+  /* Mostrar menú móvil cuando esté abierto */
+  .mobileMenu.open {
+    display: block;
+  }
+}
+
+/* Botón Hablemos */
 .buttonHablemos {
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px;
   width: 162px;
   height: 40px;
   background: #27A49F;
@@ -134,8 +138,8 @@
   outline: none;
   text-decoration: none;
   opacity: 1;
-  transition: background 0.3s ease;
-  overflow: visible;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .buttonHablemos:focus {
@@ -145,16 +149,15 @@
 
 .buttonHablemos:hover {
   background: #1f8580;
+  transform: translateY(-1px);
 }
 
 .buttonHablemos span {
-  position: absolute;
-  left: 44px;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 17px;
-  line-height: 34px;
+  line-height: 1;
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;
@@ -164,16 +167,13 @@
 }
 
 .phoneIcon {
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
   width: 18px !important;
   height: 17px !important;
   opacity: 1;
+  flex-shrink: 0;
 }
 
-/* Botón Usuario - 40x40px, left: 1838px, top: 37px */
+/* Botón Usuario */
 .buttonUser {
   display: flex;
   align-items: center;
@@ -186,7 +186,8 @@
   outline: none;
   overflow: hidden;
   opacity: 1;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .buttonUser:focus {
@@ -196,191 +197,374 @@
 
 .buttonUser:hover {
   background: #e67e04;
+  transform: translateY(-1px);
 }
 
 .buttonUser img {
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Responsive Design - Escalar proporcionalmente */
-@media (max-width: 1920px) {
-  /* Escalado proporcional para pantallas menores a 1920px */
-  .logo {
-    left: 2.6vw; /* 50/1920 = 2.6% */
-    width: 10.68vw; /* 205/1920 */
-    height: auto;
-  }
-
-  .logo img {
-    width: 100%;
-    height: auto;
-  }
-
-  .nav {
-    left: 57.55vw; /* 1105/1920 */
-  }
-
-  .menuItem a {
-    font-size: clamp(12px, 0.83vw, 16px);
-  }
-
-  .menuItem:nth-child(1) {
-    width: auto;
-  }
-
-  .menuItem:nth-child(2),
-  .menuItem:nth-child(3),
-  .menuItem:nth-child(4),
-  .menuItem:nth-child(5) {
-    width: auto;
-    margin-left: 1.5vw;
-  }
-
-  .actions {
-    right: 4.27vw; /* (1920-1838-40)/1920 */
-  }
-
-  .buttonHablemos {
-    width: clamp(140px, 8.44vw, 162px);
-    height: clamp(35px, 2.08vw, 40px);
-  }
-
-  .buttonHablemos span {
-    font-size: clamp(14px, 0.89vw, 17px);
-  }
-
-  .buttonUser {
-    width: clamp(35px, 2.08vw, 40px);
-    height: clamp(35px, 2.08vw, 40px);
-  }
-
-  .buttonUser img {
-    width: 100%;
-    height: 100%;
-  }
+/* Botón menú hamburguesa */
+.hamburgerButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-/* Tablets - Layout horizontal compacto */
-@media (max-width: 1400px) {
-  .navMenu {
-    height: auto;
-    min-height: 90px;
-    padding: 10px 0;
-  }
-
-  .logo {
-    left: 20px;
-    top: 20px;
-    width: 160px;
-  }
-
-  .nav {
-    left: 200px;
-    top: 35px;
-  }
-
-  .menuItem a {
-    font-size: 14px;
-  }
-
-  .menuItem:nth-child(2),
-  .menuItem:nth-child(3),
-  .menuItem:nth-child(4),
-  .menuItem:nth-child(5) {
-    margin-left: 15px;
-  }
-
-  .actions {
-    right: 20px;
-    top: 30px;
-  }
+.hamburgerButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
-/* Mobile - Layout vertical */
-@media (max-width: 1024px) {
-  .navMenu {
-    height: auto;
-    min-height: 70px;
-  }
+.hamburgerButton img {
+  width: 24px;
+  height: 24px;
+}
 
+/* Responsive Design */
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1200px) {
   .navContainer {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 15px 20px;
-  }
-
-  .logo {
-    position: static;
-    width: 150px;
-    height: auto;
-    margin-bottom: 15px;
+    padding: 0 30px;
   }
 
   .nav {
-    position: static;
-    width: 100%;
-    margin-bottom: 15px;
+    margin: 0 30px;
   }
 
   .menuList {
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
-
-  .menuItem:nth-child(2),
-  .menuItem:nth-child(3),
-  .menuItem:nth-child(4),
-  .menuItem:nth-child(5) {
-    margin-left: 0;
-  }
-
-  .actions {
-    position: static;
-    width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .navMenu {
-    border-radius: 0px 0px 15px 15px;
+    gap: 30px;
   }
 
   .menuItem a {
     font-size: 15px;
+    padding: 6px 10px;
   }
 
   .buttonHablemos {
-    width: 140px;
+    width: 150px;
     height: 38px;
   }
 
   .buttonHablemos span {
+    font-size: 16px;
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 900px) {
+  .navContainer {
+    padding: 0 20px;
+  }
+
+  .nav {
+    margin: 0 20px;
+  }
+
+  .menuList {
+    gap: 25px;
+  }
+
+  .menuItem a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+}
+
+/* Tablets - Solo ajustes menores, menú hamburguesa aún oculto */
+@media (max-width: 1024px) {
+  .navMenu {
+    height: 90px;
+  }
+
+  .navContainer {
+    padding: 0 30px;
+  }
+
+  .nav {
+    margin: 0 30px;
+  }
+
+  .menuList {
+    gap: 35px;
+  }
+
+  .menuItem a {
+    font-size: 15px;
+    padding: 6px 10px;
+  }
+
+  .buttonHablemos {
+    width: 150px;
+    height: 38px;
+  }
+
+  .buttonHablemos span {
+    font-size: 16px;
+  }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 900px) {
+  .navMenu {
+    height: 80px;
+  }
+
+  .navContainer {
+    padding: 0 25px;
+  }
+
+  .nav {
+    margin: 0 25px;
+  }
+
+  .menuList {
+    gap: 30px;
+  }
+
+  .menuItem a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
+
+  .buttonHablemos {
+    width: 140px;
+    height: 36px;
+  }
+
+  .buttonHablemos span {
     font-size: 15px;
   }
 }
 
-/* Para pantallas muy grandes, mantener diseño exacto */
-@media (min-width: 1921px) {
+/* Móviles */
+@media (max-width: 768px) {
+  .navMenu {
+    height: 70px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
   .navContainer {
-    max-width: 1920px;
+    padding: 0 20px;
   }
 
   .logo {
-    left: 50px;
-    width: 205px;
-    height: 56px;
-  }
-
-  .nav {
-    left: 1105px;
+    width: 160px;
+    height: 44px;
   }
 
   .actions {
-    right: 42px;
+    gap: 15px;
+  }
+
+  .buttonHablemos {
+    width: 130px;
+    height: 36px;
+  }
+
+  .buttonHablemos span {
+    font-size: 14px;
+  }
+
+  .phoneIcon {
+    width: 16px !important;
+    height: 15px !important;
+  }
+
+  .buttonUser {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .navMenu {
+    height: 60px;
+  }
+
+  .navContainer {
+    padding: 0 15px;
+  }
+
+  .logo {
+    width: 140px;
+    height: 38px;
+  }
+
+  .buttonHablemos {
+    width: 110px;
+    height: 32px;
+  }
+
+  .buttonHablemos span {
+    font-size: 13px;
+  }
+
+  .buttonUser {
+    width: 32px;
+    height: 32px;
+  }
+
+  .phoneIcon {
+    width: 14px !important;
+    height: 13px !important;
+  }
+
+
+  /* Reglas del menú móvil */
+  .mobileMenu {
+    position: fixed;
+    top: 70px;
+    right: 0;
+    width: 320px;
+    height: calc(100vh - 70px);
+    background: #FFFFFF;
+    box-shadow: -3px 0px 6px #00000029;
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;
+  }
+
+  .mobileMenu.open {
+    transform: translateX(0);
+  }
+
+  .mobileMenuContent {
+    padding: 30px 25px;
+  }
+
+  .mobileCloseButton {
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobileCloseButton:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .mobileMenuNav {
+    margin-bottom: 40px;
+  }
+
+  .mobileMenuList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .mobileMenuItem {
+    margin-bottom: 20px;
+  }
+
+  .mobileMenuItem a {
+    display: block;
+    font-family: 'FinalSix', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #1A1818;
+    text-decoration: none;
+    padding: 15px 0;
+    border-bottom: 1px solid #F0F0F0;
+    transition: color 0.3s ease;
+  }
+
+  .mobileMenuItem a:hover {
+    color: #27A49F;
+  }
+
+  .mobileMenuActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .mobileMenuActionsLeft {
+    flex: 1;
+  }
+
+  .mobileMenuActionsRight {
+    flex: 0 0 auto;
+  }
+
+  /* Estilos específicos para botones dentro del menú móvil */
+  .mobileMenu .mobileMenuActions .buttonHablemos {
+    width: 200px !important;
+    height: 50px !important;
+    display: flex !important;
+  }
+
+  .mobileMenu .mobileMenuActions .buttonHablemos span {
+    font-size: 16px !important;
+  }
+
+  .mobileMenu .mobileMenuActions .buttonUser {
+    width: 50px !important;
+    height: 50px !important;
+    display: flex !important;
+  }
+
+  /* Ajustes para móviles pequeños */
+  @media (max-width: 480px) {
+    .mobileMenu {
+      top: 60px;
+      width: 280px;
+    }
+
+    .mobileMenuContent {
+      padding: 25px 20px;
+    }
+
+    .mobileMenuItem a {
+      font-size: 16px;
+      padding: 12px 0;
+    }
+
+    .mobileMenu .mobileMenuActions .buttonHablemos {
+      width: 160px !important;
+      height: 40px !important;
+    }
+
+    .mobileMenu .mobileMenuActions .buttonHablemos span {
+      font-size: 14px !important;
+    }
+
+    .mobileMenu .mobileMenuActions .buttonUser {
+      width: 40px !important;
+      height: 40px !important;
+    }
+
+    .hamburgerButton {
+      width: 36px;
+      height: 36px;
+    }
+
+    .hamburgerButton img {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
