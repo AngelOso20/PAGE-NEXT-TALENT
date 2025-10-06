@@ -168,7 +168,9 @@
   .imageBox {
     width: 100%;
     max-width: 1055px;
-    height: 400px;
+    height: auto;
+    aspect-ratio: 1055 / 728; /* mantener proporción en tablets */
+    overflow: hidden;
   }
   
   .title {

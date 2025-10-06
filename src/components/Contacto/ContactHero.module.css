@@ -358,8 +358,8 @@
   }
 
   .formRow {
-    justify-content: center; /* Centrado en móviles grandes */
-    margin-top: -400px; /* Margen negativo ajustado para posición óptima */
+    justify-content: center; /* Centrado en tablets */
+    margin-top: 24px; /* separar del bloque superior; evita superposición */
   }
 
   .contentWrapper {

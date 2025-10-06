@@ -198,13 +198,16 @@
   .topImageBox,
   .bottomImageBox {
     width: 300px;
-    height: 200px;
+    height: auto;
+    aspect-ratio: 528 / 304; /* conservar proporción en tablets */
+    overflow: hidden;
   }
   
   .largeImageBox {
     width: 100%;
     max-width: 510px;
-    height: 400px;
+    height: auto;
+    aspect-ratio: 510 / 630;
   }
   
   .title {

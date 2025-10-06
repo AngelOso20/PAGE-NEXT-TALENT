@@ -140,6 +140,38 @@
   }
 }
 
+/* Tablets: optimizar imagen y layout (768px–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .container {
+    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .blueBox,
+  .imageBox {
+    width: 100%;
+    max-width: 902px;
+    height: auto;
+    min-height: 600px;
+  }
+
+  .imageBox {
+    aspect-ratio: 902 / 933;
+    overflow: hidden;
+  }
+
+  .imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* que se vea completa sin deformarse */
+    object-position: center;
+  }
+
+  .blueBox { padding: 80px 40px; }
+}
+
 @media (max-width: 768px) {
   .container {
     padding-top: 60px;
