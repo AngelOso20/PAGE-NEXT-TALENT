@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 113px;
+  height: 90px;
   background: #FFFFFF;
   box-shadow: 0px 3px 6px #00000029;
   border-radius: 0px 0px 20px 20px;
@@ -20,12 +20,15 @@
 .navContainer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* Keep items aligned from the left; we'll push nav to the right with auto margin */
+  justify-content: flex-start;
   width: 100%;
   height: 100%;
-  max-width: 1400px;
+  /* Use full viewport width to allow logo far left and actions far right */
+  max-width: none;
   margin: 0 auto;
-  padding: 0 40px;
+  /* Bring logo even closer to the left edge */
+  padding: 0 40px 0 8px;
 }
 
 /* Logo */
@@ -33,6 +36,7 @@
   flex-shrink: 0;
   width: 205px;
   height: 56px;
+  margin-left: 24px;
 }
 
 .logo img {
@@ -46,14 +50,18 @@
   display: flex;
   align-items: center;
   flex: 1;
-  justify-content: center;
-  margin: 0 40px;
+  /* Push links to the right, away from the centered layout */
+  justify-content: flex-end;
+  /* Create a larger gap between logo and menu */
+  margin-left: auto;
+  margin-right: 32px;
 }
 
 .menuList {
   display: flex;
   list-style: none;
-  gap: 40px;
+  /* Tighter spacing so items look more grouped */
+  gap: 24px;
   margin: 0;
   padding: 0;
   align-items: center;
@@ -93,6 +101,8 @@
   align-items: center;
   gap: 20px;
   flex-shrink: 0;
+  /* Slight spacing between nav links and action buttons */
+  margin-left: 8px;
 }
 
 /* Desktop - Ocultar menú móvil por defecto */
@@ -387,6 +397,25 @@
   }
 }
 
+/* Móviles en vertical: empujar hamburguesa a la derecha y agrandarla */
+@media (max-width: 576px) and (orientation: portrait) {
+  .actions {
+    margin-left: auto;
+    margin-right: 6px;
+  }
+
+  .hamburgerButton {
+    width: 52px;
+    height: 52px;
+    padding: 12px;
+  }
+
+  .hamburgerButton img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
 /* Móviles pequeños */
 @media (max-width: 480px) {
   .navMenu {
@@ -566,5 +595,13 @@
       height: 20px;
     }
   }
+}
+
+/* Forzar tamaño mayor del hamburguesa en móviles muy pequeños (vertical) */
+@media (max-width: 480px) and (orientation: portrait) {
+  .navMenu { height: 68px; }
+  .hamburgerButton { width: 56px; height: 56px; padding: 12px; }
+  .hamburgerButton img { width: 34px; height: 34px; }
+  .actions { margin-right: 8px; }
 }
 

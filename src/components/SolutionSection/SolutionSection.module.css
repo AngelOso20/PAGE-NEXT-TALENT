@@ -215,3 +215,33 @@
   }
 }
 
+/* Mobile phones in portrait: prevent text clipping and ensure proper wrapping */
+@media (max-width: 576px) and (orientation: portrait) {
+  .subtitle,
+  .finalText {
+    width: 100%;
+    max-width: 92%;
+    padding: 0 16px; /* side padding so text breathes */
+    margin-left: auto;
+    margin-right: auto;
+    word-break: normal;
+    overflow-wrap: anywhere; /* allow wrap on long segments */
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 36px;
+  }
+
+  .finalText {
+    font-size: 17px;
+    line-height: 27px;
+    margin-top: 10px;
+  }
+
+  .solutionsGrid {
+    padding: 0 16px;
+  }
+}
+

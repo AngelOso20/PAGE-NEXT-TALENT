@@ -414,3 +414,37 @@
   }
 }
 
+/* Mobile phones in portrait: fix advisor blue box and image overflow */
+@media (max-width: 576px) and (orientation: portrait) {
+  .plansContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0 16px;
+  }
+
+  .advisorBox {
+    width: 100%;
+    max-width: 420px;
+    min-height: 480px; /* taller to fully show the face */
+    height: 480px;
+    margin-top: 8px; /* box a bit lower */
+    overflow: hidden; /* contain the image */
+  }
+
+  .advisorImage {
+    position: absolute;
+    bottom: -65px; /* shift image further up */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: auto;
+    z-index: 2; /* ensure image above blue background */
+  }
+
+  .advisorImage img {
+    width: 100%;
+    height: auto;
+  }
+}
+
