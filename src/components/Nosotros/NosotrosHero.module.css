@@ -158,5 +158,20 @@
   .blueBox {
     padding: 60px 30px;
   }
+
+  /* Mostrar imagen completa y bien encuadrada en móviles */
+  .imageBox {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 902 / 933; /* conserva proporción original */
+    overflow: hidden;
+  }
+
+  .imageBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* llena manteniendo proporción */
+    object-position: center; /* centra el sujeto */
+  }
 }
 

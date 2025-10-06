@@ -396,7 +396,7 @@
 
 @media (max-width: 768px) {
   .contactHero {
-    padding: 80px 0 40px 0;
+    padding: 100px 0 40px 0; /* bajar más el hero respecto al nav */
   }
 
   .heroContent {
@@ -409,7 +409,9 @@
   .imageContainer {
     width: 100%;
     max-width: 902px;
-    height: 300px;
+    height: auto;
+    aspect-ratio: 902 / 933;
+    overflow: hidden;
   }
 
   .contentCard {
@@ -428,7 +430,7 @@
 
   .formRow {
     justify-content: center; /* Centrado en móviles */
-    margin-top: -400px; /* Margen negativo ajustado para posición óptima */
+    margin-top: 16px; /* separar del hero */
   }
 
   .contentWrapper {
@@ -467,7 +469,7 @@
 
 @media (max-width: 480px) {
   .contactHero {
-    padding: 60px 0 30px 0;
+    padding: 90px 0 30px 0; /* extra aire en móviles pequeños */
   }
 
   .container {
@@ -484,7 +486,8 @@
   .imageContainer {
     width: 100%;
     max-width: 902px;
-    height: 250px;
+    height: auto;
+    aspect-ratio: 902 / 933;
   }
 
   .contentCard {
@@ -503,7 +506,7 @@
 
   .formRow {
     justify-content: center; /* Centrado en móviles pequeños */
-    margin-top: -400px; /* Margen negativo ajustado para posición óptima */
+    margin-top: 16px; /* sin solapar la imagen */
   }
 
   .contentWrapper {
