@@ -65,11 +65,12 @@
 
 /* Cuadro naranja - top: 2898px, left: 50px, 443x304px */
 .orangeBox {
-  width: 340px;            /* más angosto para dejar aire a la grilla */
-  height: 420px;           /* más alto para alinear verticalmente */
+  width: 320px;            /* más angosto para alinear con el azul */
+  height: 260px;           /* más corto */
   background: #FB8C05;
   border-radius: 20px;
-  padding: 36px 28px 36px; /* ajustar para el nuevo tamaño */
+  padding: 28px 24px;      /* padding compacto */
+  margin-left: 15px;       /* mover un poco más a la derecha */
   display: flex;
   align-items: center;
   opacity: 1;
@@ -187,6 +188,16 @@
   .iconContainer {
     width: clamp(65px, 4.63vw, 89px);
     height: clamp(55px, 4.01vw, 77px);
+  }
+}
+
+/* Laptops (1280–1600px): forzar tamaño y proporción del cuadro naranja */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .valoresSection .orangeBox {
+    width: 300px;                 /* más angosto en laptops */
+    height: 260px !important;     /* misma altura que el ajuste base */
+    padding: 24px 20px;
+    margin-left: 36px;
   }
 }
 
