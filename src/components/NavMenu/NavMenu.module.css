@@ -271,6 +271,19 @@
   }
 }
 
+/* Tablets (portrait/landscape): 768px–1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navMenu { height: 80px; }
+  .navContainer { padding: 0 16px; }
+  .logo { width: 170px; height: 48px; }
+  .nav { margin: 0 12px; }
+  .menuList { gap: 18px; }
+  .menuItem a { font-size: 15px; padding: 6px 8px; }
+  /* Ocultar botones de acción para evitar corte en tablets */
+  .actions .buttonHablemos,
+  .actions .buttonUser { display: none !important; }
+}
+
 /* Tablets pequeñas */
 @media (max-width: 900px) {
   .navContainer {

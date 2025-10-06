@@ -414,6 +414,34 @@
   }
 }
 
+/* Tablets: reorganizar en 2x2 y contener imagen asesora (768px–1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .plansContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    align-items: stretch;
+    padding: 0 20px;
+  }
+
+  /* Orden 2x2: [asesora | plan 1] \n [plan 2 | plan 3] */
+  /* Igualar/llenar altura de fila de grid frente a la tarjeta */
+  .advisorBox {
+    grid-column: 1;
+    grid-row: 1;
+    overflow: hidden;
+    min-height: 700px; /* punto de partida, pero además llenamos la fila */
+    height: 100%; /* estira para igualar la altura real de la fila (la del plan) */
+  }
+  .planCard:nth-of-type(1) { grid-column: 2; grid-row: 1; }
+  .planCard:nth-of-type(2) { grid-column: 1; grid-row: 2; }
+  .planCard:nth-of-type(3) { grid-column: 2; grid-row: 2; }
+
+  /* Contener imagen de asesora dentro del cuadro */
+  .advisorImage { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 85%; height: auto; }
+  .advisorImage img { width: 100%; height: auto; }
+}
+
 /* Mobile phones in portrait: fix advisor blue box and image overflow */
 @media (max-width: 576px) and (orientation: portrait) {
   .plansContainer {
