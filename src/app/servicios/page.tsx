@@ -13,7 +13,7 @@ export default function ServiciosPage() {
   return (
     <main>
       <NavMenu />
-      image.png
+      <ServiciosHero />
       <ServiciosCards />
       <BlogSection />
     </main>

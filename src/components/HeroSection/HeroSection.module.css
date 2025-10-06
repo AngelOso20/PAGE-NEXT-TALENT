@@ -545,3 +545,66 @@
   }
 }
 
+/* Laptops: estilos anulados (volver a comportamiento por defecto) */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  /* Laptops: optimizar para que se vean las 3 cajas sin scroll */
+  .heroSection { padding-top: 84px; }
+
+  /* Caja blanca principal más compacta */
+  .leftBox { height: 420px; }
+
+  /* Caja naranja compacta y con separación */
+  .orangeBox {
+    width: 288px;
+    min-height: 280px;             /* paso 1: altura unificada */
+    margin-bottom: 12px; /* separa de la azul */
+    box-sizing: border-box;
+    padding: 14px 16px;
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .orangeBox h3 { font-size: 16px; line-height: 19px; margin: 0 0 8px 0; }
+  .orangeBox p { font-size: 12px; line-height: 18px; margin: 0 0 8px 0; }
+  .orangeText { font-size: 12px; line-height: 18px; margin: 0 0 8px 0; }
+  .orangeSubtext { font-size: 12px; line-height: 18px; }
+  .orangeIcon { width: 40px; height: 40px; margin: 2px 0 8px 0; }
+  .orangeIcon img { width: 40px; height: 40px; object-fit: contain; }
+
+  /* Ajustes solo para contener texto/botón dentro del cuadro azul */
+  .blueBox {
+    position: relative;
+    z-index: 3;                     /* evitar que la tape la caja blanca */
+    display: flex;                  /* organizar contenido vertical */
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    padding: 14px 16px;             /* paso 1: igual padding que la blanca */
+    overflow: hidden;
+    min-height: 280px;              /* paso 1: altura unificada */
+    width: 288px;                   /* paso 1: mismo ancho */
+    margin-top: -148px;              /* paso 5: respiro uniforme respecto a la blanca */
+  }
+  .blueIcon { position: relative; width: 40px; height: 40px; margin: 2px 0 8px 0; }
+  .blueText {
+    margin: 2px 0 8px 0;
+    font-size: 12px;
+    line-height: 18px;
+    max-width: 100%;              /* igual ancho de texto que la blanca */
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    white-space: normal;
+    text-align: left;              /* nunca justificar */
+    flex: 0 0 auto;                /* no crecer para que el botón tenga espacio */
+  }
+  .orangeButton {
+    position: relative;
+    width: 72%;                    /* un poco más compacto y centrado */
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 8px auto 0;            /* centrar y con respiro respecto al texto */
+  }
+  .phoneIcon { width: 15px !important; height: 15px !important; }
+  .orangeButton span { font-size: 13px; line-height: 28px; }
+}
+
