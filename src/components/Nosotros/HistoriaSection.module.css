@@ -22,19 +22,14 @@
 .imageBox {
   position: relative;
   width: 902px;
-  height: 728px;
+  height: 800px; /* aumentar más para alinear con cards */
   border-radius: 20px;
   overflow: hidden;
   opacity: 1;
   flex-shrink: 0;
 }
 
-.imageBox img {
-  width: 902px;
-  height: 728px;
-  object-fit: cover;
-  border-radius: 20px;
-}
+.imageBox img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
 
 /* Columna derecha */
 .rightColumn {
@@ -112,10 +107,10 @@
 /* Card pequeña - 290x304px */
 .historiaCard {
   width: 100%;
-  height: 304px;
+  height: 280px; /* base; valores específicos se fijan por media query */
   background: #FFFFFF;
   border-radius: 20px;
-  padding: 84px 40px 64px;
+  padding: 28px 30px 36px; /* subir al máximo razonable */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -124,9 +119,9 @@
 
 /* Contenedor del icono */
 .cardIconContainer {
-  width: 89px;
-  height: 86px;
-  margin-bottom: 34px;
+  width: 68px; /* pequeño para no desbordar */
+  height: 64px;
+  margin-bottom: 8px; /* aún más arriba respecto al texto */
   flex-shrink: 0;
 }
 
@@ -200,6 +195,13 @@
     width: clamp(65px, 4.63vw, 89px);
     height: clamp(63px, 4.48vw, 86px);
   }
+}
+
+/* Laptops 1280–1600px: forzar altura más baja para alinear con la imagen inferior */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .historiaCard { height: 180px; padding: 14px 16px 18px; }
+  .cardIconContainer { width: 44px; height: 40px; margin-bottom: 4px; }
+  .cardText { font-size: 12px; line-height: 18px; margin-top: 8px; }
 }
 
 @media (max-width: 1400px) {

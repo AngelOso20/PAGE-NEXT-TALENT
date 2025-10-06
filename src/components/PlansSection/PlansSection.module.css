@@ -316,6 +316,18 @@
   }
 }
 
+/* Laptops: 1280–1600px — contener imagen de asesora y evitar desbordes de texto/botón */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .advisorBox { overflow: hidden; }
+  .advisorImage { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 85%; height: auto; }
+  .advisorImage img { width: 100%; height: auto; object-fit: contain; }
+
+  .planCard { box-sizing: border-box; padding: 36px 22px 134px; overflow: hidden; min-height: 900px; }
+  .planTitle { font-size: 30px; line-height: 36px; margin-bottom: 30px; }
+  .planDescription { max-width: 100%; word-break: break-word; overflow-wrap: anywhere; font-size: 15px; line-height: 24px; }
+  .planButton { width: 220px; height: 36px; font-size: 15px; line-height: 32px; bottom: 14px; }
+}
+
 @media (max-width: 1400px) {
   .plansSection {
     padding-top: 80px;

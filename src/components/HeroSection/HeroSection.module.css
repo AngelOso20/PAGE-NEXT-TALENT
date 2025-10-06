@@ -560,14 +560,14 @@
     margin-bottom: 12px; /* separa de la azul */
     box-sizing: border-box;
     padding: 14px 16px;
-    display: flex; flex-direction: column; align-items: flex-start;
+    display: flex; flex-direction: column; align-items: flex-start; gap: 6px; /* gap como referencia */
   }
-  .orangeBox h3 { font-size: 16px; line-height: 19px; margin: 0 0 8px 0; }
-  .orangeBox p { font-size: 12px; line-height: 18px; margin: 0 0 8px 0; }
-  .orangeText { font-size: 12px; line-height: 18px; margin: 0 0 8px 0; }
-  .orangeSubtext { font-size: 12px; line-height: 18px; }
-  .orangeIcon { width: 40px; height: 40px; margin: 2px 0 8px 0; }
-  .orangeIcon img { width: 40px; height: 40px; object-fit: contain; }
+  .orangeBox h3 { font-size: 15px; line-height: 18px; margin: 0 0 6px 0; }
+  .orangeBox p { font-size: 11.5px; line-height: 17px; margin: 0 0 6px 0; }
+  .orangeText { font-size: 11.5px; line-height: 17px; margin: 0 0 6px 0; }
+  .orangeSubtext { font-size: 11.5px; line-height: 17px; }
+  .orangeIcon { width: 36px; height: 36px; margin: 0 0 6px 0; }
+  .orangeIcon img { width: 36px; height: 36px; object-fit: contain; }
 
   /* Ajustes solo para contener texto/botón dentro del cuadro azul */
   .blueBox {
@@ -577,34 +577,36 @@
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 14px 16px;             /* paso 1: igual padding que la blanca */
+    padding: 14px 16px;             /* igual padding que la blanca */
     overflow: hidden;
-    min-height: 280px;              /* paso 1: altura unificada */
+    min-height: 300px;              /* un poco más alta para alojar botón */
     width: 288px;                   /* paso 1: mismo ancho */
-    margin-top: -148px;              /* paso 5: respiro uniforme respecto a la blanca */
+    margin-top: -148px;              /* respiro uniforme respecto a la blanca */
+    gap: 6px;                        /* gap como referencia */
   }
-  .blueIcon { position: relative; width: 40px; height: 40px; margin: 2px 0 8px 0; }
+  .blueIcon { position: relative; width: 36px; height: 36px; margin: 0 0 6px 0; }
   .blueText {
-    margin: 2px 0 8px 0;
-    font-size: 12px;
-    line-height: 18px;
-    max-width: 100%;              /* igual ancho de texto que la blanca */
+    margin: 0 0 6px 0;            /* igual a la caja blanca */
+    font-size: 11.5px;
+    line-height: 17px;
+    max-width: 96%;              /* ancho similar para saltos equivalentes */
     word-break: break-word;
     overflow-wrap: anywhere;
     white-space: normal;
     text-align: left;              /* nunca justificar */
-    flex: 0 0 auto;                /* no crecer para que el botón tenga espacio */
+    flex: 0 0 auto;
+    align-self: flex-start;        /* forzar misma alineación que en blanca */
   }
   .orangeButton {
     position: relative;
-    width: 72%;                    /* un poco más compacto y centrado */
-    height: 28px;
+    width: 70%;                    /* compacto y centrado */
+    height: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 8px auto 0;            /* centrar y con respiro respecto al texto */
+    margin: 10px auto 0;           /* respiro como en la referencia */
   }
-  .phoneIcon { width: 15px !important; height: 15px !important; }
-  .orangeButton span { font-size: 13px; line-height: 28px; }
+  .phoneIcon { width: 14px !important; height: 14px !important; }
+  .orangeButton span { font-size: 12.5px; line-height: 26px; }
 }
 

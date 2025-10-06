@@ -110,6 +110,12 @@
   }
 }
 
+/* Laptops (1280–1600px): asegurar imagen completa y bien encuadrada */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .imageBox { overflow: hidden; }
+  .imageBox img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+}
+
 @media (max-width: 1400px) {
   .nosotrosHero {
     min-height: auto;

@@ -65,11 +65,11 @@
 
 /* Cuadro naranja - top: 2898px, left: 50px, 443x304px */
 .orangeBox {
-  width: 443px;
-  height: 304px;
+  width: 340px;            /* más angosto para dejar aire a la grilla */
+  height: 420px;           /* más alto para alinear verticalmente */
   background: #FB8C05;
   border-radius: 20px;
-  padding: 86px 52px 64px;
+  padding: 36px 28px 36px; /* ajustar para el nuevo tamaño */
   display: flex;
   align-items: center;
   opacity: 1;
