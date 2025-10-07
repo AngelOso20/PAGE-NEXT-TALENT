@@ -550,13 +550,13 @@
   /* Laptops: optimizar para que se vean las 3 cajas sin scroll */
   .heroSection { padding-top: 84px; }
 
-  /* Caja blanca principal más compacta */
-  .leftBox { height: 420px; }
+  /* Caja blanca principal (con imagen): más larga por abajo */
+  .leftBox { height: 518px; }
 
   /* Caja naranja compacta y con separación */
   .orangeBox {
     width: 288px;
-    min-height: 240px;             /* altura reducida */
+    min-height: 240px;             /* más largo por la parte inferior */
     margin-bottom: 12px; /* separa de la azul */
     box-sizing: border-box;
     padding: 14px 16px;
@@ -609,13 +609,13 @@
     position: relative;
     top: 0 !important;              /* anula top: 328px del estilo base */
     left: 0 !important;             /* anula left del estilo base */
-    width: 70%;                    /* compacto */
+    width: 88%;                    /* más ancho para evitar desbordes */
     height: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: flex-start;        /* alinear con el texto a la izquierda */
-    margin: -2px 0 0 8px;          /* pegar más al texto (solo botón) */
+    margin: -55px 0 0 8px;         /* subir aún más el botón */
   }
   .phoneIcon { width: 14px !important; height: 14px !important; }
   .orangeButton span { font-size: 12.5px; line-height: 26px; }
