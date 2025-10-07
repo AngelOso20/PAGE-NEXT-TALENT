@@ -551,7 +551,35 @@
   .heroSection { padding-top: 84px; }
 
   /* Caja blanca principal (con imagen): más larga por abajo */
-  .leftBox { height: 518px; }
+  .leftBox { height: 518px; overflow: hidden; }
+
+  /* Reposicionar y compactar títulos para que no desborden */
+  .mainTitle {
+    top: 160px;
+    left: 64px;
+    width: 620px;
+    font-size: 56px;
+    line-height: 64px;
+  }
+
+  .subtitle {
+    top: 320px;
+    left: 64px;
+    width: 620px;
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  /* Imagen contenida y sin fondo visible */
+  .workerImage {
+    top: 16px;               /* subir aún más la imagen */
+    left: auto;
+    right: 64px;             /* mantenerla dentro del borde derecho */
+    width: 280px;            /* reducir aún más el tamaño */
+    height: auto;
+    z-index: 1;
+  }
+  .workerImage img { width: 100%; height: auto; object-fit: contain; background: transparent; }
 
   /* Caja naranja compacta y con separación */
   .orangeBox {
@@ -619,5 +647,12 @@
   }
   .phoneIcon { width: 14px !important; height: 14px !important; }
   .orangeButton span { font-size: 12.5px; line-height: 26px; }
+
+  /* Mover la imagen de fondo del cuadro principal hacia la derecha */
+  .backgroundPattern {
+    background-size: 55% auto;        /* hacerla más pequeña */
+    background-position: 45% center; /* mover un poco hacia la izquierda */
+    opacity: 0.95; /* mantener visible */
+  }
 }
 
