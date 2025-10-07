@@ -556,7 +556,7 @@
   /* Caja naranja compacta y con separación */
   .orangeBox {
     width: 288px;
-    min-height: 280px;             /* paso 1: altura unificada */
+    min-height: 240px;             /* altura reducida */
     margin-bottom: 12px; /* separa de la azul */
     box-sizing: border-box;
     padding: 14px 16px;
@@ -564,9 +564,12 @@
   }
   .orangeBox h3 { font-size: 15px; line-height: 18px; margin: 0 0 6px 0; }
   .orangeBox p { font-size: 11.5px; line-height: 17px; margin: 0 0 6px 0; }
-  .orangeText { font-size: 11.5px; line-height: 17px; margin: 0 0 6px 0; }
-  .orangeSubtext { font-size: 11.5px; line-height: 17px; }
-  .orangeIcon { width: 36px; height: 36px; margin: 0 0 6px 0; }
+  .orangeText { font-size: 11.5px; line-height: 17px; margin: 18px 0 6px 0; margin-left: 8px; } /* subir más el texto y alinearlo a la derecha */
+  /* Regla más específica para vencer a .orangeBox p y asegurar el desplazamiento */
+  .orangeBox p.orangeText { margin: 36px 0 6px 0; margin-left: 8px; }
+  .orangeSubtext { font-size: 11.5px; line-height: 17px; margin-left: 8px; }
+  .orangeBox p.orangeSubtext { margin-left: 8px; }
+  .orangeIcon { width: 36px; height: 36px; margin: 0 0 32px 0; } /* mucho más espacio bajo el icono */
   .orangeIcon img { width: 36px; height: 36px; object-fit: contain; }
 
   /* Ajustes solo para contener texto/botón dentro del cuadro azul */
@@ -577,16 +580,21 @@
     flex-direction: column;
     align-items: flex-start;
     box-sizing: border-box;
-    padding: 14px 16px;             /* igual padding que la blanca */
+    padding: 14px 16px 0;           /* remover casi todo el espacio inferior */
     overflow: hidden;
-    min-height: 300px;              /* un poco más alta para alojar botón */
+    min-height: 232px;              /* recorte fuerte por la parte inferior */
     width: 288px;                   /* paso 1: mismo ancho */
-    margin-top: -148px;              /* respiro uniforme respecto a la blanca */
+    margin-top: -190px;              /* subir más la caja azul en laptops */
     gap: 6px;                        /* gap como referencia */
   }
-  .blueIcon { position: relative; width: 36px; height: 36px; margin: 0 0 6px 0; }
+  .blueIcon { position: relative; top: 0 !important; left: 0 !important; width: 36px; height: 36px; margin: 0 0 32px 0; align-self: flex-start; } /* esquina superior izquierda exacta */
+  .blueIcon img { width: 36px; height: 36px; object-fit: contain; } /* asegurar tamaño del ícono dentro de la azul */
   .blueText {
-    margin: 0 0 6px 0;            /* igual a la caja blanca */
+    position: relative;            /* anular position: absolute del estilo base */
+    top: 0 !important;
+    left: 0 !important;
+    margin: 30px 0 6px 0;         /* subir/bajar para igualar con la caja blanca */
+    margin-left: 8px;             /* alinear con el icono */
     font-size: 11.5px;
     line-height: 17px;
     max-width: 96%;              /* ancho similar para saltos equivalentes */
@@ -599,12 +607,15 @@
   }
   .orangeButton {
     position: relative;
-    width: 70%;                    /* compacto y centrado */
+    top: 0 !important;              /* anula top: 328px del estilo base */
+    left: 0 !important;             /* anula left del estilo base */
+    width: 70%;                    /* compacto */
     height: 26px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px auto 0;           /* respiro como en la referencia */
+    align-self: flex-start;        /* alinear con el texto a la izquierda */
+    margin: -2px 0 0 8px;          /* pegar más al texto (solo botón) */
   }
   .phoneIcon { width: 14px !important; height: 14px !important; }
   .orangeButton span { font-size: 12.5px; line-height: 26px; }
