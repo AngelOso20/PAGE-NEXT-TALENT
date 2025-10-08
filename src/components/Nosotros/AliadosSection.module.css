@@ -152,6 +152,72 @@
   }
 }
 
+/* Laptops (1280–1600px): hacer componente más compacto para que quepa en pantalla */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .aliadosSection {
+    padding: 50px 0; /* Reducir padding vertical */
+  }
+  
+  .container {
+    gap: 12px; /* Reducir gap entre elementos */
+  }
+  
+  .textBox {
+    width: 580px; /* Más angosto */
+    height: 500px; /* Altura fija más pequeña */
+    min-height: 500px;
+    max-height: 500px;
+    padding: 40px 25px; /* Padding más compacto */
+  }
+  
+  .title {
+    font-size: 38px; /* Reducir tamaño del título */
+    line-height: 42px;
+    margin-bottom: 20px; /* Menos espacio */
+  }
+  
+  .introText {
+    font-size: 16px; /* Reducir tamaño del texto introductorio */
+    line-height: 24px;
+    margin-bottom: 20px; /* Menos espacio */
+  }
+  
+  .servicesList li {
+    font-size: 14px; /* Reducir tamaño de fuente de la lista */
+    line-height: 20px; /* Menos interlineado */
+    margin-bottom: 6px; /* Menos espacio entre elementos */
+  }
+  
+  .imagesContainer {
+    gap: 16px; /* Reducir gap entre imágenes */
+  }
+  
+  .topImageBox,
+  .bottomImageBox {
+    width: 400px; /* Más angosto */
+    height: 244px; /* Altura ajustada para alineación perfecta */
+    min-height: 244px;
+    max-height: 244px;
+  }
+  
+  .largeImageBox {
+    width: 400px; /* Más angosto */
+    height: 500px; /* Misma altura que el cuadro de texto */
+    min-height: 500px;
+    max-height: 500px;
+  }
+  
+  .serviceImage {
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .largeImage {
+    object-fit: cover;
+    object-position: center top; /* Ajustar para mostrar mejor la imagen sin recortes */
+  }
+}
+
 @media (max-width: 1600px) {
   .textBox {
     width: 600px;

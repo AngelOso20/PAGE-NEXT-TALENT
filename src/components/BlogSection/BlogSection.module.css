@@ -223,7 +223,67 @@
   }
 }
 
-@media (max-width: 1400px) {
+/* Responsive para laptops específicamente */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .blogSection {
+    padding: 60px 0;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* Centrar toda la sección */
+  }
+
+  .mainTitle {
+    font-size: 40px;
+    line-height: 45px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 50px;
+  }
+
+  .blogGrid {
+    grid-template-columns: repeat(4, 1fr) !important;
+    max-width: 1300px !important; /* Mismo ancho máximo que el hero */
+    gap: 12px !important;
+    justify-content: center !important; /* Centrar el grid */
+    margin: 0 auto !important; /* Centrar el grid */
+  }
+
+  .blogCard {
+    width: 100%;
+    height: auto;
+    min-height: 460px;
+  }
+
+  .imageContainer {
+    height: 240px;
+  }
+
+  .cardImage {
+    height: 240px;
+  }
+
+  .cardContent {
+    padding: 16px 20px 20px;
+  }
+
+  .cardTitle {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 12px;
+  }
+
+  .cardDescription {
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 1279px) {
   .blogSection {
     padding: 80px 0;
   }

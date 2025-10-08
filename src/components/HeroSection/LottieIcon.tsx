@@ -35,6 +35,6 @@ export default function LottieIcon() {
     }
   }, [])
 
-  return <div ref={containerRef} style={{ width: 98, height: 94, overflow: 'hidden' }} />
+  return <div ref={containerRef} className="lottie-icon" />
 }
 

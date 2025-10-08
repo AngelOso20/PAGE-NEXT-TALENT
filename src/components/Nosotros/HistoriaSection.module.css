@@ -197,11 +197,59 @@
   }
 }
 
-/* Laptops 1280–1600px: forzar altura más baja para alinear con la imagen inferior */
+/* Laptops 1280–1600px: alinear imagen con iconos en la parte inferior */
 @media (min-width: 1280px) and (max-width: 1600px) {
-  .historiaCard { height: 180px; padding: 14px 16px 18px; }
-  .cardIconContainer { width: 44px; height: 40px; margin-bottom: 4px; }
-  .cardText { font-size: 12px; line-height: 18px; margin-top: 8px; }
+  /* Ajustar altura de la imagen para que coincida con la columna derecha */
+  .imageBox { 
+    height: 510px; /* Punto intermedio para alineación óptima */
+    min-height: 510px;
+    max-height: 510px;
+  }
+  
+  /* Reducir altura del cuadro de historia */
+  .historiaBox { 
+    height: 320px; /* Reducir altura */
+    min-height: 320px;
+    max-height: 320px;
+    padding: 30px 30px;
+  }
+  
+  /* Ajustar tipografías para que quepan mejor */
+  .title { 
+    font-size: 42px; 
+    line-height: 48px; 
+    margin-bottom: 20px; 
+  }
+  
+  .orangeText { 
+    font-size: 17px; 
+    line-height: 26px; 
+    margin-bottom: 20px; 
+  }
+  
+  .grayText { 
+    font-size: 15px; 
+    line-height: 22px; 
+    margin-bottom: 10px; 
+  }
+  
+  /* Ajustar cards de iconos */
+  .historiaCard { 
+    height: 180px; 
+    padding: 14px 16px 18px; 
+  }
+  
+  .cardIconContainer { 
+    width: 44px; 
+    height: 40px; 
+    margin-bottom: 4px; 
+  }
+  
+  .cardText { 
+    font-size: 12px; 
+    line-height: 18px; 
+    margin-top: 8px; 
+  }
 }
 
 @media (max-width: 1400px) {

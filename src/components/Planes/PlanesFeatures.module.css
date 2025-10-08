@@ -82,7 +82,34 @@
   }
 }
 
-@media (max-width: 1600px) {
+/* Responsive para laptops específicamente */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .featuresContainer {
+    margin-top: 05px;
+    margin-left: 20px;
+    width: 380px;
+  }
+  
+  .featureCard {
+    height: auto;
+    min-height: 80px;
+    padding: 15px 16px;
+    gap: 16px;
+    width: 100%;
+  }
+  
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .featureText {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 1279px) {
   .featuresContainer {
     margin-top: -300px;
   }

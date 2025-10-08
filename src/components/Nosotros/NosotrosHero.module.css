@@ -110,10 +110,49 @@
   }
 }
 
-/* Laptops (1280–1600px): asegurar imagen completa y bien encuadrada */
+/* Laptops (1280–1600px): hacer hero más compacto para que quepa en pantalla */
 @media (min-width: 1280px) and (max-width: 1600px) {
-  .imageBox { overflow: hidden; }
-  .imageBox img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+  .nosotrosHero { 
+    padding-top: 80px; /* Aumentar espaciado superior para separar del navmenu */
+    min-height: 600px; /* Altura mucho más compacta */
+    padding-bottom: 40px;
+  }
+  
+  .container { 
+    padding-top: 30px; /* Aumentar un poco el espaciado del container */
+  }
+  
+  .blueBox { 
+    padding: 60px 25px; /* Padding mucho más compacto */
+    height: 600px; /* Altura fija */
+    min-height: 600px;
+    max-height: 600px;
+  }
+  
+  .title { 
+    font-size: 48px; /* Reducir tamaño del título */
+    line-height: 54px;
+    margin-bottom: 20px; /* Menos espacio entre elementos */
+  }
+  
+  .description { 
+    font-size: 22px; /* Reducir tamaño de descripción */
+    line-height: 30px;
+  }
+  
+  .imageBox { 
+    height: 600px; /* Misma altura que el cuadro azul */
+    min-height: 600px;
+    max-height: 600px;
+    overflow: hidden; 
+  }
+  
+  .imageBox img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center; 
+  }
 }
 
 @media (max-width: 1400px) {

@@ -356,6 +356,123 @@
   }
 }
 
+/* Media query específica para laptops (1280px - 1600px) */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .planesCards {
+    padding: 40px 0;
+  }
+  
+  .container {
+    padding: 0 25px;
+  }
+  
+  .cardsGrid {
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+  
+  /* Reducir altura de las tarjetas de planes */
+  .planCard {
+    height: 520px;
+    padding: 25px 20px 20px 20px;
+  }
+  
+  /* Reducir altura del cuadro naranja */
+  .quoteCard {
+    height: 520px;
+  }
+  
+  /* Reducir altura de la imagen del cuadro naranja */
+  .quoteImage {
+    height: 300px;
+  }
+  
+  /* Reducir altura de la columna de imágenes */
+  .imagesColumn {
+    height: 520px;
+  }
+  
+  /* Reducir altura de las tarjetas de imagen */
+  .imageCard {
+    height: 240px;
+  }
+  
+  /* Reducir tamaños de fuente del título */
+  .planTitle {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 10px 0;
+  }
+  
+  .quoteTitle {
+    font-size: 24px;
+    line-height: 28px;
+    margin: 0 0 10px 0;
+  }
+  
+  /* Reducir tamaño de fuente del precio */
+  .price {
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0 0 10px 0;
+  }
+  
+  /* Reducir márgenes de elementos */
+  .desde {
+    margin: 0 0 3px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .target {
+    margin: 0 0 12px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .description {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .includesTitle {
+    margin: 0 0 8px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .featuresList {
+    margin: 0 0 15px 0;
+  }
+  
+  .featureItem {
+    margin: 0 0 4px 0;
+    font-size: 13px;
+    line-height: 18px;
+  }
+  
+  .quoteDescription {
+    margin: 0 0 15px 0;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  /* Reducir padding del contenido del cuadro naranja */
+  .quoteContent {
+    padding: 15px;
+  }
+  
+  /* Reducir tamaño de botones */
+  .buyButton,
+  .calculateButton {
+    width: 200px;
+    height: 35px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+}
+
 @media (max-width: 1600px) {
   .cardsGrid {
     grid-template-columns: repeat(3, 1fr);

@@ -117,6 +117,14 @@
   object-fit: contain;
 }
 
+/* Estilos para iconos Lottie */
+.orangeIcon .lottie-icon,
+.blueIcon .lottie-icon {
+  width: 98px;
+  height: 94px;
+  overflow: hidden;
+}
+
 .orangeText {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
@@ -246,6 +254,8 @@
   opacity: 1;
   white-space: nowrap;
 }
+
+
 
 /* Sistema Responsive */
 @media (max-width: 1920px) {
@@ -477,6 +487,145 @@
   }
 }
 
+/* Laptops: Reducir proporcionalmente todos los elementos del hero */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  /* Reducir el contenedor principal */
+  .heroSection {
+    min-height: 800px; /* Reducido de 1062px */
+    padding-top: 85px; /* Reducido de 113px */
+  }
+
+  /* Reducir el cuadro izquierdo principal */
+  .leftBox {
+    top: 97px; /* Reducido de 129px */
+    left: 38px; /* Reducido de 50px */
+    width: 1021px; /* Reducido de 1361px */
+    height: 700px; /* Reducido de 933px */
+  }
+
+  /* Reducir el título principal */
+  .mainTitle {
+    top: 158px; /* Reducido de 211px */
+    left: 29px; /* Reducido de 39px */
+    width: 561px; /* Reducido de 748px */
+    height: 128px; /* Reducido de 170px */
+    font-size: 50px; /* Reducido de 67px */
+    line-height: 56px; /* Reducido de 75px */
+  }
+
+  /* Reducir el subtítulo */
+  .subtitle {
+    top: 296px; /* Reducido de 394px */
+    left: 29px; /* Reducido de 39px */
+    width: 462px; /* Reducido de 616px */
+    height: 63px; /* Reducido de 84px */
+    font-size: 21px; /* Reducido de 28px */
+    line-height: 29px; /* Reducido de 38px */
+  }
+
+  /* Reducir la imagen del trabajador */
+  .workerImage {
+    top: 18px; /* Reducido de 24px */
+    left: 574px; /* Reducido de 765px */
+    width: 404px; /* Reducido de 538px */
+    height: 682px; /* Reducido de 909px */
+  }
+
+  .workerImage img {
+    width: 404px; /* Reducido de 538px */
+    height: 682px; /* Reducido de 909px */
+  }
+
+  /* Reducir el cuadro naranja */
+  .orangeBox {
+    top: 97px; /* Reducido de 129px */
+    left: 1070px; /* Reducido de 1427px */
+    width: 332px; /* Reducido de 443px */
+    min-height: 285px; /* Reducido de 380px */
+    padding: 34px 37px 30px; /* Reducido de 45px 49px 40px */
+  }
+
+  .orangeIcon {
+    width: 74px; /* Reducido de 98px */
+    height: 71px; /* Reducido de 94px */
+    margin-bottom: 15px; /* Reducido de 20px */
+  }
+
+  .orangeIcon img {
+    width: 74px; /* Reducido de 98px */
+    height: 71px; /* Reducido de 94px */
+  }
+
+  /* Reducir iconos Lottie para laptops */
+  .orangeIcon .lottie-icon,
+  .blueIcon .lottie-icon {
+    width: 74px !important; /* Reducido de 98px */
+    height: 71px !important; /* Reducido de 94px */
+  }
+
+  .orangeText {
+    font-size: 14px; /* Reducido de 19px */
+    line-height: 23px; /* Reducido de 31px */
+    letter-spacing: 0.35px; /* Reducido de 0.47px */
+    margin: 0 0 11px 0; /* Reducido de 0 0 15px 0 */
+  }
+
+  .orangeSubtext {
+    font-size: 12px; /* Reducido de 16px */
+    line-height: 20px; /* Reducido de 26px */
+  }
+
+  /* Reducir el cuadro azul */
+  .blueBox {
+    top: 450px; /* Subido un poco más para alinearse mejor con la caja blanca */
+    left: 1070px; /* Reducido de 1427px */
+    width: 332px; /* Reducido de 443px */
+    height: 308px; /* Reducido de 411px */
+  }
+
+  .blueIcon {
+    top: 34px; /* Reducido de 45px */
+    left: 41px; /* Reducido de 55px */
+    width: 74px; /* Reducido de 98px */
+    height: 71px; /* Reducido de 94px */
+  }
+
+  .blueIcon img {
+    width: 74px; /* Reducido de 98px */
+    height: 71px; /* Reducido de 94px */
+  }
+
+  .blueText {
+    top: 118px; /* Reducido de 157px */
+    left: 37px; /* Reducido de 49px */
+    width: 260px; /* Reducido de 346px */
+    height: 90px; /* Reducido de 120px */
+    font-size: 14px; /* Reducido de 19px */
+    line-height: 23px; /* Reducido de 31px */
+    letter-spacing: 0.35px; /* Reducido de 0.47px */
+  }
+
+  .orangeButton {
+    top: 246px; /* Reducido de 328px */
+    left: 37px; /* Reducido de 49px */
+    width: 193px; /* Reducido de 257px */
+    height: 30px; /* Reducido de 40px */
+    border-radius: 15px; /* Reducido de 20px */
+  }
+
+  .phoneIcon {
+    left: 11px; /* Reducido de 15px */
+    width: 14px !important; /* Reducido de 18px */
+    height: 13px !important; /* Reducido de 17px */
+  }
+
+  .orangeButton span {
+    left: 31px; /* Reducido de 41px */
+    font-size: 13px; /* Reducido de 17px */
+    line-height: 26px; /* Reducido de 34px */
+  }
+}
+
 /* Mobile phones in portrait: tighten layout and fix blue box overflow */
 @media (max-width: 576px) and (orientation: portrait) {
   .leftBox {
@@ -544,115 +693,3 @@
     background-position: center;
   }
 }
-
-/* Laptops: estilos anulados (volver a comportamiento por defecto) */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  /* Laptops: optimizar para que se vean las 3 cajas sin scroll */
-  .heroSection { padding-top: 84px; }
-
-  /* Caja blanca principal (con imagen): más larga por abajo */
-  .leftBox { height: 518px; overflow: hidden; }
-
-  /* Reposicionar y compactar títulos para que no desborden */
-  .mainTitle {
-    top: 160px;
-    left: 64px;
-    width: 620px;
-    font-size: 56px;
-    line-height: 64px;
-  }
-
-  .subtitle {
-    top: 320px;
-    left: 64px;
-    width: 620px;
-    font-size: 22px;
-    line-height: 32px;
-  }
-
-  /* Imagen contenida y sin fondo visible */
-  .workerImage {
-    top: 16px;               /* subir aún más la imagen */
-    left: auto;
-    right: 64px;             /* mantenerla dentro del borde derecho */
-    width: 280px;            /* reducir aún más el tamaño */
-    height: auto;
-    z-index: 1;
-  }
-  .workerImage img { width: 100%; height: auto; object-fit: contain; background: transparent; }
-
-  /* Caja naranja compacta y con separación */
-  .orangeBox {
-    width: 288px;
-    min-height: 240px;             /* más largo por la parte inferior */
-    margin-bottom: 12px; /* separa de la azul */
-    box-sizing: border-box;
-    padding: 14px 16px;
-    display: flex; flex-direction: column; align-items: flex-start; gap: 6px; /* gap como referencia */
-  }
-  .orangeBox h3 { font-size: 15px; line-height: 18px; margin: 0 0 6px 0; }
-  .orangeBox p { font-size: 11.5px; line-height: 17px; margin: 0 0 6px 0; }
-  .orangeText { font-size: 11.5px; line-height: 17px; margin: 18px 0 6px 0; margin-left: 8px; } /* subir más el texto y alinearlo a la derecha */
-  /* Regla más específica para vencer a .orangeBox p y asegurar el desplazamiento */
-  .orangeBox p.orangeText { margin: 36px 0 6px 0; margin-left: 8px; }
-  .orangeSubtext { font-size: 11.5px; line-height: 17px; margin-left: 8px; }
-  .orangeBox p.orangeSubtext { margin-left: 8px; }
-  .orangeIcon { width: 36px; height: 36px; margin: 0 0 32px 0; } /* mucho más espacio bajo el icono */
-  .orangeIcon img { width: 36px; height: 36px; object-fit: contain; }
-
-  /* Ajustes solo para contener texto/botón dentro del cuadro azul */
-  .blueBox {
-    position: relative;
-    z-index: 3;                     /* evitar que la tape la caja blanca */
-    display: flex;                  /* organizar contenido vertical */
-    flex-direction: column;
-    align-items: flex-start;
-    box-sizing: border-box;
-    padding: 14px 16px 0;           /* remover casi todo el espacio inferior */
-    overflow: hidden;
-    min-height: 232px;              /* recorte fuerte por la parte inferior */
-    width: 288px;                   /* paso 1: mismo ancho */
-    margin-top: -190px;              /* subir más la caja azul en laptops */
-    gap: 6px;                        /* gap como referencia */
-  }
-  .blueIcon { position: relative; top: 0 !important; left: 0 !important; width: 36px; height: 36px; margin: 0 0 32px 0; align-self: flex-start; } /* esquina superior izquierda exacta */
-  .blueIcon img { width: 36px; height: 36px; object-fit: contain; } /* asegurar tamaño del ícono dentro de la azul */
-  .blueText {
-    position: relative;            /* anular position: absolute del estilo base */
-    top: 0 !important;
-    left: 0 !important;
-    margin: 30px 0 6px 0;         /* subir/bajar para igualar con la caja blanca */
-    margin-left: 8px;             /* alinear con el icono */
-    font-size: 11.5px;
-    line-height: 17px;
-    max-width: 96%;              /* ancho similar para saltos equivalentes */
-    word-break: break-word;
-    overflow-wrap: anywhere;
-    white-space: normal;
-    text-align: left;              /* nunca justificar */
-    flex: 0 0 auto;
-    align-self: flex-start;        /* forzar misma alineación que en blanca */
-  }
-  .orangeButton {
-    position: relative;
-    top: 0 !important;              /* anula top: 328px del estilo base */
-    left: 0 !important;             /* anula left del estilo base */
-    width: 88%;                    /* más ancho para evitar desbordes */
-    height: 26px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-self: flex-start;        /* alinear con el texto a la izquierda */
-    margin: -55px 0 0 8px;         /* subir aún más el botón */
-  }
-  .phoneIcon { width: 14px !important; height: 14px !important; }
-  .orangeButton span { font-size: 12.5px; line-height: 26px; }
-
-  /* Mover la imagen de fondo del cuadro principal hacia la derecha */
-  .backgroundPattern {
-    background-size: 55% auto;        /* hacerla más pequeña */
-    background-position: 45% center; /* mover un poco hacia la izquierda */
-    opacity: 0.95; /* mantener visible */
-  }
-}
-

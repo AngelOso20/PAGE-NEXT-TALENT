@@ -135,6 +135,65 @@
   }
 }
 
+/* Laptops (1280–1600px): hacer componente más compacto para que quepa en pantalla */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .equipoSection {
+    padding: 50px 0; /* Reducir padding vertical */
+  }
+  
+  .container {
+    gap: 12px; /* Reducir gap entre elementos */
+  }
+  
+  .textBox {
+    width: 580px; /* Ancho optimizado */
+    height: 500px; /* Altura fija */
+    min-height: 500px;
+    max-height: 500px;
+    padding: 28px 22px; /* Padding ajustado a punto intermedio */
+  }
+  
+  .title {
+    font-size: 35px; /* Tamaño de título ajustado a punto intermedio */
+    line-height: 39px;
+    margin-bottom: 18px; /* Margen ajustado a punto intermedio */
+  }
+  
+  .introText {
+    font-size: 15px; /* Tamaño de texto introductorio ajustado a punto intermedio */
+    line-height: 22px;
+    margin-bottom: 18px; /* Margen ajustado a punto intermedio */
+  }
+  
+  .teamList {
+    margin-bottom: 18px; /* Margen ajustado a punto intermedio */
+  }
+  
+  .teamMember {
+    margin-bottom: 10px; /* Espacio entre miembros ajustado a punto intermedio */
+    gap: 2px; /* Espacio entre nombre y descripción */
+  }
+  
+  .memberName,
+  .memberDescription,
+  .conclusionText {
+    font-size: 13px; /* Tamaño de fuente de miembros ajustado a punto intermedio */
+    line-height: 18px; /* Interlineado ajustado a punto intermedio */
+  }
+  
+  .imageBox {
+    width: 700px; /* Más angosto */
+    height: 500px; /* Misma altura que el cuadro de texto */
+    min-height: 500px;
+    max-height: 500px;
+  }
+  
+  .teamImage {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
 @media (max-width: 1600px) {
   .textBox {
     width: 600px;

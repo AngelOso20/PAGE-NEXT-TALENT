@@ -141,6 +141,57 @@
   }
 }
 
+/* Laptops: 1280–1600px — alinear altura de imagen con caja blanca */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .problemSection { padding: 60px 0; }
+  
+  .container { gap: 12px; }
+  
+  /* Caja blanca con altura fija */
+  .contentBox { 
+    height: 480px; 
+    min-height: 480px; 
+    max-height: 480px;
+    padding: 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .title { 
+    font-size: 42px; 
+    line-height: 48px; 
+    margin-bottom: 16px; 
+  }
+  
+  .description { 
+    font-size: 17px; 
+    line-height: 26px; 
+    margin-bottom: 24px; 
+  }
+  
+  .problemList { 
+    font-size: 15px; 
+    line-height: 22px; 
+    flex-grow: 1;
+  }
+  
+  .problemList li { margin-bottom: 6px; }
+  
+  /* Imagen del chef con la misma altura que la caja blanca */
+  .imageBox { 
+    height: 480px; 
+    min-height: 480px; 
+    max-height: 480px;
+  }
+  
+  .imageBox img { 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: center;
+  }
+}
+
 @media (max-width: 1400px) {
   .problemSection {
     padding: 80px 0;

@@ -136,7 +136,51 @@
   }
 }
 
-@media (max-width: 1600px) {
+/* Responsive para laptops específicamente */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .serviciosCards {
+    padding: 40px 0;
+  }
+  
+  .cardsGrid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    max-width: 1350px;
+  }
+  
+  .card {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    padding: 25px 20px 20px 20px;
+  }
+  
+  .iconContainer {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 15px;
+  }
+  
+  .title {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 12px;
+  }
+  
+  .benefitLabel,
+  .benefitText {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+@media (max-width: 1279px) {
   .cardsGrid {
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;

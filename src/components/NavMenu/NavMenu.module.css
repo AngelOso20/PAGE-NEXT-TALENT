@@ -242,6 +242,62 @@
 
 /* Responsive Design */
 
+/* Media query específica para laptops (1280px - 1600px) */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .navMenu {
+    height: 60px;
+  }
+  
+  .navContainer {
+    padding: 0 25px 0 5px;
+  }
+  
+  .logo {
+    width: 160px;
+    height: 40px;
+    margin-left: 16px;
+  }
+  
+  .nav {
+    margin-right: 20px;
+  }
+  
+  .menuList {
+    gap: 16px;
+  }
+  
+  .menuItem a {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 6px 8px;
+  }
+  
+  .actions {
+    gap: 12px;
+    margin-left: 4px;
+  }
+  
+  .buttonHablemos {
+    width: 130px;
+    height: 32px;
+    gap: 6px;
+  }
+  
+  .buttonHablemos span {
+    font-size: 14px;
+  }
+  
+  .phoneIcon {
+    width: 14px !important;
+    height: 13px !important;
+  }
+  
+  .buttonUser {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 /* Tablets y pantallas medianas */
 @media (max-width: 1200px) {
   .navContainer {

@@ -113,7 +113,44 @@
   }
 }
 
-@media (max-width: 1600px) {
+/* Responsive para laptops específicamente */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .serviciosHero {
+    padding: 100px 0 50px 0;
+  }
+  
+  .heroBox {
+    height: 600px;
+  }
+  
+  .textContent {
+    padding: 80px 0 0 30px;
+    width: 550px;
+  }
+  
+  .title {
+    font-size: 45px;
+    line-height: 50px;
+    margin: 0 0 20px 0;
+  }
+  
+  .description {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  .imageContainer {
+    width: 700px;
+    height: 580px;
+  }
+  
+  .heroImage {
+    object-fit: contain;
+    object-position: center;
+  }
+}
+
+@media (max-width: 1279px) {
   .heroBox {
     height: 800px;
   }

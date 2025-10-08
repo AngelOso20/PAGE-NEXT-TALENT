@@ -126,7 +126,41 @@
   }
 }
 
-@media (max-width: 1600px) {
+/* Responsive para laptops específicamente */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .planesHero {
+    padding: 100px 0 40px 0;
+  }
+  
+  .heroBox {
+    height: 565px;
+  }
+  
+  .textContent {
+    padding: 80px 0 0 25px;
+    width: 450px;
+  }
+  
+  .title {
+    font-size: 38px;
+    line-height: 42px;
+    margin-bottom: 8px;
+  }
+  
+  .description {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .imageContainer {
+    width: 350px;
+    height: 550px;
+    right: 30px;
+    top: 25px;
+  }
+}
+
+@media (max-width: 1279px) {
   .heroBox {
     height: 800px;
   }

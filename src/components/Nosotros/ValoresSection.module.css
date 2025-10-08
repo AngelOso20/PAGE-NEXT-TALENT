@@ -191,13 +191,22 @@
   }
 }
 
-/* Laptops (1280–1600px): forzar tamaño y proporción del cuadro naranja */
+/* Laptops (1280–1600px): alinear cuadro naranja con cuadritos blancos */
 @media (min-width: 1280px) and (max-width: 1600px) {
   .valoresSection .orangeBox {
     width: 300px;                 /* más angosto en laptops */
-    height: 260px !important;     /* misma altura que el ajuste base */
+    height: 304px !important;     /* misma altura que los cuadritos blancos */
+    min-height: 304px;
+    max-height: 304px;
     padding: 24px 20px;
     margin-left: 36px;
+  }
+  
+  /* Asegurar que los cuadritos blancos tengan altura fija */
+  .valorCard {
+    height: 304px !important;
+    min-height: 304px;
+    max-height: 304px;
   }
 }
 

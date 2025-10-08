@@ -316,16 +316,30 @@
   }
 }
 
-/* Laptops: 1280–1600px — contener imagen de asesora y evitar desbordes de texto/botón */
+/* Laptops: 1280–1600px — optimizar para que quepa en 1 pantalla */
 @media (min-width: 1280px) and (max-width: 1600px) {
-  .advisorBox { overflow: hidden; }
-  .advisorImage { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 85%; height: auto; }
+  /* Contener la sección y reducir espacios verticales */
+  .plansSection { padding-top: 40px; padding-bottom: 20px; }
+  .mainTitle { font-size: 42px; line-height: 42px; margin-bottom: 8px; }
+  .subtitle { font-size: 16px; line-height: 24px; margin-bottom: 30px; }
+  .plansContainer { gap: 10px; }
+
+  /* Igualar altura del cuadro azul con las tarjetas - más compacto */
+  .advisorBox { overflow: hidden; height: 580px; min-height: 580px; }
+  .advisorImage { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80%; height: auto; }
   .advisorImage img { width: 100%; height: auto; object-fit: contain; }
 
-  .planCard { box-sizing: border-box; padding: 36px 22px 134px; overflow: hidden; min-height: 900px; }
-  .planTitle { font-size: 30px; line-height: 36px; margin-bottom: 30px; }
-  .planDescription { max-width: 100%; word-break: break-word; overflow-wrap: anywhere; font-size: 15px; line-height: 24px; }
-  .planButton { width: 220px; height: 36px; font-size: 15px; line-height: 32px; bottom: 14px; }
+  /* Tarjetas más compactas y de igual altura - alineadas con caja azul */
+  .planCard { box-sizing: border-box; padding: 24px 18px 60px; overflow: hidden; height: 580px; min-height: 580px; max-height: 580px; }
+  .planTitle { font-size: 24px; line-height: 28px; margin-bottom: 16px; }
+  .planPrice { font-size: 32px; line-height: 38px; margin-bottom: 8px; }
+  .planEmployees { font-size: 14px; line-height: 20px; margin-bottom: 20px; }
+  .planDescription { max-width: 100%; word-break: break-word; overflow-wrap: anywhere; font-size: 14px; line-height: 20px; }
+  .planDescription p { margin: 0 0 10px 0; }
+  .planDescription p:first-child { margin-bottom: 16px; }
+  .planDescription ul { margin: 8px 0 0 0; }
+  .planDescription ul li { margin-bottom: 4px; line-height: 18px; }
+  .planButton { width: 200px; height: 32px; font-size: 14px; line-height: 28px; bottom: 12px; }
 }
 
 @media (max-width: 1400px) {

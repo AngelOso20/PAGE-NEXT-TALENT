@@ -259,7 +259,129 @@
   }
 }
 
-@media (max-width: 1600px) {
+/* Laptops: Reducir proporcionalmente todos los elementos del hero de contacto */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  /* Reducir el contenedor principal */
+  .contactHero {
+    padding: 113px 0 60px 0; /* Reducido de 150px 0 80px 0 */
+  }
+
+  .container {
+    padding: 0 38px; /* Reducido de 0 50px */
+  }
+
+  /* Reducir la primera fila */
+  .heroContent {
+    gap: 12px; /* Reducido de 16px */
+    margin-bottom: 0px;
+  }
+
+  /* Reducir contenedor de imagen */
+  .imageContainer {
+    width: 677px; /* Reducido de 902px */
+    height: 700px; /* Reducido de 933px */
+  }
+
+  /* Reducir primera caja blanca */
+  .contentCard {
+    width: 677px; /* Reducido de 902px */
+    height: 394px; /* Reducido de 525px */
+  }
+
+  .contentWrapper {
+    max-width: 609px; /* Reducido de 812px */
+    padding: 30px; /* Reducido de 40px */
+    gap: 29px; /* Reducido de 38px */
+  }
+
+  /* Reducir título principal */
+  .title {
+    font-size: 50px; /* Reducido de 67px */
+    line-height: 56px; /* Reducido de 75px */
+  }
+
+  /* Reducir descripción */
+  .description {
+    font-size: 21px; /* Reducido de 28px */
+    line-height: 29px; /* Reducido de 38px */
+  }
+
+  /* Reducir segunda fila con formulario */
+  .formRow {
+    margin-top: -300px; /* Reducido de -400px */
+    justify-content: flex-end; /* Mover formulario hacia la derecha */
+    padding-right:08%; /* Reducido de 50% para alinearse mejor con el cuadro de arriba */
+  }
+
+  /* Reducir segunda caja blanca con formulario */
+  .formCard {
+    width: 677px; /* Reducido de 902px */
+    height: 295px; /* Reducido de 393px */
+  }
+
+  .formWrapper {
+    max-width: 589px; /* Reducido de 785px */
+    padding: 15px; /* Reducido de 20px */
+  }
+
+  /* Reducir formulario */
+  .form {
+    max-width: 589px; /* Reducido de 785px */
+  }
+
+  .formGrid {
+    gap: 11px; /* Reducido de 15px */
+    margin-bottom: 11px; /* Reducido de 15px */
+  }
+
+  /* Reducir etiquetas */
+  .label {
+    font-size: 9px; /* Reducido de 12px */
+    line-height: 14px; /* Reducido de 18px */
+    letter-spacing: 0.26px; /* Reducido de 0.35px */
+  }
+
+  /* Reducir inputs y textarea */
+  .input,
+  .textarea {
+    padding: 6px 9px; /* Reducido de 8px 12px */
+    font-size: 11px; /* Reducido de 14px */
+    line-height: 15px; /* Reducido de 20px */
+  }
+
+  .textarea {
+    min-height: 60px; /* Reducido de 80px */
+  }
+
+  /* Reducir checkbox */
+  .checkboxGroup {
+    gap: 6px; /* Reducido de 8px */
+    margin-bottom: 15px; /* Reducido de 20px */
+  }
+
+  .checkbox {
+    width: 12px; /* Reducido de 16px */
+    height: 12px; /* Reducido de 16px */
+  }
+
+  .checkboxLabel {
+    font-size: 8px; /* Reducido de 11px */
+    line-height: 12px; /* Reducido de 16px */
+    letter-spacing: 0.26px; /* Reducido de 0.35px */
+  }
+
+  /* Reducir botón de enviar */
+  .submitButton {
+    width: 150px; /* Reducido de 200px */
+    height: 27px; /* Reducido de 36px */
+    border-radius: 14px; /* Reducido de 18px */
+    font-size: 11px; /* Reducido de 15px */
+    line-height: 23px; /* Reducido de 30px */
+    margin-top: 8px; /* Reducido de 10px */
+  }
+}
+
+@media (max-width: 1279px) {
   .contactHero {
     padding: 120px 0 60px 0;
   }
@@ -320,6 +442,8 @@
     margin-bottom: 12px;
   }
 }
+
+
 
 @media (max-width: 1200px) {
   .contactHero {

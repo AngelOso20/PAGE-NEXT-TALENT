@@ -182,6 +182,60 @@
   }
 }
 
+/* Media query específica para laptops (1280px-1600px) - DEBE ir después de max-width: 1600px */
+@media (min-width: 1280px) and (max-width: 1600px) {
+  .blogHero {
+    padding: 100px 0 50px 0 !important; /* Padding apropiado para laptops */
+  }
+  
+  .container {
+    padding: 0 40px !important; /* Padding lateral apropiado */
+    display: flex !important;
+    justify-content: center !important; /* Centrar el contenido */
+  }
+  
+  .heroContent {
+    gap: 25px !important; /* Gap apropiado entre elementos */
+    flex-direction: row !important; /* Mantener layout horizontal en laptops */
+    justify-content: center !important; /* Centrar el hero content */
+    align-items: stretch !important; /* Alinear altura de imagen y card */
+    max-width: 1300px !important; /* Limitar ancho máximo */
+  }
+  
+  .imageContainer {
+    width: 700px !important; /* Imagen más grande para alineación */
+    height: 400px !important; /* Altura igual al card */
+  }
+  
+  .contentCard {
+    width: 600px !important; /* Card de contenido */
+    height: 400px !important; /* Altura igual a la imagen */
+  }
+  
+  .contentWrapper {
+    padding: 30px !important; /* Padding interno apropiado */
+    gap: 18px !important;
+    height: 100% !important; /* Usar toda la altura del card */
+    justify-content: space-between !important; /* Distribuir contenido */
+  }
+  
+  .title {
+    font-size: 26px !important; /* Título más grande */
+    line-height: 32px !important;
+  }
+  
+  .description {
+    font-size: 20px !important; /* Descripción más grande */
+    line-height: 28px !important;
+  }
+  
+  .readMoreBtn {
+    width: 140px !important; /* Botón más grande */
+    height: 38px !important;
+    font-size: 15px !important;
+  }
+}
+
 @media (max-width: 1200px) {
   .blogHero {
     padding: 100px 0 60px 0; /* Ajuste de padding para pantallas pequeñas */
