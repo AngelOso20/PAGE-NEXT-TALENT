@@ -287,6 +287,15 @@
   background: #1f8580;
 }
 
+/* Desktop: 1601px-1920px - Reducción del 20% */
+@media (min-width: 1601px) and (max-width: 1920px) {
+  .plansSection {
+    transform: scale(0.8);
+    transform-origin: top center;
+    margin-bottom: -20%; /* Compensar el espacio perdido por el scale */
+  }
+}
+
 /* Sistema Responsive */
 @media (max-width: 1920px) {
   .plansContainer {

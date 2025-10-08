@@ -257,117 +257,11 @@
 
 
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .leftBox {
-    left: 2.6vw;
-    width: 70.9vw;
-  }
 
-  .mainTitle {
-    font-size: clamp(40px, 3.49vw, 67px);
-    line-height: clamp(48px, 3.91vw, 75px);
-    width: clamp(400px, 38.96vw, 748px);
-  }
 
-  .subtitle {
-    font-size: clamp(20px, 1.46vw, 28px);
-    line-height: clamp(28px, 1.98vw, 38px);
-    width: clamp(350px, 32.08vw, 616px);
-  }
 
-  .workerImage {
-    left: 39.84vw;
-    width: clamp(300px, 28.02vw, 538px);
-    height: auto;
-  }
 
-  .workerImage img {
-    width: 100%;
-    height: auto;
-  }
-
-  .orangeBox,
-  .blueBox {
-    left: 74.32vw;
-    width: clamp(300px, 23.07vw, 443px);
-  }
-
-  .orangeBox {
-    top: clamp(129px, 6.72vw, 129px);
-  }
-
-  .blueBox {
-    top: clamp(500px, 33.91vw, 651px);
-    height: auto;
-    min-height: clamp(350px, 21.41vw, 411px);
-  }
-}
-
-@media (max-width: 1400px) {
-  .heroSection {
-    min-height: auto;
-    padding-bottom: 50px;
-  }
-
-  .leftBox {
-    position: relative;
-    left: 20px;
-    top: 20px;
-    width: calc(100% - 40px);
-    max-width: 900px;
-    height: auto;
-    margin-bottom: 30px;
-  }
-
-  .mainTitle {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 30px;
-  }
-
-  .subtitle {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-bottom: 30px;
-  }
-
-  .workerImage {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-  }
-
-  .backgroundPattern {
-    opacity: 0.3;
-  }
-
-  .orangeBox,
-  .blueBox {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 40px);
-    max-width: 443px;
-    margin-bottom: 30px;
-  }
-
-  .orangeBox {
-    top: 0;
-  }
-
-  .blueBox {
-    top: 0;
-  }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .mainTitle {
     font-size: 36px;
     line-height: 42px;
@@ -693,3 +587,154 @@
     background-position: center;
   }
 }
+
+/* Desktop estándar: Reducir hero para pantallas de 1601px a 1920px */
+@media (min-width: 1601px) and (max-width: 1920px) {
+  /* Reducir el contenedor principal */
+  .heroSection {
+    min-height: 800px; /* Reducido de 1062px */
+    padding-top: 90px; /* Reducido de 113px */
+  }
+
+  /* Reducir el cuadro izquierdo principal */
+  .leftBox {
+    top: 100px; /* Reducido de 129px */
+    left: 160px; /* Más centrado - movido más a la derecha */
+    width: 1100px; /* Reducido de 1361px */
+    height: 750px; /* Reducido de 933px */
+  }
+
+  /* Reducir el título principal */
+  .mainTitle {
+    top: 170px; /* Reducido de 211px */
+    left: 32px; /* Reducido de 39px */
+    width: 600px; /* Reducido de 748px */
+    height: 135px; /* Reducido de 170px */
+    font-size: 54px; /* Reducido de 67px */
+    line-height: 60px; /* Reducido de 75px */
+  }
+
+  /* Reducir el subtítulo */
+  .subtitle {
+    top: 315px; /* Reducido de 394px */
+    left: 32px; /* Reducido de 39px */
+    width: 490px; /* Reducido de 616px */
+    height: 67px; /* Reducido de 84px */
+    font-size: 22px; /* Reducido de 28px */
+    line-height: 30px; /* Reducido de 38px */
+  }
+
+  /* Reducir la imagen del trabajador */
+  .workerImage {
+    top: 20px; /* Reducido de 24px */
+    left: 615px; /* Reducido de 765px */
+    width: 430px; /* Reducido de 538px */
+    height: 725px; /* Reducido de 909px */
+  }
+
+  .workerImage img {
+    width: 430px; /* Reducido de 538px */
+    height: 725px; /* Reducido de 909px */
+  }
+
+  /* Reducir el cuadro naranja */
+  .orangeBox {
+    top: 100px; /* Reducido de 129px */
+    left: 1290px; /* Más centrado - ajustado para mantener balance */
+    width: 360px; /* Reducido de 443px */
+    min-height: 305px; /* Reducido de 380px */
+    padding: 36px 40px 32px; /* Reducido de 45px 49px 40px */
+  }
+
+  .orangeIcon {
+    width: 79px; /* Reducido de 98px */
+    height: 76px; /* Reducido de 94px */
+    margin-bottom: 16px; /* Reducido de 20px */
+  }
+
+  .orangeIcon img {
+    width: 79px; /* Reducido de 98px */
+    height: 76px; /* Reducido de 94px */
+  }
+
+  /* Reducir iconos Lottie para desktop estándar - Aplicar estilos más específicos */
+  .orangeIcon .lottie-icon,
+  .blueIcon .lottie-icon {
+    width: 79px !important; /* Reducido de 98px */
+    height: 76px !important; /* Reducido de 94px */
+    max-width: 79px !important;
+    max-height: 76px !important;
+  }
+
+  /* Asegurar que el SVG dentro del contenedor Lottie también se reduzca */
+  .orangeIcon .lottie-icon svg,
+  .blueIcon .lottie-icon svg {
+    width: 79px !important;
+    height: 76px !important;
+    max-width: 79px !important;
+    max-height: 76px !important;
+  }
+
+  .orangeText {
+    font-size: 15px; /* Reducido de 19px */
+    line-height: 25px; /* Reducido de 31px */
+    letter-spacing: 0.38px; /* Reducido de 0.47px */
+    margin: 0 0 12px 0; /* Reducido de 0 0 15px 0 */
+  }
+
+  .orangeSubtext {
+    font-size: 13px; /* Reducido de 16px */
+    line-height: 21px; /* Reducido de 26px */
+  }
+
+  /* Reducir el cuadro azul */
+  .blueBox {
+    top: 480px; /* Reducido de 651px - Movido más arriba para mejor alineación */
+    left: 1290px; /* Más centrado - alineado con el cuadro naranja */
+    width: 360px; /* Reducido de 443px */
+    height: 375px; /* Aumentado de 250px - Hacer más largo */
+  }
+
+  .blueIcon {
+    top: 36px; /* Reducido de 45px */
+    left: 45px; /* Reducido de 55px */
+    width: 79px; /* Reducido de 98px */
+    height: 76px; /* Reducido de 94px */
+  }
+
+  .blueIcon img {
+    width: 79px; /* Reducido de 98px */
+    height: 76px; /* Reducido de 94px */
+  }
+
+  .blueText {
+    top: 125px; /* Reducido de 157px */
+    left: 40px; /* Reducido de 49px */
+    width: 280px; /* Reducido de 346px */
+    height: 97px; /* Reducido de 120px */
+    font-size: 15px; /* Reducido de 19px */
+    line-height: 25px; /* Reducido de 31px */
+    letter-spacing: 0.38px; /* Reducido de 0.47px */
+  }
+
+  .orangeButton {
+    top: 240px; /* Reducido de 328px - Ajustado para que no se superponga al texto */
+    left: 40px; /* Reducido de 49px */
+    width: 207px; /* Reducido de 257px */
+    height: 32px; /* Reducido de 40px */
+    border-radius: 16px; /* Reducido de 20px */
+  }
+
+  .phoneIcon {
+    left: 12px; /* Reducido de 15px */
+    width: 14px !important; /* Reducido de 18px */
+    height: 13px !important; /* Reducido de 17px */
+  }
+
+  .orangeButton span {
+    left: 33px; /* Reducido de 41px */
+    font-size: 13px; /* Reducido de 17px */
+    line-height: 27px; /* Reducido de 34px */
+  }
+}
+
