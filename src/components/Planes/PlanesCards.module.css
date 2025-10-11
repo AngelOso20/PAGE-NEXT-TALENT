@@ -1,21 +1,31 @@
-/* Sección de Tarjetas de Planes */
+/* ==========================================
+   PLANES CARDS - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .planesCards {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 80px 0;
+  padding: 4.17vw 0; /* 80px = 4.17vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1920px;
+  width: 94.79vw; /* 1820px = 94.79vw - MISMO ANCHO QUE OTROS HEROES */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-bottom: 60px;
+  grid-template-columns: repeat(4, 23.07vw); /* 443px = 23.07vw */
+  gap: 0.83vw; /* 16px = 0.83vw - MISMO GAP QUE EL HERO */
+  margin-bottom: 3.13vw; /* 60px = 3.13vw */
+  box-sizing: border-box;
 }
 
 /* Primera fila: 3 planes + cuadro naranja */
@@ -55,117 +65,116 @@
   grid-column: 3;
 }
 
-/* Tarjeta de plan - 443x778px */
+/* ========== TARJETA DE PLAN ========== */
+
 .planCard {
-  width: 443px;
-  height: 778px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 40.52vw; /* 778px = 40.52vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 48px 30px 40px 30px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 2.50vw 1.56vw 2.08vw 1.56vw; /* 48px 30px 40px 30px = 2.50vw 1.56vw 2.08vw 1.56vw */
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .planCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.26vw); /* -5px = -0.26vw */
+  box-shadow: 0 0.42vw 1.56vw rgba(0, 0, 0, 0.12); /* 0 8px 30px */
 }
 
-/* Título del plan - 33px/39px FinalSix, #27A49F */
+/* ========== TEXTOS DE LA TARJETA ========== */
+
 .planTitle {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 33px;
-  line-height: 39px;
+  font-size: 1.72vw; /* 33px = 1.72vw */
+  line-height: 2.03vw; /* 39px = 2.03vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
   opacity: 1;
 }
 
-/* Texto "Desde" - 16px/25px FinalSix, #464749 */
 .desde {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: center;
-  margin: 0 0 5px 0;
+  margin: 0 0 0.26vw 0; /* 5px = 0.26vw */
   opacity: 1;
 }
 
-/* Precio - 40px/55px FinalSix, #1A1818 */
 .price {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 2.08vw; /* 40px = 2.08vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #1A1818;
   text-align: center;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
   opacity: 1;
 }
 
-/* Público objetivo - 16px/25px FinalSix, #464749 */
 .target {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: center;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   opacity: 1;
 }
 
-/* Descripción - 16px/25px FinalSix, #464749 */
 .description {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
-  margin: 0 0 15px 0;
+  margin: 0 0 0.78vw 0; /* 15px = 0.78vw */
   opacity: 1;
   width: 100%;
 }
 
-/* Título "Incluye:" - 16px/25px FinalSix, #464749, bold */
 .includesTitle {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
-  margin: 0 0 15px 0;
+  margin: 0 0 0.78vw 0; /* 15px = 0.78vw */
   opacity: 1;
   width: 100%;
 }
 
-/* Lista de características */
+/* ========== LISTA DE CARACTERÍSTICAS ========== */
+
 .featuresList {
   list-style: none;
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   width: 100%;
 }
 
@@ -173,15 +182,15 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
-  margin: 0 0 8px 0;
+  margin: 0 0 0.42vw 0; /* 8px = 0.42vw */
   opacity: 1;
   position: relative;
-  padding-left: 20px;
+  padding-left: 1.04vw; /* 20px = 1.04vw */
 }
 
 .featureItem::before {
@@ -192,18 +201,19 @@
   left: 0;
 }
 
-/* Botón comprar - 244x40px, #27A49F */
+/* ========== BOTÓN COMPRAR ========== */
+
 .buyButton {
-  width: 244px;
-  height: 40px;
+  width: 12.71vw; /* 244px = 12.71vw */
+  height: 2.08vw; /* 40px = 2.08vw */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   border: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 17px;
-  line-height: 34px;
+  font-size: 0.89vw; /* 17px = 0.89vw */
+  line-height: 1.77vw; /* 34px = 1.77vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -217,29 +227,30 @@
   background: #1e8a85;
 }
 
-/* Cuadro naranja de Cotiza tu plan - 443x778px */
+/* ========== CUADRO NARANJA ========== */
+
 .quoteCard {
-  width: 443px;
-  height: 778px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 40.52vw; /* 778px = 40.52vw */
   background: #FB8C05;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .quoteCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.26vw); /* -5px = -0.26vw */
+  box-shadow: 0 0.42vw 1.56vw rgba(0, 0, 0, 0.12); /* 0 8px 30px */
 }
 
-/* Imagen del cuadro naranja - 443x460px */
 .quoteImage {
-  width: 443px;
-  height: 460px;
-  border-radius: 20px 20px 0px 0px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 23.96vw; /* 460px = 23.96vw */
+  border-radius: 1.04vw 1.04vw 0px 0px; /* 20px = 1.04vw */
   overflow: hidden;
 }
 
@@ -250,57 +261,54 @@
   object-position: center;
 }
 
-/* Contenido del cuadro naranja */
 .quoteContent {
-  padding: 30px;
+  padding: 1.56vw; /* 30px = 1.56vw */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-grow: 1;
+  box-sizing: border-box;
 }
 
-/* Título del cuadro naranja - 33px/39px FinalSix, #F3F7F9 */
 .quoteTitle {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 33px;
-  line-height: 39px;
+  font-size: 1.72vw; /* 33px = 1.72vw */
+  line-height: 2.03vw; /* 39px = 2.03vw */
   letter-spacing: 0px;
   color: #F3F7F9;
   text-align: left;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
   opacity: 1;
 }
 
-/* Descripción del cuadro naranja - 16px/25px FinalSix, #F3F7F9 */
 .quoteDescription {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #F3F7F9;
   text-align: center;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   opacity: 1;
 }
 
-/* Botón calcular - 244x40px, #27A49F */
 .calculateButton {
-  width: 244px;
-  height: 40px;
+  width: 12.71vw; /* 244px = 12.71vw */
+  height: 2.08vw; /* 40px = 2.08vw */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   border: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 17px;
-  line-height: 34px;
+  font-size: 0.89vw; /* 17px = 0.89vw */
+  line-height: 1.77vw; /* 34px = 1.77vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-transform: uppercase;
@@ -313,299 +321,97 @@
   background: #1e8a85;
 }
 
-/* Columna de imágenes apiladas */
+/* ========== COLUMNA DE IMÁGENES APILADAS ========== */
+
 .imagesColumn {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  width: 443px;
-  height: 778px;
+  gap: 0.83vw; /* 16px = 0.83vw - MISMO GAP QUE EL GRID */
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 40.52vw; /* 778px = 40.52vw */
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
-/* Tarjeta de imagen - 443x380px */
 .imageCard {
-  width: 443px;
-  height: 380px;
-  border-radius: 20px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 19.85vw; /* (40.52vw - 0.83vw gap) / 2 = 19.85vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .imageCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.26vw); /* -5px = -0.26vw */
+  box-shadow: 0 0.42vw 1.56vw rgba(0, 0, 0, 0.12); /* 0 8px 30px */
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 20px;
-  }
-  
-  .planCard,
-  .quoteCard {
-    width: 100%;
-    max-width: 443px;
-  }
-  
-  .imageCard {
-    width: 100%;
-    max-width: 443px;
-  }
-}
-
-/* Media query específica para laptops (1280px - 1600px) */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .planesCards {
-    padding: 40px 0;
-  }
-  
-  .container {
-    padding: 0 25px;
-  }
-  
-  .cardsGrid {
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  
-  /* Reducir altura de las tarjetas de planes */
-  .planCard {
-    height: 520px;
-    padding: 25px 20px 20px 20px;
-  }
-  
-  /* Reducir altura del cuadro naranja */
-  .quoteCard {
-    height: 520px;
-  }
-  
-  /* Reducir altura de la imagen del cuadro naranja */
-  .quoteImage {
-    height: 300px;
-  }
-  
-  /* Reducir altura de la columna de imágenes */
-  .imagesColumn {
-    height: 520px;
-  }
-  
-  /* Reducir altura de las tarjetas de imagen */
-  .imageCard {
-    height: 240px;
-  }
-  
-  /* Reducir tamaños de fuente del título */
-  .planTitle {
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0 0 10px 0;
-  }
-  
-  .quoteTitle {
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0 0 10px 0;
-  }
-  
-  /* Reducir tamaño de fuente del precio */
-  .price {
-    font-size: 26px;
-    line-height: 32px;
-    margin: 0 0 10px 0;
-  }
-  
-  /* Reducir márgenes de elementos */
-  .desde {
-    margin: 0 0 3px 0;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  .target {
-    margin: 0 0 12px 0;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  .description {
-    margin: 0 0 8px 0;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  .includesTitle {
-    margin: 0 0 8px 0;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  .featuresList {
-    margin: 0 0 15px 0;
-  }
-  
-  .featureItem {
-    margin: 0 0 4px 0;
-    font-size: 13px;
-    line-height: 18px;
-  }
-  
-  .quoteDescription {
-    margin: 0 0 15px 0;
-    font-size: 14px;
-    line-height: 20px;
-  }
-  
-  /* Reducir padding del contenido del cuadro naranja */
-  .quoteContent {
-    padding: 15px;
-  }
-  
-  /* Reducir tamaño de botones */
-  .buyButton,
-  .calculateButton {
-    width: 200px;
-    height: 35px;
-    font-size: 14px;
-    line-height: 30px;
-  }
-}
-
-@media (max-width: 1600px) {
-  .cardsGrid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .cardsGrid > *:nth-child(1),
-  .cardsGrid > *:nth-child(2),
-  .cardsGrid > *:nth-child(3) {
-    grid-row: 1;
-  }
-  
-  .cardsGrid > *:nth-child(4) {
-    grid-row: 2;
-    grid-column: 1;
-  }
-  
-  .cardsGrid > *:nth-child(5) {
-    grid-row: 2;
-    grid-column: 2;
-  }
-  
-  .cardsGrid > *:nth-child(6) {
-    grid-row: 2;
-    grid-column: 3;
-  }
-  
-  .cardsGrid > *:nth-child(7) {
-    grid-row: 3;
-    grid-column: 1;
-  }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1200px) {
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 2vw;
   }
-  
-  /* Fila 1: Esencial | Crecimiento | Integral | Cuadro naranja => en 2x2 */
-  .cardsGrid > *:nth-child(1) { grid-row: 1; grid-column: 1; }
-  .cardsGrid > *:nth-child(2) { grid-row: 1; grid-column: 2; }
-  .cardsGrid > *:nth-child(3) { grid-row: 2; grid-column: 1; }
-  .cardsGrid > *:nth-child(4) { grid-row: 2; grid-column: 2; }
 
-  /* Fila 2: Columna imágenes | Protección Total | Premium Plus (2x2) */
-  .cardsGrid > *:nth-child(5) { grid-row: 3; grid-column: 1; }
-  .cardsGrid > *:nth-child(6) { grid-row: 3; grid-column: 2; }
-  .cardsGrid > *:nth-child(7) { grid-row: 4; grid-column: 1; }
-  
   .planCard,
-  .quoteCard {
-    width: 100%;            /* misma anchura en grid */
-    height: auto;
-    min-height: 600px;
-  }
-  
+  .quoteCard,
   .imagesColumn {
-    width: 100%;            /* misma anchura en grid */
+    width: 100%;
     height: auto;
-    min-height: 600px;
+    min-height: 80vw;
   }
 
-  .imageCard {              /* tarjetas de imagen ocupan el ancho del grid */
+  .imageCard,
+  .quoteImage {
     width: 100%;
-  }
-
-  .quoteImage {             /* imagen del cuadro naranja ocupa el ancho */
-    width: 100%;
+    height: auto;
+    min-height: 40vw;
   }
 }
 
 @media (max-width: 768px) {
   .planesCards {
-    padding: 60px 0;
+    padding: 8vw 0;
   }
-  
+
   .container {
-    padding: 0 15px;
+    width: 90vw;
   }
-  
+
   .cardsGrid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 4vw;
   }
-  
+
   .cardsGrid > *:nth-child(n) {
     grid-row: auto;
     grid-column: auto;
   }
-  
+
   .planCard,
   .quoteCard {
-    padding: 30px 20px;
+    width: 100%;
+    height: auto;
+    min-height: 120vw;
+    padding: 6vw 4vw;
   }
-  
-  .planTitle,
-  .quoteTitle {
-    font-size: 28px;
-    line-height: 34px;
+
+  .imagesColumn {
+    width: 100%;
+    height: auto;
   }
-  
-  .price {
-    font-size: 32px;
-    line-height: 44px;
+
+  .imageCard,
+  .quoteImage {
+    height: 50vw;
   }
-  
+
   .buyButton,
   .calculateButton {
-    width: 100%;
+    width: 80%;
     max-width: 244px;
-  }
-}
-
-@media (max-width: 480px) {
-  .planCard,
-  .quoteCard {
-    padding: 20px 15px;
-  }
-  
-  .planTitle,
-  .quoteTitle {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  
-  .price {
-    font-size: 28px;
-    line-height: 38px;
-  }
-  
-  .description,
-  .quoteDescription {
-    font-size: 14px;
-    line-height: 22px;
   }
 }

@@ -1,43 +1,55 @@
-/* Wrapper de características de planes */
+/* ==========================================
+   PLANES FEATURES - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .planesFeaturesWrapper {
-  width: 443px;
+  width: 23.07vw; /* 443px = 23.07vw */
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Contenedor de características */
+/* ========== CONTENEDOR DE CARACTERÍSTICAS ========== */
+
 .featuresContainer {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  width: 443px;
+  gap: 0.83vw; /* 16px = 0.83vw */
+  width: 23.07vw; /* 443px = 23.07vw */
   position: relative;
   z-index: 10;
+  box-sizing: border-box;
 }
 
-/* Tarjeta de característica - 443x142px */
+/* ========== TARJETA DE CARACTERÍSTICA ========== */
+
 .featureCard {
-  width: 443px;
-  height: 142px;
+  width: 23.07vw; /* 443px = 23.07vw - Mantiene ancho */
+  height: 5.92vw; /* 7.40vw * 0.8 = 5.92vw - REDUCCIÓN 20% */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 33px 30px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 1.38vw 1.56vw; /* 1.72vw * 0.8 = 1.38vw vertical, mantiene horizontal */
   display: flex;
   align-items: center;
-  gap: 38px;
+  gap: 1.98vw; /* 38px = 1.98vw - Mantiene gap */
   opacity: 1;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .featureCard:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.10vw); /* -2px = -0.10vw */
+  box-shadow: 0 0.42vw 1.56vw rgba(0, 0, 0, 0.12); /* 0 8px 30px */
 }
 
-/* Contenedor del icono - 79x77px */
+/* ========== CONTENEDOR DEL ICONO ========== */
+
 .iconContainer {
-  width: 79px;
-  height: 77px;
+  width: 3.29vw; /* 4.11vw * 0.8 = 3.29vw - REDUCCIÓN 20% */
+  height: 3.21vw; /* 4.01vw * 0.8 = 3.21vw - REDUCCIÓN 20% */
   opacity: 1;
   display: flex;
   align-items: center;
@@ -51,14 +63,15 @@
   object-fit: contain;
 }
 
-/* Texto de la característica - 16px/25px FinalSix, #464749 */
+/* ========== TEXTO DE LA CARACTERÍSTICA ========== */
+
 .featureText {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.66vw; /* 0.83vw * 0.8 = 0.66vw - REDUCCIÓN 20% */
+  line-height: 1.04vw; /* 1.30vw * 0.8 = 1.04vw - REDUCCIÓN 20% */
+  letter-spacing: 0.017vw; /* 0.021vw * 0.8 = 0.017vw */
   color: #464749;
   text-align: left;
   margin: 0;
@@ -66,146 +79,34 @@
   flex-grow: 1;
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 20px;
-  }
-  
-  .featuresContainer {
-    width: 100%;
-    max-width: 443px;
-  }
-  
-  .featureCard {
-    width: 100%;
-  }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-/* Responsive para laptops específicamente */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .featuresContainer {
-    margin-top: 05px;
-    margin-left: 20px;
-    width: 380px;
-  }
-  
-  .featureCard {
-    height: auto;
-    min-height: 80px;
-    padding: 15px 16px;
-    gap: 16px;
+@media (max-width: 1024px) {
+  .planesFeaturesWrapper {
     width: 100%;
   }
-  
-  .iconContainer {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .featureText {
-    font-size: 12px;
-    line-height: 18px;
-  }
-}
 
-@media (max-width: 1279px) {
   .featuresContainer {
-    margin-top: -300px;
-  }
-  
-  .featureCard {
-    height: auto;
-    min-height: 120px;
-    padding: 25px 20px;
-    gap: 25px;
-  }
-  
-  .iconContainer {
-    width: 60px;
-    height: 60px;
-  }
-  
-  .featureText {
-    font-size: 15px;
-    line-height: 23px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .container {
-    justify-content: center;
-  }
-  
-  .planesFeaturesWrapper { width: 100%; }
-  .featuresContainer {
-    margin-top: 0;
     width: 100%;
-    max-width: 900px;
-    display: grid;                 /* 2x3 en tablets */
+    max-width: 90vw;
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 2vw;
   }
-  
+
   .featureCard {
     width: 100%;
     height: auto;
-    min-height: 120px;            /* alturas consistentes */
-    padding: 20px;
-    gap: 20px;
-  }
-  
-  .iconContainer {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .featureText {
-    font-size: 14px;
-    line-height: 22px;
+    min-height: 15vw;
   }
 }
 
 @media (max-width: 768px) {
-  .planesFeatures {
-    padding: 0 0 60px 0;
+  .featuresContainer {
+    grid-template-columns: 1fr;
   }
-  
-  .container {
-    padding: 0 15px;
-  }
-  
-  .featureCard {
-    padding: 15px;
-    gap: 15px;
-    border-radius: 15px;
-  }
-  
-  .iconContainer {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .featureText {
-    font-size: 13px;
-    line-height: 20px;
-  }
-}
 
-@media (max-width: 480px) {
   .featureCard {
-    padding: 12px;
-    gap: 12px;
-    min-height: 80px;
-  }
-  
-  .iconContainer {
-    width: 35px;
-    height: 35px;
-  }
-  
-  .featureText {
-    font-size: 12px;
-    line-height: 18px;
+    min-height: 20vw;
   }
 }

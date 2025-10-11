@@ -1,38 +1,52 @@
-/* Sección Hero de Planes */
+/* ==========================================
+   PLANES HERO - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .planesHero {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 120px 0 80px 0;
+  padding-top: 5.28vw; /* EXACTO: Mismo top que leftBox del HeroSection (5.28vw desde viewport top) */
+  padding-bottom: 3.34vw; /* 4.17vw * 0.8 = 3.34vw - REDUCCIÓN 20% */
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1920px;
+  width: 94.79vw; /* 1820px = 94.79vw - MISMO ANCHO QUE NOSOTROS HERO */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Contenedor principal para layout lado a lado */
 .contentWrapper {
   display: flex;
   align-items: flex-start;
-  gap: 0px;
+  gap: 0.83vw; /* 16px = 0.83vw - Gap entre cuadro azul y tarjetas */
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Cuadro azul con fondo - top: 129px, left: 50px, 1361x933px */
+/* ========== CUADRO AZUL CON FONDO ========== */
+
 .heroBox {
-  width: 1361px;
-  height: 933px;
+  width: 70.89vw; /* 1361px = 70.89vw - Mantiene ancho */
+  height: 38.87vw; /* 48.59vw * 0.8 = 38.87vw - REDUCCIÓN 20% */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   position: relative;
   overflow: hidden;
   opacity: 1;
-  margin: 0 auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Patrón de fondo abstracto */
+/* ========== PATRÓN DE FONDO ABSTRACTO ========== */
+
 .backgroundPattern {
   position: absolute;
   top: 0;
@@ -51,39 +65,39 @@
   filter: grayscale(0%) brightness(1.2) saturate(1.5);
 }
 
-/* Contenido de texto */
+/* ========== CONTENIDO DE TEXTO ========== */
+
 .textContent {
   position: relative;
   z-index: 2;
-  padding: 180px 0 0 30px;
-  width: 658px;
+  padding: 7.50vw 0 0 1.56vw; /* 9.38vw * 0.8 = 7.50vw vertical, mantiene horizontal */
+  width: 34.27vw; /* 658px = 34.27vw - Mantiene ancho */
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
-/* Título principal - top: 309px, left: 80px, 658x95px */
 .title {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 67px;
-  line-height: 75px;
+  font-size: 2.79vw; /* 3.49vw * 0.8 = 2.79vw */
+  line-height: 3.13vw; /* 3.91vw * 0.8 = 3.13vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: left;
-  margin: 0 0 12px 0;
+  margin: 0 0 0.50vw 0; /* 0.63vw * 0.8 = 0.50vw */
   opacity: 1;
 }
 
-/* Descripción - top: 416px, left: 80px, 454x116px */
 .description {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 1.17vw; /* 1.46vw * 0.8 = 1.17vw */
+  line-height: 1.58vw; /* 1.98vw * 0.8 = 1.58vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: left;
@@ -91,15 +105,17 @@
   opacity: 1;
 }
 
-/* Contenedor de imagen - top: 176px, left: 646px, 612x886px */
+/* ========== IMAGEN DE LA MUJER ========== */
+
 .imageContainer {
   position: absolute;
-  top: 47px;
-  right: 103px;
-  width: 612px;
-  height: 886px;
+  top: 1.96vw; /* 2.45vw * 0.8 = 1.96vw */
+  right: 5.36vw; /* 103px = 5.36vw - Mantiene horizontal */
+  width: 31.88vw; /* 612px = 31.88vw - Mantiene ancho */
+  height: 36.92vw; /* 46.15vw * 0.8 = 36.92vw - REDUCCIÓN 20% */
   z-index: 2;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .heroImage {
@@ -109,189 +125,39 @@
   object-position: center;
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 20px;
-  }
-  
-  .contentWrapper {
-    flex-direction: row;
-    align-items: flex-start;
-  }
-  
-  .heroBox {
-    width: 100%;
-    max-width: 1361px;
-  }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-/* Responsive para laptops específicamente */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .planesHero {
-    padding: 100px 0 40px 0;
-  }
-  
-  .heroBox {
-    height: 565px;
-  }
-  
-  .textContent {
-    padding: 80px 0 0 25px;
-    width: 450px;
-  }
-  
-  .title {
-    font-size: 38px;
-    line-height: 42px;
-    margin-bottom: 8px;
-  }
-  
-  .description {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  
-  .imageContainer {
-    width: 350px;
-    height: 550px;
-    right: 30px;
-    top: 25px;
-  }
-}
-
-@media (max-width: 1279px) {
-  .heroBox {
-    height: 800px;
-  }
-  
-  .textContent {
-    padding: 120px 0 0 30px;
-    width: 550px;
-  }
-  
-  .title {
-    font-size: 55px;
-    line-height: 60px;
-  }
-  
-  .description {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  
-  .imageContainer {
-    width: 500px;
-    height: 700px;
-    right: 50px;
-  }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .contentWrapper {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    gap: 3vw;
   }
-  
-  .heroBox {
-    height: auto;
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .textContent {
-    position: static;
-    padding: 60px 30px 30px 30px;
-    width: 100%;
-    order: 1;
-  }
-  
-  .imageContainer {
-    position: static;
-    width: 100%;
-    height: auto;
-    aspect-ratio: 612 / 886; /* mantener proporción de la imagen en tablets */
-    overflow: hidden;
-    order: 2;
-    right: auto;
-    top: auto;
-  }
-  
-  .title {
-    font-size: 45px;
-    line-height: 50px;
-  }
-  
-  .description {
-    font-size: 20px;
-    line-height: 28px;
-  }
-}
 
-@media (max-width: 768px) {
-  .planesHero {
-    padding: 60px 0;
-  }
-  
-  .container {
-    padding: 0 15px;
-  }
-  
   .heroBox {
-    border-radius: 15px;
-  }
-  
-  .textContent {
-    padding: 40px 20px 20px 20px;
-  }
-  
-  .title {
-    font-size: 35px;
-    line-height: 40px;
-  }
-  
-  .description {
-    font-size: 18px;
-    line-height: 26px;
-  }
-  
-  .imageContainer {
+    width: 90vw;
     height: auto;
-    aspect-ratio: 612 / 886; /* proporción original de la imagen */
+    min-height: 80vw;
+  }
+
+  .textContent {
+    position: static;
+    padding: 6vw 4vw 4vw 4vw;
+    width: 100%;
+  }
+
+  .imageContainer {
+    position: static;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 612 / 886;
     overflow: hidden;
-    border-radius: 12px; /* que no se salga de la caja en mobile */
-    margin: 0 12px; /* pequeño respiro del borde del hero */
   }
 
   .heroImage {
     width: 100%;
     height: 100%;
-    object-fit: cover;      /* llena sin deformarse */
-    object-position: center;/* centra el sujeto */
-    border-radius: 12px;
-  }
-}
-
-@media (max-width: 480px) {
-  .textContent {
-    padding: 30px 15px 15px 15px;
-  }
-  
-  .title {
-    font-size: 28px;
-    line-height: 32px;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 24px;
-  }
-  
-  .imageContainer {
-    height: auto;
-    aspect-ratio: 612 / 886;
+    object-fit: cover;
+    object-position: center;
   }
 }

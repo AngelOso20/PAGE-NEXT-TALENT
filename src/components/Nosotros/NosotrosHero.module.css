@@ -1,254 +1,141 @@
-/* Nosotros Hero - Diseño base 1920px */
+/* ==========================================
+   NOSOTROS HERO - DISEÑO PROPORCIONAL COMPACTO
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   Reducción: 30% aplicada a alturas para que quepa sin scroll
+   ========================================== */
+
 .nosotrosHero {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-top: 113px;
-  min-height: 1062px;
+  width: 100vw;
+  padding-top: 5.28vw; /* EXACTO: Mismo top que leftBox del HeroSection */
+  min-height: 38.72vw; /* 55.31vw * 0.7 = 38.72vw - REDUCCIÓN CLAVE */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px = 94.79vw - Mantiene ancho */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw - Mantiene gap */
   align-items: stretch;
-  padding-top: 129px;
+  padding-top: 0;
+  box-sizing: border-box;
 }
 
-/* Cuadro azul - top: 129px, left: 50px, 902x933px */
+/* ========== CUADRO AZUL CON TEXTO ========== */
+
 .blueBox {
   position: relative;
-  width: 902px;
-  height: 933px;
+  width: 46.98vw; /* 902px = 46.98vw - Mantiene ancho */
+  height: 34.01vw; /* 48.59vw * 0.7 = 34.01vw - REDUCCIÓN CLAVE */
   background: #27A49F;
-  border-radius: 20px;
-  padding: 180px 30px 180px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 6.57vw 1.56vw; /* 9.38vw * 0.7 = 6.57vw vertical, mantiene horizontal */
   display: flex;
   flex-direction: column;
   justify-content: center;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Título - top: 309px, left: 80px (relativo: 180px, 30px) */
 .title {
   width: 100%;
-  max-width: 658px;
-  margin: 0 0 34px 0;
+  max-width: 34.27vw; /* 658px = 34.27vw - Mantiene ancho */
+  margin: 0 0 1.24vw 0; /* 1.77vw * 0.7 = 1.24vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 67px;
-  line-height: 75px;
+  font-size: 2.44vw; /* 3.49vw * 0.7 = 2.44vw */
+  line-height: 2.74vw; /* 3.91vw * 0.7 = 2.74vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
 }
 
-/* Descripción - top: 663px, left: 80px */
 .description {
   width: 100%;
-  max-width: 812px;
+  max-width: 42.29vw; /* 812px = 42.29vw - Mantiene ancho */
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 1.02vw; /* 1.46vw * 0.7 = 1.02vw */
+  line-height: 1.39vw; /* 1.98vw * 0.7 = 1.39vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
 }
 
-/* Imagen - top: 129px, left: 968px, 902x933px */
+/* ========== IMAGEN A LA DERECHA ========== */
+
 .imageBox {
   position: relative;
-  width: 902px;
-  height: 933px;
-  border-radius: 20px;
+  width: 46.98vw; /* 902px = 46.98vw - Mantiene ancho */
+  height: 34.01vw; /* 48.59vw * 0.7 = 34.01vw - REDUCCIÓN CLAVE */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .imageBox img {
-  width: 902px;
-  height: 933px;
+  width: 46.98vw; /* 902px = 46.98vw - Mantiene ancho */
+  height: 34.01vw; /* 48.59vw * 0.7 = 34.01vw - REDUCCIÓN CLAVE */
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 2.6vw;
-    padding-top: clamp(100px, 6.72vw, 129px);
-    gap: 0.83vw;
-  }
-
-  .blueBox,
-  .imageBox {
-    width: clamp(600px, 46.98vw, 902px);
-    height: clamp(650px, 48.59vw, 933px);
-  }
-
-  .title {
-    font-size: clamp(40px, 3.49vw, 67px);
-    line-height: clamp(48px, 3.91vw, 75px);
-  }
-
-  .description {
-    font-size: clamp(20px, 1.46vw, 28px);
-    line-height: clamp(28px, 1.98vw, 38px);
-  }
-}
-
-/* Laptops (1280–1600px): hacer hero más compacto para que quepa en pantalla */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .nosotrosHero { 
-    padding-top: 80px; /* Aumentar espaciado superior para separar del navmenu */
-    min-height: 600px; /* Altura mucho más compacta */
-    padding-bottom: 40px;
-  }
-  
-  .container { 
-    padding-top: 30px; /* Aumentar un poco el espaciado del container */
-  }
-  
-  .blueBox { 
-    padding: 60px 25px; /* Padding mucho más compacto */
-    height: 600px; /* Altura fija */
-    min-height: 600px;
-    max-height: 600px;
-  }
-  
-  .title { 
-    font-size: 48px; /* Reducir tamaño del título */
-    line-height: 54px;
-    margin-bottom: 20px; /* Menos espacio entre elementos */
-  }
-  
-  .description { 
-    font-size: 22px; /* Reducir tamaño de descripción */
-    line-height: 30px;
-  }
-  
-  .imageBox { 
-    height: 600px; /* Misma altura que el cuadro azul */
-    min-height: 600px;
-    max-height: 600px;
-    overflow: hidden; 
-  }
-  
-  .imageBox img { 
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    object-position: center; 
-  }
-}
-
-@media (max-width: 1400px) {
-  .nosotrosHero {
-    min-height: auto;
-    padding-bottom: 60px;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-    padding-top: 80px;
-  }
-
-  .blueBox,
-  .imageBox {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 600px;
-  }
-
-  .imageBox {
-    aspect-ratio: 902 / 933;
-    min-height: auto;
-  }
-
-  .blueBox {
-    padding: 80px 40px;
-  }
-}
-
-/* Tablets: optimizar imagen y layout (768px–1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .container {
-    padding-top: 80px;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .blueBox,
-  .imageBox {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 600px;
-  }
-
-  .imageBox {
-    aspect-ratio: 902 / 933;
-    overflow: hidden;
-  }
-
-  .imageBox img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* que se vea completa sin deformarse */
-    object-position: center;
-  }
-
-  .blueBox { padding: 80px 40px; }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 768px) {
   .container {
-    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    padding-top: 4vw;
   }
 
-  .title {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .description {
-    font-size: 20px;
-    line-height: 30px;
+  .blueBox,
+  .imageBox {
+    width: 90vw;
+    height: auto;
+    min-height: 60vw;
   }
 
   .blueBox {
-    padding: 60px 30px;
+    padding: 5vw 3vw;
   }
 
-  /* Mostrar imagen completa y bien encuadrada en móviles */
+  .title {
+    font-size: 2.5vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .description {
+    font-size: 1.2vw;
+    line-height: 1.6vw;
+  }
+
   .imageBox {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 902 / 933; /* conserva proporción original */
-    overflow: hidden;
+    aspect-ratio: 902 / 933;
+    min-height: auto;
   }
 
   .imageBox img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* llena manteniendo proporción */
-    object-position: center; /* centra el sujeto */
+    object-fit: cover;
+    object-position: center;
   }
 }
 

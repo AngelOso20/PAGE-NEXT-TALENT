@@ -1,30 +1,42 @@
-/* Sección Hero de Servicios */
+/* ==========================================
+   SERVICIOS HERO - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .serviciosHero {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 150px 0 80px 0;
+  padding-top: 5.28vw; /* EXACTO: Mismo top que leftBox del HeroSection (5.28vw desde viewport top) */
+  padding-bottom: 3.34vw; /* 4.17vw * 0.8 = 3.34vw - REDUCCIÓN 20% */
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1920px;
+  width: 94.79vw; /* 1820px = 94.79vw - MISMO ANCHO QUE OTROS HEROES */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Cuadro blanco con fondo - top: 129px, left: 50px, 1820x933px */
+/* ========== CUADRO BLANCO CON FONDO ========== */
+
 .heroBox {
-  width: 1820px;
-  height: 933px;
+  width: 94.79vw; /* 1820px = 94.79vw - Mantiene ancho */
+  height: 38.87vw; /* 48.59vw * 0.8 = 38.87vw - REDUCCIÓN 20% */
   background: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   position: relative;
   overflow: hidden;
   opacity: 1;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-/* Patrón de fondo abstracto */
+/* ========== PATRÓN DE FONDO ABSTRACTO ========== */
+
 .backgroundPattern {
   position: absolute;
   top: 0;
@@ -43,39 +55,39 @@
   filter: grayscale(100%) brightness(0.8);
 }
 
-/* Contenido de texto */
+/* ========== CONTENIDO DE TEXTO ========== */
+
 .textContent {
   position: relative;
   z-index: 2;
-  padding: 211px 0 0 39px;
-  width: 726px;
+  padding: 8.79vw 0 0 2.03vw; /* 10.99vw * 0.8 = 8.79vw vertical, mantiene horizontal */
+  width: 37.81vw; /* 726px = 37.81vw - Mantiene ancho */
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  box-sizing: border-box;
 }
 
-/* Título principal - top: 340px, left: 89px, 726x245px */
 .title {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 67px;
-  line-height: 75px;
+  font-size: 2.79vw; /* 3.49vw * 0.8 = 2.79vw - REDUCCIÓN 20% */
+  line-height: 3.13vw; /* 3.91vw * 0.8 = 3.13vw - REDUCCIÓN 20% */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
-  margin: 0 0 36px 0;
+  margin: 0 0 1.50vw 0; /* 1.88vw * 0.8 = 1.50vw - REDUCCIÓN 20% */
   opacity: 1;
 }
 
-/* Descripción - top: 621px, left: 90px, 672x156px */
 .description {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 30px;
-  line-height: 38px;
+  font-size: 1.25vw; /* 1.56vw * 0.8 = 1.25vw - REDUCCIÓN 20% */
+  line-height: 1.58vw; /* 1.98vw * 0.8 = 1.58vw - REDUCCIÓN 20% */
   letter-spacing: 0px;
   color: #464749;
   text-align: left;
@@ -83,192 +95,72 @@
   opacity: 1;
 }
 
-/* Contenedor de imagen */
+/* ========== IMAGEN DE LAS PERSONAS ========== */
+
 .imageContainer {
   position: absolute;
-  top: 20px;
+  top: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
   right: 0;
-  width: 992px;
-  height: 913px;
+  width: 51.67vw; /* 992px = 51.67vw - Mantiene ancho */
+  height: 38.04vw; /* 47.55vw * 0.8 = 38.04vw - REDUCCIÓN 20% */
   z-index: 2;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .heroImage {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Muestra la imagen completa sin recortar */
   object-position: center;
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 20px;
-  }
-  
-  .heroBox {
-    width: 100%;
-    max-width: 1820px;
-  }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-/* Responsive para laptops específicamente */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .serviciosHero {
-    padding: 100px 0 50px 0;
-  }
-  
-  .heroBox {
-    height: 600px;
-  }
-  
-  .textContent {
-    padding: 80px 0 0 30px;
-    width: 550px;
-  }
-  
-  .title {
-    font-size: 45px;
-    line-height: 50px;
-    margin: 0 0 20px 0;
-  }
-  
-  .description {
-    font-size: 20px;
-    line-height: 26px;
-  }
-  
-  .imageContainer {
-    width: 700px;
-    height: 580px;
-  }
-  
-  .heroImage {
-    object-fit: contain;
-    object-position: center;
-  }
-}
-
-@media (max-width: 1279px) {
-  .heroBox {
-    height: 800px;
-  }
-  
-  .textContent {
-    padding: 150px 0 0 30px;
-    width: 600px;
-  }
-  
-  .title {
-    font-size: 55px;
-    line-height: 60px;
-  }
-  
-  .description {
-    font-size: 24px;
-    line-height: 30px;
-  }
-  
-  .imageContainer {
-    width: 800px;
-    height: 750px;
-  }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .heroBox {
     height: auto;
-    min-height: 600px;
+    min-height: 80vw;
     display: flex;
     flex-direction: column;
   }
-  
+
   .textContent {
     position: static;
-    padding: 60px 30px 30px 30px;
+    padding: 8vw 4vw;
     width: 100%;
     order: 1;
   }
-  
+
   .imageContainer {
     position: static;
     width: 100%;
     height: auto;
-    aspect-ratio: 992 / 913; /* mantener proporción de la imagen en tablets */
+    aspect-ratio: 992 / 913;
     overflow: hidden;
     order: 2;
-  }
-  
-  .title {
-    font-size: 45px;
-    line-height: 50px;
-  }
-  
-  .description {
-    font-size: 20px;
-    line-height: 26px;
   }
 }
 
 @media (max-width: 768px) {
   .serviciosHero {
-    padding: 60px 0;
+    padding: 8vw 0;
   }
-  
+
   .container {
-    padding: 0 15px;
+    width: 90vw;
   }
-  
+
   .heroBox {
-    border-radius: 15px;
-  }
-  
-  .textContent {
-    padding: 40px 20px 20px 20px;
-  }
-  
-  .title {
-    font-size: 35px;
-    line-height: 40px;
-  }
-  
-  .description {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  
-  .imageContainer {
     height: auto;
-    aspect-ratio: 992 / 913; /* mantener proporción de la imagen original */
-    overflow: hidden;
+    min-height: 100vw;
   }
 
-  .heroImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;      /* llena sin deformarse */
-    object-position: center;/* centra sujetos */
-  }
-}
-
-@media (max-width: 480px) {
   .textContent {
-    padding: 30px 15px 15px 15px;
+    padding: 6vw 4vw;
   }
-  
-  .title {
-    font-size: 28px;
-    line-height: 32px;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 22px;
-  }
-  
+
   .imageContainer {
-    height: auto;
-    aspect-ratio: 992 / 913;
+    height: 80vw;
   }
 }

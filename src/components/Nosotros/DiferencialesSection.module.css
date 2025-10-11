@@ -1,81 +1,102 @@
-/* Diferenciales Section - Diseño base 1920px */
+/* ==========================================
+   DIFERENCIALES SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .diferencialesSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px = 94.79vw */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: stretch;
+  box-sizing: border-box;
 }
 
-/* Cuadro naranja - 443x628px */
+/* ========== CUADRO NARANJA CON IMAGEN ========== */
+
 .orangeBox {
   position: relative;
-  width: 443px;
-  height: 515px; /* ajuste final para alinear */
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 26.82vw; /* 515px = 26.82vw */
   background: #FB8C05;
-  border-radius: 20px;
-  padding: 32px 18px 24px; /* más compacto */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 1.67vw 0.94vw 1.25vw; /* 32px 18px 24px = 1.67vw 0.94vw 1.25vw */
   display: flex;
   flex-direction: column;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .orangeText {
-  margin: 0 0 28px 0;
-  padding: 0 20px;
+  margin: 0 0 1.46vw 0; /* 28px = 1.46vw */
+  padding: 0 1.04vw; /* 20px = 1.04vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px; /* más pequeño */
-  line-height: 24px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.25vw; /* 24px = 1.25vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
 }
 
-/* Imagen de Andrea - reducida para que quepa en el cuadro */
+/* Imagen de Andrea */
 .andreaImage {
-  position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
-  width: 70%; height: auto; max-width: 300px; /* imagen más pequeña */
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: auto;
+  max-width: 15.63vw; /* 300px = 15.63vw */
 }
 
-.andreaImage img { width: 100%; height: auto; object-fit: contain; }
+.andreaImage img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
 
-/* Grid de diferenciales - 3x2 */
+/* ========== GRID DE DIFERENCIALES (3x2) ========== */
+
 .diferencialesGrid {
   display: grid;
-  grid-template-columns: repeat(3, 443px);
-  grid-template-rows: 304px 304px;
-  gap: 16px;
+  grid-template-columns: repeat(3, 23.07vw); /* 443px = 23.07vw */
+  grid-template-rows: 15.83vw 15.83vw; /* 304px = 15.83vw */
+  gap: 0.83vw; /* 16px = 0.83vw */
   flex-grow: 1;
   align-content: start;
+  box-sizing: border-box;
 }
 
-/* Card de título */
+/* ========== CARD DE TÍTULO ========== */
+
 .titleCard {
   position: relative;
   width: 100%;
   height: 100%;
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 81px 28px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 4.22vw 1.46vw; /* 81px 28px = 4.22vw 1.46vw */
   display: flex;
   align-items: center;
   justify-content: flex-start;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .diferencialesTitle {
@@ -83,34 +104,36 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
   opacity: 1;
 }
 
-/* Card con icono */
+/* ========== CARD CON ICONO ========== */
+
 .diferencialCard {
   position: relative;
   width: 100%;
   height: 100%;
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 68px 43px 64px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 3.54vw 2.24vw 3.33vw; /* 68px 43px 64px = 3.54vw 2.24vw 3.33vw */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Contenedor del icono - ~65-82px width, 76-79px height */
+/* Contenedor del icono Lottie */
 .iconContainer {
-  width: 82px;
-  height: 79px;
-  margin-bottom: 30px;
+  width: 4.27vw; /* 82px = 4.27vw */
+  height: 4.11vw; /* 79px = 4.11vw */
+  margin-bottom: 1.56vw; /* 30px = 1.56vw */
   flex-shrink: 0;
 }
 
@@ -120,9 +143,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
@@ -133,103 +156,43 @@
   font-weight: bold;
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 2.6vw;
-    gap: 0.83vw;
-  }
+/* ========== RESPONSIVE - SOLO MÓVILES/TABLETS ========== */
 
-  .orangeBox {
-    width: clamp(300px, 23.07vw, 443px);
-    min-height: clamp(500px, 32.71vw, 628px);
-  }
-
-  .andreaImage {
-    width: clamp(280px, 21.09vw, 405px);
-    height: clamp(250px, 19.17vw, 368px);
-  }
-
-  .andreaImage img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .diferencialesGrid {
-    grid-template-columns: repeat(3, clamp(300px, 23.07vw, 443px));
-    grid-template-rows: repeat(2, clamp(250px, 15.83vw, 304px));
-    gap: clamp(12px, 0.83vw, 16px);
-  }
-
-  .titleCard,
-  .diferencialCard {
-    width: 100%;
-    height: 100%;
-  }
-
-  .diferencialesTitle {
-    font-size: clamp(35px, 2.86vw, 55px);
-    line-height: clamp(40px, 2.86vw, 55px);
-  }
-
-  .iconContainer {
-    width: clamp(60px, 4.27vw, 82px);
-    height: clamp(60px, 4.11vw, 79px);
-  }
-
-  .cardText {
-    font-size: clamp(14px, 0.83vw, 16px);
-    line-height: clamp(22px, 1.30vw, 25px);
-  }
-}
-
-@media (max-width: 1400px) {
-  .diferencialesSection {
-    padding: 80px 0;
-  }
-
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     align-items: center;
+    gap: 2vw;
   }
 
   .orangeBox {
-    width: 100%;
-    max-width: 443px;
-    min-height: auto;
+    width: 90vw;
+    height: auto;
+    min-height: 50vw;
   }
 
   .diferencialesGrid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
-    width: 100%;
     grid-template-rows: auto;
+    width: 90vw;
+    gap: 2vw;
   }
 
   .titleCard,
   .diferencialCard {
-    min-height: 280px;
+    min-height: 40vw;
   }
 }
 
 @media (max-width: 768px) {
-  .diferencialesSection {
-    padding: 60px 0;
-  }
-
   .diferencialesGrid {
     grid-template-columns: 1fr;
-    max-width: 443px;
+    width: 90vw;
   }
 
-  .diferencialesTitle {
-    font-size: 40px;
-    line-height: 46px;
-  }
-
-  .cardText {
-    font-size: 15px;
-    line-height: 24px;
+  .titleCard,
+  .diferencialCard {
+    min-height: 50vw;
   }
 }
 
