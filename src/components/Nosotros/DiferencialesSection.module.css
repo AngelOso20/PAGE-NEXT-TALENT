@@ -29,7 +29,7 @@
 .orangeBox {
   position: relative;
   width: 23.07vw; /* 443px = 23.07vw */
-  height: 26.82vw; /* 515px = 26.82vw */
+  height: 32.49vw; /* Alineado con grid: (15.83vw × 2 filas) + 0.83vw gap = 32.49vw */
   background: #FB8C05;
   border-radius: 1.04vw; /* 20px = 1.04vw */
   padding: 1.67vw 0.94vw 1.25vw; /* 32px 18px 24px = 1.67vw 0.94vw 1.25vw */

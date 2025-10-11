@@ -1,67 +1,79 @@
-/* Sección Nuestros Aliados */
+/* ==========================================
+   ALIADOS SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .aliadosSection {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 80px 0;
+  padding: 4.17vw 0; /* 80px = 4.17vw */
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1920px;
+  width: 94.79vw; /* 1820px = 94.79vw - MISMO ANCHO QUE OTROS HEROES */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
-/* Cuadro azul con texto - top: 4200px, left: 50px, 749x628px */
+/* ========== CUADRO AZUL CON TEXTO ========== */
+
 .textBox {
-  width: 749px;
-  height: 628px;
+  width: 39.01vw; /* 749px = 39.01vw */
+  height: 32.71vw; /* 628px = 32.71vw */
   background: #27A49F;
-  border-radius: 20px;
-  padding: 113px 40px 40px 40px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 5.89vw 2.08vw 2.08vw 2.08vw; /* 113px 40px 40px 40px = 5.89vw 2.08vw 2.08vw 2.08vw */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Título "Nuestros Aliados" - top: 4313px, left: 90px, 482x78px */
+/* ========== TEXTOS DEL CUADRO AZUL ========== */
+
 .title {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: left;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   opacity: 1;
 }
 
-/* Texto introductorio - top: 4415px, left: 90px, 613x89px */
 .introText {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FFFFFF;
   text-align: left;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   opacity: 1;
 }
 
-/* Lista de servicios - top: 4549px, left: 90px, 586x173px */
+/* ========== LISTA DE SERVICIOS ========== */
+
 .servicesList {
   color: #FFFFFF;
   text-align: left;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   margin: 0;
   opacity: 1;
 }
@@ -76,14 +88,14 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #FFFFFF;
   text-align: left;
-  margin-bottom: 8px;
+  margin-bottom: 0.42vw; /* 8px = 0.42vw */
   position: relative;
-  padding-left: 20px;
+  padding-left: 1.04vw; /* 20px = 1.04vw */
 }
 
 .servicesList li::before {
@@ -94,47 +106,55 @@
   font-weight: bold;
 }
 
-/* Contenedor de imágenes del medio */
+/* ========== CONTENEDOR DE IMÁGENES DEL MEDIO ========== */
+
 .imagesContainer {
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 1.15vw; /* 22px = 1.15vw */
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Imagen superior - top: 4200px, left: 815px, 528x304px */
+/* ========== IMAGEN SUPERIOR ========== */
+
 .topImageBox {
-  width: 528px;
-  height: 304px;
-  border-radius: 20px;
+  width: 27.50vw; /* 528px = 27.50vw */
+  height: 15.83vw; /* 304px = 15.83vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Imagen inferior - top: 4526px, left: 815px, 528x304px */
+/* ========== IMAGEN INFERIOR ========== */
+
 .bottomImageBox {
-  width: 528px;
-  height: 304px;
-  border-radius: 20px;
+  width: 27.50vw; /* 528px = 27.50vw */
+  height: 15.83vw; /* 304px = 15.83vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .serviceImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
 }
 
-/* Imagen grande del lado derecho - top: 4200px, left: 1360px, 510x630px */
+/* ========== IMAGEN GRANDE DEL LADO DERECHO ========== */
+
 .largeImageBox {
-  width: 510px;
-  height: 630px;
-  border-radius: 20px;
+  width: 26.56vw; /* 510px = 26.56vw */
+  height: 32.81vw; /* 630px = 32.81vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .largeImage {
@@ -142,216 +162,70 @@
   height: 100%;
   object-fit: cover;
   object-position: center top;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 20px;
-  }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-/* Laptops (1280–1600px): hacer componente más compacto para que quepa en pantalla */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .aliadosSection {
-    padding: 50px 0; /* Reducir padding vertical */
-  }
-  
-  .container {
-    gap: 12px; /* Reducir gap entre elementos */
-  }
-  
-  .textBox {
-    width: 580px; /* Más angosto */
-    height: 500px; /* Altura fija más pequeña */
-    min-height: 500px;
-    max-height: 500px;
-    padding: 40px 25px; /* Padding más compacto */
-  }
-  
-  .title {
-    font-size: 38px; /* Reducir tamaño del título */
-    line-height: 42px;
-    margin-bottom: 20px; /* Menos espacio */
-  }
-  
-  .introText {
-    font-size: 16px; /* Reducir tamaño del texto introductorio */
-    line-height: 24px;
-    margin-bottom: 20px; /* Menos espacio */
-  }
-  
-  .servicesList li {
-    font-size: 14px; /* Reducir tamaño de fuente de la lista */
-    line-height: 20px; /* Menos interlineado */
-    margin-bottom: 6px; /* Menos espacio entre elementos */
-  }
-  
-  .imagesContainer {
-    gap: 16px; /* Reducir gap entre imágenes */
-  }
-  
-  .topImageBox,
-  .bottomImageBox {
-    width: 400px; /* Más angosto */
-    height: 244px; /* Altura ajustada para alineación perfecta */
-    min-height: 244px;
-    max-height: 244px;
-  }
-  
-  .largeImageBox {
-    width: 400px; /* Más angosto */
-    height: 500px; /* Misma altura que el cuadro de texto */
-    min-height: 500px;
-    max-height: 500px;
-  }
-  
-  .serviceImage {
-    object-fit: cover;
-    object-position: center;
-  }
-  
-  .largeImage {
-    object-fit: cover;
-    object-position: center top; /* Ajustar para mostrar mejor la imagen sin recortes */
-  }
-}
-
-@media (max-width: 1600px) {
-  .textBox {
-    width: 600px;
-    padding: 80px 30px 30px 30px;
-  }
-  
-  .topImageBox,
-  .bottomImageBox {
-    width: 400px;
-    height: 230px;
-  }
-  
-  .largeImageBox {
-    width: 400px;
-    height: 500px;
-  }
-  
-  .title {
-    font-size: 45px;
-    line-height: 45px;
-  }
-}
-
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     align-items: center;
-    gap: 30px;
   }
-  
+
   .textBox {
-    width: 100%;
-    max-width: 749px;
+    width: 90vw;
     height: auto;
-    padding: 60px 30px;
+    min-height: 60vw;
   }
-  
+
   .imagesContainer {
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 2vw;
   }
-  
+
   .topImageBox,
   .bottomImageBox {
-    width: 300px;
+    width: 44vw;
     height: auto;
-    aspect-ratio: 528 / 304; /* conservar proporción en tablets */
-    overflow: hidden;
+    aspect-ratio: 528 / 304;
   }
-  
+
   .largeImageBox {
-    width: 100%;
-    max-width: 510px;
+    width: 90vw;
     height: auto;
     aspect-ratio: 510 / 630;
-  }
-  
-  .title {
-    font-size: 40px;
-    line-height: 40px;
   }
 }
 
 @media (max-width: 768px) {
   .aliadosSection {
-    padding: 60px 0;
+    padding: 8vw 0;
   }
-  
+
   .container {
-    padding: 0 15px;
+    width: 90vw;
   }
-  
+
   .textBox {
-    padding: 40px 20px;
+    padding: 6vw 4vw;
   }
-  
-  .title {
-    font-size: 35px;
-    line-height: 35px;
-  }
-  
-  .introText {
-    font-size: 17px;
-    line-height: 28px;
-  }
-  
-  .servicesList li {
-    font-size: 15px;
-    line-height: 23px;
-  }
-  
+
   .imagesContainer {
     flex-direction: column;
     width: 100%;
   }
-  
+
   .topImageBox,
   .bottomImageBox {
     width: 100%;
-    height: 250px;
+    height: 50vw;
   }
-  
+
   .largeImageBox {
-    height: 350px;
+    width: 100%;
+    height: 70vw;
   }
 }
 
-@media (max-width: 480px) {
-  .textBox {
-    padding: 30px 15px;
-  }
-  
-  .title {
-    font-size: 30px;
-    line-height: 30px;
-  }
-  
-  .introText {
-    font-size: 16px;
-    line-height: 26px;
-  }
-  
-  .servicesList li {
-    font-size: 14px;
-    line-height: 22px;
-  }
-  
-  .topImageBox,
-  .bottomImageBox {
-    height: 200px;
-  }
-  
-  .largeImageBox {
-    height: 300px;
-  }
-}

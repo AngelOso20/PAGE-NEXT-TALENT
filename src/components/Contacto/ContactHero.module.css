@@ -1,33 +1,47 @@
-/* Sección Hero de Contacto */
+/* ==========================================
+   CONTACT HERO - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .contactHero {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 150px 0 80px 0;
+  padding-top: 5.28vw; /* EXACTO: Mismo top que leftBox del HeroSection (5.28vw desde viewport top) */
+  padding-bottom: 4.17vw; /* 80px = 4.17vw */
   position: relative;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 50px;
+  width: 100vw; /* ANCHO COMPLETO PARA ALINEACIÓN CON BORDES */
+  margin: 0;
+  padding: 0 2.60vw; /* 50px = 2.60vw - MISMO ESPACIADO QUE HERO SECTION */
+  box-sizing: border-box;
 }
 
-/* Primera fila: Imagen y primera caja blanca */
+/* ========== PRIMERA FILA: IMAGEN Y PRIMERA CAJA BLANCA ========== */
+
 .heroContent {
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: flex-start;
   width: 100%;
-  margin-bottom: 0px; /* Sin espacio entre las cajas */
+  margin-bottom: 0px;
+  box-sizing: border-box;
 }
 
-/* Contenedor de imagen - 902x933px */
+/* ========== CONTENEDOR DE IMAGEN ========== */
+
 .imageContainer {
-  width: 902px;
-  height: 933px;
-  border-radius: 20px;
+  width: 46.98vw; /* 902px = 46.98vw */
+  height: 38.87vw; /* 48.59vw * 0.8 = 38.87vw - REDUCCIÓN 20% */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .heroImage {
@@ -37,35 +51,39 @@
   object-position: center;
 }
 
-/* Primera caja blanca de contenido - 902x525px */
+/* ========== PRIMERA CAJA BLANCA DE CONTENIDO ========== */
+
 .contentCard {
-  width: 902px;
-  height: 525px;
+  width: 46.98vw; /* 902px = 46.98vw */
+  height: 21.87vw; /* 27.34vw * 0.8 = 21.87vw - REDUCCIÓN 20% */
   background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .contentWrapper {
   width: 100%;
-  max-width: 812px;
-  padding: 40px;
+  max-width: 42.29vw; /* 812px = 42.29vw */
+  padding: 1.67vw; /* 2.08vw * 0.8 = 1.67vw - REDUCCIÓN 20% */
   display: flex;
   flex-direction: column;
-  gap: 38px;
+  gap: 1.58vw; /* 1.98vw * 0.8 = 1.58vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
-/* Título principal - 67px/75px FinalSix, #27A49F */
+/* ========== TEXTOS DEL CONTENIDO ========== */
+
 .title {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 67px;
-  line-height: 75px;
+  font-size: 2.79vw; /* 3.49vw * 0.8 = 2.79vw - REDUCCIÓN 20% */
+  line-height: 3.13vw; /* 3.91vw * 0.8 = 3.13vw - REDUCCIÓN 20% */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
@@ -73,13 +91,12 @@
   opacity: 1;
 }
 
-/* Descripción - 28px/38px FinalSix, #FB8C05 */
 .description {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 1.17vw; /* 1.46vw * 0.8 = 1.17vw - REDUCCIÓN 20% */
+  line-height: 1.58vw; /* 1.98vw * 0.8 = 1.58vw - REDUCCIÓN 20% */
   letter-spacing: 0px;
   color: #FB8C05;
   text-align: left;
@@ -87,89 +104,103 @@
   opacity: 1;
 }
 
-/* Segunda fila: Caja blanca con formulario - alineada a la derecha */
+/* ========== SEGUNDA FILA: CAJA BLANCA CON FORMULARIO ========== */
+
 .formRow {
   display: flex;
-  justify-content: flex-end; /* Alineado a la derecha como la primera caja */
+  justify-content: flex-end;
   width: 100%;
-  margin-top: -400px; /* Margen negativo ajustado para posición óptima */
+  margin-top: -16.67vw; /* -20.83vw * 0.8 = -16.67vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
-/* Segunda caja blanca con formulario - 902x393px */
+/* ========== SEGUNDA CAJA BLANCA CON FORMULARIO ========== */
+
 .formCard {
-  width: 902px;
-  height: 393px;
+  width: 46.98vw; /* 902px = 46.98vw */
+  height: 16.38vw; /* 20.47vw * 0.8 = 16.38vw - REDUCCIÓN 20% */
   background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .formWrapper {
   width: 100%;
-  max-width: 785px;
-  padding: 20px;
+  max-width: 40.89vw; /* 785px = 40.89vw */
+  padding: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
-/* Formulario */
+/* ========== FORMULARIO ========== */
+
 .form {
   width: 100%;
-  max-width: 785px;
+  max-width: 40.89vw; /* 785px = 40.89vw */
   position: relative;
+  box-sizing: border-box;
 }
 
-/* Grid de formulario - 2 columnas */
+/* ========== GRID DE FORMULARIO ========== */
+
 .formGrid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 0.62vw; /* 0.78vw * 0.8 = 0.62vw - REDUCCIÓN 20% */
+  margin-bottom: 0.62vw; /* 0.78vw * 0.8 = 0.62vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
-/* Grupo de input */
+/* ========== GRUPO DE INPUT ========== */
+
 .inputGroup {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 0.21vw; /* 0.26vw * 0.8 = 0.21vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
-/* Etiquetas */
+/* ========== ETIQUETAS ========== */
+
 .label {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 12px;
-  line-height: 18px;
-  letter-spacing: 0.35px;
+  font-size: 0.50vw; /* 0.63vw * 0.8 = 0.50vw - REDUCCIÓN 20% */
+  line-height: 0.75vw; /* 0.94vw * 0.8 = 0.75vw - REDUCCIÓN 20% */
+  letter-spacing: 0.014vw; /* 0.018vw * 0.8 = 0.014vw - REDUCCIÓN 20% */
   color: #464749;
   text-align: left;
   margin: 0;
   opacity: 1;
 }
 
-/* Inputs y textarea */
+/* ========== INPUTS Y TEXTAREA ========== */
+
 .input,
 .textarea {
   width: 100%;
-  padding: 8px 12px;
-  border: 2px solid #E5E5E5;
-  border-radius: 8px;
+  padding: 0.34vw 0.50vw; /* 0.42vw 0.63vw * 0.8 = 0.34vw 0.50vw - REDUCCIÓN 20% */
+  border: 0.08vw solid #E5E5E5; /* 0.10vw * 0.8 = 0.08vw - REDUCCIÓN 20% */
+  border-radius: 0.34vw; /* 0.42vw * 0.8 = 0.34vw - REDUCCIÓN 20% */
   font-family: 'FinalSix', sans-serif;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 0.58vw; /* 0.73vw * 0.8 = 0.58vw - REDUCCIÓN 20% */
+  line-height: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
   color: #464749;
   background: #FFFFFF;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
   border-color: #27A49F;
-  box-shadow: 0 0 0 3px rgba(39, 164, 159, 0.1);
+  box-shadow: 0 0 0 0.13vw rgba(39, 164, 159, 0.1); /* 0.16vw * 0.8 = 0.13vw - REDUCCIÓN 20% */
 }
 
 .input::placeholder,
@@ -177,498 +208,142 @@
   color: #999999;
 }
 
-/* Textarea específico */
 .textarea {
   resize: vertical;
-  min-height: 80px;
+  min-height: 3.34vw; /* 4.17vw * 0.8 = 3.34vw - REDUCCIÓN 20% */
 }
 
-/* Grupo de checkbox */
+/* ========== GRUPO DE CHECKBOX ========== */
+
 .checkboxGroup {
   display: flex;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 0.34vw; /* 0.42vw * 0.8 = 0.34vw - REDUCCIÓN 20% */
+  margin-bottom: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
-/* Checkbox */
 .checkbox {
-  width: 16px;
-  height: 16px;
+  width: 0.66vw; /* 0.83vw * 0.8 = 0.66vw - REDUCCIÓN 20% */
+  height: 0.66vw; /* 0.83vw * 0.8 = 0.66vw - REDUCCIÓN 20% */
   accent-color: #27A49F;
 }
 
-/* Etiqueta del checkbox */
 .checkboxLabel {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 11px;
-  line-height: 16px;
-  letter-spacing: 0.35px;
+  font-size: 0.46vw; /* 0.57vw * 0.8 = 0.46vw - REDUCCIÓN 20% */
+  line-height: 0.66vw; /* 0.83vw * 0.8 = 0.66vw - REDUCCIÓN 20% */
+  letter-spacing: 0.014vw; /* 0.018vw * 0.8 = 0.014vw - REDUCCIÓN 20% */
   color: #464749;
   cursor: pointer;
 }
 
-/* Botón de enviar - 244x40px, #FB8C05 */
+/* ========== BOTÓN DE ENVIAR ========== */
+
 .submitButton {
-  width: 200px;
-  height: 36px;
+  width: 8.34vw; /* 10.42vw * 0.8 = 8.34vw - REDUCCIÓN 20% */
+  height: 1.50vw; /* 1.88vw * 0.8 = 1.50vw - REDUCCIÓN 20% */
   background: #FB8C05;
-  border-radius: 18px;
+  border-radius: 0.75vw; /* 0.94vw * 0.8 = 0.75vw - REDUCCIÓN 20% */
   border: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 15px;
-  line-height: 30px;
+  font-size: 0.62vw; /* 0.78vw * 0.8 = 0.62vw - REDUCCIÓN 20% */
+  line-height: 1.25vw; /* 1.56vw * 0.8 = 1.25vw - REDUCCIÓN 20% */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   align-self: flex-end;
-  margin-top: 10px;
+  margin-top: 0.42vw; /* 0.52vw * 0.8 = 0.42vw - REDUCCIÓN 20% */
+  box-sizing: border-box;
 }
 
 .submitButton:hover {
   background: #e67e00;
-  transform: translateY(-2px);
+  transform: translateY(-0.08vw); /* -0.10vw * 0.8 = -0.08vw - REDUCCIÓN 20% */
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 20px;
-  }
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
+@media (max-width: 1024px) {
   .heroContent {
-    gap: 16px;
+    flex-direction: column;
+    align-items: center;
   }
 
   .imageContainer,
   .contentCard,
   .formCard {
-    width: 100%;
-    max-width: 902px;
-  }
-
-  .formRow {
-    justify-content: center; /* Centrado en pantallas más pequeñas */
-    margin-top: -400px; /* Margen negativo ajustado para posición óptima */
-  }
-}
-
-/* Laptops: Reducir proporcionalmente todos los elementos del hero de contacto */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  /* Reducir el contenedor principal */
-  .contactHero {
-    padding: 113px 0 60px 0; /* Reducido de 150px 0 80px 0 */
-  }
-
-  .container {
-    padding: 0 38px; /* Reducido de 0 50px */
-  }
-
-  /* Reducir la primera fila */
-  .heroContent {
-    gap: 12px; /* Reducido de 16px */
-    margin-bottom: 0px;
-  }
-
-  /* Reducir contenedor de imagen */
-  .imageContainer {
-    width: 677px; /* Reducido de 902px */
-    height: 700px; /* Reducido de 933px */
-  }
-
-  /* Reducir primera caja blanca */
-  .contentCard {
-    width: 677px; /* Reducido de 902px */
-    height: 394px; /* Reducido de 525px */
-  }
-
-  .contentWrapper {
-    max-width: 609px; /* Reducido de 812px */
-    padding: 30px; /* Reducido de 40px */
-    gap: 29px; /* Reducido de 38px */
-  }
-
-  /* Reducir título principal */
-  .title {
-    font-size: 50px; /* Reducido de 67px */
-    line-height: 56px; /* Reducido de 75px */
-  }
-
-  /* Reducir descripción */
-  .description {
-    font-size: 21px; /* Reducido de 28px */
-    line-height: 29px; /* Reducido de 38px */
-  }
-
-  /* Reducir segunda fila con formulario */
-  .formRow {
-    margin-top: -300px; /* Reducido de -400px */
-    justify-content: flex-end; /* Mover formulario hacia la derecha */
-    padding-right:08%; /* Reducido de 50% para alinearse mejor con el cuadro de arriba */
-  }
-
-  /* Reducir segunda caja blanca con formulario */
-  .formCard {
-    width: 677px; /* Reducido de 902px */
-    height: 295px; /* Reducido de 393px */
-  }
-
-  .formWrapper {
-    max-width: 589px; /* Reducido de 785px */
-    padding: 15px; /* Reducido de 20px */
-  }
-
-  /* Reducir formulario */
-  .form {
-    max-width: 589px; /* Reducido de 785px */
-  }
-
-  .formGrid {
-    gap: 11px; /* Reducido de 15px */
-    margin-bottom: 11px; /* Reducido de 15px */
-  }
-
-  /* Reducir etiquetas */
-  .label {
-    font-size: 9px; /* Reducido de 12px */
-    line-height: 14px; /* Reducido de 18px */
-    letter-spacing: 0.26px; /* Reducido de 0.35px */
-  }
-
-  /* Reducir inputs y textarea */
-  .input,
-  .textarea {
-    padding: 6px 9px; /* Reducido de 8px 12px */
-    font-size: 11px; /* Reducido de 14px */
-    line-height: 15px; /* Reducido de 20px */
-  }
-
-  .textarea {
-    min-height: 60px; /* Reducido de 80px */
-  }
-
-  /* Reducir checkbox */
-  .checkboxGroup {
-    gap: 6px; /* Reducido de 8px */
-    margin-bottom: 15px; /* Reducido de 20px */
-  }
-
-  .checkbox {
-    width: 12px; /* Reducido de 16px */
-    height: 12px; /* Reducido de 16px */
-  }
-
-  .checkboxLabel {
-    font-size: 8px; /* Reducido de 11px */
-    line-height: 12px; /* Reducido de 16px */
-    letter-spacing: 0.26px; /* Reducido de 0.35px */
-  }
-
-  /* Reducir botón de enviar */
-  .submitButton {
-    width: 150px; /* Reducido de 200px */
-    height: 27px; /* Reducido de 36px */
-    border-radius: 14px; /* Reducido de 18px */
-    font-size: 11px; /* Reducido de 15px */
-    line-height: 23px; /* Reducido de 30px */
-    margin-top: 8px; /* Reducido de 10px */
-  }
-}
-
-@media (max-width: 1279px) {
-  .contactHero {
-    padding: 120px 0 60px 0;
-  }
-
-  .heroContent {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 0px; /* Sin espacio entre las cajas */
+    width: 90vw;
   }
 
   .imageContainer {
-    width: 100%;
-    max-width: 902px;
-    height: 700px;
+    height: auto;
+    aspect-ratio: 902 / 933;
   }
 
   .contentCard {
-    width: 100%;
-    max-width: 902px;
     height: auto;
-    min-height: 400px;
+    min-height: 50vw;
   }
 
   .formCard {
-    width: 100%;
-    max-width: 902px;
     height: auto;
-    min-height: 350px;
+    min-height: 40vw;
   }
 
   .formRow {
-    justify-content: center; /* Centrado en tablets */
-    margin-top: -400px; /* Margen negativo ajustado para posición óptima */
+    justify-content: center;
+    margin-top: 3vw;
   }
 
-  .contentWrapper {
-    padding: 30px;
-    gap: 30px;
-  }
-
-  .title {
-    font-size: 55px;
-    line-height: 65px;
-  }
-
-  .description {
-    font-size: 24px;
-    line-height: 32px;
-  }
-
+  .contentWrapper,
   .formWrapper {
-    padding: 15px;
-  }
-
-  .formGrid {
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-}
-
-
-
-@media (max-width: 1200px) {
-  .contactHero {
-    padding: 100px 0 50px 0;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
-  .heroContent {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 0px; /* Sin espacio entre las cajas */
-  }
-
-  .imageContainer {
-    width: 100%;
-    max-width: 902px;
-    height: 500px;
-  }
-
-  .contentCard {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 350px;
-  }
-
-  .formCard {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 300px;
-  }
-
-  .formRow {
-    justify-content: center; /* Centrado en tablets */
-    margin-top: 24px; /* separar del bloque superior; evita superposición */
-  }
-
-  .contentWrapper {
-    padding: 25px;
-    gap: 25px;
-  }
-
-  .title {
-    font-size: 45px;
-    line-height: 55px;
-  }
-
-  .description {
-    font-size: 20px;
-    line-height: 28px;
-  }
-
-  .formWrapper {
-    padding: 15px;
+    padding: 4vw;
   }
 
   .formGrid {
     grid-template-columns: 1fr;
-    gap: 12px;
-    margin-bottom: 12px;
-  }
-
-  .input,
-  .textarea {
-    font-size: 13px;
-    padding: 6px 10px;
   }
 }
 
 @media (max-width: 768px) {
   .contactHero {
-    padding: 100px 0 40px 0; /* bajar más el hero respecto al nav */
-  }
-
-  .heroContent {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 0px; /* Sin espacio entre las cajas */
-  }
-
-  .imageContainer {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    aspect-ratio: 902 / 933;
-    overflow: hidden;
-  }
-
-  .contentCard {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 250px;
-  }
-
-  .formCard {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 280px;
-  }
-
-  .formRow {
-    justify-content: center; /* Centrado en móviles */
-    margin-top: 16px; /* separar del hero */
-  }
-
-  .contentWrapper {
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .title {
-    font-size: 35px;
-    line-height: 45px;
-  }
-
-  .description {
-    font-size: 18px;
-    line-height: 26px;
-  }
-
-  .formWrapper {
-    padding: 12px;
-  }
-
-  .input,
-  .textarea {
-    font-size: 12px;
-    padding: 6px 10px;
-  }
-
-  .submitButton {
-    width: 180px;
-    height: 32px;
-    font-size: 13px;
-    align-self: flex-end;
-    margin-top: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .contactHero {
-    padding: 90px 0 30px 0; /* extra aire en móviles pequeños */
+    padding-top: 8vw;
+    padding-bottom: 6vw;
   }
 
   .container {
-    padding: 0 10px;
+    width: 90vw;
   }
 
   .heroContent {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 0px; /* Sin espacio entre las cajas */
+    gap: 3vw;
   }
 
   .imageContainer {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    aspect-ratio: 902 / 933;
+    height: 60vw;
   }
 
   .contentCard {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 200px;
+    min-height: 60vw;
   }
 
   .formCard {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 250px;
+    min-height: 70vw;
+  }
+
+  .contentWrapper,
+  .formWrapper {
+    padding: 3vw;
   }
 
   .formRow {
-    justify-content: center; /* Centrado en móviles pequeños */
-    margin-top: 16px; /* sin solapar la imagen */
-  }
-
-  .contentWrapper {
-    padding: 15px;
-    gap: 15px;
-  }
-
-  .title {
-    font-size: 28px;
-    line-height: 38px;
-  }
-
-  .description {
-    font-size: 16px;
-    line-height: 24px;
-  }
-
-  .formWrapper {
-    padding: 10px;
-  }
-
-  .input,
-  .textarea {
-    font-size: 11px;
-    padding: 5px 8px;
-  }
-
-  .submitButton {
-    width: 100%;
-    max-width: 160px;
-    height: 30px;
-    font-size: 12px;
-    align-self: flex-end;
-    margin-top: 6px;
-  }
-
-  .checkboxLabel {
-    font-size: 10px;
-    line-height: 14px;
+    margin-top: 4vw;
   }
 }

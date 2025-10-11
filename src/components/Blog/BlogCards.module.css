@@ -1,51 +1,64 @@
-/* Contenedor de tarjetas de blog */
+/* ==========================================
+   BLOG CARDS - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .blogCardsContainer {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 0 0 80px 0;
+  padding: 0 0 4.17vw 0; /* 80px = 4.17vw */
   display: flex;
-  justify-content: flex-start; /* Alineado a la izquierda para coincidir con el mockup */
+  justify-content: flex-start;
+  box-sizing: border-box;
 }
 
 .container {
-  max-width: 1400px; /* Mismo ancho que los filtros para consistencia */
-  width: 100%;
-  padding: 0 50px;
-  margin-left: 0; /* Asegurar alineación a la izquierda */
+  width: 100vw; /* ANCHO COMPLETO PARA ALINEACIÓN CON BORDES */
+  margin: 0;
+  padding: 0 2.60vw; /* 50px = 2.60vw - MISMO ESPACIADO QUE HERO SECTION */
+  box-sizing: border-box;
 }
 
-/* Grid de tarjetas */
+/* ========== GRID DE TARJETAS ========== */
+
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
-  margin-top: 20px;
+  grid-template-columns: repeat(4, 23.07vw); /* 443px = 23.07vw */
+  gap: 0.83vw; /* 16px = 0.83vw - MISMO GAP QUE OTROS COMPONENTES */
+  margin-top: 1.04vw; /* 20px = 1.04vw */
+  box-sizing: border-box;
 }
 
-/* Tarjeta individual - 443x562px como en el mockup */
+/* ========== TARJETA INDIVIDUAL ========== */
+
 .blogCard {
   background: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  width: 443px;
-  height: 562px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 29.27vw; /* 562px = 29.27vw */
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
 .blogCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-0.26vw); /* -5px = -0.26vw */
+  box-shadow: 0 0.42vw 1.56vw rgba(0, 0, 0, 0.12); /* 0 8px 30px */
 }
 
-/* Contenedor de imagen - 443x294px como en el mockup */
+/* ========== CONTENEDOR DE IMAGEN ========== */
+
 .imageContainer {
   position: relative;
   width: 100%;
-  height: 294px;
+  height: 15.31vw; /* 294px = 15.31vw */
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cardImage {
@@ -55,87 +68,94 @@
   object-position: center;
 }
 
-/* Etiqueta de categoría */
+/* ========== ETIQUETAS ========== */
+
 .categoryTag {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  padding: 6px 12px;
-  border-radius: 15px;
+  top: 0.78vw; /* 15px = 0.78vw */
+  left: 0.78vw; /* 15px = 0.78vw */
+  padding: 0.31vw 0.63vw; /* 6px 12px = 0.31vw 0.63vw */
+  border-radius: 0.78vw; /* 15px = 0.78vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 0.52vw; /* 10px = 0.52vw */
+  line-height: 0.73vw; /* 14px = 0.73vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-transform: uppercase;
   z-index: 2;
+  box-sizing: border-box;
 }
 
-/* Etiqueta de fecha */
 .dateTag {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  padding: 6px 12px;
-  border-radius: 15px;
+  top: 0.78vw; /* 15px = 0.78vw */
+  right: 0.78vw; /* 15px = 0.78vw */
+  padding: 0.31vw 0.63vw; /* 6px 12px = 0.31vw 0.63vw */
+  border-radius: 0.78vw; /* 15px = 0.78vw */
   background: #27A49F;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 0.52vw; /* 10px = 0.52vw */
+  line-height: 0.73vw; /* 14px = 0.73vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-transform: uppercase;
   z-index: 2;
+  box-sizing: border-box;
 }
 
-/* Contenido de la tarjeta */
+/* ========== CONTENIDO DE LA TARJETA ========== */
+
 .cardContent {
-  padding: 25px;
+  padding: 1.30vw; /* 25px = 1.30vw */
   flex-grow: 1;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
 }
 
-/* Título de la tarjeta */
+/* ========== TÍTULO DE LA TARJETA ========== */
+
 .cardTitle {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 0.94vw; /* 18px = 0.94vw */
+  line-height: 1.25vw; /* 24px = 1.25vw */
   letter-spacing: 0px;
   color: #27A49F;
-  margin: 0 0 15px 0;
+  margin: 0 0 0.78vw 0; /* 15px = 0.78vw */
   flex-grow: 1;
 }
 
-/* Descripción de la tarjeta */
+/* ========== DESCRIPCIÓN DE LA TARJETA ========== */
+
 .cardDescription {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 0.73vw; /* 14px = 0.73vw */
+  line-height: 1.15vw; /* 22px = 1.15vw */
   letter-spacing: 0px;
   color: #464749;
-  margin: 0 0 20px 0;
+  margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
   flex-grow: 1;
 }
 
-/* Texto "Saber más +" - estilo plano como en el mockup */
+/* ========== BOTÓN "SABER MÁS" ========== */
+
 .readMoreBtn {
   background: none;
   border: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 31px;
-  letter-spacing: 0.35px;
+  font-size: 0.73vw; /* 14px = 0.73vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
   color: #27A49F;
   text-align: center;
   cursor: pointer;
@@ -147,166 +167,58 @@
 
 .readMoreBtn:hover {
   color: #1e8a85;
-  transform: translateY(-1px);
+  transform: translateY(-0.05vw); /* -1px = -0.05vw */
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 30px;
-  }
-  
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
+
+@media (max-width: 1024px) {
   .cardsGrid {
-    gap: 25px;
-  }
-}
-
-@media (max-width: 1600px) {
-  .cardsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .blogCard {
-    width: 100%;
-    max-width: 443px;
-    height: 500px; /* Altura ajustada para pantallas medianas */
-  }
-
-  .imageContainer {
-    height: 260px;
-  }
-
-  .cardContent {
-    padding: 20px;
-  }
-
-  .cardTitle {
-    font-size: 16px;
-    line-height: 22px;
-  }
-
-  .cardDescription {
-    font-size: 13px;
-    line-height: 20px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .blogCardsContainer {
-    padding: 0 0 60px 0;
-  }
-
-  .container {
-    padding: 0 15px;
-  }
-
-  .cardsGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .blogCard {
-    width: 100%;
-    max-width: 443px;
-    height: 480px; /* Altura ajustada para tablets */
-  }
-
-  .imageContainer {
-    height: 240px;
-  }
-
-  .cardContent {
-    padding: 18px;
-  }
-
-  .cardTitle {
-    font-size: 15px;
-    line-height: 21px;
-  }
-
-  .cardDescription {
-    font-size: 12px;
-    line-height: 18px;
-  }
-
-  .readMoreBtn {
-    font-size: 13px;
-    line-height: 28px;
+    grid-template-columns: repeat(3, 23.07vw); /* 3 columnas en tablets */
+    gap: 0.83vw; /* MISMO GAP QUE OTROS COMPONENTES */
   }
 }
 
 @media (max-width: 768px) {
+  .blogCardsContainer {
+    padding: 0 0 3.13vw 0; /* 60px = 3.13vw */
+  }
+
+  .container {
+    padding: 0 0.78vw; /* 15px = 0.78vw */
+  }
+
   .cardsGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+    gap: 0.83vw; /* MISMO GAP QUE OTROS COMPONENTES */
   }
 
   .blogCard {
     width: 100%;
-    max-width: 443px;
-    height: 460px; /* Altura ajustada para móviles */
+    height: auto;
+    min-height: 24.00vw; /* Altura mínima para móviles */
   }
 
   .imageContainer {
-    height: 220px;
+    height: 12.50vw; /* Altura reducida para móviles */
   }
 
   .cardContent {
-    padding: 15px;
-  }
-
-  .categoryTag,
-  .dateTag {
-    font-size: 9px;
-    padding: 4px 8px;
+    padding: 0.94vw; /* 18px = 0.94vw */
   }
 
   .cardTitle {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 0.78vw; /* 15px = 0.78vw */
+    line-height: 1.15vw; /* 21px = 1.15vw */
   }
 
   .cardDescription {
-    font-size: 11px;
-    line-height: 16px;
+    font-size: 0.63vw; /* 12px = 0.63vw */
+    line-height: 0.94vw; /* 18px = 0.94vw */
   }
 
   .readMoreBtn {
-    font-size: 12px;
-    line-height: 24px;
-  }
-}
-
-@media (max-width: 480px) {
-  .blogCardsContainer {
-    padding: 0 0 40px 0;
-  }
-
-  .blogCard {
-    height: 420px; /* Altura ajustada para móviles pequeños */
-  }
-
-  .imageContainer {
-    height: 200px;
-  }
-
-  .cardContent {
-    padding: 12px;
-  }
-
-  .cardTitle {
-    font-size: 13px;
-    line-height: 18px;
-  }
-
-  .cardDescription {
-    font-size: 10px;
-    line-height: 15px;
-  }
-
-  .readMoreBtn {
-    font-size: 11px;
-    line-height: 22px;
+    font-size: 0.68vw; /* 13px = 0.68vw */
+    line-height: 1.46vw; /* 28px = 1.46vw */
   }
 }

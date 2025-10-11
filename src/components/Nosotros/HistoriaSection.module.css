@@ -1,92 +1,108 @@
-/* Historia Section - Diseño base 1920px */
+/* ==========================================
+   HISTORIA SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .historiaSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px = 94.79vw - MISMO ANCHO QUE OTROS HEROES */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: flex-start;
+  box-sizing: border-box;
 }
 
-/* Imagen izquierda - 902x728px */
+/* ========== IMAGEN IZQUIERDA ========== */
+
 .imageBox {
   position: relative;
-  width: 902px;
-  height: 800px; /* aumentar más para alinear con cards */
-  border-radius: 20px;
+  width: 46.98vw; /* 902px = 46.98vw */
+  height: 36.66vw; /* Alineada con historiaBox (21.25vw) + gap (0.83vw) + cards (14.58vw) = 36.66vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-.imageBox img { width: 100%; height: 100%; object-fit: cover; border-radius: 20px; }
+.imageBox img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+}
 
-/* Columna derecha */
+/* ========== COLUMNA DERECHA ========== */
+
 .rightColumn {
-  width: 902px;
+  width: 46.98vw; /* 902px = 46.98vw */
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Cuadro blanco historia - 902x408px */
+/* ========== CUADRO BLANCO HISTORIA ========== */
+
 .historiaBox {
   width: 100%;
-  height: 408px;
+  height: 21.25vw; /* 408px = 21.25vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 41px 38px 38px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 2.14vw 1.98vw 1.98vw; /* 41px 38px 38px = 2.14vw 1.98vw 1.98vw */
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Título - turquesa */
+/* ========== TEXTOS DEL CUADRO ========== */
+
 .title {
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
   opacity: 1;
 }
 
-/* Texto naranja */
 .orangeText {
-  margin: 0 0 30px 0;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FB8C05;
   text-align: left;
   opacity: 1;
 }
 
-/* Texto gris */
 .grayText {
-  margin: 0 0 15px 0;
+  margin: 0 0 0.78vw 0; /* 15px = 0.78vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
@@ -96,167 +112,58 @@
   margin-bottom: 0;
 }
 
-/* Grid de 3 cards - 290x304px cada una */
+/* ========== GRID DE 3 CARDS ========== */
+
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 290px);
-  gap: 16px;
+  grid-template-columns: repeat(3, 15.10vw); /* 290px = 15.10vw */
+  gap: 0.83vw; /* 16px = 0.83vw */
   width: 100%;
+  box-sizing: border-box;
 }
 
-/* Card pequeña - 290x304px */
+/* ========== CARD PEQUEÑA ========== */
+
 .historiaCard {
   width: 100%;
-  height: 280px; /* base; valores específicos se fijan por media query */
+  height: 14.58vw; /* 280px = 14.58vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 28px 30px 36px; /* subir al máximo razonable */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 1.46vw 1.56vw 1.88vw; /* 28px 30px 36px = 1.46vw 1.56vw 1.88vw */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Contenedor del icono */
+/* ========== CONTENEDOR DEL ICONO ========== */
+
 .cardIconContainer {
-  width: 68px; /* pequeño para no desbordar */
-  height: 64px;
-  margin-bottom: 8px; /* aún más arriba respecto al texto */
+  width: 3.54vw; /* 68px = 3.54vw */
+  height: 3.33vw; /* 64px = 3.33vw */
+  margin-bottom: 0.42vw; /* 8px = 0.42vw */
   flex-shrink: 0;
 }
 
-/* Texto de la card */
+/* ========== TEXTO DE LA CARD ========== */
+
 .cardText {
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .container {
-    padding: 0 2.6vw;
-    gap: 0.83vw;
-  }
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-  .imageBox {
-    width: clamp(600px, 46.98vw, 902px);
-    height: clamp(480px, 37.92vw, 728px);
-  }
-
-  .imageBox img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .rightColumn {
-    width: clamp(600px, 46.98vw, 902px);
-    gap: clamp(12px, 0.83vw, 16px);
-  }
-
-  .historiaBox {
-    height: clamp(350px, 21.25vw, 408px);
-    padding: clamp(30px, 2.14vw, 41px) clamp(30px, 1.98vw, 38px);
-  }
-
-  .title {
-    font-size: clamp(35px, 2.86vw, 55px);
-    line-height: clamp(40px, 2.86vw, 55px);
-  }
-
-  .orangeText {
-    font-size: clamp(17px, 0.99vw, 19px);
-    line-height: clamp(26px, 1.61vw, 31px);
-  }
-
-  .grayText {
-    font-size: clamp(14px, 0.83vw, 16px);
-    line-height: clamp(22px, 1.30vw, 25px);
-  }
-
-  .cardsGrid {
-    grid-template-columns: repeat(3, clamp(200px, 15.10vw, 290px));
-    gap: clamp(12px, 0.83vw, 16px);
-  }
-
-  .historiaCard {
-    height: clamp(250px, 15.83vw, 304px);
-    padding: clamp(50px, 4.38vw, 84px) clamp(30px, 2.08vw, 40px) clamp(40px, 3.33vw, 64px);
-  }
-
-  .cardIconContainer {
-    width: clamp(65px, 4.63vw, 89px);
-    height: clamp(63px, 4.48vw, 86px);
-  }
-}
-
-/* Laptops 1280–1600px: alinear imagen con iconos en la parte inferior */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  /* Ajustar altura de la imagen para que coincida con la columna derecha */
-  .imageBox { 
-    height: 510px; /* Punto intermedio para alineación óptima */
-    min-height: 510px;
-    max-height: 510px;
-  }
-  
-  /* Reducir altura del cuadro de historia */
-  .historiaBox { 
-    height: 320px; /* Reducir altura */
-    min-height: 320px;
-    max-height: 320px;
-    padding: 30px 30px;
-  }
-  
-  /* Ajustar tipografías para que quepan mejor */
-  .title { 
-    font-size: 42px; 
-    line-height: 48px; 
-    margin-bottom: 20px; 
-  }
-  
-  .orangeText { 
-    font-size: 17px; 
-    line-height: 26px; 
-    margin-bottom: 20px; 
-  }
-  
-  .grayText { 
-    font-size: 15px; 
-    line-height: 22px; 
-    margin-bottom: 10px; 
-  }
-  
-  /* Ajustar cards de iconos */
-  .historiaCard { 
-    height: 180px; 
-    padding: 14px 16px 18px; 
-  }
-  
-  .cardIconContainer { 
-    width: 44px; 
-    height: 40px; 
-    margin-bottom: 4px; 
-  }
-  
-  .cardText { 
-    font-size: 12px; 
-    line-height: 18px; 
-    margin-top: 8px; 
-  }
-}
-
-@media (max-width: 1400px) {
-  .historiaSection {
-    padding: 80px 0;
-  }
-
+@media (max-width: 1024px) {
   .container {
     flex-direction: column;
     align-items: center;
@@ -264,43 +171,37 @@
 
   .imageBox,
   .rightColumn {
-    width: 100%;
-    max-width: 902px;
+    width: 90vw;
   }
 
   .imageBox {
     height: auto;
-    aspect-ratio: 902 / 728;
+    aspect-ratio: 902 / 800;
   }
 
   .historiaBox {
     height: auto;
-    min-height: 350px;
+    min-height: 40vw;
   }
 
   .cardsGrid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 2vw;
+  }
+
+  .historiaCard {
+    height: auto;
+    min-height: 30vw;
   }
 }
 
 @media (max-width: 768px) {
   .historiaSection {
-    padding: 60px 0;
+    padding: 8vw 0;
   }
 
-  .title {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .orangeText {
-    font-size: 17px;
-    line-height: 28px;
-  }
-
-  .grayText {
-    font-size: 15px;
-    line-height: 24px;
+  .container {
+    width: 90vw;
   }
 
   .cardsGrid {
@@ -308,8 +209,8 @@
   }
 
   .historiaCard {
-    height: auto;
-    min-height: 280px;
+    min-height: 50vw;
+    padding: 4vw;
   }
 }
 

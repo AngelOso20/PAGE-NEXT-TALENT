@@ -1,45 +1,55 @@
-/* Contenedor de filtros */
+/* ==========================================
+   BLOG FILTERS - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .filtersContainer {
-  width: 100%;
+  width: 100vw;
   background: #F3F7F9;
-  padding: 40px 0 20px 0;
+  padding: 2.08vw 0 1.04vw 0; /* 40px 20px = 2.08vw 1.04vw */
   display: flex;
-  justify-content: center; /* Centrado como en el mockup */
+  justify-content: center;
+  box-sizing: border-box;
 }
 
 .filtersBar {
-  max-width: 1400px; /* Ancho más compacto para centrar */
-  width: 100%;
-  padding: 0 50px;
+  width: 100vw; /* ANCHO COMPLETO PARA ALINEACIÓN CON BORDES */
+  margin: 0;
+  padding: 0 2.60vw; /* 50px = 2.60vw - MISMO ESPACIADO QUE HERO SECTION */
   display: flex;
-  gap: 40px;
+  gap: 2.08vw; /* 40px = 2.08vw */
   align-items: center;
-  justify-content: center; /* Botones centrados dentro del contenedor */
-  margin: 0 auto; /* Centrado automático */
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-/* Botón de filtro */
+/* ========== BOTÓN DE FILTRO ========== */
+
 .filterButton {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.20vw; /* 23px = 1.20vw */
   letter-spacing: 0px;
   color: #27A49F;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px 0;
+  padding: 0.42vw 0; /* 8px = 0.42vw */
   position: relative;
   transition: color 0.3s ease;
+  box-sizing: border-box;
 }
 
 .filterButton:hover {
   color: #1e8a85;
 }
 
-/* Filtro activo */
+/* ========== FILTRO ACTIVO ========== */
+
 .filterButton.active {
   color: #464749;
   font-weight: bold;
@@ -51,58 +61,38 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 0.10vw; /* 2px = 0.10vw */
   background: #27A49F;
-  border-radius: 1px;
+  border-radius: 0.05vw; /* 1px = 0.05vw */
 }
 
-/* Responsive Design */
-@media (max-width: 1920px) {
-  .filtersBar {
-    padding: 0 30px;
-    gap: 30px;
-  }
-}
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-@media (max-width: 1200px) {
+@media (max-width: 1024px) {
   .filtersBar {
-    padding: 0 15px;
-    gap: 25px;
+    gap: 1.56vw; /* 30px = 1.56vw */
     flex-wrap: wrap;
   }
   
   .filterButton {
-    font-size: 15px;
-    line-height: 22px;
+    font-size: 0.78vw; /* 15px = 0.78vw */
+    line-height: 1.15vw; /* 22px = 1.15vw */
   }
 }
 
 @media (max-width: 768px) {
   .filtersContainer {
-    padding: 30px 0 15px 0;
+    padding: 1.56vw 0 0.78vw 0; /* 30px 15px = 1.56vw 0.78vw */
   }
   
   .filtersBar {
-    gap: 20px;
+    gap: 1.04vw; /* 20px = 1.04vw */
     justify-content: center;
   }
   
   .filterButton {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 6px 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .filtersBar {
-    gap: 15px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  .filterButton {
-    font-size: 13px;
-    line-height: 18px;
+    font-size: 0.73vw; /* 14px = 0.73vw */
+    line-height: 1.04vw; /* 20px = 1.04vw */
+    padding: 0.31vw 0; /* 6px = 0.31vw */
   }
 }

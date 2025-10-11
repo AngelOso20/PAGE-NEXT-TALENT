@@ -1,224 +1,166 @@
-/* Valores Section - Diseño base 1920px */
+/* ==========================================
+   VALORES SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .valoresSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Cuadro azul largo - top: 2604px, left: 50px, 1820x159px */
+/* ========== CUADRO AZUL LARGO ========== */
+
 .blueBox {
-  width: 1820px;
-  height: 159px;
+  width: 94.79vw; /* 1820px = 94.79vw */
+  height: 8.28vw; /* 159px = 8.28vw */
   background: #27A49F;
-  border-radius: 20px;
-  margin: 0 auto 61px;
-  padding: 41px 370px 38px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  margin: 0 auto 3.18vw; /* 61px = 3.18vw */
+  padding: 2.14vw 19.27vw 1.98vw; /* 41px 370px 38px = 2.14vw 19.27vw 1.98vw */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Título del cuadro azul - top: 2618px, left: 420px */
 .blueTitle {
-  margin: 0 0 17px 0;
+  margin: 0 0 0.89vw 0; /* 17px = 0.89vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;
   opacity: 1;
 }
 
-/* Texto del cuadro azul - top: 2713px, left: 317px */
 .blueText {
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FFFFFF;
   text-align: center;
   opacity: 1;
 }
 
-/* Contenedor inferior - Layout horizontal */
+/* ========== CONTENEDOR INFERIOR ========== */
+
 .bottomContainer {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px = 94.79vw */
   margin: 0 auto;
-  padding: 0 0px;
+  padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: stretch;
-  margin-top: 20px;
+  box-sizing: border-box;
 }
 
-/* Cuadro naranja - top: 2898px, left: 50px, 443x304px */
+/* ========== CUADRO NARANJA ========== */
+
 .orangeBox {
-  width: 320px;            /* más angosto para alinear con el azul */
-  height: 260px;           /* más corto */
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 15.83vw; /* 304px = 15.83vw */
   background: #FB8C05;
-  border-radius: 20px;
-  padding: 28px 24px;      /* padding compacto */
-  margin-left: 15px;       /* mover un poco más a la derecha */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 1.46vw 1.25vw; /* 28px 24px = 1.46vw 1.25vw */
   display: flex;
   align-items: center;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Título naranja */
 .orangeTitle {
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
 }
 
-/* Grid de valores - 3 cards en fila */
+/* ========== GRID DE VALORES ========== */
+
 .valoresGrid {
   display: grid;
-  grid-template-columns: repeat(3, 443px);
-  gap: 16px;
-  width: 1345px; /* 443px * 3 + 16px * 2 */
+  grid-template-columns: repeat(3, 23.07vw); /* 443px = 23.07vw */
+  gap: 0.83vw; /* 16px = 0.83vw */
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Card de valor - 443x304px */
+/* ========== CARD DE VALOR ========== */
+
 .valorCard {
   width: 100%;
-  height: 304px;
+  height: 15.83vw; /* 304px = 15.83vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 93px 43px 64px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 4.84vw 2.24vw 3.33vw; /* 93px 43px 64px = 4.84vw 2.24vw 3.33vw */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Contenedor del icono - ~79-89px width, 57-77px height */
+/* ========== CONTENEDOR DEL ICONO ========== */
+
 .iconContainer {
-  width: 89px;
-  height: 77px;
-  margin-bottom: 37px;
+  width: 4.63vw; /* 89px = 4.63vw */
+  height: 4.01vw; /* 77px = 4.01vw */
+  margin-bottom: 1.93vw; /* 37px = 1.93vw */
   flex-shrink: 0;
 }
 
-/* Texto de la card */
+/* ========== TEXTOS DE LA CARD ========== */
+
 .cardText {
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
 }
 
-/* Título de la card (bold) */
 .cardTitle {
   font-weight: bold;
 }
 
-/* Descripción de la card (normal) */
 .cardDescription {
   font-weight: normal;
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .blueBox {
-    width: 94.79vw;
-    max-width: 1820px;
-    height: clamp(140px, 8.28vw, 159px);
-    padding: clamp(30px, 2.14vw, 41px) clamp(250px, 19.27vw, 370px) clamp(25px, 1.98vw, 38px);
-  }
+/* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
-  .blueTitle {
-    font-size: clamp(35px, 2.86vw, 55px);
-    line-height: clamp(40px, 2.86vw, 55px);
-  }
-
-  .blueText {
-    font-size: clamp(17px, 0.99vw, 19px);
-    line-height: clamp(26px, 1.61vw, 31px);
-  }
-
-  .orangeBox {
-    width: clamp(300px, 23.07vw, 443px);
-    height: clamp(250px, 15.83vw, 304px);
-  }
-
-  .valoresGrid {
-    grid-template-columns: repeat(3, clamp(300px, 23.07vw, 443px));
-    gap: clamp(12px, 0.83vw, 16px);
-  }
-
-  .valorCard {
-    width: 100%;
-    height: 100%;
-    padding: clamp(60px, 4.84vw, 93px) clamp(30px, 2.24vw, 43px) clamp(40px, 3.33vw, 64px);
-  }
-
-  .orangeTitle {
-    font-size: clamp(35px, 2.86vw, 55px);
-    line-height: clamp(40px, 2.86vw, 55px);
-  }
-
-  .iconContainer {
-    width: clamp(65px, 4.63vw, 89px);
-    height: clamp(55px, 4.01vw, 77px);
-  }
-}
-
-/* Laptops (1280–1600px): alinear cuadro naranja con cuadritos blancos */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .valoresSection .orangeBox {
-    width: 300px;                 /* más angosto en laptops */
-    height: 304px !important;     /* misma altura que los cuadritos blancos */
-    min-height: 304px;
-    max-height: 304px;
-    padding: 24px 20px;
-    margin-left: 36px;
-  }
-  
-  /* Asegurar que los cuadritos blancos tengan altura fija */
-  .valorCard {
-    height: 304px !important;
-    min-height: 304px;
-    max-height: 304px;
-  }
-}
-
-@media (max-width: 1400px) {
-  .valoresSection {
-    padding: 80px 0;
-  }
-
+@media (max-width: 1024px) {
   .blueBox {
     height: auto;
-    min-height: 140px;
-    padding: 40px 50px;
+    min-height: 15vw;
+    padding: 4vw 10vw;
   }
 
   .bottomContainer {
@@ -227,47 +169,35 @@
   }
 
   .orangeBox {
-    width: 100%;
-    max-width: 443px;
+    width: 90vw;
     height: auto;
-    min-height: 250px;
+    min-height: 30vw;
   }
 
   .valoresGrid {
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1400px;
-    width: 100%;
+    width: 90vw;
+    gap: 2vw;
+  }
+
+  .valorCard {
+    height: auto;
+    min-height: 40vw;
   }
 }
 
 @media (max-width: 768px) {
   .valoresSection {
-    padding: 60px 0;
-  }
-
-  .blueTitle {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .blueText {
-    font-size: 17px;
-    line-height: 28px;
-  }
-
-  .orangeTitle {
-    font-size: 40px;
-    line-height: 46px;
+    padding: 8vw 0;
   }
 
   .valoresGrid {
     grid-template-columns: 1fr;
-    max-width: 443px;
   }
 
   .valorCard {
-    height: auto;
-    min-height: 280px;
+    min-height: 60vw;
+    padding: 6vw 4vw;
   }
 }
 
