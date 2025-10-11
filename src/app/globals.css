@@ -21,17 +21,27 @@
   --design-width: 1920;
 }
 
-html,
-body {
-  max-width: 100vw;
+html {
+  width: 100%;
   overflow-x: hidden;
-  font-family: var(--font-family);
+  /* Usar overflow-x: hidden asegura que no haya scroll horizontal
+     incluso si 100vw incluye el ancho del scrollbar vertical */
 }
 
 body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: var(--font-family);
   background: var(--color-background);
   color: var(--color-text-primary);
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  overflow-x: hidden;
 }
 
 a {

@@ -29,6 +29,7 @@ export default function HeroSection() {
             width={538}
             height={909}
             priority
+            sizes="(max-width: 768px) 70vw, 28vw"
           />
         </div>
       </div>
@@ -65,6 +66,7 @@ export default function HeroSection() {
             width={18}
             height={17}
             className={styles.phoneIcon}
+            sizes="(max-width: 768px) 4vw, 0.94vw"
           />
           <span>AGENDA TU ASESORÍA</span>
         </a>

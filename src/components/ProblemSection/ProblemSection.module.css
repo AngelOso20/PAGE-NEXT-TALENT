@@ -1,248 +1,176 @@
-/* Problem Section - Diseño base 1920px */
+/* ==========================================
+   PROBLEM SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .problemSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px = 94.79vw */
   margin: 0 auto;
   padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: stretch;
+  box-sizing: border-box;
 }
 
-/* Cuadro blanco - top: 2448px, left: 50px, 1055x545px */
+/* ========== CUADRO BLANCO DE CONTENIDO ========== */
 .contentBox {
   position: relative;
-  width: 1055px;
-  min-height: 545px;
+  width: 54.95vw; /* 1055px = 54.95vw */
+  min-height: 28.39vw; /* 545px = 28.39vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 68px 49px 68px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 3.54vw 2.55vw; /* 68px 49px = 3.54vw 2.55vw */
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Título - top: 2516px, left: 99px (relativo: 68px, 49px) */
+/* ========== TEXTOS INTERNOS ========== */
+
+/* Título */
 .title {
   width: 100%;
-  max-width: 769px;
-  margin: 0 0 21px 0;
+  max-width: 40.05vw; /* 769px = 40.05vw */
+  margin: 0 0 1.09vw 0; /* 21px = 1.09vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
   opacity: 1;
 }
 
-/* Descripción naranja - top: 2670px, left: 99px */
+/* Descripción naranja */
 .description {
   width: 100%;
-  max-width: 712px;
-  margin: 0 0 37px 0;
+  max-width: 37.08vw; /* 712px = 37.08vw */
+  margin: 0 0 1.93vw 0; /* 37px = 1.93vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FB8C05;
   text-align: left;
   opacity: 1;
 }
 
-/* Lista de problemas - top: 2827px, left: 99px */
+/* Lista de problemas */
 .problemList {
   width: 100%;
-  max-width: 836px;
+  max-width: 43.54vw; /* 836px = 43.54vw */
   margin: 0;
   padding: 0;
   list-style: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
 }
 
 .problemList li {
-  margin-bottom: 8px;
+  margin-bottom: 0.42vw; /* 8px = 0.42vw */
 }
 
-/* Imagen del chef - top: 2448px, left: 1121px, 749x545px */
+/* ========== IMAGEN DEL CHEF ========== */
 .imageBox {
   position: relative;
-  width: 749px;
-  height: 545px;
-  border-radius: 20px;
+  width: 39.01vw; /* 749px = 39.01vw */
+  height: 28.39vw; /* 545px = 28.39vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .imageBox img {
-  width: 749px;
-  height: 545px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
 }
 
-/* Desktop: 1601px-1920px - Reducción del 20% */
-@media (min-width: 1601px) and (max-width: 1920px) {
+/* ==========================================
+   MEDIA QUERY ÚNICO - SOLO PARA MÓVILES
+   Cambia layout de horizontal a vertical
+   NO altera tamaños, solo distribución
+   ========================================== */
+
+@media (max-width: 768px) {
   .problemSection {
-    transform: scale(0.8);
-    transform-origin: top center;
-    margin-bottom: -20%; /* Compensar el espacio perdido por el scale */
+    padding: 8vw 0;
   }
-}
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
   .container {
-    padding: 0;
-    gap: 0.83vw;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    padding: 0 4vw;
   }
 
   .contentBox {
-    width: clamp(600px, 54.95vw, 1055px);
-    min-height: clamp(450px, 28.39vw, 545px);
-    padding: clamp(40px, 3.54vw, 68px) clamp(30px, 2.55vw, 49px);
+    width: 90%;
+    min-height: auto;
+    padding: 6vw 5vw;
+    max-width: none;
   }
 
   .title {
-    font-size: clamp(35px, 2.86vw, 55px);
-    line-height: clamp(40px, 2.86vw, 55px);
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 4vw;
+    max-width: none;
   }
 
   .description {
-    font-size: clamp(17px, 0.99vw, 19px);
-    line-height: clamp(26px, 1.61vw, 31px);
+    font-size: 4vw;
+    line-height: 6vw;
+    margin-bottom: 5vw;
+    max-width: none;
   }
 
   .problemList {
-    font-size: clamp(15px, 0.83vw, 16px);
-    line-height: clamp(22px, 1.30vw, 25px);
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    max-width: none;
+  }
+
+  .problemList li {
+    margin-bottom: 3vw;
   }
 
   .imageBox {
-    width: clamp(500px, 39.01vw, 749px);
-    height: clamp(360px, 28.39vw, 545px);
+    width: 90%;
+    height: auto;
+    aspect-ratio: 749 / 545;
   }
 
   .imageBox img {
     width: 100%;
     height: 100%;
-  }
-}
-
-/* Laptops: 1280–1600px — alinear altura de imagen con caja blanca */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .problemSection { padding: 60px 0; }
-  
-  .container { gap: 12px; padding: 0; }
-  
-  /* Caja blanca con altura fija */
-  .contentBox { 
-    height: 480px; 
-    min-height: 480px; 
-    max-height: 480px;
-    padding: 40px 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .title { 
-    font-size: 42px; 
-    line-height: 48px; 
-    margin-bottom: 16px; 
-  }
-  
-  .description { 
-    font-size: 17px; 
-    line-height: 26px; 
-    margin-bottom: 24px; 
-  }
-  
-  .problemList { 
-    font-size: 15px; 
-    line-height: 22px; 
-    flex-grow: 1;
-  }
-  
-  .problemList li { margin-bottom: 6px; }
-  
-  /* Imagen del chef con la misma altura que la caja blanca */
-  .imageBox { 
-    height: 480px; 
-    min-height: 480px; 
-    max-height: 480px;
-  }
-  
-  .imageBox img { 
-    height: 100%; 
-    object-fit: cover; 
-    object-position: center;
-  }
-}
-
-@media (max-width: 1400px) {
-  .problemSection {
-    padding: 80px 0;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contentBox {
-    width: 100%;
-    max-width: 1055px;
-    min-height: auto;
-  }
-
-  .imageBox {
-    width: 100%;
-    max-width: 749px;
-    height: auto;
-    aspect-ratio: 749 / 545;
-  }
-}
-
-@media (max-width: 768px) {
-  .problemSection {
-    padding: 60px 0;
-  }
-
-  .title {
-    font-size: 32px;
-    line-height: 38px;
-  }
-
-  .description {
-    font-size: 16px;
-    line-height: 26px;
-  }
-
-  .problemList {
-    font-size: 15px;
-    line-height: 24px;
   }
 }
 

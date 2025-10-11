@@ -1,138 +1,153 @@
-/* Impact Section - Diseño base 1920px */
+/* ==========================================
+   IMPACT SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .impactSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .container {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px = 94.79vw - deja 50px (2.6vw) a cada lado */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0;
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   align-items: stretch;
+  box-sizing: border-box;
 }
 
-/* Imagen de Couple Workers - top: 3772px, left: 50px, 902x571px */
+/* ========== IMAGEN DE COUPLE WORKERS ========== */
+
 .imageBox {
   position: relative;
-  width: 902px;
-  height: 571px;
-  border-radius: 20px;
+  width: 46.98vw; /* 902px = 46.98vw */
+  height: 29.74vw; /* 571px = 29.74vw */
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   overflow: hidden;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .imageBox img {
-  width: 902px;
-  height: 571px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
 }
 
-/* Cuadro blanco - top: 3772px, left: 968px, 902x571px */
+/* ========== CUADRO BLANCO DE CONTENIDO ========== */
+
 .contentBox {
   position: relative;
-  width: 902px;
-  height: 571px;
+  width: 46.98vw; /* 902px = 46.98vw */
+  height: 29.74vw; /* 571px = 29.74vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 82px 46px 64px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 4.27vw 2.40vw 3.33vw; /* 82px 46px 64px = 4.27vw 2.40vw 3.33vw */
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Título - top: 3854px, left: 1014px (relativo: 82px, 46px) */
+/* ========== TEXTOS INTERNOS ========== */
+
+/* Título */
 .title {
   width: 100%;
-  max-width: 583px;
-  margin: 0 0 30px 0;
+  max-width: 30.36vw; /* 583px = 30.36vw */
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
   opacity: 1;
 }
 
-/* Descripción naranja - top: 3962px, left: 1014px */
+/* Descripción naranja */
 .description {
   width: 100%;
-  max-width: 703px;
-  margin: 0 0 42px 0;
+  max-width: 36.61vw; /* 703px = 36.61vw */
+  margin: 0 0 2.19vw 0; /* 42px = 2.19vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FB8C05;
   text-align: left;
   opacity: 1;
 }
 
+/* ========== SECCIÓN DE AHORROS ========== */
+
 /* Container de columnas de ahorro */
 .savingsContainer {
   display: flex;
-  gap: 124px;
-  margin-bottom: 53px;
+  gap: 6.46vw; /* 124px = 6.46vw */
+  margin-bottom: 2.76vw; /* 53px = 2.76vw */
 }
 
 /* Columna de ahorro */
 .savingColumn {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 0.36vw; /* 7px = 0.36vw */
 }
 
-/* Label de ahorro - 16px/25px */
+/* Label de ahorro */
 .savingLabel {
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
 }
 
-/* Cantidad de ahorro - 40px/55px */
+/* Cantidad de ahorro */
 .savingAmount {
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 2.08vw; /* 40px = 2.08vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #FB8C05;
   text-align: left;
   opacity: 1;
 }
 
-/* Texto final - 21px/31px */
+/* ========== TEXTO FINAL ========== */
+
 .finalText {
   width: 100%;
-  max-width: 819px;
+  max-width: 42.66vw; /* 819px = 42.66vw */
   margin: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
-  line-height: 31px;
-  letter-spacing: 0.53px;
+  font-size: 1.09vw; /* 21px = 1.09vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.028vw; /* 0.53px = 0.028vw */
   color: #464749;
   text-align: left;
   opacity: 1;
@@ -143,16 +158,29 @@
   font-weight: bold;
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
+/* ==========================================
+   MEDIA QUERY ÚNICO - SOLO PARA MÓVILES
+   Cambia layout de horizontal a vertical
+   NO altera tamaños, solo distribución
+   ========================================== */
+
+@media (max-width: 768px) {
+  .impactSection {
+    padding: 8vw 0;
+  }
+
   .container {
-    padding: 0 2.6vw;
-    gap: 0.83vw;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw;
+    padding: 0 4vw;
   }
 
   .imageBox {
-    width: clamp(600px, 46.98vw, 902px);
-    height: clamp(380px, 29.74vw, 571px);
+    width: 90%;
+    height: auto;
+    aspect-ratio: 902 / 571;
   }
 
   .imageBox img {
@@ -161,88 +189,50 @@
   }
 
   .contentBox {
-    width: clamp(600px, 46.98vw, 902px);
-    height: clamp(380px, 29.74vw, 571px);
-    padding: clamp(40px, 4.27vw, 82px) clamp(30px, 2.40vw, 46px) clamp(40px, 3.33vw, 64px);
+    width: 90%;
+    height: auto;
+    min-height: auto;
+    padding: 8vw 6vw;
   }
 
   .title {
-    font-size: clamp(35px, 2.86vw, 55px);
-    line-height: clamp(40px, 2.86vw, 55px);
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 4vw;
+    max-width: none;
   }
 
   .description {
-    font-size: clamp(17px, 0.99vw, 19px);
-    line-height: clamp(26px, 1.61vw, 31px);
-  }
-
-  .savingsContainer {
-    gap: clamp(40px, 6.46vw, 124px);
-  }
-
-  .savingAmount {
-    font-size: clamp(28px, 2.08vw, 40px);
-    line-height: clamp(38px, 2.86vw, 55px);
-  }
-
-  .finalText {
-    font-size: clamp(17px, 1.09vw, 21px);
-    line-height: clamp(26px, 1.61vw, 31px);
-  }
-}
-
-@media (max-width: 1400px) {
-  .impactSection {
-    padding: 80px 0;
-  }
-
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imageBox {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    aspect-ratio: 902 / 571;
-  }
-
-  .contentBox {
-    width: 100%;
-    max-width: 902px;
-    height: auto;
-    min-height: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .impactSection {
-    padding: 60px 0;
-  }
-
-  .title {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .description {
-    font-size: 17px;
-    line-height: 28px;
+    font-size: 4vw;
+    line-height: 6vw;
+    margin-bottom: 6vw;
+    max-width: none;
   }
 
   .savingsContainer {
     flex-direction: column;
-    gap: 30px;
+    gap: 6vw;
+    margin-bottom: 6vw;
+  }
+
+  .savingColumn {
+    gap: 2vw;
+  }
+
+  .savingLabel {
+    font-size: 3.5vw;
+    line-height: 5vw;
   }
 
   .savingAmount {
-    font-size: 32px;
+    font-size: 7vw;
+    line-height: 9vw;
   }
 
   .finalText {
-    font-size: 18px;
-    line-height: 28px;
+    font-size: 4vw;
+    line-height: 6vw;
+    max-width: none;
   }
 }
 

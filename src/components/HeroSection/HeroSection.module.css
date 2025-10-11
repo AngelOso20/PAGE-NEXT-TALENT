@@ -1,51 +1,60 @@
-/* Hero Section - Diseño base 1920px */
+/* ==========================================
+   DISEÑO PROPORCIONAL - 100% BASADO EN VIEWPORT
+   Todo escala proporcionalmente según el tamaño de pantalla
+   SIN MEDIA QUERIES - Mantiene proporciones visuales
+   Base de diseño: 1920px de ancho = 100vw
+   ========================================== */
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
 .heroSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  min-height: 1062px;
-  padding-top: 113px; /* Espacio del NavMenu */
+  width: 100vw;
+  min-height: 43.46vw; /* 48.29vw * 0.9 = 43.46% */
+  padding-top: 4.63vw; /* 5.14vw * 0.9 = 4.63% */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Cuadro izquierdo con trabajador - top: 129px, left: 50px, 1361x933px */
+/* ========== CUADRO IZQUIERDO PRINCIPAL ========== */
 .leftBox {
   position: absolute;
-  top: 129px;
-  left: 50px;
-  width: 1361px;
-  height: 933px;
+  top: 5.28vw; /* Mantener altura actual */
+  left: 2.6vw; /* Margen izquierdo de 50px */
+  width: 69.08vw; /* Ajustado: 100vw - 2.6vw (izq) - 2.6vw (der) - 22.66vw (cuadros der) - 1vw (espacio) = 69.08vw */
+  height: 38.18vw; /* Mantener altura actual */
   background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0.82vw; /* Mantener proporción */
+  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Imagen de fondo abstracta */
+/* ========== PATRÓN DE FONDO ========== */
 .backgroundPattern {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') 0% 0% no-repeat;
-  background-size: contain;
-  opacity: 1;
+  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') right top no-repeat;
+  background-size: 85% 100%; /* Más alto para llegar a los bordes superior e inferior */
+  opacity: 0.98; /* Ajustado para que se vea un poco más pero sin ser demasiado prominente */
   z-index: 0;
+  pointer-events: none;
 }
 
-/* Título principal - top: 340px, left: 89px (relativo: 211px, 39px) */
+/* ========== TÍTULO PRINCIPAL ========== */
 .mainTitle {
   position: absolute;
-  top: 211px;
-  left: 39px;
-  width: 748px;
-  height: 170px;
+  top: 8.63vw; /* Mantener altura actual */
+  left: 2.0vw; /* Ajustado proporcionalmente */
+  width: 38.26vw; /* 30.61vw * 1.25 = 38.26% */
+  height: auto;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 67px;
-  line-height: 75px;
+  font-size: 3.44vw; /* 2.75vw * 1.25 = 3.44% */
+  line-height: 3.84vw; /* 3.07vw * 1.25 = 3.84% */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
@@ -54,18 +63,18 @@
   z-index: 2;
 }
 
-/* Subtítulo - top: 523px, left: 89px (relativo: 394px, 39px) */
+/* ========== SUBTÍTULO ========== */
 .subtitle {
   position: absolute;
-  top: 394px;
-  left: 39px;
-  width: 616px;
-  height: 84px;
+  top: 16.13vw; /* Mantener altura actual */
+  left: 2.0vw; /* Ajustado proporcionalmente */
+  width: 31.5vw; /* 25.20vw * 1.25 = 31.5% */
+  height: auto;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 38px;
+  font-size: 1.43vw; /* 1.14vw * 1.25 = 1.43% */
+  line-height: 1.95vw; /* 1.56vw * 1.25 = 1.95% */
   letter-spacing: 0px;
   color: #464749;
   text-align: left;
@@ -74,54 +83,56 @@
   z-index: 2;
 }
 
-/* Imagen del trabajador - top: 153px, left: 815px (relativo: 24px, 765px) */
+/* ========== IMAGEN DEL TRABAJADOR ========== */
 .workerImage {
   position: absolute;
-  top: 24px;
-  left: 765px;
-  width: 538px;
-  height: 909px;
+  top: 0.99vw; /* Mantener altura actual */
+  left: 36.58vw; /* Ajustado: 42.11vw - 2.6vw = 39.51vw, pero reducido más para que quepa en el cuadro más estrecho */
+  width: 23.51vw; /* 25.51vw * 0.92 = 23.51% - Reducido para que se vea completa */
+  height: 39.07vw; /* 42.47vw * 0.92 = 39.07% - Reducido proporcionalmente */
   z-index: 1;
 }
 
 .workerImage img {
-  width: 538px;
-  height: 909px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Cuadro naranja - Colombia 90% - Alineado con cuadro del trabajador */
+/* ========== CUADRO NARANJA (Colombia 90%) ========== */
 .orangeBox {
   position: absolute;
-  top: 129px;
-  left: 1427px;
-  width: 443px;
-  min-height: 380px;
+  top: 5.28vw; /* Mantener altura actual */
+  left: 74.74vw; /* Posición derecha: 100vw - 22.66vw (ancho) - 2.6vw (margen derecho) */
+  width: 22.66vw; /* Mantener ancho actual */
+  min-height: 15.55vw; /* Mantener altura actual */
   background: #FFFFFF;
-  border-radius: 20px;
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
-  padding: 45px 49px 40px;
+  border-radius: 0.82vw; /* Mantener proporción */
+  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
+  padding: 1.85vw 2.01vw 1.63vw; /* Mantener proporción */
   opacity: 1;
   z-index: 3;
+  box-sizing: border-box;
 }
 
 .orangeIcon {
-  width: 98px;
-  height: 94px;
-  margin-bottom: 20px;
+  width: 5.01vw; /* 4.01vw * 1.25 = 5.01% */
+  height: 4.81vw; /* 3.85vw * 1.25 = 4.81% */
+  margin-bottom: 0.82vw; /* Mantener proporción */
 }
 
-.orangeIcon img {
-  width: 98px;
-  height: 94px;
+.orangeIcon img,
+.orangeIcon .lottie-icon {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
 /* Estilos para iconos Lottie */
 .orangeIcon .lottie-icon,
 .blueIcon .lottie-icon {
-  width: 98px;
-  height: 94px;
+  width: 100% !important;
+  height: 100% !important;
   overflow: hidden;
 }
 
@@ -129,10 +140,10 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
-  margin: 0 0 15px 0;
+  font-size: 0.96vw; /* 0.77vw * 1.25 = 0.96% */
+  line-height: 1.59vw; /* 1.27vw * 1.25 = 1.59% */
+  letter-spacing: 0.024vw; /* 0.019vw * 1.25 = 0.024% */
+  margin: 0 0 0.61vw 0; /* Mantener proporción */
   opacity: 1;
 }
 
@@ -144,109 +155,110 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 26px;
+  font-size: 0.83vw; /* 0.66vw * 1.25 = 0.83% */
+  line-height: 1.33vw; /* 1.06vw * 1.25 = 1.33% */
   letter-spacing: 0px;
   color: #464749;
   margin: 0;
   opacity: 1;
 }
 
-/* Cuadro azul - top: 651px, left: 1427px, 443x411px */
+/* ========== CUADRO AZUL (Agenda tu asesoría) ========== */
 .blueBox {
   position: absolute;
-  top: 651px;
-  left: 1427px;
-  width: 443px;
-  height: 411px;
+  top: 26.64vw; /* Mantener altura actual */
+  left: 74.74vw; /* Posición derecha: 100vw - 22.66vw (ancho) - 2.6vw (margen derecho) */
+  width: 22.66vw; /* Mantener ancho actual */
+  height: 16.82vw; /* Mantener altura actual */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 0.82vw; /* Mantener proporción */
   opacity: 1;
   z-index: 3;
+  box-sizing: border-box;
 }
 
-/* Icono dentro del cuadro azul - top: 696px, left: 1482px (relativo: 45px, 55px) */
+/* Icono dentro del cuadro azul */
 .blueIcon {
   position: absolute;
-  top: 45px;
-  left: 55px;
-  width: 98px;
-  height: 94px;
+  top: 1.85vw; /* Mantener altura actual */
+  left: 2.24vw; /* Mantener proporción */
+  width: 5.01vw; /* 4.01vw * 1.25 = 5.01% */
+  height: 4.81vw; /* 3.85vw * 1.25 = 4.81% */
   opacity: 1;
 }
 
-.blueIcon img {
-  width: 98px;
-  height: 94px;
+.blueIcon img,
+.blueIcon .lottie-icon {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
 }
 
-/* Texto del cuadro azul - top: 808px, left: 1476px (relativo: 157px, 49px) */
+/* Texto del cuadro azul */
 .blueText {
   position: absolute;
-  top: 157px;
-  left: 49px;
-  width: 346px;
-  height: 120px;
+  top: 6.43vw; /* Mantener altura actual */
+  left: 2.01vw; /* Mantener proporción */
+  width: 17.70vw; /* 14.16vw * 1.25 = 17.70% */
+  height: auto;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.96vw; /* 0.77vw * 1.25 = 0.96% */
+  line-height: 1.59vw; /* 1.27vw * 1.25 = 1.59% */
+  letter-spacing: 0.024vw; /* 0.019vw * 1.25 = 0.024% */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
   margin: 0;
 }
 
-/* Botón naranja dentro del cuadro azul - top: 979px, left: 1476px (relativo: 328px, 49px) */
+/* Botón naranja dentro del cuadro azul */
 .orangeButton {
   position: absolute;
-  top: 328px;
-  left: 49px;
-  width: 257px;
-  height: 40px;
+  top: 13.42vw; /* Mantener altura actual */
+  left: 2.01vw; /* Mantener proporción */
+  width: 13.15vw; /* 10.52vw * 1.25 = 13.15% */
+  height: 1.63vw; /* Mantener altura actual */
   background: #FB8C05;
-  border-radius: 20px;
+  border-radius: 0.82vw; /* Mantener proporción */
   border: none;
   outline: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   text-decoration: none;
   opacity: 1;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .orangeButton:hover {
   background: #e67e04;
+  transform: translateY(-0.078vw); /* 0.087vw * 0.9 = 0.078% */
+  box-shadow: 0 0.166vw 0.498vw rgba(251, 140, 5, 0.3); /* 0.184vw 0.553vw * 0.9 */
 }
 
 .orangeButton:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(251, 140, 5, 0.3);
+  box-shadow: 0 0 0 0.122vw rgba(251, 140, 5, 0.3); /* 0.136vw * 0.9 = 0.122% */
 }
 
-/* Icono del botón - top: 990px, left: 1491px (relativo al botón: 11px, 15px) */
+/* Icono del botón */
 .phoneIcon {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 18px !important;
-  height: 17px !important;
-  opacity: 1;
+  width: 0.929vw !important; /* 0.743vw * 1.25 = 0.929% */
+  height: 0.873vw !important; /* 0.698vw * 1.25 = 0.873% */
+  margin-right: 0.410vw; /* Mantener proporción */
+  flex-shrink: 0;
 }
 
-/* Texto del botón - top: 987px, left: 1517px (relativo al botón: 8px, 41px) */
+/* Texto del botón */
 .orangeButton span {
-  position: absolute;
-  left: 41px;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 17px;
-  line-height: 34px;
+  font-size: 0.873vw; /* 0.698vw * 1.25 = 0.873% */
+  line-height: 1.388vw; /* Mantener proporción */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;
@@ -255,486 +267,120 @@
   white-space: nowrap;
 }
 
-
-
-
-
-
-
-@media (max-width: 767px) {
-  .mainTitle {
-    font-size: 36px;
-    line-height: 42px;
-    width: 100%;
+/* ========== ÚNICO MEDIA QUERY NECESARIO ========== */
+/* Solo para móviles: cambiar a layout vertical */
+@media (max-width: 768px) {
+  .heroSection {
+    min-height: auto;
+    padding: 4vw 3vw;
   }
 
-  .subtitle {
-    font-size: 18px;
-    line-height: 28px;
-    width: 100%;
-  }
-
-  .workerImage {
-    max-width: 300px;
-  }
-
-  .orangeBox,
-  .blueBox {
-    padding: 30px 20px;
-  }
-
-  .blueText,
-  .orangeText {
-    font-size: 17px;
-    line-height: 28px;
-    width: 100%;
-    height: auto;
-  }
-
-  .orangeButton {
-    width: 100%;
-    max-width: 257px;
-  }
-}
-
-/* Tablets: optimizar espaciados y evitar desbordes (768px–1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* Cuadro principal en flujo normal */
-  .leftBox {
-    position: relative;
-    left: 20px;
-    top: 20px;
-    width: calc(100% - 40px);
-    height: auto;
-    padding: 36px 28px 24px 36px; /* añade padding izquierdo y superior para despegar el texto */
-  }
-
-  /* Bajar un poco el título (estaba muy arriba) */
-  .mainTitle {
-    position: relative;
-    top: 0;
-    left: 0;
-    margin: 18px 0 12px 4px; /* un poco más abajo y despegado del borde izquierdo */
-    font-size: 48px;
-    line-height: 56px;
-    width: 92%;
-  }
-
-  /* Compactar subtítulo para que no se vea grande y quede más unido */
-  .subtitle {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 88%;
-    font-size: 20px;
-    line-height: 28px;
-    margin: 8px 0 20px 4px; /* más cerca del título y con leve sangría */
-  }
-
-  /* Imagen del trabajador centrada y más contenida */
-  .workerImage {
-    position: relative;
-    left: 0;
-    top: 0;
-    width: 60%;
-    max-width: 420px;
-    height: auto;
-    margin: 10px auto 0;
-  }
-
-  .workerImage img { width: 100%; height: auto; }
-
-  /* Refluir cuadros derecho (naranja y azul) al flujo y centrados */
+  /* Convertir todo a flujo normal */
+  .leftBox,
   .orangeBox,
   .blueBox {
     position: relative;
-    left: auto;
-    transform: none;
-    display: inline-block;
-    vertical-align: top;
-    width: calc(50% - 28px);
-    max-width: none;
-    margin: 0 12px 24px 12px;
-    min-height: 560px; /* mayor altura para alinear bases */
-  }
-
-  .orangeBox { top: 0; }
-  .blueBox {
+    left: 0;
     top: 0;
-    min-height: 560px; /* igualar/forzar alineación inferior con el blanco */
-    padding: 45px 49px 40px; /* igual padding que el cuadro blanco */
+    width: 100%;
+    margin-bottom: 4vw;
+    height: auto;
+    min-height: auto;
   }
 
-  /* Icono, texto y botón del cuadro azul en columna, sin posiciones absolutas */
-  .blueIcon { position: static; width: 98px; height: 94px; margin-bottom: 20px; }
-  .blueText { position: static; width: 100%; height: auto; margin: 0 0 16px 0; line-height: 30px; }
-  .orangeButton { position: static; width: 100%; height: 44px; max-width: none; justify-content: center; margin-top: 28px; }
-  .phoneIcon { position: static; transform: none; margin-right: 10px; }
-  .orangeButton span { position: static; line-height: 44px; white-space: nowrap; }
-
-  /* Asegurar visibilidad del patrón de fondo en tablets */
-  .backgroundPattern {
-    opacity: 0.55; /* más visible que en desktop reducido */
-    background-size: cover;
-    background-position: center;
-    z-index: 0;
-  }
-}
-
-/* Laptops: Reducir proporcionalmente todos los elementos del hero */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  /* Reducir el contenedor principal */
-  .heroSection {
-    min-height: 800px; /* Reducido de 1062px */
-    padding-top: 85px; /* Reducido de 113px */
-  }
-
-  /* Reducir el cuadro izquierdo principal */
   .leftBox {
-    top: 97px; /* Reducido de 129px */
-    left: 38px; /* Reducido de 50px */
-    width: 1021px; /* Reducido de 1361px */
-    height: 700px; /* Reducido de 933px */
+    padding: 6vw 5vw;
   }
 
-  /* Reducir el título principal */
-  .mainTitle {
-    top: 158px; /* Reducido de 211px */
-    left: 29px; /* Reducido de 39px */
-    width: 561px; /* Reducido de 748px */
-    height: 128px; /* Reducido de 170px */
-    font-size: 50px; /* Reducido de 67px */
-    line-height: 56px; /* Reducido de 75px */
-  }
-
-  /* Reducir el subtítulo */
-  .subtitle {
-    top: 296px; /* Reducido de 394px */
-    left: 29px; /* Reducido de 39px */
-    width: 462px; /* Reducido de 616px */
-    height: 63px; /* Reducido de 84px */
-    font-size: 21px; /* Reducido de 28px */
-    line-height: 29px; /* Reducido de 38px */
-  }
-
-  /* Reducir la imagen del trabajador */
+  /* Textos en flujo normal */
+  .mainTitle,
+  .subtitle,
   .workerImage {
-    top: 18px; /* Reducido de 24px */
-    left: 574px; /* Reducido de 765px */
-    width: 404px; /* Reducido de 538px */
-    height: 682px; /* Reducido de 909px */
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .mainTitle {
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 3vw;
+  }
+
+  .subtitle {
+    font-size: 4vw;
+    line-height: 5.5vw;
+    margin-bottom: 4vw;
+  }
+
+  .workerImage {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
   }
 
   .workerImage img {
-    width: 404px; /* Reducido de 538px */
-    height: 682px; /* Reducido de 909px */
-  }
-
-  /* Reducir el cuadro naranja */
-  .orangeBox {
-    top: 97px; /* Reducido de 129px */
-    left: 1070px; /* Reducido de 1427px */
-    width: 332px; /* Reducido de 443px */
-    min-height: 285px; /* Reducido de 380px */
-    padding: 34px 37px 30px; /* Reducido de 45px 49px 40px */
-  }
-
-  .orangeIcon {
-    width: 74px; /* Reducido de 98px */
-    height: 71px; /* Reducido de 94px */
-    margin-bottom: 15px; /* Reducido de 20px */
-  }
-
-  .orangeIcon img {
-    width: 74px; /* Reducido de 98px */
-    height: 71px; /* Reducido de 94px */
-  }
-
-  /* Reducir iconos Lottie para laptops */
-  .orangeIcon .lottie-icon,
-  .blueIcon .lottie-icon {
-    width: 74px !important; /* Reducido de 98px */
-    height: 71px !important; /* Reducido de 94px */
-  }
-
-  .orangeText {
-    font-size: 14px; /* Reducido de 19px */
-    line-height: 23px; /* Reducido de 31px */
-    letter-spacing: 0.35px; /* Reducido de 0.47px */
-    margin: 0 0 11px 0; /* Reducido de 0 0 15px 0 */
-  }
-
-  .orangeSubtext {
-    font-size: 12px; /* Reducido de 16px */
-    line-height: 20px; /* Reducido de 26px */
-  }
-
-  /* Reducir el cuadro azul */
-  .blueBox {
-    top: 450px; /* Subido un poco más para alinearse mejor con la caja blanca */
-    left: 1070px; /* Reducido de 1427px */
-    width: 332px; /* Reducido de 443px */
-    height: 308px; /* Reducido de 411px */
-  }
-
-  .blueIcon {
-    top: 34px; /* Reducido de 45px */
-    left: 41px; /* Reducido de 55px */
-    width: 74px; /* Reducido de 98px */
-    height: 71px; /* Reducido de 94px */
-  }
-
-  .blueIcon img {
-    width: 74px; /* Reducido de 98px */
-    height: 71px; /* Reducido de 94px */
-  }
-
-  .blueText {
-    top: 118px; /* Reducido de 157px */
-    left: 37px; /* Reducido de 49px */
-    width: 260px; /* Reducido de 346px */
-    height: 90px; /* Reducido de 120px */
-    font-size: 14px; /* Reducido de 19px */
-    line-height: 23px; /* Reducido de 31px */
-    letter-spacing: 0.35px; /* Reducido de 0.47px */
-  }
-
-  .orangeButton {
-    top: 246px; /* Reducido de 328px */
-    left: 37px; /* Reducido de 49px */
-    width: 193px; /* Reducido de 257px */
-    height: 30px; /* Reducido de 40px */
-    border-radius: 15px; /* Reducido de 20px */
-  }
-
-  .phoneIcon {
-    left: 11px; /* Reducido de 15px */
-    width: 14px !important; /* Reducido de 18px */
-    height: 13px !important; /* Reducido de 17px */
-  }
-
-  .orangeButton span {
-    left: 31px; /* Reducido de 41px */
-    font-size: 13px; /* Reducido de 17px */
-    line-height: 26px; /* Reducido de 34px */
-  }
-}
-
-/* Mobile phones in portrait: tighten layout and fix blue box overflow */
-@media (max-width: 576px) and (orientation: portrait) {
-  .leftBox {
-    padding: 28px 18px 12px 22px; /* más espacio izquierdo y superior */
-  }
-
-  .mainTitle {
-    margin-top: 14px; /* bajar un poco más */
-    margin-left: 2px;
-    text-align: left;
-  }
-
-  .subtitle {
-    margin-top: 6px; /* más unido al título */
-    width: 94%;
-    line-height: 26px; /* compacto */
-    margin-left: 2px;
-  }
-
-  /* Reflow blue card content vertically */
-  .blueBox {
-    position: relative;
-    padding: 24px 16px 20px;
-  }
-
-  .blueIcon {
-    position: static;
-    width: 72px;
-    height: 72px;
-    margin-bottom: 12px;
-  }
-
-  .blueText {
-    position: static;
     width: 100%;
     height: auto;
-    margin: 0 0 14px 0;
-    line-height: 28px;
   }
 
-  .orangeButton {
-    position: static;
+  /* Ajustar cuadros */
+  .orangeBox,
+  .blueBox {
+    padding: 5vw;
+  }
+
+  .orangeIcon,
+  .blueIcon {
+    position: relative;
+    width: 15vw;
+    height: 14vw;
+    margin-bottom: 3vw;
+    left: 0;
+    top: 0;
+  }
+
+  .orangeText,
+  .blueText {
+    position: relative;
+    font-size: 3.5vw;
+    line-height: 5vw;
     width: 100%;
-    height: 44px;
-    max-width: none;
-    justify-content: center;
-  }
-
-  .phoneIcon {
-    position: static;
-    transform: none;
-    margin-right: 10px;
-  }
-
-  .orangeButton span {
-    position: static;
-    line-height: 44px;
-    white-space: nowrap;
-  }
-
-  /* Mostrar patrón de fondo también en móviles con un poco más de opacidad */
-  .backgroundPattern {
-    opacity: 0.5;
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-/* Desktop estándar: Reducir hero para pantallas de 1601px a 1920px */
-@media (min-width: 1601px) and (max-width: 1920px) {
-  /* Reducir el contenedor principal */
-  .heroSection {
-    min-height: 800px; /* Reducido de 1062px */
-    padding-top: 90px; /* Reducido de 113px */
-  }
-
-  /* Reducir el cuadro izquierdo principal */
-  .leftBox {
-    top: 100px; /* Reducido de 129px */
-    left: 160px; /* Más centrado - movido más a la derecha */
-    width: 1100px; /* Reducido de 1361px */
-    height: 750px; /* Reducido de 933px */
-  }
-
-  /* Reducir el título principal */
-  .mainTitle {
-    top: 170px; /* Reducido de 211px */
-    left: 32px; /* Reducido de 39px */
-    width: 600px; /* Reducido de 748px */
-    height: 135px; /* Reducido de 170px */
-    font-size: 54px; /* Reducido de 67px */
-    line-height: 60px; /* Reducido de 75px */
-  }
-
-  /* Reducir el subtítulo */
-  .subtitle {
-    top: 315px; /* Reducido de 394px */
-    left: 32px; /* Reducido de 39px */
-    width: 490px; /* Reducido de 616px */
-    height: 67px; /* Reducido de 84px */
-    font-size: 22px; /* Reducido de 28px */
-    line-height: 30px; /* Reducido de 38px */
-  }
-
-  /* Reducir la imagen del trabajador */
-  .workerImage {
-    top: 20px; /* Reducido de 24px */
-    left: 615px; /* Reducido de 765px */
-    width: 430px; /* Reducido de 538px */
-    height: 725px; /* Reducido de 909px */
-  }
-
-  .workerImage img {
-    width: 430px; /* Reducido de 538px */
-    height: 725px; /* Reducido de 909px */
-  }
-
-  /* Reducir el cuadro naranja */
-  .orangeBox {
-    top: 100px; /* Reducido de 129px */
-    left: 1290px; /* Más centrado - ajustado para mantener balance */
-    width: 360px; /* Reducido de 443px */
-    min-height: 305px; /* Reducido de 380px */
-    padding: 36px 40px 32px; /* Reducido de 45px 49px 40px */
-  }
-
-  .orangeIcon {
-    width: 79px; /* Reducido de 98px */
-    height: 76px; /* Reducido de 94px */
-    margin-bottom: 16px; /* Reducido de 20px */
-  }
-
-  .orangeIcon img {
-    width: 79px; /* Reducido de 98px */
-    height: 76px; /* Reducido de 94px */
-  }
-
-  /* Reducir iconos Lottie para desktop estándar - Aplicar estilos más específicos */
-  .orangeIcon .lottie-icon,
-  .blueIcon .lottie-icon {
-    width: 79px !important; /* Reducido de 98px */
-    height: 76px !important; /* Reducido de 94px */
-    max-width: 79px !important;
-    max-height: 76px !important;
-  }
-
-  /* Asegurar que el SVG dentro del contenedor Lottie también se reduzca */
-  .orangeIcon .lottie-icon svg,
-  .blueIcon .lottie-icon svg {
-    width: 79px !important;
-    height: 76px !important;
-    max-width: 79px !important;
-    max-height: 76px !important;
-  }
-
-  .orangeText {
-    font-size: 15px; /* Reducido de 19px */
-    line-height: 25px; /* Reducido de 31px */
-    letter-spacing: 0.38px; /* Reducido de 0.47px */
-    margin: 0 0 12px 0; /* Reducido de 0 0 15px 0 */
+    left: 0;
+    top: 0;
   }
 
   .orangeSubtext {
-    font-size: 13px; /* Reducido de 16px */
-    line-height: 21px; /* Reducido de 26px */
-  }
-
-  /* Reducir el cuadro azul */
-  .blueBox {
-    top: 480px; /* Reducido de 651px - Movido más arriba para mejor alineación */
-    left: 1290px; /* Más centrado - alineado con el cuadro naranja */
-    width: 360px; /* Reducido de 443px */
-    height: 375px; /* Aumentado de 250px - Hacer más largo */
-  }
-
-  .blueIcon {
-    top: 36px; /* Reducido de 45px */
-    left: 45px; /* Reducido de 55px */
-    width: 79px; /* Reducido de 98px */
-    height: 76px; /* Reducido de 94px */
-  }
-
-  .blueIcon img {
-    width: 79px; /* Reducido de 98px */
-    height: 76px; /* Reducido de 94px */
+    font-size: 3vw;
+    line-height: 4.5vw;
   }
 
   .blueText {
-    top: 125px; /* Reducido de 157px */
-    left: 40px; /* Reducido de 49px */
-    width: 280px; /* Reducido de 346px */
-    height: 97px; /* Reducido de 120px */
-    font-size: 15px; /* Reducido de 19px */
-    line-height: 25px; /* Reducido de 31px */
-    letter-spacing: 0.38px; /* Reducido de 0.47px */
+    margin-bottom: 4vw;
   }
 
+  /* Botón */
   .orangeButton {
-    top: 240px; /* Reducido de 328px - Ajustado para que no se superponga al texto */
-    left: 40px; /* Reducido de 49px */
-    width: 207px; /* Reducido de 257px */
-    height: 32px; /* Reducido de 40px */
-    border-radius: 16px; /* Reducido de 20px */
+    position: relative;
+    width: 100%;
+    height: 12vw;
+    border-radius: 2.5vw;
+    left: 0;
+    top: 0;
   }
 
   .phoneIcon {
-    left: 12px; /* Reducido de 15px */
-    width: 14px !important; /* Reducido de 18px */
-    height: 13px !important; /* Reducido de 17px */
+    width: 4vw !important;
+    height: 3.8vw !important;
   }
 
   .orangeButton span {
-    left: 33px; /* Reducido de 41px */
-    font-size: 13px; /* Reducido de 17px */
-    line-height: 27px; /* Reducido de 34px */
+    font-size: 3.5vw;
+    line-height: 12vw;
   }
 }
-
+/* ========== NOTA SOBRE PANTALLAS GRANDES ========== */
+/* NO limitamos el ancho máximo para que las proporciones 
+   se mantengan perfectas en todos los tamaños de pantalla,
+   incluyendo zoom muy bajo (<50%) y pantallas ultra grandes. */

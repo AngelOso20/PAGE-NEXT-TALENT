@@ -1,42 +1,45 @@
-/*
-  NavMenu responsive moderno usando flexbox
-*/
+/* ==========================================
+   NAVMENU - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
 
 .navMenu {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 90px;
+  width: 100vw;
+  height: 4.69vw; /* 90px = 4.69vw */
   background: #FFFFFF;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 0px 0px 20px 20px;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0px 0.16vw 0.31vw #00000029; /* 3px 6px = 0.16vw 0.31vw */
+  border-radius: 0px 0px 1.04vw 1.04vw; /* 20px = 1.04vw */
+  backdrop-filter: blur(0.63vw); /* 12px = 0.63vw */
+  -webkit-backdrop-filter: blur(0.63vw);
   z-index: 1000;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .navContainer {
   display: flex;
   align-items: center;
-  /* Keep items aligned from the left; we'll push nav to the right with auto margin */
   justify-content: flex-start;
   width: 100%;
   height: 100%;
-  /* Use full viewport width to allow logo far left and actions far right */
   max-width: none;
   margin: 0 auto;
-  /* Bring logo even closer to the left edge */
-  padding: 0 40px 0 8px;
+  padding: 0 2.08vw 0 0.42vw; /* 40px 8px = 2.08vw 0.42vw */
+  box-sizing: border-box;
 }
 
-/* Logo */
+/* ========== LOGO ========== */
+
 .logo {
   flex-shrink: 0;
-  width: 205px;
-  height: 56px;
-  margin-left: 24px;
+  width: 10.68vw; /* 205px = 10.68vw */
+  height: 2.92vw; /* 56px = 2.92vw */
+  margin-left: 1.25vw; /* 24px = 1.25vw */
 }
 
 .logo img {
@@ -45,23 +48,21 @@
   object-fit: contain;
 }
 
-/* Navegación - Escritorio */
+/* ========== NAVEGACIÓN - ESCRITORIO ========== */
+
 .nav {
   display: flex;
   align-items: center;
   flex: 1;
-  /* Push links to the right, away from the centered layout */
   justify-content: flex-end;
-  /* Create a larger gap between logo and menu */
   margin-left: auto;
-  margin-right: 32px;
+  margin-right: 1.67vw; /* 32px = 1.67vw */
 }
 
 .menuList {
   display: flex;
   list-style: none;
-  /* Tighter spacing so items look more grouped */
-  gap: 24px;
+  gap: 1.25vw; /* 24px = 1.25vw */
   margin: 0;
   padding: 0;
   align-items: center;
@@ -77,8 +78,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 23px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.20vw; /* 23px = 1.20vw */
   letter-spacing: 0px;
   color: #1A1818;
   text-align: center;
@@ -86,8 +87,8 @@
   white-space: nowrap;
   opacity: 1;
   transition: color 0.3s ease;
-  padding: 8px 12px;
-  border-radius: 8px;
+  padding: 0.42vw 0.63vw; /* 8px 12px = 0.42vw 0.63vw */
+  border-radius: 0.42vw; /* 8px = 0.42vw */
 }
 
 .menuItem a:hover {
@@ -95,22 +96,136 @@
   background-color: rgba(39, 164, 159, 0.05);
 }
 
-/* Botones de acción */
+/* ========== BOTONES DE ACCIÓN ========== */
+
 .actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 1.04vw; /* 20px = 1.04vw */
   flex-shrink: 0;
-  /* Slight spacing between nav links and action buttons */
-  margin-left: 8px;
+  margin-left: 0.42vw; /* 8px = 0.42vw */
 }
 
-/* Desktop - Ocultar menú móvil por defecto */
+/* ========== BOTÓN HABLEMOS ========== */
+
+.buttonHablemos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.42vw; /* 8px = 0.42vw */
+  width: 8.44vw; /* 162px = 8.44vw */
+  height: 2.08vw; /* 40px = 2.08vw */
+  background: #27A49F;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  border: none;
+  outline: none;
+  text-decoration: none;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.buttonHablemos:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.16vw rgba(39, 164, 159, 0.3); /* 3px = 0.16vw */
+}
+
+.buttonHablemos:hover {
+  background: #1f8580;
+  transform: translateY(-0.05vw); /* -1px = -0.05vw */
+}
+
+.buttonHablemos span {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.89vw; /* 17px = 0.89vw */
+  line-height: 1;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+.phoneIcon {
+  width: 0.94vw !important; /* 18px = 0.94vw */
+  height: 0.89vw !important; /* 17px = 0.89vw */
+  opacity: 1;
+  flex-shrink: 0;
+}
+
+/* ========== BOTÓN USUARIO ========== */
+
+.buttonUser {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.08vw; /* 40px = 2.08vw */
+  height: 2.08vw; /* 40px = 2.08vw */
+  background: #FB8C05;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.buttonUser:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.16vw rgba(251, 140, 5, 0.3); /* 3px = 0.16vw */
+}
+
+.buttonUser:hover {
+  background: #e67e04;
+  transform: translateY(-0.05vw); /* -1px = -0.05vw */
+}
+
+.buttonUser img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ========== BOTÓN HAMBURGUESA ========== */
+
+.hamburgerButton {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 2.08vw; /* 40px = 2.08vw */
+  height: 2.08vw; /* 40px = 2.08vw */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.42vw; /* 8px = 0.42vw */
+  border-radius: 0.42vw; /* 8px = 0.42vw */
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.hamburgerButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.hamburgerButton img {
+  width: 1.25vw; /* 24px = 1.25vw */
+  height: 1.25vw; /* 24px = 1.25vw */
+}
+
+/* ========== MENÚ MÓVIL - OCULTO POR DEFECTO ========== */
+
 .mobileMenu {
   display: none;
 }
 
-/* Móviles - Mostrar botón hamburguesa y menú móvil */
+/* ========== RESPONSIVE - MANTENER HAMBURGER EN MÓVILES ========== */
+
 @media (max-width: 768px) {
   /* Ocultar navegación y botones de acción en móviles */
   .nav {
@@ -134,299 +249,8 @@
   }
 }
 
-/* Botón Hablemos */
-.buttonHablemos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  width: 162px;
-  height: 40px;
-  background: #27A49F;
-  border-radius: 20px;
-  border: none;
-  outline: none;
-  text-decoration: none;
-  opacity: 1;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
+/* ========== ESTILOS DEL MENÚ MÓVIL (HAMBURGUESA) ========== */
 
-.buttonHablemos:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(39, 164, 159, 0.3);
-}
-
-.buttonHablemos:hover {
-  background: #1f8580;
-  transform: translateY(-1px);
-}
-
-.buttonHablemos span {
-  font-family: 'FinalSix', sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 17px;
-  line-height: 1;
-  letter-spacing: 0px;
-  color: #FFFFFF;
-  text-align: center;
-  text-transform: uppercase;
-  opacity: 1;
-  white-space: nowrap;
-}
-
-.phoneIcon {
-  width: 18px !important;
-  height: 17px !important;
-  opacity: 1;
-  flex-shrink: 0;
-}
-
-/* Botón Usuario */
-.buttonUser {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #FB8C05;
-  border-radius: 50%;
-  border: none;
-  outline: none;
-  overflow: hidden;
-  opacity: 1;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.buttonUser:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(251, 140, 5, 0.3);
-}
-
-.buttonUser:hover {
-  background: #e67e04;
-  transform: translateY(-1px);
-}
-
-.buttonUser img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Botón menú hamburguesa */
-.hamburgerButton {
-  display: none;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  padding: 8px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
-}
-
-.hamburgerButton:hover {
-  background-color: rgba(0, 0, 0, 0.05);
-}
-
-.hamburgerButton img {
-  width: 24px;
-  height: 24px;
-}
-
-/* Responsive Design */
-
-/* Media query específica para laptops (1280px - 1600px) */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .navMenu {
-    height: 60px;
-  }
-  
-  .navContainer {
-    padding: 0 25px 0 5px;
-  }
-  
-  .logo {
-    width: 160px;
-    height: 40px;
-    margin-left: 16px;
-  }
-  
-  .nav {
-    margin-right: 20px;
-  }
-  
-  .menuList {
-    gap: 16px;
-  }
-  
-  .menuItem a {
-    font-size: 14px;
-    line-height: 20px;
-    padding: 6px 8px;
-  }
-  
-  .actions {
-    gap: 12px;
-    margin-left: 4px;
-  }
-  
-  .buttonHablemos {
-    width: 130px;
-    height: 32px;
-    gap: 6px;
-  }
-  
-  .buttonHablemos span {
-    font-size: 14px;
-  }
-  
-  .phoneIcon {
-    width: 14px !important;
-    height: 13px !important;
-  }
-  
-  .buttonUser {
-    width: 32px;
-    height: 32px;
-  }
-}
-
-/* Tablets y pantallas medianas */
-@media (max-width: 1200px) {
-  .navContainer {
-    padding: 0 30px;
-  }
-
-  .nav {
-    margin: 0 30px;
-  }
-
-  .menuList {
-    gap: 30px;
-  }
-
-  .menuItem a {
-    font-size: 15px;
-    padding: 6px 10px;
-  }
-
-  .buttonHablemos {
-    width: 150px;
-    height: 38px;
-  }
-
-  .buttonHablemos span {
-    font-size: 16px;
-  }
-}
-
-/* Tablets (portrait/landscape): 768px–1024px */
-@media (min-width: 768px) and (max-width: 1024px) {
-  .navMenu { height: 80px; }
-  .navContainer { padding: 0 16px; }
-  .logo { width: 170px; height: 48px; }
-  .nav { margin: 0 12px; }
-  .menuList { gap: 18px; }
-  .menuItem a { font-size: 15px; padding: 6px 8px; }
-  /* Ocultar botones de acción para evitar corte en tablets */
-  .actions .buttonHablemos,
-  .actions .buttonUser { display: none !important; }
-}
-
-/* Tablets pequeñas */
-@media (max-width: 900px) {
-  .navContainer {
-    padding: 0 20px;
-  }
-
-  .nav {
-    margin: 0 20px;
-  }
-
-  .menuList {
-    gap: 25px;
-  }
-
-  .menuItem a {
-    font-size: 14px;
-    padding: 5px 8px;
-  }
-}
-
-/* Tablets - Solo ajustes menores, menú hamburguesa aún oculto */
-@media (max-width: 1024px) {
-  .navMenu {
-    height: 90px;
-  }
-
-  .navContainer {
-    padding: 0 30px;
-  }
-
-  .nav {
-    margin: 0 30px;
-  }
-
-  .menuList {
-    gap: 35px;
-  }
-
-  .menuItem a {
-    font-size: 15px;
-    padding: 6px 10px;
-  }
-
-  .buttonHablemos {
-    width: 150px;
-    height: 38px;
-  }
-
-  .buttonHablemos span {
-    font-size: 16px;
-  }
-}
-
-/* Tablets pequeñas */
-@media (max-width: 900px) {
-  .navMenu {
-    height: 80px;
-  }
-
-  .navContainer {
-    padding: 0 25px;
-  }
-
-  .nav {
-    margin: 0 25px;
-  }
-
-  .menuList {
-    gap: 30px;
-  }
-
-  .menuItem a {
-    font-size: 14px;
-    padding: 5px 8px;
-  }
-
-  .buttonHablemos {
-    width: 140px;
-    height: 36px;
-  }
-
-  .buttonHablemos span {
-    font-size: 15px;
-  }
-}
-
-/* Móviles */
 @media (max-width: 768px) {
   .navMenu {
     height: 70px;
@@ -440,87 +264,25 @@
   .logo {
     width: 160px;
     height: 44px;
+    margin-left: 12px;
   }
 
   .actions {
     gap: 15px;
   }
 
-  .buttonHablemos {
-    width: 130px;
-    height: 36px;
-  }
-
-  .buttonHablemos span {
-    font-size: 14px;
-  }
-
-  .phoneIcon {
-    width: 16px !important;
-    height: 15px !important;
-  }
-
-  .buttonUser {
-    width: 36px;
-    height: 36px;
-  }
-}
-
-/* Móviles en vertical: empujar hamburguesa a la derecha y agrandarla */
-@media (max-width: 576px) and (orientation: portrait) {
-  .actions {
-    margin-left: auto;
-    margin-right: 6px;
-  }
-
   .hamburgerButton {
-    width: 52px;
-    height: 52px;
-    padding: 12px;
+    width: 40px;
+    height: 40px;
+    padding: 8px;
   }
 
   .hamburgerButton img {
-    width: 30px;
-    height: 30px;
-  }
-}
-
-/* Móviles pequeños */
-@media (max-width: 480px) {
-  .navMenu {
-    height: 60px;
+    width: 24px;
+    height: 24px;
   }
 
-  .navContainer {
-    padding: 0 15px;
-  }
-
-  .logo {
-    width: 140px;
-    height: 38px;
-  }
-
-  .buttonHablemos {
-    width: 110px;
-    height: 32px;
-  }
-
-  .buttonHablemos span {
-    font-size: 13px;
-  }
-
-  .buttonUser {
-    width: 32px;
-    height: 32px;
-  }
-
-  .phoneIcon {
-    width: 14px !important;
-    height: 13px !important;
-  }
-
-
-  /* Reglas del menú móvil */
+  /* Reglas del menú móvil desplegable */
   .mobileMenu {
     position: fixed;
     top: 70px;

@@ -1,21 +1,28 @@
-/* Blog Section - Diseño base 1920px */
+/* ==========================================
+   BLOG SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .blogSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Título principal - top: 5244px, left: 362px, 1196x78px */
+/* ========== TÍTULO PRINCIPAL ========== */
+
 .mainTitle {
   width: auto;
-  margin: 0 auto 17px;
+  margin: 0 auto 0.89vw; /* 17px = 0.89vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: center;
@@ -23,76 +30,85 @@
   white-space: nowrap;
 }
 
-/* Subtítulo - top: 5339px, left: 444px, 1032x27px */
+/* ========== SUBTÍTULO ========== */
+
 .subtitle {
   width: 100%;
-  max-width: 1032px;
-  margin: 0 auto 80px;
+  max-width: 53.75vw; /* 1032px = 53.75vw */
+  margin: 0 auto 4.17vw; /* 80px = 4.17vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FB8C05;
   text-align: center;
   opacity: 1;
 }
 
-/* Grid de artículos */
+/* ========== GRID DE ARTÍCULOS ========== */
+
 .blogGrid {
   display: grid;
-  grid-template-columns: repeat(4, 443px);
-  gap: 16px;
+  grid-template-columns: repeat(4, 23.07vw); /* 443px = 23.07vw */
+  gap: 0.83vw; /* 16px = 0.83vw */
   justify-content: center;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 2.60vw; /* 50px = 2.60vw */
+  box-sizing: border-box;
 }
 
-/* Card de blog - 443x562px */
+/* ========== CARD DE BLOG ========== */
+
 .blogCard {
   position: relative;
-  width: 443px;
-  height: 562px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 29.27vw; /* 562px = 29.27vw */
   background: #FFFFFF;
-  border-radius: 20px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
   opacity: 1;
   overflow: visible;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 /* Contenedor de imagen */
 .imageContainer {
   position: relative;
-  width: 443px;
-  height: 294px;
-  border-radius: 20px 20px 0px 0px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 15.31vw; /* 294px = 15.31vw */
+  border-radius: 1.04vw 1.04vw 0px 0px; /* 20px = 1.04vw */
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .cardImage {
-  width: 443px;
-  height: 294px;
+  width: 23.07vw; /* 443px = 23.07vw */
+  height: 15.31vw; /* 294px = 15.31vw */
   object-fit: cover;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 1.04vw 1.04vw 0px 0px; /* 20px = 1.04vw */
 }
+
+/* ========== BADGES ========== */
 
 /* Badge de categoría - esquina superior izquierda */
 .categoryBadge {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  padding: 3px 9px;
+  top: 0.52vw; /* 10px = 0.52vw */
+  left: 0.52vw; /* 10px = 0.52vw */
+  padding: 0.16vw 0.47vw; /* 3px 9px = 0.16vw 0.47vw */
   background: #27A49F;
-  border-radius: 14px;
+  border-radius: 0.73vw; /* 14px = 0.73vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 34px;
+  font-size: 0.52vw; /* 10px = 0.52vw */
+  line-height: 1.77vw; /* 34px = 1.77vw */
   letter-spacing: 0px;
   color: #F3F7F9;
   opacity: 1;
+  box-sizing: border-box;
 }
 
 /* Badge de fecha - esquina superior derecha (solo cuadro 4) */
@@ -100,24 +116,25 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 63px;
-  height: 72px;
+  width: 3.28vw; /* 63px = 3.28vw */
+  height: 3.75vw; /* 72px = 3.75vw */
   background: #27A49F;
-  border-radius: 0px 20px;
+  border-radius: 0px 1.04vw; /* 20px = 1.04vw */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 13px;
+  padding-top: 0.68vw; /* 13px = 0.68vw */
   opacity: 1;
+  box-sizing: border-box;
 }
 
 .dateMonth {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 10px;
-  line-height: 14px;
+  font-size: 0.52vw; /* 10px = 0.52vw */
+  line-height: 0.73vw; /* 14px = 0.73vw */
   letter-spacing: 0px;
   color: #F3F7F9;
   text-align: center;
@@ -128,42 +145,44 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 24px;
-  line-height: 33px;
+  font-size: 1.25vw; /* 24px = 1.25vw */
+  line-height: 1.72vw; /* 33px = 1.72vw */
   letter-spacing: 0px;
   color: #F3F7F9;
   text-align: center;
   opacity: 1;
 }
 
-/* Contenido de la card */
+/* ========== CONTENIDO DE LA CARD ========== */
+
 .cardContent {
-  padding: 21px 28px 28px;
+  padding: 1.09vw 1.46vw 1.46vw; /* 21px 28px 28px = 1.09vw 1.46vw 1.46vw */
+  box-sizing: border-box;
 }
 
-/* Título de la card - 17px/23px */
+/* Título de la card */
 .cardTitle {
-  margin: 0 0 17px 0;
+  margin: 0 0 0.89vw 0; /* 17px = 0.89vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 17px;
-  line-height: 23px;
-  letter-spacing: 0.42px;
+  font-size: 0.89vw; /* 17px = 0.89vw */
+  line-height: 1.20vw; /* 23px = 1.20vw */
+  letter-spacing: 0.022vw; /* 0.42px = 0.022vw */
   color: #FB8C05;
   text-align: left;
   opacity: 1;
 }
 
-/* Descripción - 14px/25px */
+/* Descripción */
 .cardDescription {
-  margin: 0 0 53px 0;
+  margin: 0 0 2.76vw 0; /* 53px = 2.76vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 25px;
-  letter-spacing: 0.35px;
+  font-size: 0.73vw; /* 14px = 0.73vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
   color: #464749;
   text-align: left;
   opacity: 1;
@@ -175,9 +194,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 31px;
-  letter-spacing: 0.35px;
+  font-size: 0.73vw; /* 14px = 0.73vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
   color: #27A49F;
   text-align: center;
   text-decoration: none;
@@ -189,158 +208,43 @@
   color: #1f8580;
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .blogGrid {
-    grid-template-columns: repeat(4, clamp(300px, 23.07vw, 443px));
-    gap: clamp(12px, 0.83vw, 16px);
-    padding: 0 2.6vw;
-  }
+/* ========== RESPONSIVE - SOLO MÓVILES/TABLETS ========== */
 
-  .blogCard {
-    width: 100%;
-    height: clamp(480px, 29.27vw, 562px);
-  }
-
-  .imageContainer {
-    width: 100%;
-    height: clamp(200px, 15.31vw, 294px);
-  }
-
-  .cardImage {
-    width: 100%;
-    height: 100%;
-  }
-
-  .cardTitle {
-    font-size: clamp(15px, 0.89vw, 17px);
-    line-height: clamp(20px, 1.20vw, 23px);
-  }
-
-  .cardDescription {
-    font-size: clamp(13px, 0.73vw, 14px);
-    line-height: clamp(22px, 1.30vw, 25px);
-  }
-}
-
-/* Responsive para laptops específicamente */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  .blogSection {
-    padding: 60px 0;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important; /* Centrar toda la sección */
-  }
-
-  .mainTitle {
-    font-size: 40px;
-    line-height: 45px;
-    margin-bottom: 12px;
-  }
-
-  .subtitle {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 50px;
-  }
-
-  .blogGrid {
-    grid-template-columns: repeat(4, 1fr) !important;
-    max-width: 1300px !important; /* Mismo ancho máximo que el hero */
-    gap: 12px !important;
-    justify-content: center !important; /* Centrar el grid */
-    margin: 0 auto !important; /* Centrar el grid */
-  }
-
-  .blogCard {
-    width: 100%;
-    height: auto;
-    min-height: 460px;
-  }
-
-  .imageContainer {
-    height: 240px;
-  }
-
-  .cardImage {
-    height: 240px;
-  }
-
-  .cardContent {
-    padding: 16px 20px 20px;
-  }
-
-  .cardTitle {
-    font-size: 15px;
-    line-height: 20px;
-    margin-bottom: 12px;
-  }
-
-  .cardDescription {
-    font-size: 12px;
-    line-height: 20px;
-    margin-bottom: 35px;
-  }
-}
-
-@media (max-width: 1279px) {
-  .blogSection {
-    padding: 80px 0;
-  }
-
-  .mainTitle {
-    font-size: 45px;
-    line-height: 50px;
-    margin-bottom: 15px;
-  }
-
-  .subtitle {
-    font-size: 18px;
-    line-height: 29px;
-    margin-bottom: 60px;
-  }
-
+@media (max-width: 1024px) {
   .blogGrid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
-    gap: 20px;
+    gap: 2.08vw;
   }
 
   .blogCard {
     width: 100%;
     height: auto;
-    min-height: 520px;
+    min-height: 60vw;
+  }
+
+  .imageContainer,
+  .cardImage {
+    width: 100%;
+    height: 35vw;
   }
 }
 
 @media (max-width: 768px) {
-  .blogSection {
-    padding: 60px 0;
-  }
-
-  .mainTitle {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .subtitle {
-    font-size: 17px;
-    line-height: 27px;
-  }
-
   .blogGrid {
     grid-template-columns: 1fr;
-    max-width: 443px;
+    padding: 0 5vw;
   }
 
-  .cardTitle {
-    font-size: 16px;
-    line-height: 22px;
+  .blogCard {
+    width: 100%;
+    height: auto;
+    min-height: 100vw;
   }
 
-  .cardDescription {
-    font-size: 14px;
-    line-height: 24px;
+  .imageContainer,
+  .cardImage {
+    width: 100%;
+    height: 50vw;
   }
 }
 

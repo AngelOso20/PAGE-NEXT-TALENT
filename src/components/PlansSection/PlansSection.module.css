@@ -1,24 +1,31 @@
-/* Plans Section - Diseño base 1920px */
+/* ==========================================
+   PLANS SECTION - DISEÑO PROPORCIONAL COMPACTO
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   Factor de reducción: 0.85 (85% del tamaño original)
+   para que la sección completa quepa en pantalla sin scroll
+   ========================================== */
+
 .plansSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding-top: 120px;
-  padding-bottom: 100px;
+  width: 100vw;
+  padding-top: 4.00vw; /* 6.25vw * 0.85 = 5.31vw, reducido a 4vw para más compacto */
+  padding-bottom: 3.50vw; /* 5.21vw * 0.85 = 4.43vw, reducido a 3.5vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Título principal - top: 1182px, left: 732px, 456x78px */
+/* ========== TÍTULO PRINCIPAL ========== */
 .mainTitle {
-  width: 100%;
-  max-width: 456px;
+  width: 23.75vw; /* Ancho mantiene proporción */
   height: auto;
-  margin: 0 auto 17px;
+  margin: 0 auto 0.76vw; /* 0.89vw * 0.85 = 0.76vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.43vw; /* 2.86vw * 0.85 = 2.43vw */
+  line-height: 2.43vw; /* 2.86vw * 0.85 = 2.43vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: center;
@@ -26,92 +33,95 @@
   white-space: nowrap;
 }
 
-/* Subtítulo - top: 1277px, left: 444px, 1032x27px */
+/* ========== SUBTÍTULO ========== */
 .subtitle {
-  width: 100%;
-  max-width: 1032px;
+  width: 53.75vw; /* Ancho mantiene proporción */
   height: auto;
-  margin: 0 auto 80px;
-  padding: 0 20px;
+  margin: 0 auto 3.00vw; /* 4.17vw * 0.85 = 3.54vw, reducido a 3vw */
+  padding: 0 1.04vw; /* Mantiene padding horizontal */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 31px;
-  letter-spacing: 0.47px;
+  font-size: 0.84vw; /* 0.99vw * 0.85 = 0.84vw */
+  line-height: 1.37vw; /* 1.61vw * 0.85 = 1.37vw */
+  letter-spacing: 0.020vw; /* 0.024vw * 0.85 = 0.020vw */
   color: #FB8C05;
   text-align: center;
   opacity: 1;
 }
 
-/* Contenedor de planes */
+/* ========== CONTENEDOR DE PLANES ========== */
 .plansContainer {
   position: relative;
-  width: 100%;
-  max-width: 1820px;
+  width: 94.79vw; /* 1820px en 1920px = 94.79vw */
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 2.60vw; /* 50px = 2.60vw */
   display: flex;
-  gap: 16px;
+  gap: 0.83vw; /* 16px = 0.83vw */
   justify-content: center;
+  box-sizing: border-box;
 }
 
-/* Cuadro azul con asesora - top: 1384px, left: 50px, 443x778px */
+/* ========== CUADRO AZUL CON ASESORA ========== */
 .advisorBox {
   position: relative;
-  width: 443px;
-  min-height: 778px;
+  width: 23.07vw; /* Mantiene ancho */
+  min-height: 34.44vw; /* 40.52vw * 0.85 = 34.44vw - REDUCCIÓN CLAVE */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
   opacity: 1;
   flex-shrink: 0;
   align-self: stretch;
+  box-sizing: border-box;
 }
 
-/* Imagen de asesora - top: 1598px, left: 87px (relativo: 214px, 37px) */
+/* Imagen de asesora */
 .advisorImage {
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 384px;
-  height: 564px;
+  width: 17vw; /* 20vw * 0.85 = 17vw */
+  height: 24.97vw; /* 29.38vw * 0.85 = 24.97vw */
 }
 
 .advisorImage img {
-  width: 384px;
-  height: 564px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
-/* Card de plan - 443x778px */
+/* ========== CARD DE PLAN ========== */
 .planCard {
   position: relative;
-  width: 443px;
-  min-height: 778px;
+  width: 23.07vw; /* Mantiene ancho */
+  min-height: 34.44vw; /* 40.52vw * 0.85 = 34.44vw - REDUCCIÓN CLAVE */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 48px 34px 71px;
+  border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
+  padding: 2.13vw 1.50vw 3.15vw; /* 2.50vw 1.77vw 3.70vw * 0.85 */
   display: flex;
   flex-direction: column;
   align-items: center;
   opacity: 1;
   flex-shrink: 0;
+  box-sizing: border-box;
 }
 
-/* Título del plan - 226x46px */
+/* ========== ELEMENTOS INTERNOS DE LA CARD ========== */
+
+/* Título del plan */
 .planTitle {
   width: 100%;
-  max-width: 375px;
+  max-width: 19.53vw; /* Mantiene ancho */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 33px;
-  line-height: 39px;
+  font-size: 1.46vw; /* 1.72vw * 0.85 = 1.46vw */
+  line-height: 1.73vw; /* 2.03vw * 0.85 = 1.73vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: center;
-  margin: 0 0 36px 0;
+  margin: 0 0 1.60vw 0; /* 1.88vw * 0.85 = 1.60vw */
   opacity: 1;
 }
 
@@ -120,12 +130,12 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.71vw; /* 0.83vw * 0.85 = 0.71vw */
+  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
+  letter-spacing: 0.018vw; /* 0.021vw * 0.85 = 0.018vw */
   color: #464749;
   text-align: center;
-  margin: 0 0 4px 0;
+  margin: 0 0 0.18vw 0; /* 0.21vw * 0.85 = 0.18vw */
   opacity: 1;
 }
 
@@ -134,12 +144,12 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 40px;
-  line-height: 55px;
+  font-size: 1.77vw; /* 2.08vw * 0.85 = 1.77vw */
+  line-height: 2.43vw; /* 2.86vw * 0.85 = 2.43vw */
   letter-spacing: 0px;
   color: #1A1818;
   text-align: center;
-  margin: 0 0 17px 0;
+  margin: 0 0 0.76vw 0; /* 0.89vw * 0.85 = 0.76vw */
   opacity: 1;
 }
 
@@ -148,26 +158,26 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.71vw; /* 0.83vw * 0.85 = 0.71vw */
+  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
+  letter-spacing: 0.018vw; /* 0.021vw * 0.85 = 0.018vw */
   color: #464749;
   text-align: center;
-  margin: 0 0 67px 0;
+  margin: 0 0 2.97vw 0; /* 3.49vw * 0.85 = 2.97vw */
   opacity: 1;
 }
 
 /* Descripción */
 .planDescription {
   width: 100%;
-  max-width: 375px;
+  max-width: 19.53vw; /* Mantiene ancho */
   flex-grow: 1;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.71vw; /* 0.83vw * 0.85 = 0.71vw */
+  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
+  letter-spacing: 0.018vw; /* 0.021vw * 0.85 = 0.018vw */
   color: #464749;
   text-align: left;
   margin-bottom: 0;
@@ -175,46 +185,46 @@
 }
 
 .planDescription p {
-  margin: 0 0 15px 0;
+  margin: 0 0 0.66vw 0; /* 0.78vw * 0.85 = 0.66vw */
 }
 
 .planDescription p:first-child {
   font-weight: 600;
   color: #1A1818;
-  margin-bottom: 25px;
+  margin-bottom: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
 }
 
 .includesLabel {
   font-weight: bold;
-  margin-top: 15px !important;
+  margin-top: 0.66vw !important; /* 0.78vw * 0.85 = 0.66vw */
 }
 
 .planDescription ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0 0;
+  margin: 0.44vw 0 0 0; /* 0.52vw * 0.85 = 0.44vw */
 }
 
 .planDescription ul li {
-  margin-bottom: 8px;
-  line-height: 25px;
+  margin-bottom: 0.36vw; /* 0.42vw * 0.85 = 0.36vw */
+  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
 }
 
-/* Botón del plan - 244x40px */
+/* Botón del plan */
 .planButton {
   position: absolute;
-  bottom: 30px;
+  bottom: 1.33vw; /* 1.56vw * 0.85 = 1.33vw */
   left: 50%;
   transform: translateX(-50%);
-  width: 244px;
-  height: 40px;
+  width: 10.80vw; /* 12.71vw * 0.85 = 10.80vw */
+  height: 1.77vw; /* 2.08vw * 0.85 = 1.77vw */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 17px;
-  line-height: 34px;
+  font-size: 0.76vw; /* 0.89vw * 0.85 = 0.76vw */
+  line-height: 1.50vw; /* 1.77vw * 0.85 = 1.50vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;
@@ -231,28 +241,29 @@
   background: #1f8580;
 }
 
-/* Cuadro naranja inferior - top: 2182px, left: 50px, 1820x127px */
+/* ========== BANNER NARANJA INFERIOR ========== */
 .orangeBanner {
   position: relative;
-  width: 1820px;
-  height: 127px;
-  margin: 100px auto 0;
+  width: 94.79vw; /* Mantiene ancho */
+  height: 5.62vw; /* 6.61vw * 0.85 = 5.62vw */
+  margin: 3.50vw auto 0; /* 5.21vw * 0.85 = 4.43vw, reducido a 3.5vw */
   background: #FB8C05;
-  border-radius: 20px;
+  border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 19px;
+  gap: 0.84vw; /* 0.99vw * 0.85 = 0.84vw */
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Texto del banner - 636x55px */
+/* Texto del banner */
 .bannerText {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 39px;
-  line-height: 39px;
+  font-size: 1.73vw; /* 2.03vw * 0.85 = 1.73vw */
+  line-height: 1.73vw; /* 2.03vw * 0.85 = 1.73vw */
   letter-spacing: 0px;
   color: #F3F7F9;
   text-align: center;
@@ -260,17 +271,17 @@
   opacity: 1;
 }
 
-/* Botón del banner - 152x40px */
+/* Botón del banner */
 .bannerButton {
-  width: 152px;
-  height: 40px;
+  width: 6.73vw; /* 7.92vw * 0.85 = 6.73vw */
+  height: 1.77vw; /* 2.08vw * 0.85 = 1.77vw */
   background: #27A49F;
-  border-radius: 20px;
+  border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 17px;
-  line-height: 34px;
+  font-size: 0.76vw; /* 0.89vw * 0.85 = 0.76vw */
+  line-height: 1.50vw; /* 1.77vw * 0.85 = 1.50vw */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;
@@ -287,227 +298,144 @@
   background: #1f8580;
 }
 
-/* Desktop: 1601px-1920px - Reducción del 20% */
-@media (min-width: 1601px) and (max-width: 1920px) {
-  .plansSection {
-    transform: scale(0.8);
-    transform-origin: top center;
-    margin-bottom: -20%; /* Compensar el espacio perdido por el scale */
-  }
-}
-
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .plansContainer {
-    padding: 0 2.6vw;
-    gap: 0.83vw;
-  }
-
-  .advisorBox,
-  .planCard {
-    width: clamp(300px, 23.07vw, 443px);
-    height: clamp(650px, 40.52vw, 778px);
-  }
-
-  .advisorImage {
-    width: clamp(260px, 20vw, 384px);
-    height: clamp(380px, 29.38vw, 564px);
-  }
-
-  .orangeBanner {
-    width: 94.79vw;
-    max-width: 1820px;
-    height: clamp(100px, 6.61vw, 127px);
-  }
-
-  .bannerText {
-    font-size: clamp(24px, 2.03vw, 39px);
-  }
-}
-
-/* Laptops: 1280–1600px — optimizar para que quepa en 1 pantalla */
-@media (min-width: 1280px) and (max-width: 1600px) {
-  /* Contener la sección y reducir espacios verticales */
-  .plansSection { padding-top: 40px; padding-bottom: 20px; }
-  .mainTitle { font-size: 42px; line-height: 42px; margin-bottom: 8px; }
-  .subtitle { font-size: 16px; line-height: 24px; margin-bottom: 30px; }
-  .plansContainer { gap: 10px; }
-
-  /* Igualar altura del cuadro azul con las tarjetas - más compacto */
-  .advisorBox { overflow: hidden; height: 580px; min-height: 580px; }
-  .advisorImage { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80%; height: auto; }
-  .advisorImage img { width: 100%; height: auto; object-fit: contain; }
-
-  /* Tarjetas más compactas y de igual altura - alineadas con caja azul */
-  .planCard { box-sizing: border-box; padding: 24px 18px 60px; overflow: hidden; height: 580px; min-height: 580px; max-height: 580px; }
-  .planTitle { font-size: 24px; line-height: 28px; margin-bottom: 16px; }
-  .planPrice { font-size: 32px; line-height: 38px; margin-bottom: 8px; }
-  .planEmployees { font-size: 14px; line-height: 20px; margin-bottom: 20px; }
-  .planDescription { max-width: 100%; word-break: break-word; overflow-wrap: anywhere; font-size: 14px; line-height: 20px; }
-  .planDescription p { margin: 0 0 10px 0; }
-  .planDescription p:first-child { margin-bottom: 16px; }
-  .planDescription ul { margin: 8px 0 0 0; }
-  .planDescription ul li { margin-bottom: 4px; line-height: 18px; }
-  .planButton { width: 200px; height: 32px; font-size: 14px; line-height: 28px; bottom: 12px; }
-}
-
-@media (max-width: 1400px) {
-  .plansSection {
-    padding-top: 80px;
-    padding-bottom: 60px;
-  }
-
-  .mainTitle {
-    width: auto;
-    max-width: 90%;
-    font-size: 45px;
-    line-height: 50px;
-  }
-
-  .subtitle {
-    width: auto;
-    max-width: 90%;
-    font-size: 18px;
-    margin-bottom: 60px;
-  }
-
-  .plansContainer {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .advisorBox {
-    width: 100%;
-    max-width: 443px;
-    height: 400px;
-  }
-
-  .advisorImage {
-    width: 280px;
-    height: 380px;
-  }
-
-  .planCard {
-    width: 100%;
-    max-width: 443px;
-    height: auto;
-    min-height: 650px;
-  }
-
-  .orangeBanner {
-    width: calc(100% - 40px);
-    max-width: 1820px;
-    height: auto;
-    min-height: 100px;
-    padding: 30px 20px;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .bannerText {
-    font-size: 28px;
-    line-height: 34px;
-  }
-}
+/* ==========================================
+   MEDIA QUERY ÚNICO - SOLO PARA MÓVILES
+   Cambia layout de horizontal a vertical
+   NO altera tamaños, solo distribución
+   ========================================== */
 
 @media (max-width: 768px) {
+  .plansSection {
+    padding: 8vw 4vw;
+  }
+
   .mainTitle {
-    font-size: 36px;
-    line-height: 42px;
-    margin-bottom: 15px;
+    width: 90%;
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 3vw;
+    white-space: normal;
   }
 
   .subtitle {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 40px;
+    width: 90%;
+    font-size: 4vw;
+    line-height: 6vw;
+    margin-bottom: 8vw;
+    padding: 0;
   }
 
-  .planTitle {
-    font-size: 28px;
-    line-height: 34px;
-  }
-
-  .planPrice {
-    font-size: 32px;
-    line-height: 42px;
-  }
-
-  .planDescription {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .bannerText {
-    font-size: 22px;
-    line-height: 28px;
-  }
-
-  .bannerButton {
-    width: 180px;
-  }
-}
-
-/* Tablets: reorganizar en 2x2 y contener imagen asesora (768px–1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
   .plansContainer {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    align-items: stretch;
-    padding: 0 20px;
-  }
-
-  /* Orden 2x2: [asesora | plan 1] \n [plan 2 | plan 3] */
-  /* Igualar/llenar altura de fila de grid frente a la tarjeta */
-  .advisorBox {
-    grid-column: 1;
-    grid-row: 1;
-    overflow: hidden;
-    min-height: 700px; /* punto de partida, pero además llenamos la fila */
-    height: 100%; /* estira para igualar la altura real de la fila (la del plan) */
-  }
-  .planCard:nth-of-type(1) { grid-column: 2; grid-row: 1; }
-  .planCard:nth-of-type(2) { grid-column: 1; grid-row: 2; }
-  .planCard:nth-of-type(3) { grid-column: 2; grid-row: 2; }
-
-  /* Contener imagen de asesora dentro del cuadro */
-  .advisorImage { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 85%; height: auto; }
-  .advisorImage img { width: 100%; height: auto; }
-}
-
-/* Mobile phones in portrait: fix advisor blue box and image overflow */
-@media (max-width: 576px) and (orientation: portrait) {
-  .plansContainer {
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    padding: 0 16px;
+    gap: 6vw;
+    padding: 0 4vw;
   }
 
   .advisorBox {
-    width: 100%;
-    max-width: 420px;
-    min-height: 480px; /* taller to fully show the face */
-    height: 480px;
-    margin-top: 8px; /* box a bit lower */
-    overflow: hidden; /* contain the image */
+    width: 90%;
+    min-height: 70vw;
+    max-width: none;
   }
 
   .advisorImage {
-    position: absolute;
-    bottom: -65px; /* shift image further up */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    width: 70%;
     height: auto;
-    z-index: 2; /* ensure image above blue background */
+    bottom: 0;
   }
 
   .advisorImage img {
     width: 100%;
     height: auto;
+  }
+
+  .planCard {
+    width: 90%;
+    min-height: auto;
+    height: auto;
+    padding: 6vw 5vw 12vw;
+    max-width: none;
+  }
+
+  .planTitle {
+    font-size: 5vw;
+    line-height: 6vw;
+    margin-bottom: 4vw;
+    max-width: none;
+  }
+
+  .planFrom {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    margin-bottom: 1vw;
+  }
+
+  .planPrice {
+    font-size: 6vw;
+    line-height: 7vw;
+    margin-bottom: 2vw;
+  }
+
+  .planEmployees {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    margin-bottom: 6vw;
+  }
+
+  .planDescription {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    max-width: none;
+  }
+
+  .planDescription p {
+    margin-bottom: 3vw;
+  }
+
+  .planDescription p:first-child {
+    margin-bottom: 4vw;
+  }
+
+  .planDescription ul {
+    margin-top: 2vw;
+  }
+
+  .planDescription ul li {
+    margin-bottom: 2vw;
+    line-height: 5vw;
+  }
+
+  .planButton {
+    width: 70%;
+    height: 10vw;
+    font-size: 3.5vw;
+    line-height: 10vw;
+    border-radius: 2vw;
+    bottom: 3vw;
+  }
+
+  .orangeBanner {
+    width: 90%;
+    height: auto;
+    min-height: 20vw;
+    margin-top: 8vw;
+    padding: 5vw 4vw;
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .bannerText {
+    font-size: 5vw;
+    line-height: 6vw;
+  }
+
+  .bannerButton {
+    width: 50%;
+    height: 10vw;
+    font-size: 3.5vw;
+    line-height: 10vw;
+    border-radius: 2vw;
   }
 }
 

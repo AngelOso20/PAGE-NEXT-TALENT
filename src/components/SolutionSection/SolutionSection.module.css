@@ -1,21 +1,29 @@
-/* Solution Section - Diseño base 1920px */
+/* ==========================================
+   SOLUTION SECTION - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
 .solutionSection {
   position: relative;
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 100px 0;
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
-/* Título principal - top: 3116px, left: 723px, 474x78px */
+/* ========== TÍTULOS ========== */
+
+/* Título principal */
 .mainTitle {
   width: auto;
-  margin: 0 auto 17px;
+  margin: 0 auto 0.89vw; /* 17px = 0.89vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 55px;
-  line-height: 55px;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 2.86vw; /* 55px = 2.86vw */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: center;
@@ -23,225 +31,172 @@
   white-space: nowrap;
 }
 
-/* Subtítulo - top: 3211px, left: 550px, 820x58px */
+/* Subtítulo */
 .subtitle {
-  width: 820px;
-  margin: 0 auto 58px;
+  width: 42.71vw; /* 820px = 42.71vw */
+  margin: 0 auto 3.02vw; /* 58px = 3.02vw */
   padding: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 19px;
-  line-height: 29px;
-  letter-spacing: 0.47px;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.51vw; /* 29px = 1.51vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
   color: #FB8C05;
   text-align: center;
   opacity: 1;
 }
 
-/* Grid de soluciones */
+/* ========== GRID DE SOLUCIONES ========== */
+
 .solutionsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 443px);
-  gap: 16px;
+  grid-template-columns: repeat(4, 23.07vw); /* 443px = 23.07vw */
+  gap: 0.83vw; /* 16px = 0.83vw */
   justify-content: center;
-  margin: 0 auto 21px;
-  padding: 0 50px;
+  margin: 0 auto 1.09vw; /* 21px = 1.09vw */
+  padding: 0 2.60vw; /* 50px = 2.60vw */
+  box-sizing: border-box;
 }
 
-/* Card de solución - 443x304px */
+/* ========== CARD DE SOLUCIÓN ========== */
+
 .solutionCard {
   position: relative;
-  width: 443px;
-  height: 304px;
+  width: 100%;
+  height: 15.83vw; /* 304px = 15.83vw */
   background: #FFFFFF;
-  border-radius: 20px;
-  padding: 69px 43px 64px;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 3.59vw 2.24vw 3.33vw; /* 69px 43px 64px = 3.59vw 2.24vw 3.33vw */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   opacity: 1;
+  box-sizing: border-box;
 }
 
-/* Contenedor del icono - 71-79px width, 76-79px height */
+/* Contenedor del icono */
 .iconContainer {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 30px;
+  width: 4.17vw; /* 80px = 4.17vw */
+  height: 4.17vw; /* 80px = 4.17vw */
+  margin-bottom: 1.56vw; /* 30px = 1.56vw */
   flex-shrink: 0;
 }
 
-/* Texto de la card */
+/* ========== TEXTOS DE LA CARD ========== */
+
 .cardText {
   width: 100%;
-  max-width: 357px;
+  max-width: 18.59vw; /* 357px = 18.59vw */
   font-family: 'FinalSix', sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
 }
 
-/* Título de la card (bold) - Primera línea */
+/* Título de la card (bold) */
 .cardTitle {
   font-weight: bold;
-  margin: 0 0 0 0;
+  margin: 0;
   font-family: 'FinalSix', sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
 }
 
-/* Descripción de la card (normal) - Segunda línea */
+/* Descripción de la card (normal) */
 .cardDescription {
   font-weight: normal;
   margin: 0;
   font-family: 'FinalSix', sans-serif;
-  font-size: 16px;
-  line-height: 25px;
-  letter-spacing: 0.4px;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
 }
 
-/* Texto final - top: 3660px, left: 551px, 819x29px */
+/* ========== TEXTO FINAL ========== */
+
 .finalText {
-  width: 819px;
+  width: 42.66vw; /* 819px = 42.66vw */
   margin: 0 auto;
   padding: 0;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 21px;
-  line-height: 31px;
-  letter-spacing: 0.53px;
+  font-size: 1.09vw; /* 21px = 1.09vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.028vw; /* 0.53px = 0.028vw */
   color: #27A49F;
   text-align: center;
   opacity: 1;
 }
 
-/* Sistema Responsive */
-@media (max-width: 1920px) {
-  .solutionsGrid {
-    grid-template-columns: repeat(4, clamp(300px, 23.07vw, 443px));
-    gap: clamp(12px, 0.83vw, 16px);
-    padding: 0 2.6vw;
-  }
+/* ==========================================
+   MEDIA QUERY ÚNICO - SOLO PARA MÓVILES
+   Cambia layout de grid 4 columnas a 1 columna
+   NO altera tamaños, solo distribución
+   ========================================== */
 
-  .solutionCard {
-    width: 100%;
-    height: clamp(250px, 15.83vw, 304px);
-    padding: clamp(40px, 3.59vw, 69px) clamp(30px, 2.24vw, 43px) clamp(40px, 3.33vw, 64px);
-  }
-
-  .iconContainer {
-    width: clamp(60px, 4.17vw, 80px);
-    height: clamp(60px, 4.17vw, 80px);
-    margin-bottom: clamp(20px, 1.56vw, 30px);
-  }
-
-  .cardText {
-    font-size: clamp(14px, 0.83vw, 16px);
-    line-height: clamp(22px, 1.30vw, 25px);
-  }
-}
-
-@media (max-width: 1400px) {
+@media (max-width: 768px) {
   .solutionSection {
-    padding: 80px 0;
+    padding: 8vw 0;
   }
 
   .mainTitle {
-    font-size: 45px;
-    line-height: 50px;
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 3vw;
+    white-space: normal;
   }
 
   .subtitle {
-    font-size: 18px;
-    line-height: 29px;
-    margin-bottom: 50px;
+    width: 90%;
+    font-size: 4vw;
+    line-height: 6vw;
+    margin-bottom: 8vw;
+    padding: 0 4vw;
   }
 
   .solutionsGrid {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 900px;
-    gap: 20px;
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    padding: 0 4vw;
+    margin-bottom: 6vw;
   }
 
   .solutionCard {
     width: 100%;
     height: auto;
-    min-height: 280px;
+    min-height: 60vw;
+    padding: 8vw 6vw;
+  }
+
+  .iconContainer {
+    width: 15vw;
+    height: 15vw;
+    margin-bottom: 4vw;
+  }
+
+  .cardText,
+  .cardTitle,
+  .cardDescription {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    max-width: none;
   }
 
   .finalText {
-    font-size: 19px;
-    line-height: 29px;
-  }
-}
-
-@media (max-width: 768px) {
-  .solutionSection {
-    padding: 60px 0;
-  }
-
-  .mainTitle {
-    font-size: 36px;
-    line-height: 42px;
-  }
-
-  .subtitle {
-    font-size: 17px;
-    line-height: 27px;
-  }
-
-  .solutionsGrid {
-    grid-template-columns: 1fr;
-    max-width: 443px;
-  }
-
-  .cardText {
-    font-size: 15px;
-    line-height: 24px;
-  }
-
-  .finalText {
-    font-size: 18px;
-    line-height: 28px;
-  }
-}
-
-/* Mobile phones in portrait: prevent text clipping and ensure proper wrapping */
-@media (max-width: 576px) and (orientation: portrait) {
-  .subtitle,
-  .finalText {
-    width: 100%;
-    max-width: 92%;
-    padding: 0 16px; /* side padding so text breathes */
-    margin-left: auto;
-    margin-right: auto;
-    word-break: normal;
-    overflow-wrap: anywhere; /* allow wrap on long segments */
-  }
-
-  .subtitle {
-    font-size: 16px;
-    line-height: 26px;
-    margin-bottom: 36px;
-  }
-
-  .finalText {
-    font-size: 17px;
-    line-height: 27px;
-    margin-top: 10px;
-  }
-
-  .solutionsGrid {
-    padding: 0 16px;
+    width: 90%;
+    font-size: 4.5vw;
+    line-height: 6.5vw;
+    padding: 0 4vw;
   }
 }
 
