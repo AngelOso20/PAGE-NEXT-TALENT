@@ -52,7 +52,7 @@ export default function NavMenu() {
           {/* Botones de acción */}
           <div className={styles.actions}>
             {/* Botón Hablemos */}
-            <a href="#contacto" className={styles.buttonHablemos}>
+            <a href="https://api.whatsapp.com/send/?phone=573024904740&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className={styles.buttonHablemos}>
               <Image
                 src="/images/Buttons/Button Phone.svg"
                 alt="Teléfono"
@@ -64,7 +64,7 @@ export default function NavMenu() {
             </a>
 
             {/* Botón Usuario */}
-            <a href="#usuario" className={styles.buttonUser}>
+            <a href="/muy-pronto" className={styles.buttonUser}>
               <Image
                 src="/images/Buttons/Button User.svg"
                 alt="Usuario"
@@ -108,7 +108,7 @@ export default function NavMenu() {
           {/* Botones de acción móvil */}
           <div className={styles.mobileMenuActions}>
             <div className={styles.mobileMenuActionsLeft}>
-              <a href="#contacto" className={styles.buttonHablemos} onClick={closeMobileMenu}>
+              <a href="https://api.whatsapp.com/send/?phone=573024904740&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className={styles.buttonHablemos} onClick={closeMobileMenu}>
                 <Image
                   src="/images/Buttons/Button Phone.svg"
                   alt="Teléfono"
@@ -121,7 +121,7 @@ export default function NavMenu() {
             </div>
 
             <div className={styles.mobileMenuActionsRight}>
-              <a href="#usuario" className={styles.buttonUser} onClick={closeMobileMenu}>
+              <a href="/muy-pronto" className={styles.buttonUser} onClick={closeMobileMenu}>
                 <Image
                   src="/images/Buttons/Button User.svg"
                   alt="Usuario"

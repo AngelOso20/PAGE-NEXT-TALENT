@@ -1,0 +1,301 @@
+/* ==========================================
+   COMING SOON PAGE - DISEÑO PROPORCIONAL
+   100% BASADO EN VIEWPORT
+   Todo escala proporcionalmente según el tamaño de pantalla
+   SIN MEDIA QUERIES - Mantiene proporciones visuales
+   Base de diseño: 1920px de ancho = 100vw
+   ========================================== */
+
+/* ========== CONTENEDOR PRINCIPAL ========== */
+.comingSoonSection {
+  position: relative;
+  width: 100vw;
+  min-height: 43.46vw; /* Misma altura que HeroSection */
+  padding-top: 4.63vw; /* Espacio para el NavMenu */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ========== CUADRO PRINCIPAL ========== */
+.mainContainer {
+  position: absolute;
+  top: 5.28vw;
+  left: 15.46vw; /* CENTRADO: (100vw - 69.08vw) / 2 = 15.46vw */
+  width: 69.08vw; /* Mismo ancho que leftBox del HeroSection */
+  height: 38.18vw;
+  background: #FFFFFF;
+  border-radius: 0.82vw;
+  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
+  opacity: 1;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden; /* OCULTAR EL DESBORDAMIENTO DE LA IMAGEN DE FONDO */
+}
+
+/* ========== PATRÓN DE FONDO ========== */
+.backgroundPattern {
+  position: absolute;
+  top: -5vw; /* MOVER MÁS HACIA ARRIBA */
+  left: -5vw; /* MOVER MÁS HACIA LA IZQUIERDA */
+  width: 130%; /* MÁS ANCHO PARA OCUPAR TODO EL CUADRO */
+  height: 130%; /* MÁS ALTO PARA OCUPAR TODO EL CUADRO */
+  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') center center no-repeat;
+  background-size: 100% 100%; /* TAMAÑO COMPLETO PARA VER TODA LA IMAGEN */
+  opacity: 1; /* SIN OPACIDAD PARA VER EL COLOR ORIGINAL */
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* ========== ICONO DE CONSTRUCCIÓN ========== */
+.iconContainer {
+  position: relative;
+  width: 8vw;
+  height: 8vw;
+  background: #FB8C05;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2vw;
+  z-index: 2;
+}
+
+.iconImage {
+  width: 4vw !important;
+  height: 4vw !important;
+  object-fit: contain;
+}
+
+/* ========== TÍTULO PRINCIPAL ========== */
+.mainTitle {
+  position: relative;
+  width: 100%;
+  height: auto;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.5vw;
+  line-height: 3vw;
+  letter-spacing: 0px;
+  color: #FB8C05;
+  text-align: center;
+  opacity: 1;
+  margin: 0 0 1vw 0;
+  z-index: 2;
+}
+
+/* ========== SUBTÍTULO ========== */
+.subtitle {
+  position: relative;
+  width: 80%;
+  height: auto;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2vw;
+  line-height: 1.8vw;
+  letter-spacing: 0px;
+  color: #464749;
+  text-align: center;
+  opacity: 1;
+  margin: 0 0 2vw 0;
+  z-index: 2;
+}
+
+/* ========== BOTÓN VOLVER AL INICIO ========== */
+.homeButton {
+  position: relative;
+  width: 13.15vw;
+  height: 1.63vw;
+  background: #27A49F;
+  border-radius: 0.82vw;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  opacity: 1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 2vw;
+  z-index: 2;
+}
+
+.homeButton:hover {
+  background: #1f8580;
+  transform: translateY(-0.078vw);
+  box-shadow: 0 0.166vw 0.498vw rgba(39, 164, 159, 0.3);
+}
+
+.homeButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.122vw rgba(39, 164, 159, 0.3);
+}
+
+.homeButton span {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.873vw;
+  line-height: 1.388vw;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+/* ========== ENLACES RÁPIDOS ========== */
+.quickLinks {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8vw;
+  justify-content: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.quickLink {
+  padding: 0.6vw 1.2vw;
+  background: transparent;
+  color: #27A49F;
+  text-decoration: none;
+  border: 0.1vw solid #27A49F;
+  border-radius: 1.2vw;
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.7vw;
+  line-height: 1;
+  letter-spacing: 0px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.quickLink:hover {
+  background: #27A49F;
+  color: #FFFFFF;
+  transform: translateY(-0.05vw);
+}
+
+.quickLink:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.1vw rgba(39, 164, 159, 0.3);
+}
+
+/* ========== RESPONSIVE MEJORADO - DISEÑO MÓVIL OPTIMIZADO ========== */
+/* Solo para móviles: diseño vertical completo y atractivo */
+@media (max-width: 768px) {
+  .comingSoonSection {
+    min-height: auto;
+    padding: 20vw 4vw 4vw; /* MUCHO MÁS ESPACIO DEL NAVMENU */
+    background: transparent; /* SIN FONDO PARA MOSTRAR EL PATRÓN */
+  }
+
+  /* Layout vertical optimizado */
+  .mainContainer {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin-bottom: 3vw; /* MENOS ESPACIO ENTRE ELEMENTOS PARA REDUCIR ALTURA */
+    height: auto;
+    min-height: auto;
+    border-radius: 1.5vw; /* Border-radius más pequeño */
+    box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.1); /* Sombra más pequeña */
+    padding: 5vw 4vw; /* PADDING REDUCIDO */
+    background: #FFFFFF;
+    order: 1; /* Primero el cuadro principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* DISTRIBUIR CONTENIDO */
+    overflow: hidden; /* OCULTAR EL DESBORDAMIENTO DE LA IMAGEN DE FONDO */
+  }
+
+  /* Elementos optimizados para móviles - REDUCIDOS */
+  .iconContainer,
+  .mainTitle,
+  .subtitle,
+  .homeButton,
+  .quickLinks {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
+  .iconContainer {
+    width: 15vw; /* MÁS PEQUEÑO PARA MÓVILES */
+    height: 15vw;
+    margin-bottom: 4vw; /* MARGEN REDUCIDO */
+    align-self: center; /* CENTRAR */
+  }
+
+  .iconImage {
+    width: 7vw !important;
+    height: 7vw !important;
+  }
+
+  .mainTitle {
+    font-size: 5.5vw; /* REDUCIDO para menor altura */
+    line-height: 6.5vw;
+    margin-bottom: 2.5vw; /* MARGEN REDUCIDO */
+    text-align: center; /* CENTRADO */
+  }
+
+  .subtitle {
+    font-size: 3.2vw; /* REDUCIDO para menor altura */
+    line-height: 4.5vw;
+    margin-bottom: 3.5vw; /* MARGEN REDUCIDO */
+    text-align: center; /* CENTRADO */
+    width: 100%; /* ANCHO COMPLETO */
+  }
+
+  .homeButton {
+    width: 100%; /* ANCHO COMPLETO */
+    height: 9vw; /* ALTURA REDUCIDA */
+    border-radius: 2.5vw; /* Border-radius reducido */
+    margin-bottom: 4vw; /* MARGEN REDUCIDO */
+  }
+
+  .homeButton span {
+    font-size: 3.2vw; /* REDUCIDO */
+    line-height: 9vw;
+  }
+
+  .quickLinks {
+    gap: 2vw; /* MÁS ESPACIO ENTRE ENLACES */
+    margin-top: 1.5vw; /* MARGEN REDUCIDO */
+    justify-content: center; /* CENTRAR ENLACES */
+  }
+
+  .quickLink {
+    padding: 2vw 3vw; /* MÁS GRANDE PARA TACTO */
+    font-size: 2.5vw; /* REDUCIDO */
+    border-radius: 3vw; /* Border-radius reducido */
+  }
+
+  /* Mantener patrón de fondo en móviles */
+  .backgroundPattern {
+    display: block; /* MOSTRAR EL PATRÓN DE FONDO */
+    top: -3vw; /* EMPEZAR DESDE ARRIBA CON MARGEN */
+    left: -3vw; /* MOVER MENOS HACIA LA IZQUIERDA PARA PEGARSE MÁS A LA CAJA */
+    width: 120%; /* ANCHO MÁS GRANDE PARA OCUPAR TODO EL CUADRO */
+    height: 120%; /* ALTURA MÁS GRANDE PARA OCUPAR TODO EL CUADRO */
+    background-position: center center; /* CENTRAR LA IMAGEN */
+    background-size: 100% 100%; /* TAMAÑO COMPLETO PARA VER TODA LA IMAGEN */
+    opacity: 1; /* SIN OPACIDAD PARA VER EL COLOR ORIGINAL */
+  }
+}
+
+/* ========== NOTA SOBRE PANTALLAS GRANDES ========== */
+/* NO limitamos el ancho máximo para que las proporciones 
+   se mantengan perfectas en todos los tamaños de pantalla,
+   incluyendo zoom muy bajo (<50%) y pantallas ultra grandes. */

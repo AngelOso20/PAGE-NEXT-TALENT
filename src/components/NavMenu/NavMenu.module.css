@@ -112,7 +112,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.42vw; /* 8px = 0.42vw */
+  gap: 0vw; /* Sin gap para compensar el icono muy grande */
   width: 8.44vw; /* 162px = 8.44vw */
   height: 2.08vw; /* 40px = 2.08vw */
   background: #27A49F;
@@ -151,8 +151,8 @@
 }
 
 .phoneIcon {
-  width: 0.94vw !important; /* 18px = 0.94vw */
-  height: 0.89vw !important; /* 17px = 0.89vw */
+  width: 2.08vw !important; /* 40px = 2.08vw */
+  height: 1.98vw !important; /* 38px = 1.98vw */
   opacity: 1;
   flex-shrink: 0;
 }
