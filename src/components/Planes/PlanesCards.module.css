@@ -351,17 +351,88 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1200px) {
+  .planesCards {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .container {
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+  }
+
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2vw;
+    margin-bottom: 3vw;
   }
-
+  
   .planCard,
   .quoteCard,
   .imagesColumn {
     width: 100%;
     height: auto;
     min-height: 80vw;
+  }
+
+  .planCard {
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .quoteCard {
+    padding: 0;
+  }
+
+  .quoteContent {
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .planTitle {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .desde,
+  .target,
+  .description,
+  .includesTitle {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+  }
+
+  .price {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 5vw;
+    margin-bottom: 2vw;
+  }
+
+  .featureItem {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+    margin-bottom: 1vw;
+    padding-left: 2vw;
+  }
+
+  .buyButton,
+  .calculateButton {
+    width: 60%;
+    height: 6vw; /* MÁS GRANDE PARA TABLETS */
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 6vw;
+    border-radius: 2vw;
+  }
+
+  .quoteTitle {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .quoteDescription {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+    margin-bottom: 3vw;
   }
 
   .imageCard,
@@ -374,29 +445,36 @@
 
 @media (max-width: 768px) {
   .planesCards {
-    padding: 8vw 0;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
-
+  
   .container {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
-
+  
   .cardsGrid {
     grid-template-columns: 1fr;
     gap: 4vw;
+    margin-bottom: 4vw;
   }
-
+  
   .cardsGrid > *:nth-child(n) {
     grid-row: auto;
     grid-column: auto;
   }
-
+  
   .planCard,
   .quoteCard {
     width: 100%;
     height: auto;
     min-height: 120vw;
-    padding: 6vw 4vw;
+    padding: 6vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .quoteContent {
+    padding: 6vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
   }
 
   .imagesColumn {
@@ -409,9 +487,51 @@
     height: 50vw;
   }
 
+  .planTitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .desde,
+  .target,
+  .description,
+  .includesTitle {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .price {
+    font-size: 5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 6vw;
+    margin-bottom: 3vw;
+  }
+
+  .featureItem {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 2vw;
+    padding-left: 3vw;
+  }
+
   .buyButton,
   .calculateButton {
     width: 80%;
-    max-width: 244px;
+    height: 8vw; /* MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 8vw;
+    border-radius: 2.5vw;
+  }
+
+  .quoteTitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .quoteDescription {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 4vw;
   }
 }

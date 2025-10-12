@@ -60,15 +60,14 @@
   border-radius: 1.04vw; /* 20px = 1.04vw */
   box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-shrink: 0;
   box-sizing: border-box;
 }
 
 .contentWrapper {
   width: 100%;
-  max-width: 42.29vw; /* 812px = 42.29vw */
   padding: 1.67vw; /* 2.08vw * 0.8 = 1.67vw - REDUCCIÓN 20% */
   display: flex;
   flex-direction: column;
@@ -123,15 +122,14 @@
   border-radius: 1.04vw; /* 20px = 1.04vw */
   box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-shrink: 0;
   box-sizing: border-box;
 }
 
 .formWrapper {
   width: 100%;
-  max-width: 40.89vw; /* 785px = 40.89vw */
   padding: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
   box-sizing: border-box;
 }
@@ -140,7 +138,6 @@
 
 .form {
   width: 100%;
-  max-width: 40.89vw; /* 785px = 40.89vw */
   position: relative;
   box-sizing: border-box;
 }
@@ -243,7 +240,7 @@
 /* ========== BOTÓN DE ENVIAR ========== */
 
 .submitButton {
-  width: 8.34vw; /* 10.42vw * 0.8 = 8.34vw - REDUCCIÓN 20% */
+  width: 12vw; /* MÁS ANCHO PARA DESKTOP */
   height: 1.50vw; /* 1.88vw * 0.8 = 1.50vw - REDUCCIÓN 20% */
   background: #FB8C05;
   border-radius: 0.75vw; /* 0.94vw * 0.8 = 0.75vw - REDUCCIÓN 20% */
@@ -258,7 +255,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-top: 0.42vw; /* 0.52vw * 0.8 = 0.42vw - REDUCCIÓN 20% */
   box-sizing: border-box;
 }
@@ -271,15 +268,26 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1024px) {
+  .contactHero {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .container {
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+  }
+
   .heroContent {
     flex-direction: column;
     align-items: center;
+    gap: 3vw;
   }
 
   .imageContainer,
   .contentCard,
   .formCard {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
 
   .imageContainer {
@@ -290,11 +298,15 @@
   .contentCard {
     height: auto;
     min-height: 50vw;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .formCard {
     height: auto;
     min-height: 40vw;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .formRow {
@@ -304,26 +316,85 @@
 
   .contentWrapper,
   .formWrapper {
-    padding: 4vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    width: 100%;
+  }
+
+  .title {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4.5vw;
+    margin-bottom: 2vw;
+  }
+
+  .description {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
   }
 
   .formGrid {
     grid-template-columns: 1fr;
+    gap: 2vw;
+    margin-bottom: 2vw;
+  }
+
+  .label {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3vw;
+    margin-bottom: 1vw;
+  }
+
+  .input,
+  .textarea {
+    padding: 1.5vw 2vw; /* PADDING MÁS GRANDE */
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3vw;
+    border-radius: 1vw;
+    margin-bottom: 2vw;
+  }
+
+  .textarea {
+    min-height: 8vw;
+  }
+
+  .checkboxGroup {
+    gap: 1vw;
+    margin-bottom: 2vw;
+  }
+
+  .checkbox {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  .checkboxLabel {
+    font-size: 1.8vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 2.5vw;
+  }
+
+  .submitButton {
+    width: 100%; /* OCUPA TODO EL ANCHO DISPONIBLE */
+    height: 6vw; /* MÁS GRANDE PARA TABLETS */
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 6vw;
+    border-radius: 2vw;
+    margin-top: 2vw;
+    align-self: stretch; /* SE ESTIRA PARA OCUPAR TODO EL ANCHO */
   }
 }
 
 @media (max-width: 768px) {
   .contactHero {
-    padding-top: 8vw;
-    padding-bottom: 6vw;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
 
   .container {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .heroContent {
-    gap: 3vw;
+    gap: 4vw;
   }
 
   .imageContainer {
@@ -332,18 +403,84 @@
 
   .contentCard {
     min-height: 60vw;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .formCard {
     min-height: 70vw;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
 
   .contentWrapper,
   .formWrapper {
-    padding: 3vw;
+    padding: 5vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    width: 100%;
   }
 
   .formRow {
     margin-top: 4vw;
+  }
+
+  .title {
+    font-size: 4.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .description {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    gap: 3vw;
+    margin-bottom: 3vw;
+  }
+
+  .label {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 4vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .input,
+  .textarea {
+    padding: 2vw 3vw; /* PADDING MÁS GRANDE */
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 4vw;
+    border-radius: 1.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .textarea {
+    min-height: 12vw;
+  }
+
+  .checkboxGroup {
+    gap: 1.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .checkbox {
+    width: 3vw;
+    height: 3vw;
+  }
+
+  .checkboxLabel {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 3.5vw;
+  }
+
+  .submitButton {
+    width: 100%; /* OCUPA TODO EL ANCHO DISPONIBLE */
+    height: 8vw; /* MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 8vw;
+    border-radius: 2.5vw;
+    margin-top: 3vw;
+    align-self: stretch; /* SE ESTIRA PARA OCUPAR TODO EL ANCHO */
   }
 }

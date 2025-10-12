@@ -263,22 +263,101 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 768px) {
+  .savingsSection {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .mainTitle {
+    font-size: 7vw; /* TAMAÑO EN VW PARA MÓVILES */
+    line-height: 8vw;
+    margin-bottom: 6vw; /* MARGEN EN VW */
+    padding: 0 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
   .container {
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
     flex-direction: column;
     align-items: center;
     gap: 2.08vw; /* 16px en móvil = ~2.08vw */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .leftBox,
   .centerBox,
   .rightBox {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     min-height: auto;
+    padding: 6vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .leftTextOrange {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .leftTextGray {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .leftResult {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .ctaTitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 6vw;
+    margin-bottom: 3vw;
+  }
+
+  .ctaDescription {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 4vw;
+  }
+
+  .ctaButton {
+    width: 60%; /* ANCHO MÁS GRANDE PARA MÓVILES */
+    height: 10vw; /* ALTURA MÁS GRANDE */
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE */
+    line-height: 10vw;
+    border-radius: 2vw;
   }
 
   .comparisonTable {
     display: block;
     overflow-x: auto;
+  }
+
+  .comparisonTable thead th {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    padding: 2vw 1vw 2vw 0; /* PADDING MÁS GRANDE */
+  }
+
+  .comparisonTable tbody td {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    padding: 2vw 1vw 2vw 0; /* PADDING MÁS GRANDE */
+  }
+
+  .divider {
+    margin: 3vw 0 4vw; /* MARGEN MÁS GRANDE */
+  }
+
+  .centerTitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 6vw;
+    margin-bottom: 2vw;
+  }
+
+  .centerDescription {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
   }
 }
 

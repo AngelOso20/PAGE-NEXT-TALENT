@@ -71,6 +71,8 @@
   overflow: visible;
   flex-shrink: 0;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Contenedor de imagen */
@@ -158,6 +160,10 @@
 .cardContent {
   padding: 1.09vw 1.46vw 1.46vw; /* 21px 28px 28px = 1.09vw 1.46vw 1.46vw */
   box-sizing: border-box;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Título de la card */
@@ -186,6 +192,7 @@
   color: #464749;
   text-align: left;
   opacity: 1;
+  flex-grow: 1;
 }
 
 /* Link "Saber más +" */
@@ -198,10 +205,11 @@
   line-height: 1.61vw; /* 31px = 1.61vw */
   letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
   color: #27A49F;
-  text-align: center;
+  text-align: left;
   text-decoration: none;
   opacity: 1;
   transition: color 0.3s ease;
+  align-self: flex-start;
 }
 
 .readMore:hover {
@@ -211,15 +219,36 @@
 /* ========== RESPONSIVE - SOLO MÓVILES/TABLETS ========== */
 
 @media (max-width: 1024px) {
+  .blogSection {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .mainTitle {
+    font-size: 7vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 8vw;
+    margin-bottom: 3vw;
+    white-space: normal;
+  }
+
+  .subtitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 6vw;
+    margin-bottom: 8vw;
+    padding: 0;
+  }
+
   .blogGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.08vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .blogCard {
     width: 100%;
     height: auto;
     min-height: 60vw;
+    display: flex;
+    flex-direction: column;
   }
 
   .imageContainer,
@@ -227,24 +256,150 @@
     width: 100%;
     height: 35vw;
   }
+
+  /* Badges más grandes para tablets */
+  .categoryBadge {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 2.5vw;
+    padding: 0.8vw 1.5vw;
+    border-radius: 1.2vw;
+  }
+
+  .dateBadge {
+    width: 6vw; /* MÁS GRANDE PARA TABLETS */
+    height: 8vw;
+    border-radius: 0px 1.5vw;
+    padding-top: 1.2vw;
+  }
+
+  .dateMonth {
+    font-size: 1.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 2vw;
+  }
+
+  .dateDay {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4vw;
+  }
+
+  /* Contenido de las cards más grande para tablets */
+  .cardContent {
+    padding: 3vw 2.5vw;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cardTitle {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4vw;
+    margin-bottom: 2vw;
+  }
+
+  .cardDescription {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+    margin-bottom: 3vw;
+    flex-grow: 1;
+  }
+
+  .readMore {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+    align-self: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
+  .blogSection {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .mainTitle {
+    font-size: 7vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 8vw;
+    margin-bottom: 3vw;
+    white-space: normal;
+  }
+
+  .subtitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 6vw;
+    margin-bottom: 8vw;
+    padding: 0;
+  }
+
   .blogGrid {
     grid-template-columns: 1fr;
-    padding: 0 5vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .blogCard {
     width: 100%;
     height: auto;
     min-height: 100vw;
+    display: flex;
+    flex-direction: column;
   }
 
   .imageContainer,
   .cardImage {
     width: 100%;
     height: 50vw;
+  }
+
+  /* Badges más grandes para móviles */
+  .categoryBadge {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 3vw;
+    padding: 1vw 2vw; /* PADDING MÁS GRANDE */
+    border-radius: 1.5vw;
+  }
+
+  .dateBadge {
+    width: 8vw; /* MÁS GRANDE PARA MÓVILES */
+    height: 10vw;
+    border-radius: 0px 2vw;
+    padding-top: 1.5vw;
+  }
+
+  .dateMonth {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 2.5vw;
+  }
+
+  .dateDay {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  /* Contenido de las cards más grande para móviles */
+  .cardContent {
+    padding: 4vw 3vw; /* PADDING MÁS GRANDE */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cardTitle {
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .cardDescription {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 4vw;
+    flex-grow: 1;
+  }
+
+  .readMore {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    align-self: flex-start;
   }
 }
 

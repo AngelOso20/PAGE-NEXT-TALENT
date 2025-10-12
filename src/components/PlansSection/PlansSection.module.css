@@ -330,31 +330,43 @@
     flex-direction: column;
     align-items: center;
     gap: 6vw;
-    padding: 0 4vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .advisorBox {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     min-height: 70vw;
     max-width: none;
+    position: relative; /* ASEGURAR POSICIONAMIENTO */
+    overflow: hidden; /* EVITAR QUE LA IMAGEN SE SALGA */
+    padding: 5vw 4vw 0; /* MISMO PADDING QUE EL LEFTBOX DEL HERO */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   .advisorImage {
-    width: 70%;
-    height: auto;
-    bottom: 0;
+    position: absolute;
+    bottom: 0; /* PEGADA EN LA PARTE DE ABAJO */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* MÁS GRANDE PARA MEJOR COBERTURA */
+    height: 60vw; /* ALTURA FIJA EN VW */
+    z-index: 1;
   }
 
   .advisorImage img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: contain; /* CUBRIR SIN CORTAR */
+    object-position: bottom; /* PEGADA ABAJO */
   }
 
   .planCard {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     min-height: auto;
     height: auto;
-    padding: 6vw 5vw 12vw;
+    padding: 6vw 4vw 12vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
     max-width: none;
   }
 
@@ -416,13 +428,15 @@
   }
 
   .orangeBanner {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     min-height: 20vw;
     margin-top: 8vw;
-    padding: 5vw 4vw;
+    padding: 5vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
     flex-direction: column;
     gap: 4vw;
+    margin-left: 0; /* SIN MARGEN ADICIONAL */
+    margin-right: 0; /* SIN MARGEN ADICIONAL */
   }
 
   .bannerText {

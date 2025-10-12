@@ -38,7 +38,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.42vw 0; /* 8px = 0.42vw */
+  padding: 0.42vw 0.8vw; /* MÁS PADDING HORIZONTAL */
   position: relative;
   transition: color 0.3s ease;
   box-sizing: border-box;
@@ -69,30 +69,47 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1024px) {
+  .filtersContainer {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
   .filtersBar {
-    gap: 1.56vw; /* 30px = 1.56vw */
-    flex-wrap: wrap;
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+    gap: 2vw; /* MÁS ESPACIO ENTRE BOTONES */
+    flex-wrap: nowrap; /* NO ENVOLVER - MANTENER EN UNA LÍNEA */
+    justify-content: center;
   }
   
   .filterButton {
-    font-size: 0.78vw; /* 15px = 0.78vw */
-    line-height: 1.15vw; /* 22px = 1.15vw */
+    font-size: 1.8vw; /* TAMAÑO MÁS PEQUEÑO PARA TABLETS */
+    line-height: 2.5vw;
+    padding: 0.8vw 1vw; /* MÁS PADDING HORIZONTAL */
+    white-space: nowrap; /* NO ENVOLVER EL TEXTO */
   }
 }
 
 @media (max-width: 768px) {
   .filtersContainer {
-    padding: 1.56vw 0 0.78vw 0; /* 30px 15px = 1.56vw 0.78vw */
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
   
   .filtersBar {
-    gap: 1.04vw; /* 20px = 1.04vw */
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+    gap: 1.5vw; /* MÁS ESPACIO ENTRE BOTONES */
     justify-content: center;
+    flex-wrap: nowrap; /* NO ENVOLVER - MANTENER EN UNA LÍNEA */
+    overflow-x: auto; /* PERMITIR SCROLL HORIZONTAL SI ES NECESARIO */
   }
   
   .filterButton {
-    font-size: 0.73vw; /* 14px = 0.73vw */
-    line-height: 1.04vw; /* 20px = 1.04vw */
-    padding: 0.31vw 0; /* 6px = 0.31vw */
+    font-size: 2.2vw; /* TAMAÑO MÁS PEQUEÑO PARA MÓVILES */
+    line-height: 3vw;
+    padding: 1vw 1.5vw; /* MÁS PADDING HORIZONTAL */
+    white-space: nowrap; /* NO ENVOLVER EL TEXTO */
+    flex-shrink: 0; /* NO REDUCIR EL TAMAÑO */
   }
 }

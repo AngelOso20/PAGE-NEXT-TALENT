@@ -157,47 +157,130 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1024px) {
+  .valoresSection {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
   .blueBox {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     min-height: 15vw;
-    padding: 4vw 10vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    margin: 0 auto 3vw;
+  }
+
+  .blueTitle {
+    font-size: 5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 6vw;
+    margin-bottom: 2vw;
+  }
+
+  .blueText {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4.5vw;
   }
 
   .bottomContainer {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    margin: 0;
     flex-direction: column;
     align-items: center;
+    gap: 2vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .orangeBox {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     min-height: 30vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .orangeTitle {
+    font-size: 5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 6vw;
   }
 
   .valoresGrid {
     grid-template-columns: repeat(3, 1fr);
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     gap: 2vw;
   }
 
   .valorCard {
     height: auto;
     min-height: 40vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .cardText {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+  }
+
+  .iconContainer {
+    width: 6vw; /* MÁS GRANDE PARA TABLETS */
+    height: 6vw;
+    margin-bottom: 2vw;
   }
 }
 
 @media (max-width: 768px) {
   .valoresSection {
-    padding: 8vw 0;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .blueBox {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .blueTitle {
+    font-size: 6vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 7vw;
+    margin-bottom: 3vw;
+  }
+
+  .blueText {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .bottomContainer {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    margin: 0;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+  }
+
+  .orangeBox {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .orangeTitle {
+    font-size: 6vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 7vw;
   }
 
   .valoresGrid {
     grid-template-columns: 1fr;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
 
   .valorCard {
     min-height: 60vw;
-    padding: 6vw 4vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .cardText {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .iconContainer {
+    width: 8vw; /* MÁS GRANDE PARA MÓVILES */
+    height: 8vw;
+    margin-bottom: 3vw;
   }
 }
 

@@ -143,19 +143,60 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1024px) {
+  .equipoSection {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
   .container {
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
     flex-direction: column;
     align-items: center;
+    gap: 2vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .textBox,
   .imageBox {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
 
   .textBox {
     height: auto;
     min-height: 60vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .title {
+    font-size: 5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 6vw;
+    margin-bottom: 3vw;
+  }
+
+  .introText {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 4.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .memberName {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+  }
+
+  .memberDescription {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+  }
+
+  .conclusionText {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+  }
+
+  .teamMember {
+    margin-bottom: 2vw;
+    gap: 0.5vw;
   }
 
   .imageBox {
@@ -166,15 +207,54 @@
 
 @media (max-width: 768px) {
   .equipoSection {
-    padding: 8vw 0;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
 
   .container {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+  }
+
+  .textBox,
+  .imageBox {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
 
   .textBox {
-    padding: 4vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .title {
+    font-size: 6vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 7vw;
+    margin-bottom: 4vw;
+  }
+
+  .introText {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 4vw;
+  }
+
+  .memberName {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .memberDescription {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .conclusionText {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+  }
+
+  .teamMember {
+    margin-bottom: 3vw;
+    gap: 1vw;
   }
 
   .imageBox {

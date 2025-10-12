@@ -228,11 +228,73 @@
 /* ========== RESPONSIVE - SOLO MÓVILES/TABLETS ========== */
 
 @media (max-width: 1024px) {
+  .footer {
+    padding: 0 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
   .footerContainer {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    margin: 0;
     grid-template-columns: 1fr 1fr;
     gap: 3vw;
     height: auto;
     min-height: 30vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+  }
+
+  .sectionTitle {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .contactInfo {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3vw;
+    margin-bottom: 4vw;
+  }
+
+  .copyright {
+    font-size: 1.8vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 2.5vw;
+  }
+
+  .addressInfo {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3vw;
+  }
+
+  .socialIcon {
+    width: 3vw; /* MÁS GRANDE PARA TABLETS */
+    height: 3vw;
+  }
+
+  .socialIcon img {
+    width: 3vw; /* MÁS GRANDE PARA TABLETS */
+    height: 3vw;
+  }
+
+  .newsletterText {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .emailInput {
+    height: 4vw; /* MÁS GRANDE PARA TABLETS */
+    font-size: 2vw;
+    padding: 0 2vw;
+  }
+
+  .submitButton {
+    height: 4vw; /* MÁS GRANDE PARA TABLETS */
+    font-size: 2vw;
+    line-height: 4vw;
+  }
+
+  .privacyLink {
+    font-size: 1.8vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 2.5vw;
   }
 
   .contactSection {
@@ -254,22 +316,56 @@
 
 @media (max-width: 768px) {
   .footer {
+    padding: 0 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
     margin: 8vw auto 2vw;
   }
 
   .footerContainer {
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    margin: 0;
     grid-template-columns: 1fr;
     gap: 4vw;
     height: auto;
     min-height: auto;
-    padding: 5vw;
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
   }
 
-  .contactSection,
-  .addressSection,
-  .socialSection,
-  .newsletterSection {
-    grid-column: 1;
+  .sectionTitle {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 4vw;
+  }
+
+  .contactInfo {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 4.5vw;
+    margin-bottom: 5vw;
+  }
+
+  .copyright {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 3.5vw;
+  }
+
+  .addressInfo {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 4.5vw;
+  }
+
+  .socialIcon {
+    width: 4vw; /* MÁS GRANDE PARA MÓVILES */
+    height: 4vw;
+  }
+
+  .socialIcon img {
+    width: 4vw; /* MÁS GRANDE PARA MÓVILES */
+    height: 4vw;
+  }
+
+  .newsletterText {
+    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 4.5vw;
+    margin-bottom: 3vw;
   }
 
   .newsletterForm {
@@ -277,14 +373,32 @@
     gap: 2vw;
   }
 
-  .emailInput,
+  .emailInput {
+    width: 100%;
+    height: 6vw; /* MÁS GRANDE PARA MÓVILES */
+    font-size: 3vw;
+    padding: 0 3vw;
+  }
+
   .submitButton {
     width: 100%;
+    height: 6vw; /* MÁS GRANDE PARA MÓVILES */
+    font-size: 3vw;
+    line-height: 6vw;
   }
 
   .privacyLink {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 3.5vw;
     align-self: flex-start;
-    margin-top: 2vw;
+    margin-top: 3vw;
+  }
+
+  .contactSection,
+  .addressSection,
+  .socialSection,
+  .newsletterSection {
+    grid-column: 1;
   }
 }
 

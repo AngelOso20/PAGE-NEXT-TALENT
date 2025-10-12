@@ -120,7 +120,7 @@
 
 @media (max-width: 768px) {
   .problemSection {
-    padding: 8vw 0;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
 
   .container {
@@ -128,13 +128,13 @@
     flex-direction: column;
     align-items: center;
     gap: 6vw;
-    padding: 0 4vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .contentBox {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     min-height: auto;
-    padding: 6vw 5vw;
+    padding: 6vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
     max-width: none;
   }
 
@@ -163,7 +163,7 @@
   }
 
   .imageBox {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     aspect-ratio: 749 / 545;
   }

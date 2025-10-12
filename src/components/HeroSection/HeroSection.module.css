@@ -33,11 +33,11 @@
 .backgroundPattern {
   position: absolute;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: -10vw; /* MOVER MÁS HACIA LA IZQUIERDA */
+  width: 120%; /* MÁS ANCHO PARA MOSTRAR LA IMAGEN COMPLETA */
   height: 100%;
-  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') right top no-repeat;
-  background-size: 85% 100%; /* Más alto para llegar a los bordes superior e inferior */
+  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') left bottom no-repeat; /* PEGADA ABAJO Y A LA IZQUIERDA */
+  background-size: 100% 100%; /* TAMAÑO COMPLETO PARA VER TODA LA IMAGEN */
   opacity: 0.98; /* Ajustado para que se vea un poco más pero sin ser demasiado prominente */
   z-index: 0;
   pointer-events: none;
@@ -267,15 +267,16 @@
   white-space: nowrap;
 }
 
-/* ========== ÚNICO MEDIA QUERY NECESARIO ========== */
-/* Solo para móviles: cambiar a layout vertical */
+/* ========== RESPONSIVE MEJORADO - DISEÑO MÓVIL OPTIMIZADO ========== */
+/* Solo para móviles: diseño vertical completo y atractivo */
 @media (max-width: 768px) {
   .heroSection {
     min-height: auto;
-    padding: 4vw 3vw;
+    padding: 20vw 4vw 4vw; /* MUCHO MÁS ESPACIO DEL NAVMENU */
+    background: transparent; /* SIN FONDO PARA MOSTRAR EL PATRÓN */
   }
 
-  /* Convertir todo a flujo normal */
+  /* Layout vertical optimizado */
   .leftBox,
   .orangeBox,
   .blueBox {
@@ -283,16 +284,23 @@
     left: 0;
     top: 0;
     width: 100%;
-    margin-bottom: 4vw;
+    margin-bottom: 3vw; /* MENOS ESPACIO ENTRE ELEMENTOS PARA REDUCIR ALTURA */
     height: auto;
     min-height: auto;
+    border-radius: 1.5vw; /* Border-radius más pequeño */
+    box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.1); /* Sombra más pequeña */
   }
 
   .leftBox {
-    padding: 6vw 5vw;
+    padding: 5vw 4vw 0; /* SIN PADDING INFERIOR PARA PEGAR LA IMAGEN */
+    background: #FFFFFF;
+    order: 1; /* Primero el cuadro principal */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* DISTRIBUIR CONTENIDO */
   }
 
-  /* Textos en flujo normal */
+  /* Textos optimizados para móviles - REDUCIDOS */
   .mainTitle,
   .subtitle,
   .workerImage {
@@ -303,81 +311,124 @@
   }
 
   .mainTitle {
-    font-size: 7vw;
-    line-height: 8vw;
-    margin-bottom: 3vw;
+    font-size: 5.5vw; /* REDUCIDO para menor altura */
+    line-height: 6.5vw;
+    margin-bottom: 2.5vw; /* MARGEN REDUCIDO */
+    text-align: left; /* ALINEADO A LA IZQUIERDA */
   }
 
   .subtitle {
-    font-size: 4vw;
-    line-height: 5.5vw;
-    margin-bottom: 4vw;
+    font-size: 3.2vw; /* REDUCIDO para menor altura */
+    line-height: 4.5vw;
+    margin-bottom: 3.5vw; /* MARGEN REDUCIDO */
+    text-align: left; /* ALINEADO A LA IZQUIERDA */
   }
 
   .workerImage {
-    width: 70%;
+    width: 35vw; /* MÁS PEQUEÑA - REDUCIDA DE 45vw A 35vw */
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 0; /* PEGADA EN LA PARTE DE ABAJO DEL CUADRO */
+    max-width: 100%;
+    align-self: flex-end; /* PEGAR AL FINAL DEL CUADRO */
   }
 
   .workerImage img {
     width: 100%;
     height: auto;
+    object-fit: contain;
+    border-radius: 0.8vw; /* Bordes más pequeños */
   }
 
-  /* Ajustar cuadros */
+  /* Cuadros laterales optimizados - REDUCIDOS */
   .orangeBox,
   .blueBox {
-    padding: 5vw;
+    padding: 4vw; /* PADDING REDUCIDO */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .orangeBox {
+    order: 2; /* Segundo */
+    background: #FFFFFF;
+  }
+
+  .blueBox {
+    order: 3; /* Tercero */
+    background: #27A49F;
   }
 
   .orangeIcon,
   .blueIcon {
-    position: relative;
-    width: 15vw;
-    height: 14vw;
-    margin-bottom: 3vw;
-    left: 0;
-    top: 0;
+    position: absolute;
+    top: 2vw; /* POSICIONAR EN LA PARTE SUPERIOR */
+    left: 4vw; /* MOVIDO A LA DERECHA PARA ALINEAR CON EL TEXTO */
+    width: 12vw; /* REDUCIDO */
+    height: 11vw;
+    margin-bottom: 0; /* QUITAR MARGEN INFERIOR */
+    z-index: 2; /* ASEGURAR QUE ESTÉ ENCIMA */
   }
 
   .orangeText,
   .blueText {
     position: relative;
-    font-size: 3.5vw;
-    line-height: 5vw;
+    font-size: 3.2vw; /* REDUCIDO */
+    line-height: 4.5vw;
     width: 100%;
     left: 0;
     top: 0;
+    margin-top: 13vw; /* REDUCIDO DE 15vw A 8vw PARA MENOS ESPACIO */
+    margin-bottom: 2vw; /* MARGEN REDUCIDO */
+    text-align: left; /* ALINEAR A LA IZQUIERDA */
+    padding-left: 0; /* SIN PADDING IZQUIERDO */
   }
 
   .orangeSubtext {
-    font-size: 3vw;
-    line-height: 4.5vw;
+    font-size: 2.8vw; /* REDUCIDO */
+    line-height: 4vw;
+    margin-bottom: 2.5vw; /* MARGEN REDUCIDO */
+    text-align: left; /* ALINEAR A LA IZQUIERDA */
   }
 
   .blueText {
-    margin-bottom: 4vw;
+    margin-bottom: 3vw; /* MARGEN REDUCIDO */
+    color: #FFFFFF;
+    text-align: left; /* ALINEAR A LA IZQUIERDA */
   }
 
-  /* Botón */
+  /* Botón optimizado para móviles - REDUCIDO */
   .orangeButton {
     position: relative;
     width: 100%;
-    height: 12vw;
-    border-radius: 2.5vw;
+    height: 9vw; /* ALTURA REDUCIDA */
+    border-radius: 2.5vw; /* Border-radius reducido */
     left: 0;
     top: 0;
+    margin-top: 1.5vw; /* MARGEN REDUCIDO */
   }
 
   .phoneIcon {
-    width: 4vw !important;
-    height: 3.8vw !important;
+    width: 3vw !important; /* REDUCIDO */
+    height: 2.8vw !important;
   }
 
   .orangeButton span {
-    font-size: 3.5vw;
-    line-height: 12vw;
+    font-size: 3.2vw; /* REDUCIDO */
+    line-height: 9vw;
+  }
+
+  /* Mantener patrón de fondo en móviles */
+  .backgroundPattern {
+    display: block; /* MOSTRAR EL PATRÓN DE FONDO */
+    top: 0; /* EMPEZAR DESDE ARRIBA */
+    bottom: auto; /* QUITAR POSICIONAMIENTO INFERIOR */
+    left: -5vw; /* MOVER MENOS HACIA LA IZQUIERDA PARA PEGARSE MÁS A LA CAJA */
+    width: 110%; /* ANCHO MÁS PEQUEÑO PARA PEGARSE MÁS A LA CAJA */
+    height: 100%; /* ALTURA COMPLETA PARA ALCANZAR ARRIBA Y ABAJO */
+    background-position: left bottom; /* ASEGURAR QUE ESTÉ PEGADO ABAJO */
+    background-size: 120% 120%; /* HACER MÁS GRANDE LA IMAGEN, ESPECIALMENTE LA PARTE DE ABAJO */
+    opacity: 0.98; /* AUMENTAR OPACIDAD PARA QUE SE VEA MÁS */
   }
 }
 /* ========== NOTA SOBRE PANTALLAS GRANDES ========== */

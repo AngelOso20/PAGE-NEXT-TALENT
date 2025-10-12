@@ -59,8 +59,8 @@
   background: #FFFFFF;
   border-radius: 1.04vw; /* 20px = 1.04vw */
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   flex-shrink: 0;
   box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
   box-sizing: border-box;
@@ -68,7 +68,6 @@
 
 .contentWrapper {
   width: 100%;
-  max-width: 36.77vw; /* 706px = 36.77vw */
   padding: 2.08vw; /* 40px = 2.08vw */
   display: flex;
   flex-direction: column;
@@ -137,6 +136,7 @@
   transition: background-color 0.3s ease, transform 0.3s ease;
   margin-top: 1.04vw; /* 20px = 1.04vw */
   box-sizing: border-box;
+  align-self: flex-start;
 }
 
 .readMoreBtn:hover {
@@ -147,60 +147,133 @@
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
 
 @media (max-width: 1024px) {
+  .blogHero {
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+  }
+
+  .container {
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+  }
+  
   .heroContent {
     flex-direction: column;
     align-items: center;
+    gap: 3vw;
   }
 
   .imageContainer,
   .contentCard {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
-
+  
   .imageContainer {
     height: auto;
     aspect-ratio: 910 / 528;
+    border-radius: 1.5vw; /* BORDES MÁS REDONDEADOS */
   }
-
+  
   .contentCard {
     height: auto;
     min-height: 50vw;
+    border-radius: 1.5vw; /* BORDES MÁS REDONDEADOS */
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .contentWrapper {
+    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    gap: 2.5vw; /* MÁS ESPACIO ENTRE ELEMENTOS */
   }
 
-  .contentWrapper {
-    padding: 4vw;
+  .category {
+    font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3vw;
+    margin-bottom: 1vw;
+  }
+  
+  .title {
+    font-size: 3.5vw; /* TÍTULO MÁS GRANDE PARA TABLETS */
+    line-height: 4.5vw;
+    margin-bottom: 2vw;
+  }
+  
+  .description {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 3.5vw;
+    margin-bottom: 2.5vw;
+  }
+  
+  .readMoreBtn {
+    width: 60%;
+    height: 6vw; /* MÁS GRANDE PARA TABLETS */
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
+    line-height: 6vw;
+    border-radius: 2vw;
+    margin-top: 2vw;
+    align-self: flex-start;
   }
 }
 
 @media (max-width: 768px) {
   .blogHero {
-    padding-top: 8vw;
-    padding-bottom: 6vw;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
 
   .container {
-    width: 90vw;
+    width: 100%; /* ANCHO COMPLETO */
+    margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .heroContent {
-    gap: 3vw;
+    gap: 4vw; /* MÁS ESPACIO ENTRE IMAGEN Y TEXTO */
   }
-
+  
   .imageContainer {
-    height: 50vw;
+    height: 60vw; /* MÁS ALTA PARA MEJOR VISUALIZACIÓN */
+    border-radius: 2vw; /* BORDES MÁS REDONDEADOS */
   }
-
+  
   .contentCard {
-    min-height: 60vw;
+    min-height: auto; /* ALTURA AUTOMÁTICA */
+    border-radius: 2vw; /* BORDES MÁS REDONDEADOS */
+    align-items: flex-start;
+    justify-content: flex-start;
   }
-
+  
   .contentWrapper {
-    padding: 3vw;
-    gap: 2vw;
+    padding: 5vw 4vw; /* MÁS PADDING VERTICAL */
+    gap: 3vw; /* MÁS ESPACIO ENTRE ELEMENTOS */
   }
-
+  
+  .category {
+    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 3.5vw;
+    margin-bottom: 1vw;
+  }
+  
+  .title {
+    font-size: 4.5vw; /* TÍTULO MÁS GRANDE */
+    line-height: 5.5vw;
+    margin-bottom: 2vw;
+  }
+  
+  .description {
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+  
   .readMoreBtn {
+    width: 70%;
+    height: 8vw; /* MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    line-height: 8vw;
+    border-radius: 2.5vw;
     margin-top: 2vw;
+    align-self: flex-start;
   }
 }
 

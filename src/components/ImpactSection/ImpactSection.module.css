@@ -166,7 +166,7 @@
 
 @media (max-width: 768px) {
   .impactSection {
-    padding: 8vw 0;
+    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
 
   .container {
@@ -174,11 +174,11 @@
     flex-direction: column;
     align-items: center;
     gap: 6vw;
-    padding: 0 4vw;
+    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .imageBox {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     aspect-ratio: 902 / 571;
   }
@@ -189,10 +189,10 @@
   }
 
   .contentBox {
-    width: 90%;
+    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     min-height: auto;
-    padding: 8vw 6vw;
+    padding: 8vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
   }
 
   .title {
