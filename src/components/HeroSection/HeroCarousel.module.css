@@ -277,8 +277,8 @@
   .carouselContainer {
     position: relative;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 15vw; /* Mover el cuadro a la derecha */
+    width: 70vw; /* Reducir el ancho para compensar el movimiento */
     height: auto; /* Permitir que la altura se ajuste al contenido */
     margin-bottom: 3vw;
     order: 2;
@@ -287,7 +287,7 @@
   .carouselCard {
     min-height: auto;
     height: auto; /* Permitir que la altura se ajuste al contenido */
-    padding: 4vw 4vw 6vw; /* Aumentar padding inferior para dar espacio a los puntos */
+    padding: 4vw 4vw 3vw; /* Reducir padding inferior para hacer el cuadro más corto */
     border-radius: 1.5vw;
     box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.1);
   }
@@ -320,7 +320,7 @@
   .cardContent {
     margin-top: 13vw;
     gap: 2vw;
-    padding-bottom: 2vw; /* Espacio adicional para los puntos */
+    padding-bottom: 1vw; /* Reducir espacio inferior para hacer el cuadro más corto */
   }
 
   .cardTitle {
@@ -351,7 +351,7 @@
   .eventCardContent {
     margin-top: 13vw; /* Mismo margin-top que cardContent */
     gap: 1.5vw; /* Reducido para más espacio */
-    padding-bottom: 3vw; /* Aumentado para más espacio con los puntos */
+    padding-bottom: 1.5vw; /* Reducir espacio inferior para hacer el cuadro más corto */
   }
 
   .eventDetails {
