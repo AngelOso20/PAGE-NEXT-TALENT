@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useLottieAnimation } from '../../hooks/useLottieAnimation'
 import styles from './DiferencialesSection.module.css'
 
 interface DiferencialCardProps {
@@ -9,36 +9,11 @@ interface DiferencialCardProps {
 }
 
 export default function DiferencialCard({ iconPath, text }: DiferencialCardProps) {
-  const iconRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    let animationInstance: any = null
-
-    const loadAnimation = async () => {
-      const lottie = (await import('lottie-web')).default
-      const animationData = await fetch(iconPath).then(res => res.json())
-
-      if (iconRef.current) {
-        iconRef.current.innerHTML = ''
-        
-        animationInstance = lottie.loadAnimation({
-          container: iconRef.current,
-          renderer: 'svg',
-          loop: true,
-          autoplay: true,
-          animationData: animationData,
-        })
-      }
-    }
-
-    loadAnimation()
-
-    return () => {
-      if (animationInstance) {
-        animationInstance.destroy()
-      }
-    }
-  }, [iconPath])
+  const { containerRef, isLoading, error } = useLottieAnimation({
+    iconPath,
+    loop: true,
+    autoplay: true
+  })
 
   // Procesar el texto para renderizar negritas
   const renderText = (htmlText: string) => {
@@ -65,7 +40,18 @@ export default function DiferencialCard({ iconPath, text }: DiferencialCardProps
 
   return (
     <div className={styles.diferencialCard}>
-      <div ref={iconRef} className={styles.iconContainer} />
+      <div ref={containerRef} className={styles.iconContainer}>
+        {isLoading && (
+          <div className={styles.loadingPlaceholder}>
+            <div className={styles.loadingSpinner} />
+          </div>
+        )}
+        {error && (
+          <div className={styles.errorPlaceholder}>
+            <span>⚠️</span>
+          </div>
+        )}
+      </div>
       <p className={styles.cardText}>{renderText(text)}</p>
     </div>
   )
