@@ -292,6 +292,11 @@
     box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.1);
   }
 
+  /* Asegurar que el cuadro del webinar también use altura automática en móvil */
+  .eventCarouselCard {
+    height: auto !important; /* Forzar altura automática en móvil */
+  }
+
   .eventDate {
     padding: 0.8vw 1.2vw; /* Reducido para móviles */
     border-radius: 0 1.5vw 0 0;
