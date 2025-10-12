@@ -99,74 +99,17 @@
   object-fit: cover;
 }
 
-/* ========== CUADRO NARANJA (Colombia 90%) ========== */
-.orangeBox {
-  position: absolute;
-  top: 5.28vw; /* Mantener altura actual */
-  left: 74.74vw; /* Posición derecha: 100vw - 22.66vw (ancho) - 2.6vw (margen derecho) */
-  width: 22.66vw; /* Mantener ancho actual */
-  min-height: 15.55vw; /* Mantener altura actual */
-  background: #FFFFFF;
-  border-radius: 0.82vw; /* Mantener proporción */
-  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
-  padding: 1.85vw 2.01vw 1.63vw; /* Mantener proporción */
-  opacity: 1;
-  z-index: 3;
-  box-sizing: border-box;
-}
-
-.orangeIcon {
-  width: 5.01vw; /* 4.01vw * 1.25 = 5.01% */
-  height: 4.81vw; /* 3.85vw * 1.25 = 4.81% */
-  margin-bottom: 0.82vw; /* Mantener proporción */
-}
-
-.orangeIcon img,
-.orangeIcon .lottie-icon {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-/* Estilos para iconos Lottie */
-.orangeIcon .lottie-icon,
+/* ========== ESTILOS PARA ICONOS LOTTIE ========== */
 .blueIcon .lottie-icon {
   width: 100% !important;
   height: 100% !important;
   overflow: hidden;
 }
 
-.orangeText {
-  font-family: 'FinalSix', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.96vw; /* 0.77vw * 1.25 = 0.96% */
-  line-height: 1.59vw; /* 1.27vw * 1.25 = 1.59% */
-  letter-spacing: 0.024vw; /* 0.019vw * 1.25 = 0.024% */
-  margin: 0 0 0.61vw 0; /* Mantener proporción */
-  opacity: 1;
-}
-
-.highlightText {
-  color: #FB8C05;
-}
-
-.orangeSubtext {
-  font-family: 'FinalSix', sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 0.83vw; /* 0.66vw * 1.25 = 0.83% */
-  line-height: 1.33vw; /* 1.06vw * 1.25 = 1.33% */
-  letter-spacing: 0px;
-  color: #464749;
-  margin: 0;
-  opacity: 1;
-}
-
 /* ========== CUADRO AZUL (Agenda tu asesoría) ========== */
 .blueBox {
   position: absolute;
-  top: 26.64vw; /* Mantener altura actual */
+  top: 26.64vw; /* Mantener altura original */
   left: 74.74vw; /* Posición derecha: 100vw - 22.66vw (ancho) - 2.6vw (margen derecho) */
   width: 22.66vw; /* Mantener ancho actual */
   height: 16.82vw; /* Mantener altura actual */
@@ -278,7 +221,6 @@
 
   /* Layout vertical optimizado */
   .leftBox,
-  .orangeBox,
   .blueBox {
     position: relative;
     left: 0;
@@ -339,27 +281,17 @@
     border-radius: 0.8vw; /* Bordes más pequeños */
   }
 
-  /* Cuadros laterales optimizados - REDUCIDOS */
-  .orangeBox,
+  /* Cuadro azul optimizado - REDUCIDO */
   .blueBox {
     padding: 4vw; /* PADDING REDUCIDO */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-  }
-
-  .orangeBox {
-    order: 2; /* Segundo */
-    background: #FFFFFF;
-  }
-
-  .blueBox {
     order: 3; /* Tercero */
     background: #27A49F;
   }
 
-  .orangeIcon,
   .blueIcon {
     position: absolute;
     top: 2vw; /* POSICIONAR EN LA PARTE SUPERIOR */
@@ -370,7 +302,6 @@
     z-index: 2; /* ASEGURAR QUE ESTÉ ENCIMA */
   }
 
-  .orangeText,
   .blueText {
     position: relative;
     font-size: 3.2vw; /* REDUCIDO */
@@ -382,19 +313,7 @@
     margin-bottom: 2vw; /* MARGEN REDUCIDO */
     text-align: left; /* ALINEAR A LA IZQUIERDA */
     padding-left: 0; /* SIN PADDING IZQUIERDO */
-  }
-
-  .orangeSubtext {
-    font-size: 2.8vw; /* REDUCIDO */
-    line-height: 4vw;
-    margin-bottom: 2.5vw; /* MARGEN REDUCIDO */
-    text-align: left; /* ALINEAR A LA IZQUIERDA */
-  }
-
-  .blueText {
-    margin-bottom: 3vw; /* MARGEN REDUCIDO */
     color: #FFFFFF;
-    text-align: left; /* ALINEAR A LA IZQUIERDA */
   }
 
   /* Botón optimizado para móviles - REDUCIDO */

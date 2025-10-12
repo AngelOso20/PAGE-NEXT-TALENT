@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './HeroSection.module.css'
+import HeroCarousel from './HeroCarousel'
 
 export default function HeroSection() {
   return (
@@ -32,26 +33,8 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Cuadro naranja - Colombia 90% */}
-      <div className={styles.orangeBox}>
-        <div className={styles.orangeIcon}>
-          <Image
-            src="/images/Iconos/SVG/Icon-24.svg"
-            alt="Icono Colombia 90%"
-            width={80}
-            height={80}
-            className={styles.staticIcon}
-          />
-        </div>
-        <p className={styles.orangeText}>
-          <span className={styles.highlightText}>
-            En Colombia, más del 90% de las empresas son micro, pero pocas acceden a asesoría profesional en talento humano por los altos costos.
-          </span>
-        </p>
-        <p className={styles.orangeSubtext}>
-          En Next Talent Solutions cambiamos esa historia: hacemos que la gestión de tu gente sea accesible, clara y estratégica.
-        </p>
-      </div>
+      {/* Carrusel de tarjetas */}
+      <HeroCarousel />
 
       {/* Cuadro azul - Agenda tu asesoría */}
       <div className={styles.blueBox}>

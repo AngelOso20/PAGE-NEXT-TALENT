@@ -1,0 +1,376 @@
+/* ==========================================
+   HERO CAROUSEL - DISEÑO PROPORCIONAL
+   Basado en las imágenes proporcionadas
+   ========================================== */
+
+.carouselContainer {
+  position: absolute;
+  top: 5.28vw;
+  left: 74.74vw;
+  width: 22.66vw;
+  height: 19.5vw; /* Altura fija que coincide con ambos cuadros */
+  z-index: 3;
+}
+
+.carouselCard {
+  position: relative;
+  width: 100%;
+  height: 19.5vw; /* Altura fija igual al segundo cuadro */
+  background: #FFFFFF;
+  border-radius: 0.82vw;
+  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
+  padding: 1.85vw 2.01vw 1.7vw; /* Padding original */
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Clase específica para el segundo cuadro (evento) con altura fija */
+.eventCarouselCard {
+  position: relative;
+  width: 100%;
+  height: 19.5vw; /* Altura exacta del primer cuadro */
+  background: #FFFFFF;
+  border-radius: 0.82vw;
+  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
+  padding: 1.85vw 2.01vw 1.4vw; /* Padding reducido para el segundo cuadro */
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.carouselCard.transitioning,
+.eventCarouselCard.transitioning {
+  opacity: 0.7;
+}
+
+/* ========== TARJETA DE EVENTO ========== */
+.eventDate {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #27A49F;
+  color: #FFFFFF;
+  padding: 0.5vw 0.8vw; /* Aumentado significativamente para que el recuadro sea más grande */
+  border-radius: 0 0.82vw 0 0;
+  font-family: 'FinalSix', sans-serif;
+  font-weight: bold;
+  z-index: 2;
+}
+
+.eventMonth {
+  display: block;
+  font-size: 0.75vw; /* Aumentado para que sea más grande */
+  line-height: 0.85vw; /* Aumentado para que sea más grande */
+}
+
+.eventDay {
+  display: block;
+  font-size: 1.3vw; /* Aumentado significativamente para que sea más grande */
+  line-height: 1.4vw; /* Aumentado para que sea más grande */
+  font-weight: 800;
+}
+
+/* ========== ICONO ========== */
+.cardIcon {
+  width: 5.01vw;
+  height: 4.81vw;
+  margin-bottom: 0.82vw; /* Espaciado original */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.cardIcon img,
+.cardIcon .lottie-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* ========== CONTENIDO DE LA TARJETA ========== */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.61vw; /* Restaurado al tamaño original */
+  flex: 1;
+  justify-content: flex-start; /* Cambiar para que el contenido esté arriba */
+  padding-bottom: 0.5vw; /* Restaurado al tamaño original */
+}
+
+.cardTitle {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.96vw; /* Restaurado al tamaño original */
+  line-height: 1.59vw; /* Restaurado al tamaño original */
+  letter-spacing: 0.024vw;
+  color: #FB8C05;
+  margin: 0;
+  opacity: 1;
+}
+
+.cardDescription {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.83vw; /* Restaurado al tamaño original */
+  line-height: 1.33vw; /* Restaurado al tamaño original */
+  letter-spacing: 0px;
+  color: #464749;
+  margin: 0;
+  opacity: 1;
+}
+
+/* ========== ESTILOS ESPECÍFICOS PARA EL SEGUNDO CUADRO (EVENTO) ========== */
+.eventCardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4vw; /* Más reducido para ajustar altura */
+  flex: 1;
+  justify-content: flex-start;
+  padding-bottom: 0.2vw; /* Más reducido para la nueva altura */
+}
+
+.eventCardTitle {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.8vw; /* Más reducido para ajustar altura */
+  line-height: 1.3vw; /* Más reducido para ajustar altura */
+  letter-spacing: 0.024vw;
+  color: #FB8C05;
+  margin: 0;
+  opacity: 1;
+}
+
+.eventCardDescription {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.7vw; /* Más reducido para ajustar altura */
+  line-height: 1.1vw; /* Más reducido para ajustar altura */
+  letter-spacing: 0px;
+  color: #464749;
+  margin: 0;
+  opacity: 1;
+}
+
+/* ========== DETALLES DEL EVENTO ========== */
+.eventDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1vw; /* Aún más reducido para ajustar altura */
+  margin-top: 0.15vw; /* Aún más reducido para ajustar altura */
+}
+
+.eventDetail {
+  display: flex;
+  align-items: center;
+  gap: 0.2vw; /* Aún más reducido */
+  font-family: 'FinalSix', sans-serif;
+  font-size: 0.55vw; /* Aún más reducido */
+  color: #464749;
+}
+
+.detailIcon {
+  width: 0.45vw; /* Aún más reducido */
+  height: 0.45vw; /* Aún más reducido */
+  opacity: 0.7;
+}
+
+/* ========== BOTÓN DE ACCIÓN ========== */
+.actionButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 1.4vw; /* Aún más reducido para ajustar altura */
+  background: #FB8C05;
+  border-radius: 0.82vw;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  margin-top: 0.2vw; /* Aún más reducido para ajustar altura */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.actionButton:hover {
+  background: #e67e04;
+  transform: translateY(-0.078vw);
+  box-shadow: 0 0.166vw 0.498vw rgba(251, 140, 5, 0.3);
+}
+
+.actionButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.122vw rgba(251, 140, 5, 0.3);
+}
+
+.buttonIcon {
+  width: 0.6vw !important; /* Aún más reducido */
+  height: 0.55vw !important; /* Aún más reducido */
+  margin-right: 0.25vw; /* Aún más reducido */
+  flex-shrink: 0;
+}
+
+.actionButton span {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 0.65vw; /* Aún más reducido */
+  line-height: 0.9vw; /* Aún más reducido */
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  opacity: 1;
+  white-space: nowrap;
+}
+
+/* ========== INDICADORES DE PAGINACIÓN ========== */
+.paginationDots {
+  position: absolute;
+  bottom: 0.3vw; /* Bajado un poquito más para mejor separación */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.5vw;
+  z-index: 4;
+}
+
+.dot {
+  width: 0.8vw;
+  height: 0.8vw;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  border: 0.15vw solid #27A49F;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.4;
+}
+
+.activeDot {
+  background: #27A49F;
+  opacity: 1;
+  border-color: #27A49F;
+}
+
+.dot:hover {
+  opacity: 0.7;
+  transform: scale(1.2);
+}
+
+/* ========== RESPONSIVE - DISEÑO MÓVIL ========== */
+@media (max-width: 768px) {
+  .carouselContainer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-bottom: 3vw;
+    order: 2;
+  }
+
+  .carouselCard {
+    min-height: auto;
+    padding: 4vw 4vw 4.5vw; /* Reducido aún más el padding inferior en móviles */
+    border-radius: 1.5vw;
+    box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.1);
+  }
+
+  .eventDate {
+    padding: 0.8vw 1.2vw; /* Reducido para móviles */
+    border-radius: 0 1.5vw 0 0;
+  }
+
+  .eventMonth {
+    font-size: 2vw; /* Reducido para móviles */
+    line-height: 2.2vw;
+  }
+
+  .eventDay {
+    font-size: 3.2vw; /* Reducido para móviles */
+    line-height: 3.5vw;
+  }
+
+  .cardIcon {
+    position: absolute;
+    top: 2vw;
+    left: 4vw;
+    width: 12vw;
+    height: 11vw;
+    margin-bottom: 0;
+    z-index: 2;
+  }
+
+  .cardContent {
+    margin-top: 13vw;
+    gap: 2vw;
+  }
+
+  .cardTitle {
+    font-size: 3.2vw;
+    line-height: 4.5vw;
+    text-align: left;
+  }
+
+  .cardDescription {
+    font-size: 2.8vw;
+    line-height: 4vw;
+    text-align: left;
+  }
+
+  .eventDetails {
+    gap: 0.8vw; /* Reducido para móviles */
+    margin-top: 1.5vw; /* Reducido para móviles */
+  }
+
+  .eventDetail {
+    font-size: 2.2vw; /* Reducido para móviles */
+    gap: 0.8vw; /* Reducido para móviles */
+  }
+
+  .detailIcon {
+    width: 2.2vw; /* Reducido para móviles */
+    height: 2.2vw; /* Reducido para móviles */
+  }
+
+  .actionButton {
+    height: 7.5vw; /* Reducido para móviles */
+    border-radius: 2.5vw;
+    margin-top: 1.5vw; /* Reducido para móviles */
+  }
+
+  .buttonIcon {
+    width: 2.5vw !important; /* Reducido para móviles */
+    height: 2.3vw !important; /* Reducido para móviles */
+  }
+
+  .actionButton span {
+    font-size: 2.8vw; /* Reducido para móviles */
+    line-height: 7.5vw; /* Ajustado para la nueva altura */
+  }
+
+  .paginationDots {
+    bottom: 1vw; /* Bajado un poquito más también en móviles */
+    gap: 1.5vw;
+  }
+
+  .dot {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-width: 0.4vw;
+  }
+}
