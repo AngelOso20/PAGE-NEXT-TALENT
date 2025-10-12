@@ -91,22 +91,73 @@
     max-width: 90vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2vw;
+    gap: 3vw; /* Aumentado para mejor separación */
   }
 
   .featureCard {
     width: 100%;
     height: auto;
-    min-height: 15vw;
+    min-height: 18vw; /* Aumentado para mejor visibilidad */
+    padding: 3vw 4vw; /* Padding más generoso */
+    gap: 3vw; /* Gap más grande entre icono y texto */
+  }
+
+  .iconContainer {
+    width: 6vw; /* Iconos más grandes */
+    height: 6vw;
+    flex-shrink: 0;
+  }
+
+  .featureText {
+    font-size: 2.5vw; /* Texto más grande y legible */
+    line-height: 3.5vw;
   }
 }
 
 @media (max-width: 768px) {
   .featuresContainer {
     grid-template-columns: 1fr;
+    gap: 4vw; /* Gap más grande en móviles */
   }
 
   .featureCard {
-    min-height: 20vw;
+    min-height: 25vw; /* Altura más generosa para móviles */
+    padding: 4vw 5vw; /* Padding más generoso */
+    gap: 4vw; /* Gap más grande */
+    border-radius: 2vw; /* Bordes más redondeados */
+  }
+
+  .iconContainer {
+    width: 8vw; /* Iconos aún más grandes en móviles */
+    height: 8vw;
+    flex-shrink: 0;
+  }
+
+  .featureText {
+    font-size: 3.5vw; /* Texto más grande para móviles */
+    line-height: 4.5vw;
+    letter-spacing: 0.1vw; /* Mejor espaciado de letras */
+  }
+}
+
+@media (max-width: 480px) {
+  .featuresContainer {
+    gap: 5vw; /* Gap máximo para pantallas muy pequeñas */
+  }
+
+  .featureCard {
+    min-height: 30vw; /* Altura máxima para pantallas pequeñas */
+    padding: 5vw 6vw; /* Padding máximo */
+    gap: 5vw; /* Gap máximo */
+  }
+
+  .iconContainer {
+    width: 10vw; /* Iconos máximos para pantallas pequeñas */
+    height: 10vw;
+  }
+
+  .featureText {
+    font-size: 4vw; /* Texto máximo para pantallas pequeñas */
+    line-height: 5vw;
   }
 }

@@ -384,7 +384,7 @@
 
 @media (max-width: 768px) {
   .contactHero {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 20vw 4vw 4vw; /* MISMO PADDING-TOP QUE HERO SECTION (20vw) */
   }
 
   .container {

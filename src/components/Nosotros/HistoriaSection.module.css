@@ -226,8 +226,8 @@
     font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
     line-height: 3.5vw;
   }
-
-  .cardIconContainer {
+  
+  .cardIconContainer { 
     width: 6vw; /* MÁS GRANDE PARA TABLETS */
     height: 6vw;
     margin-bottom: 2vw;

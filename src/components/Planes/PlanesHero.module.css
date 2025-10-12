@@ -130,7 +130,7 @@
 
 @media (max-width: 768px) {
   .planesHero {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 20vw 4vw 6vw; /* Más padding bottom para los cuadros */
   }
 
   .container {
@@ -142,31 +142,74 @@
   .contentWrapper {
     flex-direction: column;
     align-items: center;
-    gap: 3vw;
+    gap: 5vw; /* Gap más grande para mejor separación */
   }
 
   .heroBox {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
-    min-height: 100vw;
+    min-height: 70vw; /* AJUSTADO PARA QUE SEA PROPORCIONAL CON LA IMAGEN MÁS PEQUEÑA */
+    position: relative; /* NECESARIO PARA LA IMAGEN ABSOLUTA */
+    overflow: hidden; /* PARA QUE LAS IMÁGENES QUE SE SALEN SE VEAN BIEN */
   }
 
   .textContent {
     padding: 6vw 4vw 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    width: 100%; /* OCUPA TODO EL ANCHO DISPONIBLE */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative; /* PARA QUE ESTÉ ENCIMA DEL PATRÓN DE FONDO */
+    z-index: 3; /* MAYOR Z-INDEX PARA QUE ESTÉ ENCIMA */
   }
 
   .title {
     font-size: 6vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 7vw;
     margin-bottom: 3vw;
+    width: 100%; /* OCUPA TODO EL ANCHO */
+    text-align: left;
+    color: #FFFFFF; /* ASEGURAR QUE SEA BLANCO */
+    text-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.3); /* SOMBRA PARA MEJOR LEGIBILIDAD */
   }
 
   .description {
     font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 5vw;
+    width: 100%; /* OCUPA TODO EL ANCHO */
+    text-align: left;
+    color: #FFFFFF; /* ASEGURAR QUE SEA BLANCO */
+    text-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.3); /* SOMBRA PARA MEJOR LEGIBILIDAD */
   }
 
   .imageContainer {
-    height: 80vw;
+    height: 50vw; /* Tamaño normal */
+    width: 35vw; /* Tamaño normal */
+    position: absolute;
+    top: 25vw; /* SUBIDA MÁS para que esté en posición media-baja */
+    right: 4vw; /* ALINEADO CON EL PADDING LATERAL */
+    z-index: 2;
+  }
+
+  .backgroundPattern {
+    position: absolute;
+    top: -5vw; /* POSICIONADO HACIA ARRIBA */
+    left: -5vw; /* Ajustado hacia la izquierda */
+    width: 130%; /* UN POCO MÁS GRANDE */
+    height: 130%; /* UN POCO MÁS GRANDE */
+    background-position: center top;
+    background-size: cover; /* PARA QUE CUBRA MEJOR EL ESPACIO */
+    opacity: 1; /* COLOR ORIGINAL SIN OPACIDAD */
+    z-index: 1; /* MENOR Z-INDEX PARA QUE ESTÉ DEBAJO DEL TEXTO */
+  }
+
+  .backgroundImage {
+    width: 160%; /* UN POCO MÁS GRANDE */
+    height: 130%; /* UN POCO MÁS GRANDE */
+    object-fit: contain;
+    object-position: center top; /* POSICIONADO HACIA ARRIBA */
+    transform: translateX(5%) translateY(-5%); /* Ajustado hacia arriba */
+    filter: none; /* SIN FILTROS para color original */
   }
 }

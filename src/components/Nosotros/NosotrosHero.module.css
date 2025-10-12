@@ -9,7 +9,7 @@
 .nosotrosHero {
   position: relative;
   width: 100vw;
-  padding-top: 4.63vw; /* EXACTO: Mismo padding-top que HeroSection */
+  padding-top: 5.28vw; /* EXACTO: Mismo top que leftBox del HeroSection */
   min-height: 38.72vw; /* 55.31vw * 0.7 = 38.72vw - REDUCCIÓN CLAVE */
   overflow: hidden;
   box-sizing: border-box;
@@ -98,7 +98,7 @@
 
 @media (max-width: 768px) {
   .nosotrosHero {
-    padding: 20vw 4vw 4vw; /* EXACTO: Mismo padding que HeroSection */
+    padding: 20vw 4vw 4vw; /* MISMO PADDING-TOP QUE HERO SECTION (20vw) */
   }
 
   .container {

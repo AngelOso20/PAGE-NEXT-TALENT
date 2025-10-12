@@ -171,7 +171,7 @@
   .aliadosSection {
     padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
-
+  
   .container {
     width: 100%; /* ANCHO COMPLETO */
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
@@ -180,47 +180,47 @@
     gap: 2vw;
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
-
+  
   .textBox {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
     min-height: 60vw;
     padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
   }
-
+  
   .title {
     font-size: 5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
     line-height: 6vw;
     margin-bottom: 3vw;
   }
-
+  
   .introText {
     font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
     line-height: 4.5vw;
     margin-bottom: 3vw;
   }
-
+  
   .servicesList li {
     font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
     line-height: 3.5vw;
     margin-bottom: 1vw;
     padding-left: 2vw;
   }
-
+  
   .imagesContainer {
     flex-direction: row;
     justify-content: center;
     gap: 2vw;
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
-
+  
   .topImageBox,
   .bottomImageBox {
     width: 44vw;
     height: auto;
     aspect-ratio: 528 / 304;
   }
-
+  
   .largeImageBox {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: auto;
@@ -232,48 +232,48 @@
   .aliadosSection {
     padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
   }
-
+  
   .container {
     width: 100%; /* ANCHO COMPLETO */
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
-
+  
   .textBox {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
   }
-
+  
   .title {
     font-size: 6vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 7vw;
     margin-bottom: 4vw;
   }
-
+  
   .introText {
     font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 5vw;
     margin-bottom: 4vw;
   }
-
+  
   .servicesList li {
     font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 5vw;
     margin-bottom: 2vw;
     padding-left: 3vw;
   }
-
+  
   .imagesContainer {
     flex-direction: column;
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
-
+  
   .topImageBox,
   .bottomImageBox {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: 50vw;
   }
-
+  
   .largeImageBox {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     height: 70vw;
