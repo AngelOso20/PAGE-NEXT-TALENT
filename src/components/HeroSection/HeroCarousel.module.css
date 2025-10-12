@@ -30,22 +30,22 @@
 }
 
 /* Clase específica para el segundo cuadro (evento) con altura fija */
-.eventCarouselCard {
-  position: relative;
-  width: 100%;
-  height: 19.5vw; /* Altura exacta del primer cuadro */
-  background: #FFFFFF;
-  border-radius: 0.82vw;
-  box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
-  padding: 1.85vw 2.01vw 1.4vw; /* Padding reducido para el segundo cuadro */
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-  box-sizing: border-box;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
+  .eventCarouselCard {
+    position: relative;
+    width: 100%;
+    height: auto; /* Permitir que la altura se ajuste al contenido */
+    background: #FFFFFF;
+    border-radius: 0.82vw;
+    box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
+    padding: 1.85vw 2.01vw 1.4vw; /* Padding reducido para el segundo cuadro */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 
 .carouselCard.transitioning,
 .eventCarouselCard.transitioning {
@@ -279,13 +279,15 @@
     top: 0;
     left: 0;
     width: 100%;
+    height: auto; /* Permitir que la altura se ajuste al contenido */
     margin-bottom: 3vw;
     order: 2;
   }
 
   .carouselCard {
     min-height: auto;
-    padding: 4vw 4vw 4.5vw; /* Reducido aún más el padding inferior en móviles */
+    height: auto; /* Permitir que la altura se ajuste al contenido */
+    padding: 4vw 4vw 6vw; /* Aumentar padding inferior para dar espacio a los puntos */
     border-radius: 1.5vw;
     box-shadow: 0 0.3vw 1.5vw rgba(0, 0, 0, 0.1);
   }
@@ -318,6 +320,7 @@
   .cardContent {
     margin-top: 13vw;
     gap: 2vw;
+    padding-bottom: 2vw; /* Espacio adicional para los puntos */
   }
 
   .cardTitle {
@@ -332,19 +335,38 @@
     text-align: left;
   }
 
+  /* Estilos móviles para el segundo cuadro (evento) */
+  .eventCardTitle {
+    font-size: 3.8vw; /* Reducido ligeramente para más espacio */
+    line-height: 5vw; /* Reducido proporcionalmente */
+    text-align: left;
+  }
+
+  .eventCardDescription {
+    font-size: 3.2vw; /* Reducido ligeramente para más espacio */
+    line-height: 4.5vw; /* Reducido proporcionalmente */
+    text-align: left;
+  }
+
+  .eventCardContent {
+    margin-top: 13vw; /* Mismo margin-top que cardContent */
+    gap: 1.5vw; /* Reducido para más espacio */
+    padding-bottom: 3vw; /* Aumentado para más espacio con los puntos */
+  }
+
   .eventDetails {
-    gap: 0.8vw; /* Reducido para móviles */
-    margin-top: 1.5vw; /* Reducido para móviles */
+    gap: 0.6vw; /* Reducido para más espacio */
+    margin-top: 1.2vw; /* Reducido para más espacio */
   }
 
   .eventDetail {
-    font-size: 2.2vw; /* Reducido para móviles */
-    gap: 0.8vw; /* Reducido para móviles */
+    font-size: 2.8vw; /* Reducido para más espacio */
+    gap: 1vw; /* Reducido para más espacio */
   }
 
   .detailIcon {
-    width: 2.2vw; /* Reducido para móviles */
-    height: 2.2vw; /* Reducido para móviles */
+    width: 2.8vw; /* Reducido para más espacio */
+    height: 2.8vw; /* Reducido para más espacio */
   }
 
   .actionButton {
@@ -364,7 +386,7 @@
   }
 
   .paginationDots {
-    bottom: 1vw; /* Bajado un poquito más también en móviles */
+    bottom: 1.5vw; /* Más espacio desde el contenido */
     gap: 1.5vw;
   }
 
