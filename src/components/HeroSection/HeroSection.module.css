@@ -33,12 +33,11 @@
 .backgroundPattern {
   position: absolute;
   top: 0;
-  left: -10vw; /* MOVER MÁS HACIA LA IZQUIERDA */
+  right: -13vw; /* MOVER SOLO UN POQUITO MÁS HACIA LA DERECHA */
   width: 120%; /* MÁS ANCHO PARA MOSTRAR LA IMAGEN COMPLETA */
   height: 100%;
-  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') left bottom no-repeat; /* PEGADA ABAJO Y A LA IZQUIERDA */
+  background: transparent url('/images/Forms/Abstract Isotipo-01.svg') right bottom no-repeat; /* PEGADA ABAJO Y A LA DERECHA */
   background-size: 100% 100%; /* TAMAÑO COMPLETO PARA VER TODA LA IMAGEN */
-  opacity: 0.98; /* Ajustado para que se vea un poco más pero sin ser demasiado prominente */
   z-index: 0;
   pointer-events: none;
 }
@@ -342,10 +341,11 @@
     display: block; /* MOSTRAR EL PATRÓN DE FONDO */
     top: 0; /* EMPEZAR DESDE ARRIBA */
     bottom: auto; /* QUITAR POSICIONAMIENTO INFERIOR */
-    left: -5vw; /* MOVER MENOS HACIA LA IZQUIERDA PARA PEGARSE MÁS A LA CAJA */
+     right: -6vw; /* MOVER SOLO UN POQUITO MÁS HACIA LA DERECHA */
+    left: auto; /* QUITAR POSICIONAMIENTO IZQUIERDO */
     width: 110%; /* ANCHO MÁS PEQUEÑO PARA PEGARSE MÁS A LA CAJA */
     height: 100%; /* ALTURA COMPLETA PARA ALCANZAR ARRIBA Y ABAJO */
-    background-position: left bottom; /* ASEGURAR QUE ESTÉ PEGADO ABAJO */
+    background-position: right bottom; /* ASEGURAR QUE ESTÉ PEGADO ABAJO Y A LA DERECHA */
     background-size: 120% 120%; /* HACER MÁS GRANDE LA IMAGEN, ESPECIALMENTE LA PARTE DE ABAJO */
     opacity: 0.98; /* AUMENTAR OPACIDAD PARA QUE SE VEA MÁS */
   }
@@ -354,3 +354,4 @@
 /* NO limitamos el ancho máximo para que las proporciones 
    se mantengan perfectas en todos los tamaños de pantalla,
    incluyendo zoom muy bajo (<50%) y pantallas ultra grandes. */
+
