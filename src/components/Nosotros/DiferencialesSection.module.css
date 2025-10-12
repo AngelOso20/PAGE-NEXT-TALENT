@@ -135,41 +135,6 @@
   height: 4.11vw; /* 79px = 4.11vw */
   margin-bottom: 1.56vw; /* 30px = 1.56vw */
   flex-shrink: 0;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Estados de carga y error */
-.loadingPlaceholder,
-.errorPlaceholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f5f5f5;
-  border-radius: 0.52vw; /* 10px = 0.52vw */
-}
-
-.loadingSpinner {
-  width: 2vw; /* 38px = 2vw */
-  height: 2vw; /* 38px = 2vw */
-  border: 0.21vw solid #27A49F; /* 4px = 0.21vw */
-  border-top: 0.21vw solid transparent; /* 4px = 0.21vw */
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-.errorPlaceholder span {
-  font-size: 1.5vw; /* 29px = 1.5vw */
-  color: #FB8C05;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
 }
 
 /* Texto de la card */
@@ -279,16 +244,6 @@
     height: 8vw;
     margin-bottom: 3vw;
   }
-
-  .loadingSpinner {
-    width: 4vw; /* MÁS GRANDE PARA TABLETS */
-    height: 4vw;
-    border-width: 0.4vw;
-  }
-
-  .errorPlaceholder span {
-    font-size: 3vw; /* MÁS GRANDE PARA TABLETS */
-  }
 }
 
 @media (max-width: 768px) {
@@ -384,16 +339,6 @@
     width: 10vw; /* MÁS GRANDE PARA MÓVILES */
     height: 10vw;
     margin-bottom: 4vw;
-  }
-
-  .loadingSpinner {
-    width: 5vw; /* MÁS GRANDE PARA MÓVILES */
-    height: 5vw;
-    border-width: 0.5vw;
-  }
-
-  .errorPlaceholder span {
-    font-size: 4vw; /* MÁS GRANDE PARA MÓVILES */
   }
 }
 

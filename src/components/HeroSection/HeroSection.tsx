@@ -1,6 +1,4 @@
 import Image from 'next/image'
-import LottieIcon from './LottieIcon'
-import LottieIcon24 from './LottieIcon24'
 import styles from './HeroSection.module.css'
 
 export default function HeroSection() {
@@ -37,7 +35,13 @@ export default function HeroSection() {
       {/* Cuadro naranja - Colombia 90% */}
       <div className={styles.orangeBox}>
         <div className={styles.orangeIcon}>
-          <LottieIcon24 />
+          <Image
+            src="/images/Iconos/SVG/Icon-24.svg"
+            alt="Icono Colombia 90%"
+            width={80}
+            height={80}
+            className={styles.staticIcon}
+          />
         </div>
         <p className={styles.orangeText}>
           <span className={styles.highlightText}>
@@ -52,7 +56,13 @@ export default function HeroSection() {
       {/* Cuadro azul - Agenda tu asesoría */}
       <div className={styles.blueBox}>
         <div className={styles.blueIcon}>
-          <LottieIcon />
+          <Image
+            src="/images/Iconos/SVG/Icon-26.svg"
+            alt="Icono Agenda asesoría"
+            width={80}
+            height={80}
+            className={styles.staticIcon}
+          />
         </div>
         
         <p className={styles.blueText}>
