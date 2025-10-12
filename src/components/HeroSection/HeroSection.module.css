@@ -233,12 +233,13 @@
   }
 
   .leftBox {
-    padding: 5vw 4vw 0; /* SIN PADDING INFERIOR PARA PEGAR LA IMAGEN */
+    padding: 5vw 4vw 4vw; /* PADDING INFERIOR REDUCIDO PARA HACER EL CUADRO MÁS CORTO */
     background: #FFFFFF;
     order: 1; /* Primero el cuadro principal */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* DISTRIBUIR CONTENIDO */
+    overflow: hidden; /* OCULTAR LA PARTE QUE SE SALE DEL CUADRO */
   }
 
   /* Textos optimizados para móviles - REDUCIDOS */
@@ -256,6 +257,7 @@
     line-height: 6.5vw;
     margin-bottom: 2.5vw; /* MARGEN REDUCIDO */
     text-align: left; /* ALINEADO A LA IZQUIERDA */
+    width: 55vw; /* ANCHO REDUCIDO PARA NO TOCAR LA IMAGEN DEL HOMBRE */
   }
 
   .subtitle {
@@ -263,14 +265,15 @@
     line-height: 4.5vw;
     margin-bottom: 3.5vw; /* MARGEN REDUCIDO */
     text-align: left; /* ALINEADO A LA IZQUIERDA */
+    width: 55vw; /* ANCHO REDUCIDO PARA NO TOCAR LA IMAGEN DEL HOMBRE */
   }
 
   .workerImage {
     width: 35vw; /* MÁS PEQUEÑA - REDUCIDA DE 45vw A 35vw */
     height: auto;
-    margin: 0 auto 0; /* PEGADA EN LA PARTE DE ABAJO DEL CUADRO */
+    margin: -35vw 0 0 auto; /* SUBIR LA IMAGEN MÁS ARRIBA Y MOVER A LA DERECHA */
     max-width: 100%;
-    align-self: flex-end; /* PEGAR AL FINAL DEL CUADRO */
+    margin-bottom: -4vw; /* CORTE AJUSTADO PARA EL CUADRO MÁS CORTO */
   }
 
   .workerImage img {
