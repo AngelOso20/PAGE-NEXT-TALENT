@@ -28,7 +28,7 @@ const PlanesHero: React.FC = () => {
                 objectFit: 'contain',
                 objectPosition: 'center',
                 opacity: '1',
-                filter: 'grayscale(0%) brightness(1.2) saturate(1.5)'
+                filter: 'none'
               }}
               />
             </div>

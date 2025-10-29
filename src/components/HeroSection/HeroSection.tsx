@@ -8,7 +8,24 @@ export default function HeroSection() {
       {/* Cuadro izquierdo con trabajador y textos */}
       <div className={styles.leftBox}>
         {/* Imagen de fondo abstracta */}
-        <div className={styles.backgroundPattern}></div>
+        <div className={styles.backgroundPattern}>
+          <Image
+            src="/images/Forms/Abstract Isotipo-01.svg"
+            alt="Patrón de fondo abstracto"
+            width={1820}
+            height={933}
+            className={styles.backgroundImage}
+            priority
+            unoptimized
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'contain',
+              objectPosition: 'bottom center',
+              opacity: '1'
+            }}
+          />
+        </div>
         
         {/* Título principal */}
         <h1 className={styles.mainTitle}>

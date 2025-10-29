@@ -63,7 +63,8 @@
   object-fit: contain;
   object-position: center;
   transform: translateX(15%); /* Mover la imagen hacia la derecha */
-  filter: grayscale(0%) brightness(1.2) saturate(1.5);
+  filter: none; /* SIN FILTROS PARA MANTENER COLORES ORIGINALES */
+  opacity: 1; /* SIN OPACIDAD */
 }
 
 /* ========== CONTENIDO DE TEXTO ========== */
@@ -130,7 +131,7 @@
 
 @media (max-width: 768px) {
   .planesHero {
-    padding: 20vw 4vw 6vw; /* Más padding bottom para los cuadros */
+    padding: 20vw 4vw 4vw; /* MISMO PADDING-TOP QUE SERVICIOS HERO (20vw) */
   }
 
   .container {
@@ -142,74 +143,89 @@
   .contentWrapper {
     flex-direction: column;
     align-items: center;
-    gap: 5vw; /* Gap más grande para mejor separación */
+    gap: 5vw; /* Gap entre cuadro azul y características */
   }
 
   .heroBox {
-    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    width: 100%; /* ANCHO COMPLETO COMO SERVICIOS HERO */
     height: auto;
-    min-height: 70vw; /* AJUSTADO PARA QUE SEA PROPORCIONAL CON LA IMAGEN MÁS PEQUEÑA */
-    position: relative; /* NECESARIO PARA LA IMAGEN ABSOLUTA */
-    overflow: hidden; /* PARA QUE LAS IMÁGENES QUE SE SALEN SE VEAN BIEN */
+    min-height: 140vw; /* ALTURA MÁS GRANDE PARA OCUPAR TODA LA PANTALLA VERTICALMENTE */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
 
   .textContent {
-    padding: 6vw 4vw 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
-    width: 100%; /* OCUPA TODO EL ANCHO DISPONIBLE */
+    padding: 8vw 4vw; /* MÁS PADDING PARA MÁS ESPACIO VERTICAL */
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    position: relative; /* PARA QUE ESTÉ ENCIMA DEL PATRÓN DE FONDO */
-    z-index: 3; /* MAYOR Z-INDEX PARA QUE ESTÉ ENCIMA */
+    position: relative;
+    z-index: 3;
+    order: 1; /* TEXTO PRIMERO */
   }
 
   .title {
-    font-size: 6vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 7vw;
-    margin-bottom: 3vw;
-    width: 100%; /* OCUPA TODO EL ANCHO */
+    font-size: 7vw; /* TAMAÑO MÁS GRANDE */
+    line-height: 8vw; /* LINE-HEIGHT MÁS GRANDE */
+    margin-bottom: 5vw; /* MÁS MARGEN PARA MÁS ESPACIO */
+    width: 100%;
     text-align: left;
-    color: #FFFFFF; /* ASEGURAR QUE SEA BLANCO */
-    text-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.3); /* SOMBRA PARA MEJOR LEGIBILIDAD */
+    color: #FFFFFF;
+    text-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.3); /* SOMBRA PARA LEGIBILIDAD */
   }
 
   .description {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 5vw;
-    width: 100%; /* OCUPA TODO EL ANCHO */
+    font-size: 4vw; /* TAMAÑO MÁS GRANDE */
+    line-height: 5.5vw; /* LINE-HEIGHT MÁS GRANDE */
+    margin-bottom: 6vw; /* MÁS MARGEN PARA MÁS ESPACIO */
+    width: 100%;
     text-align: left;
-    color: #FFFFFF; /* ASEGURAR QUE SEA BLANCO */
-    text-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.3); /* SOMBRA PARA MEJOR LEGIBILIDAD */
+    color: #FFFFFF;
+    text-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.3); /* SOMBRA PARA LEGIBILIDAD */
   }
 
   .imageContainer {
-    height: 50vw; /* Tamaño normal */
-    width: 35vw; /* Tamaño normal */
-    position: absolute;
-    top: 25vw; /* SUBIDA MÁS para que esté en posición media-baja */
-    right: 4vw; /* ALINEADO CON EL PADDING LATERAL */
+    position: static; /* POSICIÓN ESTÁTICA COMO EN SERVICIOS */
+    width: 100%;
+    height: 100vw; /* ALTURA MÁS GRANDE PARA OCUPAR MÁS ESPACIO */
+    margin: 0;
+    max-width: 100%;
+    order: 2; /* IMAGEN DESPUÉS DEL TEXTO */
     z-index: 2;
   }
 
+  .heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* MISMO OBJECT-FIT QUE SERVICIOS */
+    object-position: bottom center; /* UBICADA EN LA PARTE INFERIOR DEL CUADRO */
+  }
+
   .backgroundPattern {
+    display: block;
     position: absolute;
-    top: -5vw; /* POSICIONADO HACIA ARRIBA */
-    left: -5vw; /* Ajustado hacia la izquierda */
-    width: 130%; /* UN POCO MÁS GRANDE */
-    height: 130%; /* UN POCO MÁS GRANDE */
-    background-position: center top;
-    background-size: cover; /* PARA QUE CUBRA MEJOR EL ESPACIO */
-    opacity: 1; /* COLOR ORIGINAL SIN OPACIDAD */
-    z-index: 1; /* MENOR Z-INDEX PARA QUE ESTÉ DEBAJO DEL TEXTO */
+    top: auto; /* NO DESDE ARRIBA */
+    left: -10%; /* MOVIDA MUCHO MÁS A LA DERECHA */
+    right: auto;
+    bottom: 0; /* COMPLETAMENTE PEGADO AL FONDO DE LA CAJA */
+    width: 250%; /* ANCHO SUPER GRANDE - 250% PARA CUBRIR TODA LA CAJA */
+    height: 100%; /* ALTURA AJUSTADA PARA BAJAR LA IMAGEN */
+    opacity: 1 !important; /* COLOR ORIGINAL SIN OPACIDAD - FORZADO */
+    z-index: 1;
+    overflow: visible; /* PERMITIR QUE SE VEA COMPLETA */
   }
 
   .backgroundImage {
-    width: 160%; /* UN POCO MÁS GRANDE */
-    height: 130%; /* UN POCO MÁS GRANDE */
-    object-fit: contain;
-    object-position: center top; /* POSICIONADO HACIA ARRIBA */
-    transform: translateX(5%) translateY(-5%); /* Ajustado hacia arriba */
-    filter: none; /* SIN FILTROS para color original */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* CONTAIN PARA VER LA IMAGEN COMPLETA */
+    object-position: bottom center; /* COMPLETAMENTE PEGADO AL FONDO */
+    transform: translateY(0); /* SIN DESPLAZAMIENTO - MANTENER EN EL FONDO */
+    filter: none !important; /* SIN FILTROS QUE AFECTEN EL COLOR */
+    opacity: 1 !important; /* SIN OPACIDAD */
   }
 }
