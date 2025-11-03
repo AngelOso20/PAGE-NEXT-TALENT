@@ -328,6 +328,10 @@
     line-height: 6vw;
     margin-bottom: 8vw;
     padding: 0;
+    text-align: left; /* ALINEADO A LA IZQUIERDA EN MÓVILES - NO CENTRALIZADO */
+    max-width: 100%; /* ANCHO COMPLETO */
+    margin-left: 0; /* SIN MARGEN IZQUIERDO */
+    margin-right: 0; /* SIN MARGEN DERECHO */
   }
 
   .blogGrid {

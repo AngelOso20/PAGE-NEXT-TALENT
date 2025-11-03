@@ -207,19 +207,28 @@
     width: 100%;
     height: auto;
     min-height: 80vw;
-    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    padding: 6vw 4vw; /* MÁS PADDING SUPERIOR PARA EL ICONO MÁS GRANDE */
+    gap: 2vw; /* GAP ENTRE TODOS LOS ELEMENTOS */
+    display: flex;
+    flex-direction: column;
   }
 
   .title {
     font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 0; /* SIN MARGEN - USAMOS GAP DEL CONTENEDOR */
   }
 
   .description {
     font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 5vw;
-    margin-bottom: 3vw;
+    margin-bottom: 0; /* SIN MARGEN - USAMOS GAP DEL CONTENEDOR */
+    flex-grow: 0; /* NO CRECE - PARA QUE BENEFICIO QUEDE CERCA */
+  }
+
+  .benefit {
+    gap: 0.5vw; /* REDUCIDO PARA QUE BENEFICIO NO QUEDE TAN SEPARADO */
+    margin-top: 2vw; /* SEPARACIÓN CONTROLADA DEL TEXTO ANTERIOR */
   }
 
   .benefitLabel,
@@ -229,8 +238,8 @@
   }
 
   .iconContainer {
-    width: 8vw; /* MÁS GRANDE PARA MÓVILES */
-    height: 8vw;
+    width: 15vw; /* MUCHO MÁS GRANDE - ICONOS MÁS BONITOS Y VISIBLES */
+    height: 15vw;
     margin-bottom: 4vw;
   }
 }

@@ -121,43 +121,51 @@
   }
 
   .featureCard {
-    min-height: 25vw; /* Altura más generosa para móviles */
-    padding: 4vw 5vw; /* Padding más generoso */
-    gap: 4vw; /* Gap más grande */
+    min-height: 40vw; /* MÁS ALTO PARA EL DISEÑO VERTICAL */
+    padding: 6vw 5vw; /* MÁS PADDING VERTICAL */
+    gap: 3vw; /* GAP ENTRE ICONO Y TEXTO */
     border-radius: 2vw; /* Bordes más redondeados */
+    flex-direction: column; /* VERTICAL - ICONO ARRIBA DEL TEXTO */
+    align-items: center; /* CENTRADO HORIZONTALMENTE */
+    text-align: center; /* TEXTO CENTRADO */
   }
 
   .iconContainer {
-    width: 8vw; /* Iconos aún más grandes en móviles */
-    height: 8vw;
+    width: 18vw; /* MUCHO MÁS GRANDE - MÁS BONITO Y VISIBLE */
+    height: 18vw;
     flex-shrink: 0;
   }
 
   .featureText {
-    font-size: 3.5vw; /* Texto más grande para móviles */
-    line-height: 4.5vw;
+    font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
+    line-height: 5.5vw;
     letter-spacing: 0.1vw; /* Mejor espaciado de letras */
+    text-align: center; /* TEXTO CENTRADO PARA MEJOR DISEÑO */
   }
 }
 
 @media (max-width: 480px) {
   .featuresContainer {
-    gap: 5vw; /* Gap máximo para pantallas muy pequeñas */
+    gap: 5vw; /* Gap para pantallas muy pequeñas */
   }
 
   .featureCard {
-    min-height: 30vw; /* Altura máxima para pantallas pequeñas */
-    padding: 5vw 6vw; /* Padding máximo */
-    gap: 5vw; /* Gap máximo */
+    min-height: 45vw; /* MÁS ALTO PARA PANTALLAS PEQUEÑAS */
+    padding: 7vw 6vw; /* MÁS PADDING */
+    gap: 4vw; /* GAP CONSISTENTE */
+    flex-direction: column; /* VERTICAL - ICONO ARRIBA */
+    align-items: center; /* CENTRADO */
   }
 
   .iconContainer {
-    width: 10vw; /* Iconos máximos para pantallas pequeñas */
-    height: 10vw;
+    width: 20vw; /* AÚN MÁS GRANDE EN PANTALLAS PEQUEÑAS - CONSISTENTE */
+    height: 20vw;
+    flex-shrink: 0;
   }
 
   .featureText {
-    font-size: 4vw; /* Texto máximo para pantallas pequeñas */
-    line-height: 5vw;
+    font-size: 4.5vw; /* UN POCO MÁS GRANDE PARA PANTALLAS PEQUEÑAS */
+    line-height: 6vw;
+    text-align: center; /* CENTRADO */
   }
 }

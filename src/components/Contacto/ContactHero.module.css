@@ -424,63 +424,66 @@
   }
 
   .title {
-    font-size: 4.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 5.5vw;
-    margin-bottom: 3vw;
+    font-size: 7vw; /* UNIFICADO CON BLOG - MISMO TAMAÑO */
+    line-height: 8vw;
+    margin-bottom: 4vw;
   }
 
   .description {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 5vw;
+    font-size: 4vw; /* UNIFICADO CON BLOG - MISMO TAMAÑO */
+    line-height: 5.5vw;
   }
 
   .formGrid {
     grid-template-columns: 1fr;
-    gap: 3vw;
-    margin-bottom: 3vw;
+    gap: 4vw; /* MÁS ESPACIO ENTRE CAMPOS */
+    margin-bottom: 4vw;
   }
 
   .label {
-    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 4vw;
-    margin-bottom: 1.5vw;
+    font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
+    line-height: 5.5vw;
+    margin-bottom: 2vw;
+    font-weight: 600; /* UN POCO MÁS BOLD PARA MEJOR LECTURA */
   }
 
   .input,
   .textarea {
-    padding: 2vw 3vw; /* PADDING MÁS GRANDE */
-    font-size: 3vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 4vw;
-    border-radius: 1.5vw;
-    margin-bottom: 3vw;
+    padding: 3vw 4vw; /* MÁS PADDING PARA MEJOR USABILIDAD */
+    font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
+    line-height: 5.5vw;
+    border-radius: 2vw; /* BORDES MÁS REDONDEADOS */
+    margin-bottom: 0; /* SIN MARGEN - USAMOS GAP DEL GRID */
+    border-width: 0.3vw; /* BORDE MÁS VISIBLE */
   }
 
   .textarea {
-    min-height: 12vw;
+    min-height: 20vw; /* MÁS ALTO PARA MEJOR ESCRITURA */
   }
 
   .checkboxGroup {
-    gap: 1.5vw;
-    margin-bottom: 3vw;
+    gap: 2vw; /* MÁS ESPACIO */
+    margin-bottom: 4vw;
   }
 
   .checkbox {
-    width: 3vw;
-    height: 3vw;
+    width: 5vw; /* MÁS GRANDE PARA FÁCIL CLICK */
+    height: 5vw;
+    flex-shrink: 0;
   }
 
   .checkboxLabel {
-    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 3.5vw;
+    font-size: 3.5vw; /* MÁS GRANDE PARA MEJOR LEGIBILIDAD */
+    line-height: 5vw;
   }
 
   .submitButton {
     width: 100%; /* OCUPA TODO EL ANCHO DISPONIBLE */
-    height: 8vw; /* MÁS GRANDE PARA MÓVILES */
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 8vw;
-    border-radius: 2.5vw;
-    margin-top: 3vw;
+    height: 10vw; /* MÁS GRANDE - IGUAL QUE FOOTER */
+    font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
+    line-height: 10vw;
+    border-radius: 2vw; /* BORDES MÁS REDONDEADOS */
+    margin-top: 4vw;
     align-self: stretch; /* SE ESTIRA PARA OCUPAR TODO EL ANCHO */
   }
 }

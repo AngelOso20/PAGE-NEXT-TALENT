@@ -195,7 +195,7 @@
 
 .featureItem::before {
   content: '•';
-  color: #27A49F;
+  color: #000000;
   font-weight: bold;
   position: absolute;
   left: 0;

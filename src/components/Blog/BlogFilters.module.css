@@ -99,17 +99,22 @@
     width: 100%; /* ANCHO COMPLETO */
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
-    gap: 1.5vw; /* MÁS ESPACIO ENTRE BOTONES */
-    justify-content: center;
-    flex-wrap: nowrap; /* NO ENVOLVER - MANTENER EN UNA LÍNEA */
-    overflow-x: auto; /* PERMITIR SCROLL HORIZONTAL SI ES NECESARIO */
+    gap: 3vw; /* MÁS ESPACIO ENTRE BOTONES PARA MEJOR VISIBILIDAD */
+    justify-content: flex-start; /* ALINEADO A LA IZQUIERDA */
+    flex-wrap: wrap; /* PERMITIR MÚLTIPLES LÍNEAS PARA QUE SE VEAN TODOS */
+    overflow-x: visible; /* SIN SCROLL HORIZONTAL */
   }
   
   .filterButton {
-    font-size: 2.2vw; /* TAMAÑO MÁS PEQUEÑO PARA MÓVILES */
-    line-height: 3vw;
-    padding: 1vw 1.5vw; /* MÁS PADDING HORIZONTAL */
+    font-size: 4vw; /* MUCHO MÁS GRANDE - MÁS LEGIBLE Y BONITO */
+    line-height: 5.5vw;
+    padding: 2vw 3.5vw; /* MÁS PADDING PARA MAYOR ÁREA DE TOQUE */
     white-space: nowrap; /* NO ENVOLVER EL TEXTO */
     flex-shrink: 0; /* NO REDUCIR EL TAMAÑO */
+    border-radius: 2vw; /* BORDES REDONDEADOS PARA MEJOR DISEÑO */
+  }
+
+  .filterButton.active::after {
+    height: 0.5vw; /* LÍNEA MÁS GRUESA Y VISIBLE EN MÓVILES */
   }
 }
