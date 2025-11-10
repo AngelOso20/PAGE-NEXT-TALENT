@@ -14,8 +14,8 @@ export default function BlogSection() {
     {
       image: '/images/Blog/Articulo 1.webp',
       category: 'Gestión de personas',
-      title: '5 errores que frenan el crecimiento de tu microempresa (y cómo evitarlos)',
-      description: 'Gestionar una microempresa es un desafío constante. El tiempo, los recursos y la energía suelen ser limitados, y pequeños descuidos…'
+      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.'
     },
     {
       image: '/images/Blog/Articulo 3.webp',

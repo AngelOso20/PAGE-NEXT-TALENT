@@ -125,8 +125,8 @@
 /* ========== CONTENEDOR DEL ICONO ========== */
 
 .iconContainer {
-  width: 4.63vw; /* 89px = 4.63vw */
-  height: 4.01vw; /* 77px = 4.01vw */
+  width: 5.5vw; /* ✅ UNIFICADO: 105.6px = 5.5vw (mismo que SolutionSection y DiferencialesSection) */
+  height: 5.5vw; /* ✅ UNIFICADO: 105.6px = 5.5vw (mismo que SolutionSection y DiferencialesSection) */
   margin-bottom: 1.93vw; /* 37px = 1.93vw */
   flex-shrink: 0;
 }

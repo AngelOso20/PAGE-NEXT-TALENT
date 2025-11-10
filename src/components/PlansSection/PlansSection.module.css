@@ -130,9 +130,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.71vw; /* 0.83vw * 0.85 = 0.71vw */
-  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
-  letter-spacing: 0.018vw; /* 0.021vw * 0.85 = 0.018vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que el texto negro del carrusel */
+  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
+  letter-spacing: 0px; /* ✅ UNIFICADO: Mismo letter-spacing que el texto negro del carrusel */
   color: #464749;
   text-align: center;
   margin: 0 0 0.18vw 0; /* 0.21vw * 0.85 = 0.18vw */
@@ -158,9 +158,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.71vw; /* 0.83vw * 0.85 = 0.71vw */
-  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
-  letter-spacing: 0.018vw; /* 0.021vw * 0.85 = 0.018vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que el texto negro del carrusel */
+  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
+  letter-spacing: 0px; /* ✅ UNIFICADO: Mismo letter-spacing que el texto negro del carrusel */
   color: #464749;
   text-align: center;
   margin: 0 0 2.97vw 0; /* 3.49vw * 0.85 = 2.97vw */
@@ -175,9 +175,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.71vw; /* 0.83vw * 0.85 = 0.71vw */
-  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
-  letter-spacing: 0.018vw; /* 0.021vw * 0.85 = 0.018vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que el texto negro del carrusel */
+  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
+  letter-spacing: 0px; /* ✅ UNIFICADO: Mismo letter-spacing que el texto negro del carrusel */
   color: #464749;
   text-align: left;
   margin-bottom: 0;
@@ -207,7 +207,7 @@
 
 .planDescription ul li {
   margin-bottom: 0.36vw; /* 0.42vw * 0.85 = 0.36vw */
-  line-height: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
+  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
 }
 
 /* Botón del plan */
@@ -223,8 +223,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 0.76vw; /* 0.89vw * 0.85 = 0.76vw */
-  line-height: 1.50vw; /* 1.77vw * 0.85 = 1.50vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que el texto negro del carrusel */
+  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;

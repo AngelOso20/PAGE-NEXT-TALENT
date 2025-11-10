@@ -82,13 +82,14 @@
   height: 15.31vw; /* 294px = 15.31vw */
   border-radius: 1.04vw 1.04vw 0px 0px; /* 20px = 1.04vw */
   overflow: hidden;
+  background: #FFFFFF; /* ✅ AGREGADO: Fondo blanco para que la imagen se vea completa */
   box-sizing: border-box;
 }
 
 .cardImage {
   width: 23.07vw; /* 443px = 23.07vw */
   height: 15.31vw; /* 294px = 15.31vw */
-  object-fit: cover;
+  object-fit: contain; /* ✅ CAMBIADO: contain para que la imagen se vea completa como las otras */
   border-radius: 1.04vw 1.04vw 0px 0px; /* 20px = 1.04vw */
 }
 
@@ -105,8 +106,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.52vw; /* 10px = 0.52vw */
-  line-height: 1.77vw; /* 34px = 1.77vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto negro) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto negro) */
   letter-spacing: 0px;
   color: #F3F7F9;
   opacity: 1;
@@ -158,7 +159,7 @@
 /* ========== CONTENIDO DE LA CARD ========== */
 
 .cardContent {
-  padding: 1.09vw 1.46vw 1.46vw; /* 21px 28px 28px = 1.09vw 1.46vw 1.46vw */
+  padding: 1.09vw 1.46vw 1.46vw 1.46vw; /* ✅ AJUSTADO: Padding uniforme para alineamiento correcto del título */
   box-sizing: border-box;
   flex-grow: 1;
   display: flex;
@@ -168,13 +169,14 @@
 
 /* Título de la card */
 .cardTitle {
+  width: 100%; /* ✅ AGREGADO: Ocupa todo el ancho para alineamiento correcto */
   margin: 0 0 0.89vw 0; /* 17px = 0.89vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.89vw; /* 17px = 0.89vw */
-  line-height: 1.20vw; /* 23px = 1.20vw */
-  letter-spacing: 0.022vw; /* 0.42px = 0.022vw */
+  font-size: 1.09vw; /* ✅ UNIFICADO: 21px = 1.09vw (mismo que ServiciosCards) */
+  line-height: 1.61vw; /* ✅ UNIFICADO: 31px = 1.61vw (mismo que ServiciosCards) */
+  letter-spacing: 0.028vw; /* ✅ UNIFICADO: 0.53px = 0.028vw (mismo que ServiciosCards) */
   color: #FB8C05;
   text-align: left;
   opacity: 1;
@@ -182,13 +184,14 @@
 
 /* Descripción */
 .cardDescription {
+  width: 100%; /* ✅ AGREGADO: Ocupa todo el ancho para alineamiento correcto */
   margin: 0 0 2.76vw 0; /* 53px = 2.76vw */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.73vw; /* 14px = 0.73vw */
-  line-height: 1.30vw; /* 25px = 1.30vw */
-  letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que ServiciosCards) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que ServiciosCards) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que ServiciosCards) */
   color: #464749;
   text-align: left;
   opacity: 1;
@@ -201,9 +204,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.73vw; /* 14px = 0.73vw */
-  line-height: 1.61vw; /* 31px = 1.61vw */
-  letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto negro) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto negro) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto negro) */
   color: #27A49F;
   text-align: left;
   text-decoration: none;

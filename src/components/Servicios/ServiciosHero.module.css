@@ -73,8 +73,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 2.79vw; /* 3.49vw * 0.8 = 2.79vw - REDUCCIÓN 20% */
-  line-height: 3.13vw; /* 3.91vw * 0.8 = 3.13vw - REDUCCIÓN 20% */
+  font-size: 3.44vw; /* ✅ UNIFICADO: Mismo tamaño que el título del Hero principal */
+  line-height: 3.84vw; /* ✅ UNIFICADO: Mismo line-height que el título del Hero principal */
   letter-spacing: 0px;
   color: #27A49F;
   text-align: left;
@@ -86,8 +86,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.25vw; /* 1.56vw * 0.8 = 1.25vw - REDUCCIÓN 20% */
-  line-height: 1.58vw; /* 1.98vw * 0.8 = 1.58vw - REDUCCIÓN 20% */
+  font-size: 1.43vw; /* ✅ UNIFICADO: Mismo tamaño que el subtítulo del Hero principal */
+  line-height: 1.95vw; /* ✅ UNIFICADO: Mismo line-height que el subtítulo del Hero principal */
   letter-spacing: 0px;
   color: #464749;
   text-align: left;

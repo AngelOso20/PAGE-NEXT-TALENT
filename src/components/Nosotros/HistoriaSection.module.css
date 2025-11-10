@@ -140,8 +140,8 @@
 /* ========== CONTENEDOR DEL ICONO ========== */
 
 .cardIconContainer {
-  width: 3.54vw; /* 68px = 3.54vw */
-  height: 3.33vw; /* 64px = 3.33vw */
+  width: 5.5vw; /* ✅ UNIFICADO: 105.6px = 5.5vw (mismo que SolutionSection, DiferencialesSection y ValoresSection) */
+  height: 5.5vw; /* ✅ UNIFICADO: 105.6px = 5.5vw (mismo que SolutionSection, DiferencialesSection y ValoresSection) */
   margin-bottom: 0.42vw; /* 8px = 0.42vw */
   flex-shrink: 0;
 }

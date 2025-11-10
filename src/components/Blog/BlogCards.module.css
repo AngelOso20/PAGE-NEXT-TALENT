@@ -79,9 +79,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.52vw; /* 10px = 0.52vw */
-  line-height: 0.73vw; /* 14px = 0.73vw */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-transform: uppercase;
   z-index: 2;
@@ -98,9 +98,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.52vw; /* 10px = 0.52vw */
-  line-height: 0.73vw; /* 14px = 0.73vw */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-transform: uppercase;
   z-index: 2;
@@ -124,9 +124,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.94vw; /* 18px = 0.94vw */
-  line-height: 1.25vw; /* 24px = 1.25vw */
-  letter-spacing: 0px;
+  font-size: 1.09vw; /* ✅ UNIFICADO: 21px = 1.09vw (mismo que títulos naranjas) */
+  line-height: 1.61vw; /* ✅ UNIFICADO: 31px = 1.61vw (mismo que títulos naranjas) */
+  letter-spacing: 0.028vw; /* ✅ UNIFICADO: 0.54px = 0.028vw (mismo que títulos naranjas) */
   color: #27A49F;
   margin: 0 0 0.78vw 0; /* 15px = 0.78vw */
   flex-grow: 1;
@@ -138,9 +138,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.73vw; /* 14px = 0.73vw */
-  line-height: 1.15vw; /* 22px = 1.15vw */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #464749;
   margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
   flex-grow: 1;
@@ -154,9 +154,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.73vw; /* 14px = 0.73vw */
-  line-height: 1.61vw; /* 31px = 1.61vw */
-  letter-spacing: 0.018vw; /* 0.35px = 0.018vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #27A49F;
   text-align: left;
   cursor: pointer;

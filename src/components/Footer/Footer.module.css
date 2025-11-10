@@ -42,9 +42,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.83vw; /* 16px = 0.83vw */
-  line-height: 1.93vw; /* 37px = 1.93vw */
-  letter-spacing: 0.013vw; /* 0.24px = 0.013vw */
+  font-size: 1.09vw; /* ✅ UNIFICADO: 21px = 1.09vw (mismo que BlogSection títulos) */
+  line-height: 1.61vw; /* ✅ UNIFICADO: 31px = 1.61vw (mismo que BlogSection títulos) */
+  letter-spacing: 0.028vw; /* ✅ UNIFICADO: 0.54px = 0.028vw (mismo que BlogSection títulos) */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
@@ -55,9 +55,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.68vw; /* 13px = 0.68vw */
-  line-height: 1.20vw; /* 23px = 1.20vw */
-  letter-spacing: 0.007vw; /* 0.14px = 0.007vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
@@ -68,9 +68,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.63vw; /* 12px = 0.63vw */
-  line-height: 0.89vw; /* 17px = 0.89vw */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
@@ -88,9 +88,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.68vw; /* 13px = 0.68vw */
-  line-height: 1.20vw; /* 23px = 1.20vw */
-  letter-spacing: 0.007vw; /* 0.14px = 0.007vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
@@ -144,9 +144,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.73vw; /* 14px = 0.73vw */
-  line-height: 1.04vw; /* 20px = 1.04vw */
-  letter-spacing: 0.011vw; /* 0.21px = 0.011vw */
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-align: left;
   opacity: 1;
@@ -191,9 +191,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.89vw; /* 17px = 0.89vw */
-  line-height: 1.77vw; /* 34px = 1.77vw */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;
@@ -211,9 +211,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.63vw; /* 12px = 0.63vw */
-  line-height: 0.89vw; /* 17px = 0.89vw */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto plano) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto plano) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #FFFFFF;
   text-align: left;
   text-decoration: none;

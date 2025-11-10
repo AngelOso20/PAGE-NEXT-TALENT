@@ -37,7 +37,7 @@
     background: #FFFFFF;
     border-radius: 0.82vw;
     box-shadow: 0px 0.13vw 0.41vw rgba(0, 0, 0, 0.1);
-    padding: 1.85vw 2.01vw 1.4vw; /* Padding reducido para el segundo cuadro */
+    padding: 1.85vw 2.01vw 1.7vw; /* ✅ AJUSTADO: Padding inferior aumentado para dar espacio al botón */
     opacity: 1;
     transition: opacity 0.3s ease-in-out;
     box-sizing: border-box;
@@ -108,6 +108,7 @@
 }
 
 .cardTitle {
+  width: 100%; /* ✅ AGREGADO: Ocupa todo el ancho disponible */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -120,6 +121,7 @@
 }
 
 .cardDescription {
+  width: 100%; /* ✅ AGREGADO: Ocupa todo el ancho disponible */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -135,18 +137,19 @@
 .eventCardContent {
   display: flex;
   flex-direction: column;
-  gap: 0.4vw; /* Más reducido para ajustar altura */
+  gap: 0.55vw; /* ✅ UNIFICADO: Gap intermedio para balance visual */
   flex: 1;
   justify-content: flex-start;
-  padding-bottom: 0.2vw; /* Más reducido para la nueva altura */
+  padding-bottom: 0.1vw; /* ✅ AJUSTADO: Padding reducido para subir el contenido y dar espacio al botón */
 }
 
 .eventCardTitle {
+  width: 100%; /* ✅ AGREGADO: Ocupa todo el ancho disponible como el primer carrusel */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.8vw; /* Más reducido para ajustar altura */
-  line-height: 1.3vw; /* Más reducido para ajustar altura */
+  font-size: 0.96vw; /* ✅ UNIFICADO: Mismo tamaño que cardTitle */
+  line-height: 1.59vw; /* ✅ UNIFICADO: Mismo line-height que cardTitle */
   letter-spacing: 0.024vw;
   color: #FB8C05;
   margin: 0;
@@ -154,11 +157,12 @@
 }
 
 .eventCardDescription {
+  width: 100%; /* ✅ AGREGADO: Ocupa todo el ancho disponible como el primer carrusel */
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.7vw; /* Más reducido para ajustar altura */
-  line-height: 1.1vw; /* Más reducido para ajustar altura */
+  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que cardDescription */
+  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que cardDescription */
   letter-spacing: 0px;
   color: #464749;
   margin: 0;
@@ -168,23 +172,26 @@
 /* ========== DETALLES DEL EVENTO ========== */
 .eventDetails {
   display: flex;
-  flex-direction: column;
-  gap: 0.1vw; /* Aún más reducido para ajustar altura */
-  margin-top: 0.15vw; /* Aún más reducido para ajustar altura */
+  flex-direction: row; /* ✅ CAMBIADO: Horizontal para mostrar Virtual y hora en la misma línea */
+  gap: 1vw; /* ✅ AJUSTADO: Gap horizontal entre Virtual y hora */
+  margin-top: 0.2vw; /* ✅ AJUSTADO: Margen reducido para subir el contenido */
+  align-items: center; /* ✅ AGREGADO: Alinear verticalmente los elementos */
+  flex-wrap: wrap; /* ✅ AGREGADO: Permitir que se ajuste si no cabe */
 }
 
 .eventDetail {
   display: flex;
   align-items: center;
-  gap: 0.2vw; /* Aún más reducido */
+  gap: 0.3vw; /* ✅ AJUSTADO: Gap entre icono y texto */
   font-family: 'FinalSix', sans-serif;
-  font-size: 0.55vw; /* Aún más reducido */
+  font-size: 0.65vw; /* ✅ UNIFICADO: Tamaño más legible */
   color: #464749;
+  white-space: nowrap; /* ✅ AGREGADO: Evitar que se parta en varias líneas */
 }
 
 .detailIcon {
-  width: 0.45vw; /* Aún más reducido */
-  height: 0.45vw; /* Aún más reducido */
+  width: 0.55vw; /* ✅ UNIFICADO: Iconos más visibles */
+  height: 0.55vw; /* ✅ UNIFICADO: Iconos más visibles */
   opacity: 0.7;
 }
 
@@ -194,13 +201,13 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 1.4vw; /* Aún más reducido para ajustar altura */
+  height: 1.63vw; /* ✅ UNIFICADO: Altura similar al botón del cuadro azul */
   background: #FB8C05;
   border-radius: 0.82vw;
   border: none;
   outline: none;
   text-decoration: none;
-  margin-top: 0.2vw; /* Aún más reducido para ajustar altura */
+  margin-top: 0.25vw; /* ✅ AJUSTADO: Margen reducido para subir el botón y hacerlo completamente visible */
   transition: all 0.3s ease;
   cursor: pointer;
   flex-shrink: 0;
@@ -218,9 +225,9 @@
 }
 
 .buttonIcon {
-  width: 0.6vw !important; /* Aún más reducido */
-  height: 0.55vw !important; /* Aún más reducido */
-  margin-right: 0.25vw; /* Aún más reducido */
+  width: 0.75vw !important; /* ✅ UNIFICADO: Icono más visible */
+  height: 0.7vw !important; /* ✅ UNIFICADO: Icono más visible */
+  margin-right: 0.35vw; /* ✅ AJUSTADO: Margen más espacioso */
   flex-shrink: 0;
 }
 
@@ -228,8 +235,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 0.65vw; /* Aún más reducido */
-  line-height: 0.9vw; /* Aún más reducido */
+  font-size: 0.75vw; /* ✅ UNIFICADO: Tamaño más legible */
+  line-height: 1.2vw; /* ✅ UNIFICADO: Line-height proporcionado */
   letter-spacing: 0px;
   color: #FFFFFF;
   text-align: center;

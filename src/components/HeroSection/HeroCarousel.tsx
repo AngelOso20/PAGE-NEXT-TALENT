@@ -32,7 +32,7 @@ const carouselData: CarouselCard[] = [
     icon: '/images/Iconos/SVG/Icon-25.svg',
     iconAlt: 'Icono webinar',
     title: 'Webinar: Nuevas normativas y gestiones laborales 2026',
-    description: 'Actualizate sobre los cambios más importantes en la legislación laboral y cómo adaptar tu empresa.',
+    description: 'Conoce los cambios clave en la legislación laboral y cómo adaptar tu empresa.',
     buttonText: 'INSCRIBIRME',
     buttonLink: '#contacto',
     isEvent: true,
