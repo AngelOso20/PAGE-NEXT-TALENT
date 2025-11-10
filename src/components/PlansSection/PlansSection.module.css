@@ -98,10 +98,11 @@
   min-height: 34.44vw; /* 40.52vw * 0.85 = 34.44vw - REDUCCIÓN CLAVE */
   background: #FFFFFF;
   border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
-  padding: 2.13vw 1.50vw 3.15vw; /* 2.50vw 1.77vw 3.70vw * 0.85 */
+  padding: 2.13vw 1.33vw 1.77vw 1.33vw; /* ✅ UNIFICADO: Mismo padding proporcional que PlanesCards (2.50vw 1.56vw 2.08vw 1.56vw * 0.85) */
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   opacity: 1;
   flex-shrink: 0;
   box-sizing: border-box;
@@ -121,7 +122,7 @@
   letter-spacing: 0px;
   color: #27A49F;
   text-align: center;
-  margin: 0 0 1.60vw 0; /* 1.88vw * 0.85 = 1.60vw */
+  margin: 0 0 0.88vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards (1.04vw * 0.85 = 0.88vw) */
   opacity: 1;
 }
 
@@ -135,7 +136,7 @@
   letter-spacing: 0px; /* ✅ UNIFICADO: Mismo letter-spacing que el texto negro del carrusel */
   color: #464749;
   text-align: center;
-  margin: 0 0 0.18vw 0; /* 0.21vw * 0.85 = 0.18vw */
+  margin: 0 0 0.22vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards (0.26vw * 0.85 = 0.22vw) */
   opacity: 1;
 }
 
@@ -149,7 +150,7 @@
   letter-spacing: 0px;
   color: #1A1818;
   text-align: center;
-  margin: 0 0 0.76vw 0; /* 0.89vw * 0.85 = 0.76vw */
+  margin: 0 0 0.88vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards (1.04vw * 0.85 = 0.88vw) */
   opacity: 1;
 }
 
@@ -163,7 +164,7 @@
   letter-spacing: 0px; /* ✅ UNIFICADO: Mismo letter-spacing que el texto negro del carrusel */
   color: #464749;
   text-align: center;
-  margin: 0 0 2.97vw 0; /* 3.49vw * 0.85 = 2.97vw */
+  margin: 0 0 1.33vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards (1.56vw * 0.85 = 1.33vw) */
   opacity: 1;
 }
 
@@ -180,52 +181,51 @@
   letter-spacing: 0px; /* ✅ UNIFICADO: Mismo letter-spacing que el texto negro del carrusel */
   color: #464749;
   text-align: left;
-  margin-bottom: 0;
+  margin: 0 0 0.66vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards description (0.78vw * 0.85 = 0.66vw) */
   opacity: 1;
 }
 
 .planDescription p {
-  margin: 0 0 0.66vw 0; /* 0.78vw * 0.85 = 0.66vw */
+  margin: 0 0 0.66vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards description (0.78vw * 0.85 = 0.66vw) */
 }
 
 .planDescription p:first-child {
   font-weight: 600;
   color: #1A1818;
-  margin-bottom: 1.11vw; /* 1.30vw * 0.85 = 1.11vw */
+  margin-bottom: 0.66vw; /* ✅ UNIFICADO: Mismo margin que PlanesCards description (0.78vw * 0.85 = 0.66vw) */
 }
 
 .includesLabel {
   font-weight: bold;
-  margin-top: 0.66vw !important; /* 0.78vw * 0.85 = 0.66vw */
+  margin: 0 0 0.66vw 0 !important; /* ✅ UNIFICADO: Mismo margin que PlanesCards includesTitle (0.78vw * 0.85 = 0.66vw) */
 }
 
 .planDescription ul {
   list-style: none;
   padding: 0;
-  margin: 0.44vw 0 0 0; /* 0.52vw * 0.85 = 0.44vw */
+  margin: 0 0 1.33vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards featuresList (1.56vw * 0.85 = 1.33vw) */
 }
 
 .planDescription ul li {
-  margin-bottom: 0.36vw; /* 0.42vw * 0.85 = 0.36vw */
+  margin: 0 0 0.36vw 0; /* ✅ UNIFICADO: Mismo margin que PlanesCards featureItem (0.42vw * 0.85 = 0.36vw) */
   line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
+  padding-left: 0; /* El bullet ya está en el HTML, no necesita padding adicional */
+  text-align: left; /* ✅ UNIFICADO: Mismo text-align que PlanesCards featureItem */
 }
 
 /* Botón del plan */
 .planButton {
-  position: absolute;
-  bottom: 1.33vw; /* 1.56vw * 0.85 = 1.33vw */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 10.80vw; /* 12.71vw * 0.85 = 10.80vw */
-  height: 1.77vw; /* 2.08vw * 0.85 = 1.77vw */
+  width: 12.71vw; /* ✅ UNIFICADO: Mismo tamaño que PlanesCards (244px = 12.71vw) */
+  height: 2.08vw; /* ✅ UNIFICADO: Mismo tamaño que PlanesCards (40px = 2.08vw) */
   background: #27A49F;
-  border-radius: 0.88vw; /* 1.04vw * 0.85 = 0.88vw */
+  border-radius: 1.04vw; /* ✅ UNIFICADO: Mismo border-radius que PlanesCards (20px = 1.04vw) */
+  border: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que el texto negro del carrusel */
-  line-height: 1.33vw; /* ✅ UNIFICADO: Mismo line-height que el texto negro del carrusel */
-  letter-spacing: 0px;
+  font-size: 0.83vw; /* ✅ UNIFICADO: Mismo tamaño que PlanesCards (16px = 0.83vw) */
+  line-height: 1.30vw; /* ✅ UNIFICADO: Mismo line-height que PlanesCards (25px = 1.30vw) */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: Mismo letter-spacing que PlanesCards (0.4px = 0.021vw) */
   color: #FFFFFF;
   text-align: center;
   text-transform: uppercase;
@@ -233,12 +233,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   opacity: 1;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
+  margin-top: auto; /* ✅ UNIFICADO: Mismo comportamiento que PlanesCards (empuja el botón al final) */
 }
 
 .planButton:hover {
-  background: #1f8580;
+  background: #1e8a85; /* ✅ UNIFICADO: Mismo hover que PlanesCards */
 }
 
 /* ========== BANNER NARANJA INFERIOR ========== */
@@ -364,10 +366,12 @@
 
   .planCard {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
-    min-height: auto;
     height: auto;
-    padding: 6vw 4vw 12vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    min-height: 120vw; /* ✅ UNIFICADO: Mismo min-height que PlanesCards */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo padding que PlanesCards (6vw 4vw) */
     max-width: none;
+    display: flex; /* ✅ Asegura que mantenga flexbox */
+    flex-direction: column; /* ✅ Asegura que mantenga flexbox column */
   }
 
   .planTitle {
@@ -411,6 +415,7 @@
 
   .planDescription ul {
     margin-top: 2vw;
+    margin-bottom: 8vw; /* ✅ AUMENTADO: Más espacio entre la lista y el botón para móviles */
   }
 
   .planDescription ul li {
@@ -419,12 +424,13 @@
   }
 
   .planButton {
-    width: 70%;
-    height: 10vw;
-    font-size: 3.5vw;
-    line-height: 10vw;
-    border-radius: 2vw;
-    bottom: 3vw;
+    width: 80%; /* ✅ UNIFICADO: Mismo width que PlanesCards en móviles */
+    height: 8vw; /* ✅ UNIFICADO: Mismo height que PlanesCards en móviles */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo font-size que PlanesCards en móviles */
+    line-height: 8vw; /* ✅ UNIFICADO: Mismo line-height que PlanesCards en móviles */
+    border-radius: 2.5vw; /* ✅ UNIFICADO: Mismo border-radius que PlanesCards en móviles */
+    margin-top: auto; /* ✅ UNIFICADO: Mismo comportamiento que PlanesCards (empuja el botón al final) */
+    position: static; /* ✅ Asegura que no use position absolute */
   }
 
   .orangeBanner {

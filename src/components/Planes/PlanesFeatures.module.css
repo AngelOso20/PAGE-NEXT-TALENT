@@ -97,20 +97,24 @@
   .featureCard {
     width: 100%;
     height: auto;
-    min-height: 18vw; /* Aumentado para mejor visibilidad */
-    padding: 3vw 4vw; /* Padding más generoso */
-    gap: 3vw; /* Gap más grande entre icono y texto */
+    min-height: 50vw; /* ✅ UNIFICADO: Mismo min-height que ServiciosCards en tablets */
+    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding que ServiciosCards (4vw 4vw) */
+    gap: 2vw; /* ✅ UNIFICADO: Mismo gap que ServiciosCards (2vw) */
+    flex-direction: column; /* VERTICAL - ICONO ARRIBA DEL TEXTO */
+    align-items: flex-start; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
   }
 
   .iconContainer {
-    width: 6vw; /* Iconos más grandes */
-    height: 6vw;
+    width: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    height: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    margin-bottom: 3vw; /* ✅ UNIFICADO: Mismo margin-bottom que ServiciosCards en tablets */
     flex-shrink: 0;
   }
 
   .featureText {
-    font-size: 2.5vw; /* Texto más grande y legible */
-    line-height: 3.5vw;
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
+    text-align: left; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
   }
 }
 
@@ -121,26 +125,26 @@
   }
 
   .featureCard {
-    min-height: 40vw; /* MÁS ALTO PARA EL DISEÑO VERTICAL */
-    padding: 6vw 5vw; /* MÁS PADDING VERTICAL */
-    gap: 3vw; /* GAP ENTRE ICONO Y TEXTO */
+    min-height: 80vw; /* ✅ UNIFICADO: Mismo min-height que ServiciosCards */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo padding que ServiciosCards (6vw 4vw) */
+    gap: 2vw; /* ✅ UNIFICADO: Mismo gap que ServiciosCards (2vw) */
     border-radius: 2vw; /* Bordes más redondeados */
     flex-direction: column; /* VERTICAL - ICONO ARRIBA DEL TEXTO */
-    align-items: center; /* CENTRADO HORIZONTALMENTE */
-    text-align: center; /* TEXTO CENTRADO */
+    align-items: flex-start; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
   }
 
   .iconContainer {
-    width: 18vw; /* MUCHO MÁS GRANDE - MÁS BONITO Y VISIBLE */
-    height: 18vw;
+    width: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    height: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    margin-bottom: 4vw; /* ✅ UNIFICADO: Mismo margin-bottom que ServiciosCards */
     flex-shrink: 0;
   }
 
   .featureText {
-    font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
-    line-height: 5.5vw;
-    letter-spacing: 0.1vw; /* Mejor espaciado de letras */
-    text-align: center; /* TEXTO CENTRADO PARA MEJOR DISEÑO */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
+    letter-spacing: 0.021vw; /* ✅ UNIFICADO: Mismo letter-spacing que texto plano (0.021vw) */
+    text-align: left; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
   }
 }
 
@@ -150,22 +154,23 @@
   }
 
   .featureCard {
-    min-height: 45vw; /* MÁS ALTO PARA PANTALLAS PEQUEÑAS */
-    padding: 7vw 6vw; /* MÁS PADDING */
-    gap: 4vw; /* GAP CONSISTENTE */
+    min-height: 80vw; /* ✅ UNIFICADO: Mismo min-height que ServiciosCards */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo padding que ServiciosCards (6vw 4vw) */
+    gap: 2vw; /* ✅ UNIFICADO: Mismo gap que ServiciosCards (2vw) */
     flex-direction: column; /* VERTICAL - ICONO ARRIBA */
-    align-items: center; /* CENTRADO */
+    align-items: flex-start; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
   }
 
   .iconContainer {
-    width: 20vw; /* AÚN MÁS GRANDE EN PANTALLAS PEQUEÑAS - CONSISTENTE */
-    height: 20vw;
+    width: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    height: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    margin-bottom: 4vw; /* ✅ UNIFICADO: Mismo margin-bottom que ServiciosCards */
     flex-shrink: 0;
   }
 
   .featureText {
-    font-size: 4.5vw; /* UN POCO MÁS GRANDE PARA PANTALLAS PEQUEÑAS */
-    line-height: 6vw;
-    text-align: center; /* CENTRADO */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
+    text-align: left; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
   }
 }

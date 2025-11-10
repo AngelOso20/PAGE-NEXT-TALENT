@@ -336,8 +336,8 @@
   }
 
   .iconContainer {
-    width: 10vw; /* MÁS GRANDE PARA MÓVILES */
-    height: 10vw;
+    width: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    height: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
     margin-bottom: 4vw;
   }
 }

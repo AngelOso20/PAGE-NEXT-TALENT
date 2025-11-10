@@ -358,8 +358,8 @@
 
   /* Badges más grandes para móviles */
   .categoryBadge {
-    font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 3vw;
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
     padding: 1vw 2vw; /* PADDING MÁS GRANDE */
     border-radius: 1.5vw;
   }

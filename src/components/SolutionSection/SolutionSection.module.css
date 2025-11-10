@@ -179,8 +179,8 @@
   }
 
   .iconContainer {
-    width: 15vw;
-    height: 15vw;
+    width: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
+    height: 17.4vw; /* ✅ UNIFICADO: 17.4vw × 17.4vw (mismo que iconos del Hero) */
     margin-bottom: 4vw;
   }
 

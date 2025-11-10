@@ -323,45 +323,45 @@
     position: absolute;
     top: 2vw;
     left: 4vw;
-    width: 12vw;
-    height: 11vw;
+    width: 17.4vw; /* ✅ AUMENTADO: 12vw * 1.45 = 17.4vw (+45% para móviles) */
+    height: 17.4vw; /* ✅ AJUSTADO: 17.4vw × 17.4vw (cuadrado) para móviles */
     margin-bottom: 0;
     z-index: 2;
   }
 
   .cardContent {
-    margin-top: 13vw;
+    margin-top: 19vw; /* ✅ AJUSTADO: 13vw + 6vw (aumento del icono + espacio) para dar espacio al icono más grande */
     gap: 2vw;
     padding-bottom: 2vw; /* Espacio adicional para los puntos */
   }
 
   .cardTitle {
-    font-size: 3.2vw;
+    font-size: 4.06vw; /* ✅ UNIFICADO: 3.5vw + 0.56vw (+2px) para móviles - "En Colombia, más del 90%..." */
     line-height: 4.5vw;
     text-align: left;
   }
 
   .cardDescription {
-    font-size: 2.8vw;
-    line-height: 4vw;
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano de PlansSection (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
     text-align: left;
   }
 
   /* Estilos móviles para el segundo cuadro (evento) */
   .eventCardTitle {
-    font-size: 3.8vw; /* Reducido ligeramente para más espacio */
+    font-size: 4.06vw; /* ✅ UNIFICADO: 3.8vw + 0.26vw (2px más) para móviles */
     line-height: 5vw; /* Reducido proporcionalmente */
     text-align: left;
   }
 
   .eventCardDescription {
-    font-size: 3.2vw; /* Reducido ligeramente para más espacio */
-    line-height: 4.5vw; /* Reducido proporcionalmente */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano de PlansSection (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
     text-align: left;
   }
 
   .eventCardContent {
-    margin-top: 13vw; /* Mismo margin-top que cardContent */
+    margin-top: 19vw; /* ✅ AJUSTADO: 13vw + 6vw (aumento del icono + espacio) para dar espacio al icono más grande */
     gap: 1.5vw; /* Reducido para más espacio */
     padding-bottom: 3vw; /* Aumentado para más espacio con los puntos */
   }
@@ -372,7 +372,7 @@
   }
 
   .eventDetail {
-    font-size: 2.8vw; /* Reducido para más espacio */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano de PlansSection (3.5vw) */
     gap: 1vw; /* Reducido para más espacio */
   }
 
@@ -393,7 +393,7 @@
   }
 
   .actionButton span {
-    font-size: 2.8vw; /* Reducido para móviles */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano de PlansSection (3.5vw) */
     line-height: 7.5vw; /* Ajustado para la nueva altura */
   }
 

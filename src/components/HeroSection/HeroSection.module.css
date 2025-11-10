@@ -261,7 +261,7 @@
   }
 
   .mainTitle {
-    font-size: 7vw; /* TAMAÑO MÁS GRANDE - IGUAL QUE PLANES */
+    font-size: 7.26vw; /* ✅ UNIFICADO: 7vw + 0.26vw (2px más) para móviles */
     line-height: 8vw; /* LINE-HEIGHT MÁS GRANDE - IGUAL QUE PLANES */
     margin-bottom: 5vw; /* MÁS MARGEN - IGUAL QUE PLANES */
     text-align: left;
@@ -269,8 +269,8 @@
   }
 
   .subtitle {
-    font-size: 4vw; /* TAMAÑO MÁS GRANDE - IGUAL QUE PLANES */
-    line-height: 5.5vw; /* LINE-HEIGHT MÁS GRANDE - IGUAL QUE PLANES */
+    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano de PlansSection (3.5vw) */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
     margin-bottom: 6vw; /* MÁS MARGEN - IGUAL QUE PLANES */
     text-align: left;
     width: 100%; /* ANCHO COMPLETO */
@@ -308,20 +308,20 @@
     position: absolute;
     top: 2vw;
     left: 4vw;
-    width: 12vw;
-    height: 11vw;
+    width: 17.4vw; /* ✅ AUMENTADO: 12vw * 1.45 = 17.4vw (+45% para móviles) */
+    height: 17.4vw; /* ✅ AJUSTADO: 17.4vw × 17.4vw (cuadrado) para móviles */
     margin-bottom: 0;
     z-index: 2;
   }
 
   .blueText {
     position: relative;
-    font-size: 3.2vw;
-    line-height: 4.5vw;
+    font-size: 4.06vw; /* ✅ UNIFICADO: 3.5vw + 0.56vw (+2px) para móviles - "Agenda tu asesoría..." */
+    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
     width: 100%;
     left: 0;
     top: 0;
-    margin-top: 13vw;
+    margin-top: 19vw; /* ✅ AJUSTADO: 13vw + 6vw (aumento del icono + espacio) para dar espacio al icono más grande */
     margin-bottom: 2vw;
     text-align: left;
     padding-left: 0;
@@ -345,7 +345,7 @@
   }
 
   .orangeButton span {
-    font-size: 3.2vw;
+    font-size: 4.06vw; /* ✅ UNIFICADO: 3.5vw + 0.56vw (+2px) para móviles - "AGENDA TU ASESORÍA" */
     line-height: 9vw;
   }
 
