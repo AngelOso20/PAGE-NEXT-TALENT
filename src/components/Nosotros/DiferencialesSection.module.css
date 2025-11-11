@@ -57,18 +57,19 @@
 /* Imagen de Andrea */
 .andreaImage {
   position: absolute;
-  bottom: 0;
+  bottom: -0.3vw; /* ✅ AJUSTADO: Bajada un poco más para que quede más cerca del borde */
   left: 50%;
   transform: translateX(-50%);
-  width: 70%;
+  width: 90%; /* ✅ AUMENTADO: De 70% a 90% para hacer la foto más grande */
   height: auto;
-  max-width: 15.63vw; /* 300px = 15.63vw */
+  max-width: 20.83vw; /* ✅ AUMENTADO: De 15.63vw (300px) a 20.83vw (400px) para hacer la foto más grande */
 }
 
 .andreaImage img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  object-position: bottom; /* ✅ AJUSTADO: Posiciona la imagen en el borde inferior */
 }
 
 /* ========== GRID DE DIFERENCIALES (3x2) ========== */
@@ -120,7 +121,7 @@
   height: 100%;
   background: #FFFFFF;
   border-radius: 1.04vw; /* 20px = 1.04vw */
-  padding: 3.54vw 2.24vw 3.33vw; /* 68px 43px 64px = 3.54vw 2.24vw 3.33vw */
+  padding: 2.25vw 2.24vw 2.25vw; /* ✅ AJUSTADO: Mismo espacio arriba (2.25vw) y abajo (2.25vw) */
   display: flex;
   flex-direction: column;
   align-items: flex-start;

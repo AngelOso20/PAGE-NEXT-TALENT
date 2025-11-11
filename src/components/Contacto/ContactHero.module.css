@@ -167,9 +167,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.50vw; /* 0.63vw * 0.8 = 0.50vw - REDUCCIÓN 20% */
-  line-height: 0.75vw; /* 0.94vw * 0.8 = 0.75vw - REDUCCIÓN 20% */
-  letter-spacing: 0.014vw; /* 0.018vw * 0.8 = 0.014vw - REDUCCIÓN 20% */
+  font-size: 0.83vw; /* ✅ AJUSTADO: 16px = 0.83vw (mismo que texto plano en otros componentes) */
+  line-height: 1.30vw; /* ✅ AJUSTADO: 25px = 1.30vw (mismo que texto plano en otros componentes) */
+  letter-spacing: 0.021vw; /* ✅ AJUSTADO: 0.4px = 0.021vw (mismo que texto plano) */
   color: #464749;
   text-align: left;
   margin: 0;
@@ -181,23 +181,24 @@
 .input,
 .textarea {
   width: 100%;
-  padding: 0.34vw 0.50vw; /* 0.42vw 0.63vw * 0.8 = 0.34vw 0.50vw - REDUCCIÓN 20% */
-  border: 0.08vw solid #E5E5E5; /* 0.10vw * 0.8 = 0.08vw - REDUCCIÓN 20% */
-  border-radius: 0.34vw; /* 0.42vw * 0.8 = 0.34vw - REDUCCIÓN 20% */
+  padding: 0.34vw 0 0.34vw 0; /* ✅ AJUSTADO: Solo padding vertical, sin padding horizontal */
+  border: none; /* ✅ AJUSTADO: Sin borde */
+  border-bottom: 0.08vw solid #E5E5E5; /* ✅ AJUSTADO: Solo borde inferior */
+  border-radius: 0; /* ✅ AJUSTADO: Sin bordes redondeados */
   font-family: 'FinalSix', sans-serif;
   font-size: 0.58vw; /* 0.73vw * 0.8 = 0.58vw - REDUCCIÓN 20% */
   line-height: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
   color: #464749;
-  background: #FFFFFF;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: transparent; /* ✅ AJUSTADO: Fondo transparente */
+  transition: border-color 0.3s ease;
   box-sizing: border-box;
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
-  border-color: #27A49F;
-  box-shadow: 0 0 0 0.13vw rgba(39, 164, 159, 0.1); /* 0.16vw * 0.8 = 0.13vw - REDUCCIÓN 20% */
+  border-bottom-color: #27A49F; /* ✅ AJUSTADO: Solo cambia el color del borde inferior */
+  box-shadow: none; /* ✅ AJUSTADO: Sin sombra */
 }
 
 .input::placeholder,
@@ -210,13 +211,23 @@
   min-height: 3.34vw; /* 4.17vw * 0.8 = 3.34vw - REDUCCIÓN 20% */
 }
 
+/* ========== FILA DE CHECKBOX Y BOTÓN ========== */
+
+.checkboxButtonRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.62vw; /* Espacio superior */
+  box-sizing: border-box;
+}
+
 /* ========== GRUPO DE CHECKBOX ========== */
 
 .checkboxGroup {
   display: flex;
   align-items: center;
   gap: 0.34vw; /* 0.42vw * 0.8 = 0.34vw - REDUCCIÓN 20% */
-  margin-bottom: 0.83vw; /* 1.04vw * 0.8 = 0.83vw - REDUCCIÓN 20% */
   box-sizing: border-box;
 }
 
@@ -255,8 +266,7 @@
   text-transform: uppercase;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  align-self: flex-start;
-  margin-top: 0.42vw; /* 0.52vw * 0.8 = 0.42vw - REDUCCIÓN 20% */
+  flex-shrink: 0; /* ✅ AJUSTADO: No se encoge, mantiene su tamaño */
   box-sizing: border-box;
 }
 
@@ -345,20 +355,35 @@
 
   .input,
   .textarea {
-    padding: 1.5vw 2vw; /* PADDING MÁS GRANDE */
+    padding: 1.5vw 0; /* ✅ AJUSTADO: Solo padding vertical, sin padding horizontal */
     font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
     line-height: 3vw;
-    border-radius: 1vw;
+    border: none; /* ✅ AJUSTADO: Sin borde */
+    border-bottom: 0.2vw solid #E5E5E5; /* ✅ AJUSTADO: Solo borde inferior */
+    border-radius: 0; /* ✅ AJUSTADO: Sin bordes redondeados */
+    background: transparent; /* ✅ AJUSTADO: Fondo transparente */
     margin-bottom: 2vw;
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-bottom-color: #27A49F; /* ✅ AJUSTADO: Solo cambia el color del borde inferior */
+    box-shadow: none; /* ✅ AJUSTADO: Sin sombra */
   }
 
   .textarea {
     min-height: 8vw;
   }
 
+  .checkboxButtonRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2vw;
+    margin-top: 2vw;
+  }
+
   .checkboxGroup {
     gap: 1vw;
-    margin-bottom: 2vw;
   }
 
   .checkbox {
@@ -449,21 +474,35 @@
 
   .input,
   .textarea {
-    padding: 3vw 4vw; /* MÁS PADDING PARA MEJOR USABILIDAD */
+    padding: 3vw 0; /* ✅ AJUSTADO: Solo padding vertical, sin padding horizontal */
     font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
     line-height: 5.5vw;
-    border-radius: 2vw; /* BORDES MÁS REDONDEADOS */
+    border: none; /* ✅ AJUSTADO: Sin borde */
+    border-bottom: 0.3vw solid #E5E5E5; /* ✅ AJUSTADO: Solo borde inferior */
+    border-radius: 0; /* ✅ AJUSTADO: Sin bordes redondeados */
+    background: transparent; /* ✅ AJUSTADO: Fondo transparente */
     margin-bottom: 0; /* SIN MARGEN - USAMOS GAP DEL GRID */
-    border-width: 0.3vw; /* BORDE MÁS VISIBLE */
+  }
+  
+  .input:focus,
+  .textarea:focus {
+    border-bottom-color: #27A49F; /* ✅ AJUSTADO: Solo cambia el color del borde inferior */
+    box-shadow: none; /* ✅ AJUSTADO: Sin sombra */
   }
 
   .textarea {
     min-height: 20vw; /* MÁS ALTO PARA MEJOR ESCRITURA */
   }
 
+  .checkboxButtonRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4vw;
+    margin-top: 4vw;
+  }
+
   .checkboxGroup {
     gap: 2vw; /* MÁS ESPACIO */
-    margin-bottom: 4vw;
   }
 
   .checkbox {
@@ -483,7 +522,6 @@
     font-size: 4vw; /* MÁS GRANDE Y LEGIBLE */
     line-height: 10vw;
     border-radius: 2vw; /* BORDES MÁS REDONDEADOS */
-    margin-top: 4vw;
     align-self: stretch; /* SE ESTIRA PARA OCUPAR TODO EL ANCHO */
   }
 }

@@ -96,10 +96,9 @@ const ServiciosCards: React.FC = () => {
               <p className={styles.description}>{servicio.description}</p>
               
               {/* Beneficio */}
-              <div className={styles.benefit}>
-                <span className={styles.benefitLabel}>Beneficio:</span>
-                <span className={styles.benefitText}>{servicio.benefit}</span>
-              </div>
+              <p className={styles.benefit}>
+                <span className={styles.benefitLabel}>Beneficio:</span> {servicio.benefit}
+              </p>
             </div>
           ))}
         </div>

@@ -52,7 +52,8 @@
 .blogGrid {
   display: grid;
   grid-template-columns: repeat(4, 23.07vw); /* 443px = 23.07vw */
-  gap: 0.83vw; /* 16px = 0.83vw */
+  column-gap: 0.83vw; /* 16px = 0.83vw - MISMO GAP HORIZONTAL */
+  row-gap: 2.08vw; /* ✅ AUMENTADO: 40px = 2.08vw - Mayor separación vertical entre filas (igual que ServiciosCards) */
   justify-content: center;
   margin: 0 auto;
   padding: 0 2.60vw; /* 50px = 2.60vw */
@@ -106,8 +107,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.729vw; /* ✅ AJUSTADO: 14px = 0.729vw */
-  line-height: 0.88vw; /* ✅ AJUSTADO: ~16.9px = 0.88vw */
+  font-size: 0.521vw; /* ✅ AJUSTADO: 10px = 0.521vw */
+  line-height: 0.63vw; /* ✅ AJUSTADO: ~12px = 0.63vw (proporcional al nuevo tamaño) */
   letter-spacing: 0px;
   color: #F3F7F9;
   opacity: 1;

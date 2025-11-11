@@ -114,7 +114,7 @@
   height: 15.83vw; /* 304px = 15.83vw */
   background: #FFFFFF;
   border-radius: 1.04vw; /* 20px = 1.04vw */
-  padding: 4.84vw 2.24vw 3.33vw; /* 93px 43px 64px = 4.84vw 2.24vw 3.33vw */
+  padding: 2.75vw 2.24vw 2.75vw; /* ✅ AJUSTADO: Mismo espacio arriba (2.75vw) y abajo (2.75vw) */
   display: flex;
   flex-direction: column;
   align-items: flex-start;

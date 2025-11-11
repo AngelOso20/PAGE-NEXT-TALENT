@@ -26,7 +26,8 @@
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(4, 23.07vw); /* 443px = 23.07vw */
-  gap: 0.83vw; /* 16px = 0.83vw - MISMO GAP QUE EL HERO */
+  column-gap: 0.83vw; /* 16px = 0.83vw - MISMO GAP HORIZONTAL QUE EL HERO */
+  row-gap: 2.08vw; /* ✅ AUMENTADO: 40px = 2.08vw - Mayor separación vertical entre filas */
   width: 94.79vw; /* 1820px = 94.79vw */
   margin: 0 auto;
   box-sizing: border-box;
@@ -39,7 +40,7 @@
   height: 24.53vw; /* 471px = 24.53vw */
   background: #FFFFFF;
   border-radius: 1.04vw; /* 20px = 1.04vw */
-  padding: 3.70vw 2.45vw 2.08vw 2.45vw; /* 71px 47px 40px 47px = 3.70vw 2.45vw 2.08vw 2.45vw */
+  padding: 2.89vw 2.45vw 2.89vw 2.45vw; /* ✅ AJUSTADO: Mismo espacio arriba (2.89vw) y abajo (2.89vw) */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -105,24 +106,8 @@
 /* ========== SECCIÓN DE BENEFICIO ========== */
 
 .benefit {
-  display: flex;
-  flex-direction: column;
-  gap: 0.26vw; /* 5px = 0.26vw */
+  margin: 0;
   margin-top: auto;
-}
-
-.benefitLabel {
-  font-family: 'FinalSix', sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 0.83vw; /* 16px = 0.83vw */
-  line-height: 1.30vw; /* 25px = 1.30vw */
-  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
-  color: #464749;
-  text-align: left;
-}
-
-.benefitText {
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -131,6 +116,10 @@
   letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
+}
+
+.benefitLabel {
+  font-weight: bold;
 }
 
 /* ========== RESPONSIVE - SOLO MÓVILES ========== */
@@ -172,8 +161,7 @@
     margin-bottom: 2vw;
   }
 
-  .benefitLabel,
-  .benefitText {
+  .benefit {
     font-size: 2.5vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
     line-height: 3.5vw;
   }
@@ -227,14 +215,9 @@
   }
 
   .benefit {
-    gap: 0.5vw; /* REDUCIDO PARA QUE BENEFICIO NO QUEDE TAN SEPARADO */
-    margin-top: 2vw; /* SEPARACIÓN CONTROLADA DEL TEXTO ANTERIOR */
-  }
-
-  .benefitLabel,
-  .benefitText {
     font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
     line-height: 5vw;
+    margin-top: 2vw; /* SEPARACIÓN CONTROLADA DEL TEXTO ANTERIOR */
   }
 
   .iconContainer {
