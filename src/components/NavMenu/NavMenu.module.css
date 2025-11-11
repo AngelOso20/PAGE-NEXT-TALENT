@@ -198,13 +198,13 @@
   display: none;
   align-items: center;
   justify-content: center;
-  width: 2.08vw; /* 40px = 2.08vw */
-  height: 2.08vw; /* 40px = 2.08vw */
+  width: 3.13vw; /* ✅ AUMENTADO: 60px = 3.13vw (antes 50px) */
+  height: 3.13vw; /* ✅ AUMENTADO: 60px = 3.13vw (antes 50px) */
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: 0.42vw; /* 8px = 0.42vw */
-  border-radius: 0.42vw; /* 8px = 0.42vw */
+  padding: 0.63vw; /* ✅ AUMENTADO: 12px = 0.63vw (antes 10px) */
+  border-radius: 0.63vw; /* ✅ AUMENTADO: 12px = 0.63vw (antes 10px) */
   transition: background-color 0.3s ease;
   box-sizing: border-box;
 }
@@ -214,8 +214,8 @@
 }
 
 .hamburgerButton img {
-  width: 1.25vw; /* 24px = 1.25vw */
-  height: 1.25vw; /* 24px = 1.25vw */
+  width: 2.08vw; /* ✅ AUMENTADO: 40px = 2.08vw (antes 32px) */
+  height: 2.08vw; /* ✅ AUMENTADO: 40px = 2.08vw (antes 32px) */
 }
 
 /* ========== MENÚ MÓVIL - OCULTO POR DEFECTO ========== */
@@ -276,14 +276,14 @@
   }
 
   .hamburgerButton {
-    width: 8vw; /* 40px = 8vw */
-    height: 8vw; /* 40px = 8vw */
-    padding: 1.5vw; /* 8px = 1.5vw */
+    width: 12vw; /* ✅ AUMENTADO: 60px = 12vw (antes 50px = 10vw) */
+    height: 12vw; /* ✅ AUMENTADO: 60px = 12vw (antes 50px = 10vw) */
+    padding: 2.5vw; /* ✅ AUMENTADO: 12px = 2.5vw (antes 10px = 2vw) */
   }
 
   .hamburgerButton img {
-    width: 4.5vw; /* 24px = 4.5vw */
-    height: 4.5vw; /* 24px = 4.5vw */
+    width: 7.5vw; /* ✅ AUMENTADO: 40px = 7.5vw (antes 32px = 6vw) */
+    height: 7.5vw; /* ✅ AUMENTADO: 40px = 7.5vw (antes 32px = 6vw) */
   }
 
   /* Reglas del menú móvil desplegable */
@@ -421,13 +421,13 @@
     }
 
     .hamburgerButton {
-      width: 36px;
-      height: 36px;
+      width: 60px; /* ✅ AUMENTADO: 60px (antes 50px) */
+      height: 60px; /* ✅ AUMENTADO: 60px (antes 50px) */
     }
 
     .hamburgerButton img {
-      width: 20px;
-      height: 20px;
+      width: 40px; /* ✅ AUMENTADO: 40px (antes 32px) */
+      height: 40px; /* ✅ AUMENTADO: 40px (antes 32px) */
     }
   }
 }
@@ -435,8 +435,8 @@
 /* Forzar tamaño mayor del hamburguesa en móviles muy pequeños (vertical) */
 @media (max-width: 480px) and (orientation: portrait) {
   .navMenu { height: 68px; }
-  .hamburgerButton { width: 56px; height: 56px; padding: 12px; }
-  .hamburgerButton img { width: 34px; height: 34px; }
+  .hamburgerButton { width: 70px; height: 70px; padding: 16px; } /* ✅ AUMENTADO: Botón aún más grande */
+  .hamburgerButton img { width: 48px; height: 48px; } /* ✅ AUMENTADO: Icono aún más grande */
   .actions { margin-right: 8px; }
 }
 
