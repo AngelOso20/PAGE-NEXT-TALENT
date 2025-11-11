@@ -97,8 +97,8 @@
   .featureCard {
     width: 100%;
     height: auto;
-    min-height: 50vw; /* ✅ UNIFICADO: Mismo min-height que ServiciosCards en tablets */
-    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding que ServiciosCards (4vw 4vw) */
+    min-height: 40vw; /* ✅ REDUCIDO: Tamaño más pequeño para las cajas */
+    padding: 3vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (3vw) */
     gap: 2vw; /* ✅ UNIFICADO: Mismo gap que ServiciosCards (2vw) */
     flex-direction: column; /* VERTICAL - ICONO ARRIBA DEL TEXTO */
     align-items: flex-start; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */
@@ -125,8 +125,8 @@
   }
 
   .featureCard {
-    min-height: 80vw; /* ✅ UNIFICADO: Mismo min-height que ServiciosCards */
-    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo padding que ServiciosCards (6vw 4vw) */
+    min-height: 50vw; /* ✅ REDUCIDO: Tamaño más pequeño para las cajas */
+    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (4vw) */
     gap: 2vw; /* ✅ UNIFICADO: Mismo gap que ServiciosCards (2vw) */
     border-radius: 2vw; /* Bordes más redondeados */
     flex-direction: column; /* VERTICAL - ICONO ARRIBA DEL TEXTO */
@@ -154,8 +154,8 @@
   }
 
   .featureCard {
-    min-height: 80vw; /* ✅ UNIFICADO: Mismo min-height que ServiciosCards */
-    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo padding que ServiciosCards (6vw 4vw) */
+    min-height: 50vw; /* ✅ REDUCIDO: Tamaño más pequeño para las cajas */
+    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (4vw) */
     gap: 2vw; /* ✅ UNIFICADO: Mismo gap que ServiciosCards (2vw) */
     flex-direction: column; /* VERTICAL - ICONO ARRIBA */
     align-items: flex-start; /* ✅ UNIFICADO: Alineado a la izquierda como ServiciosCards */

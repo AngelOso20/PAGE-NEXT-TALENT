@@ -224,7 +224,7 @@
 
 @media (max-width: 1024px) {
   .blogSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .mainTitle {
@@ -243,7 +243,7 @@
 
   .blogGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.08vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
@@ -322,7 +322,7 @@
 
 @media (max-width: 768px) {
   .blogSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .mainTitle {
@@ -345,6 +345,7 @@
 
   .blogGrid {
     grid-template-columns: 1fr;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
@@ -369,8 +370,8 @@
 
   /* Badges más grandes para móviles */
   .categoryBadge {
-    font-size: 3.5vw; /* ✅ UNIFICADO: Mismo tamaño que texto plano (3.5vw) */
-    line-height: 5vw; /* ✅ UNIFICADO: Mismo line-height que texto plano (5vw) */
+    font-size: 2.5vw; /* ✅ UNIFICADO: Mismo tamaño que BlogCards (2.5vw) */
+    line-height: 3vw; /* ✅ UNIFICADO: Mismo line-height que BlogCards (3vw) */
     padding: 1vw 2vw; /* PADDING MÁS GRANDE */
     border-radius: 1.5vw;
   }

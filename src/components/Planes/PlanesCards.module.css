@@ -372,11 +372,11 @@
   .imagesColumn {
     width: 100%;
     height: auto;
-    min-height: 80vw;
+    min-height: 60vw; /* ✅ REDUCIDO: Tamaño más pequeño para las cajas */
   }
 
   .planCard {
-    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    padding: 3vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (3vw) */
   }
 
   .quoteCard {
@@ -384,7 +384,7 @@
   }
 
   .quoteContent {
-    padding: 4vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    padding: 3vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (3vw) */
   }
 
   .planTitle {
@@ -469,12 +469,12 @@
   .quoteCard {
     width: 100%;
     height: auto;
-    min-height: 120vw;
-    padding: 6vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    min-height: 80vw; /* ✅ REDUCIDO: Tamaño más pequeño para las cajas */
+    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (4vw) */
   }
 
   .quoteContent {
-    padding: 6vw 4vw; /* MISMO PADDING LATERAL QUE EL LEFTBOX */
+    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (4vw) */
   }
 
   .imagesColumn {
