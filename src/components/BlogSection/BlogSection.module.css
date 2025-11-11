@@ -106,8 +106,8 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto negro) */
-  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto negro) */
+  font-size: 0.729vw; /* ✅ AJUSTADO: 14px = 0.729vw */
+  line-height: 0.88vw; /* ✅ AJUSTADO: ~16.9px = 0.88vw */
   letter-spacing: 0px;
   color: #F3F7F9;
   opacity: 1;
@@ -174,9 +174,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 1.09vw; /* ✅ UNIFICADO: 21px = 1.09vw (mismo que ServiciosCards) */
-  line-height: 1.61vw; /* ✅ UNIFICADO: 31px = 1.61vw (mismo que ServiciosCards) */
-  letter-spacing: 0.028vw; /* ✅ UNIFICADO: 0.53px = 0.028vw (mismo que ServiciosCards) */
+  font-size: 0.99vw; /* ✅ UNIFICADO: 19px = 0.99vw */
+  line-height: 1.48vw; /* ✅ UNIFICADO: ~28.4px = 1.48vw */
+  letter-spacing: 0.028vw; /* ✅ UNIFICADO: 0.53px = 0.028vw */
   color: #FB8C05;
   text-align: left;
   opacity: 1;
@@ -189,9 +189,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que ServiciosCards) */
-  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que ServiciosCards) */
-  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que ServiciosCards) */
+  font-size: 0.729vw; /* ✅ UNIFICADO: 14px = 0.729vw (texto plano) */
+  line-height: 0.88vw; /* ✅ UNIFICADO: ~16.9px = 0.88vw */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw */
   color: #464749;
   text-align: left;
   opacity: 1;
@@ -204,9 +204,9 @@
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 0.83vw; /* ✅ UNIFICADO: 16px = 0.83vw (mismo que texto negro) */
-  line-height: 1.30vw; /* ✅ UNIFICADO: 25px = 1.30vw (mismo que texto negro) */
-  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw (mismo que texto negro) */
+  font-size: 0.729vw; /* ✅ UNIFICADO: 14px = 0.729vw (texto plano) */
+  line-height: 0.88vw; /* ✅ UNIFICADO: ~16.9px = 0.88vw */
+  letter-spacing: 0.021vw; /* ✅ UNIFICADO: 0.4px = 0.021vw */
   color: #27A49F;
   text-align: left;
   text-decoration: none;

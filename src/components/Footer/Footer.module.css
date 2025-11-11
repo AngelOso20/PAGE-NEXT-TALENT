@@ -155,7 +155,7 @@
 .newsletterForm {
   display: flex;
   gap: 0.78vw; /* 15px = 0.78vw */
-  margin-bottom: 3.23vw; /* 62px = 3.23vw */
+  margin-bottom: 0; /* ✅ AJUSTADO: Reducido para alinear "Políticas de privacidad" con el copyright */
 }
 
 .emailInput {
@@ -218,7 +218,7 @@
   text-align: left;
   text-decoration: none;
   opacity: 1;
-  align-self: flex-end;
+  margin-top: auto; /* ✅ AJUSTADO: Alinea con el copyright usando margin-top auto */
 }
 
 .privacyLink:hover {

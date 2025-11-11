@@ -74,7 +74,7 @@
 /* ========== SUBTÍTULO ========== */
 .subtitle {
   position: absolute;
-  top: 16.13vw; /* Mantener altura actual */
+  top: 17.81vw; /* Ajustado: 8.63vw (título top) + 7.68vw (2 líneas × 3.84vw) + 1.50vw (espaciado igual a servicios) = 17.81vw */
   left: 2.0vw; /* Ajustado proporcionalmente */
   width: 31.5vw; /* 25.20vw * 1.25 = 31.5% */
   height: auto;
@@ -95,7 +95,7 @@
 .workerImage {
   position: absolute;
   top: 0.99vw; /* Mantener altura actual */
-  left: 36.58vw; /* Ajustado: 42.11vw - 2.6vw = 39.51vw, pero reducido más para que quepa en el cuadro más estrecho */
+  left: 42.5vw; /* ✅ AJUSTADO: Movido un poco hacia la izquierda para dejar espacio desde el borde derecho */
   width: 23.51vw; /* 25.51vw * 0.92 = 23.51% - Reducido para que se vea completa */
   height: 39.07vw; /* 42.47vw * 0.92 = 39.07% - Reducido proporcionalmente */
   z-index: 1;
@@ -263,7 +263,7 @@
   .mainTitle {
     font-size: 7.26vw; /* ✅ UNIFICADO: 7vw + 0.26vw (2px más) para móviles */
     line-height: 8vw; /* LINE-HEIGHT MÁS GRANDE - IGUAL QUE PLANES */
-    margin-bottom: 5vw; /* MÁS MARGEN - IGUAL QUE PLANES */
+    margin-bottom: 4vw; /* ✅ UNIFICADO: Mismo espaciado que hero de servicios (4vw) */
     text-align: left;
     width: 100%; /* ANCHO COMPLETO */
   }
@@ -282,6 +282,7 @@
     height: 100vw; /* ALTURA MÁS GRANDE - IGUAL QUE PLANES */
     margin: 0;
     margin-top: auto; /* EMPUJA LA IMAGEN HACIA EL FONDO DEL CONTENEDOR FLEX */
+    
     max-width: 100%;
     order: 2; /* DESPUÉS DEL TEXTO */
     align-self: flex-end; /* ALINEA AL FONDO DEL CONTENEDOR */
