@@ -161,7 +161,7 @@
 
 @media (max-width: 1024px) {
   .diferencialesSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -169,7 +169,7 @@
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
@@ -191,7 +191,7 @@
     grid-template-columns: repeat(2, 1fr); /* 2 COLUMNAS PARA TABLETS */
     grid-template-rows: auto auto auto auto; /* 4 FILAS: 1 PARA TÍTULO + 3 PARA CARDS */
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .titleCard {
@@ -249,7 +249,7 @@
 
 @media (max-width: 768px) {
   .diferencialesSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -288,6 +288,7 @@
     grid-template-columns: 1fr; /* 1 COLUMNA PARA MÓVILES */
     grid-template-rows: auto auto auto auto auto auto; /* 6 FILAS PARA 6 ELEMENTOS */
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .titleCard {

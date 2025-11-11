@@ -98,7 +98,7 @@
 
 @media (max-width: 768px) {
   .nosotrosHero {
-    padding: 20vw 4vw 4vw; /* MISMO PADDING-TOP QUE HERO SECTION (20vw) */
+    padding: 20vw 4vw 6vw; /* ✅ UNIFICADO: padding-top 20vw (hero), padding-bottom 6vw (mismo que otras secciones) */
   }
 
   .container {
@@ -106,7 +106,7 @@
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 

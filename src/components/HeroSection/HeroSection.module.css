@@ -234,7 +234,7 @@
     left: 0;
     top: 0;
     width: 100%; /* ANCHO COMPLETO COMO SERVICIOS HERO */
-    margin-bottom: 3vw;
+    margin-bottom: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     height: auto;
     min-height: 140vw; /* ALTURA MÁS GRANDE - IGUAL QUE PLANES */
     border-radius: 1.04vw; /* MISMO BORDER-RADIUS QUE SERVICIOS (1.04vw) */

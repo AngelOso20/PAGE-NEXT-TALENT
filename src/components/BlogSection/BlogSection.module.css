@@ -261,6 +261,11 @@
     height: 35vw;
   }
 
+  .cardImage {
+    object-fit: cover; /* ✅ UNIFICADO: Mismo object-fit que BlogCards para que las imágenes se vean igual */
+    object-position: center; /* ✅ UNIFICADO: Mismo object-position que BlogCards */
+  }
+
   /* Badges más grandes para tablets */
   .categoryBadge {
     font-size: 2vw; /* TAMAÑO MÁS GRANDE PARA TABLETS */
@@ -355,6 +360,11 @@
   .cardImage {
     width: 100%;
     height: 50vw;
+  }
+
+  .cardImage {
+    object-fit: cover; /* ✅ UNIFICADO: Mismo object-fit que BlogCards para que las imágenes se vean igual */
+    object-position: center; /* ✅ UNIFICADO: Mismo object-position que BlogCards */
   }
 
   /* Badges más grandes para móviles */

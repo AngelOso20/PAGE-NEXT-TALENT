@@ -165,7 +165,7 @@
 
 @media (max-width: 1024px) {
   .historiaSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -173,13 +173,17 @@
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
   .imageBox,
   .rightColumn {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+  }
+
+  .rightColumn {
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) entre historiaBox y cardsGrid */
   }
 
   .imageBox {
@@ -213,7 +217,7 @@
 
   .cardsGrid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .historiaCard {
@@ -236,7 +240,7 @@
 
 @media (max-width: 768px) {
   .historiaSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -248,6 +252,10 @@
   .imageBox,
   .rightColumn {
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+  }
+
+  .rightColumn {
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) entre historiaBox y cardsGrid */
   }
 
   .historiaBox {
@@ -274,6 +282,7 @@
 
   .cardsGrid {
     grid-template-columns: 1fr;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .historiaCard {

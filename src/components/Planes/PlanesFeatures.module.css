@@ -121,7 +121,7 @@
 @media (max-width: 768px) {
   .featuresContainer {
     grid-template-columns: 1fr;
-    gap: 4vw; /* Gap más grande en móviles */
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .featureCard {

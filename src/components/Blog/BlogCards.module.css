@@ -176,7 +176,7 @@
 
 @media (max-width: 1024px) {
   .blogCardsContainer {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -187,8 +187,8 @@
 
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
-    gap: 2vw; /* MISMO GAP QUE OTROS COMPONENTES */
-    margin-top: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
+    margin-top: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 
@@ -242,7 +242,7 @@
 
 @media (max-width: 768px) {
   .blogCardsContainer {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -253,8 +253,8 @@
 
   .cardsGrid {
     grid-template-columns: 1fr; /* 1 columna en móviles */
-    gap: 4vw; /* MISMO GAP QUE OTROS COMPONENTES */
-    margin-top: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
+    margin-top: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
 

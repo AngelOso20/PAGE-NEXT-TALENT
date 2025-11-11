@@ -352,7 +352,7 @@
 
 @media (max-width: 1200px) {
   .planesCards {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
   
   .container {
@@ -363,8 +363,8 @@
   
   .cardsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2vw;
-    margin-bottom: 3vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
+    margin-bottom: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
   
   .planCard,
@@ -445,7 +445,7 @@
 
 @media (max-width: 768px) {
   .planesCards {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
   
   .container {
@@ -456,8 +456,8 @@
   
   .cardsGrid {
     grid-template-columns: 1fr;
-    gap: 4vw;
-    margin-bottom: 4vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
+    margin-bottom: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
   
   .cardsGrid > *:nth-child(n) {

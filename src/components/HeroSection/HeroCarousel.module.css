@@ -287,7 +287,7 @@
     left: 0;
     width: 100%;
     height: auto; /* Permitir que la altura se ajuste al contenido */
-    margin-bottom: 3vw;
+    margin-bottom: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     order: 2;
   }
 

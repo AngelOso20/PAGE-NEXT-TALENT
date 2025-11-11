@@ -169,7 +169,7 @@
 
 @media (max-width: 1024px) {
   .aliadosSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
   
   .container {
@@ -177,7 +177,7 @@
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
     flex-direction: column;
     align-items: center;
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
   
@@ -210,7 +210,7 @@
   .imagesContainer {
     flex-direction: row;
     justify-content: center;
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
   }
   
@@ -230,12 +230,15 @@
 
 @media (max-width: 768px) {
   .aliadosSection {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
   
   .container {
     width: 100%; /* ANCHO COMPLETO */
     margin: 0; /* SIN MARGEN AUTOMÁTICO */
+    flex-direction: column;
+    align-items: center;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
   }
   
@@ -266,6 +269,7 @@
   .imagesContainer {
     flex-direction: column;
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
   
   .topImageBox,

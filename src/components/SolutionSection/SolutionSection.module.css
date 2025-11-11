@@ -166,7 +166,7 @@
 
   .solutionsGrid {
     grid-template-columns: 1fr;
-    gap: 4vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
     padding: 0 4vw;
     margin-bottom: 6vw;
   }

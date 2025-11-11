@@ -156,7 +156,7 @@
 
 @media (max-width: 768px) {
   .serviciosHero {
-    padding: 20vw 4vw 4vw; /* MISMO PADDING-TOP QUE HERO SECTION (20vw) */
+    padding: 20vw 4vw 6vw; /* ✅ UNIFICADO: padding-top 20vw (hero), padding-bottom 6vw (mismo que otras secciones) */
   }
 
   .container {

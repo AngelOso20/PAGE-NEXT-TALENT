@@ -126,7 +126,7 @@
 
 @media (max-width: 1200px) {
   .serviciosCards {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -139,7 +139,7 @@
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     margin: 0;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .card {
@@ -175,7 +175,7 @@
 
 @media (max-width: 768px) {
   .serviciosCards {
-    padding: 8vw 4vw; /* MISMO ESPACIADO LATERAL QUE HERO SECTION */
+    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
   }
 
   .container {
@@ -188,7 +188,7 @@
     width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
     margin: 0;
     grid-template-columns: 1fr;
-    gap: 4vw;
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .card {

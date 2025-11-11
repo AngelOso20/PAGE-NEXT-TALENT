@@ -106,22 +106,22 @@ const ContactHero: React.FC = () => {
 
                 {/* Checkbox y botón en la misma línea */}
                 <div className={styles.checkboxButtonRow}>
-                  <div className={styles.checkboxGroup}>
-                    <input
-                      type="checkbox"
-                      id="politicas"
-                      name="politicas"
-                      className={styles.checkbox}
-                    />
-                    <label htmlFor="politicas" className={styles.checkboxLabel}>
-                      Acepto las políticas de privacidad | Ver política
-                    </label>
-                  </div>
+                <div className={styles.checkboxGroup}>
+                  <input
+                    type="checkbox"
+                    id="politicas"
+                    name="politicas"
+                    className={styles.checkbox}
+                  />
+                  <label htmlFor="politicas" className={styles.checkboxLabel}>
+                    Acepto las políticas de privacidad | Ver política
+                  </label>
+                </div>
 
                   {/* Botón de enviar - alineado a la derecha */}
-                  <button type="submit" className={styles.submitButton}>
-                    ENVIAR
-                  </button>
+                <button type="submit" className={styles.submitButton}>
+                  ENVIAR
+                </button>
                 </div>
               </div>
             </div>

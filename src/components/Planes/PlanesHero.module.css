@@ -131,7 +131,7 @@
 
 @media (max-width: 768px) {
   .planesHero {
-    padding: 20vw 4vw 4vw; /* MISMO PADDING-TOP QUE SERVICIOS HERO (20vw) */
+    padding: 20vw 4vw 6vw; /* ✅ UNIFICADO: padding-top 20vw (hero), padding-bottom 6vw (mismo que otras secciones) */
   }
 
   .container {
@@ -143,7 +143,7 @@
   .contentWrapper {
     flex-direction: column;
     align-items: center;
-    gap: 5vw; /* Gap entre cuadro azul y características */
+    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
   }
 
   .heroBox {
