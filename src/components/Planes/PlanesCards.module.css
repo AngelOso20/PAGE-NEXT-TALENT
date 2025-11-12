@@ -465,13 +465,13 @@
     grid-column: auto;
   }
   
-  /* ========== PADDING UNIFORME 3VW EN TODOS LOS LADOS ========== */
+  /* ========== PADDING UNIFORME 5VW EN TODOS LOS LADOS ========== */
   /* Solución definitiva: padding uniforme y márgenes solo entre elementos */
   .planCard {
     width: 100%;
     height: auto; /* Se adapta al contenido */
     min-height: auto;
-    padding: 3vw; /* ✅ PADDING UNIFORME: 3vw en todos los lados */
+    padding: 5vw; /* ✅ PADDING UNIFORME: 5vw en todos los lados */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -490,7 +490,7 @@
   }
 
   .quoteContent {
-    padding: 3vw; /* ✅ PADDING UNIFORME: Exactamente igual que planCard - 3vw en todos los lados */
+    padding: 5vw; /* ✅ PADDING UNIFORME: Exactamente igual que planCard - 5vw en todos los lados */
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -513,7 +513,7 @@
   /* Esto evita espacio extra en la parte inferior */
   .planCard > *:not(:last-child),
   .quoteContent > *:not(:last-child) {
-    margin-bottom: 2.5vw; /* Espaciado uniforme entre elementos */
+    margin-bottom: 3vw; /* Espaciado uniforme entre elementos */
   }
 
   /* Eliminamos todos los demás márgenes */
