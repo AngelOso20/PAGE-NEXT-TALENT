@@ -175,54 +175,73 @@
 
 @media (max-width: 768px) {
   .serviciosCards {
-    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
+    padding: 6vw 4vw;
   }
 
   .container {
-    width: 100%; /* ANCHO COMPLETO */
-    margin: 0; /* SIN MARGEN AUTOMÁTICO */
-    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   .cardsGrid {
-    width: 100%; /* ANCHO COMPLETO COMO EL LEFTBOX DEL HERO */
+    width: 100%;
     margin: 0;
     grid-template-columns: 1fr;
-    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
+    gap: 6vw;
   }
 
+  /* ========== PADDING UNIFORME 3VW EN TODOS LOS LADOS ========== */
+  /* Solución definitiva: padding uniforme y márgenes solo entre elementos */
   .card {
     width: 100%;
-    height: auto;
-    min-height: 80vw;
-    padding: 6vw 4vw; /* MÁS PADDING SUPERIOR PARA EL ICONO MÁS GRANDE */
-    gap: 2vw; /* GAP ENTRE TODOS LOS ELEMENTOS */
+    height: auto; /* Se adapta al contenido */
+    min-height: auto; /* Sin altura mínima forzada */
+    padding: 3vw; /* ✅ PADDING UNIFORME: 3vw en todos los lados */
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    /* Sin gap - usamos márgenes específicos solo entre elementos */
   }
 
+  /* ========== ESPACIADO INTELIGENTE: MÁRGENES SOLO ENTRE ELEMENTOS ========== */
+  /* Aplicamos margin-bottom solo a elementos que NO son el último hijo */
+  /* Esto evita espacio extra en la parte inferior */
+  .card > *:not(:last-child) {
+    margin-bottom: 2.5vw; /* Espaciado uniforme entre elementos */
+  }
+
+  /* Eliminamos todos los demás márgenes */
+  .card > * {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* ========== TIPOGRAFÍA PARA MÓVIL ========== */
   .title {
-    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 4vw;
     line-height: 5vw;
-    margin-bottom: 0; /* SIN MARGEN - USAMOS GAP DEL CONTENEDOR */
+    width: 100%;
   }
 
   .description {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw;
     line-height: 5vw;
-    margin-bottom: 0; /* SIN MARGEN - USAMOS GAP DEL CONTENEDOR */
-    flex-grow: 0; /* NO CRECE - PARA QUE BENEFICIO QUEDE CERCA */
+    width: 100%;
+    flex-grow: 0; /* No crece - para que beneficio quede cerca */
   }
 
   .benefit {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw;
     line-height: 5vw;
-    margin-top: 2vw; /* SEPARACIÓN CONTROLADA DEL TEXTO ANTERIOR */
+    width: 100%;
   }
 
   .iconContainer {
     width: 15vw; /* MUCHO MÁS GRANDE - ICONOS MÁS BONITOS Y VISIBLES */
     height: 15vw;
-    margin-bottom: 4vw;
+    margin: 0; /* Sin margen - se aplica solo con :not(:last-child) */
   }
 }

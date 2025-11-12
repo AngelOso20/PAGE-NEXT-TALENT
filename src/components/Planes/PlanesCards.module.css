@@ -445,19 +445,19 @@
 
 @media (max-width: 768px) {
   .planesCards {
-    padding: 6vw 4vw; /* ✅ UNIFICADO: Mismo espaciado vertical que PlansSection (6vw) */
+    padding: 6vw 4vw;
   }
   
   .container {
-    width: 100%; /* ANCHO COMPLETO */
-    margin: 0; /* SIN MARGEN AUTOMÁTICO */
-    padding: 0; /* SIN PADDING INTERNO - EL ESPACIADO VIENE DEL PADRE */
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
   
   .cardsGrid {
     grid-template-columns: 1fr;
-    gap: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
-    margin-bottom: 6vw; /* ✅ UNIFICADO: Mismo espaciado que PlansSection (6vw) */
+    gap: 6vw;
+    margin-bottom: 6vw;
   }
   
   .cardsGrid > *:nth-child(n) {
@@ -465,16 +465,37 @@
     grid-column: auto;
   }
   
-  .planCard,
+  /* ========== PADDING UNIFORME 3VW EN TODOS LOS LADOS ========== */
+  /* Solución definitiva: padding uniforme y márgenes solo entre elementos */
+  .planCard {
+    width: 100%;
+    height: auto; /* Se adapta al contenido */
+    min-height: auto;
+    padding: 3vw; /* ✅ PADDING UNIFORME: 3vw en todos los lados */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center; /* Centra el contenido horizontalmente */
+    /* Sin gap - usamos márgenes específicos solo entre elementos */
+  }
+
   .quoteCard {
     width: 100%;
-    height: auto;
-    min-height: 80vw; /* ✅ REDUCIDO: Tamaño más pequeño para las cajas */
-    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (4vw) */
+    height: auto; /* Se adapta al contenido */
+    min-height: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
   }
 
   .quoteContent {
-    padding: 4vw 4vw; /* ✅ UNIFICADO: Mismo padding arriba y abajo (4vw) */
+    padding: 3vw; /* ✅ PADDING UNIFORME: Exactamente igual que planCard - 3vw en todos los lados */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center; /* Centra el contenido horizontalmente */
+    /* Sin gap - usamos márgenes específicos solo entre elementos */
   }
 
   .imagesColumn {
@@ -487,51 +508,97 @@
     height: 50vw;
   }
 
-  .planTitle {
-    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
-    line-height: 5vw;
-    margin-bottom: 3vw;
+  /* ========== ESPACIADO INTELIGENTE: MÁRGENES SOLO ENTRE ELEMENTOS ========== */
+  /* Aplicamos margin-bottom solo a elementos que NO son el último hijo */
+  /* Esto evita espacio extra en la parte inferior */
+  .planCard > *:not(:last-child),
+  .quoteContent > *:not(:last-child) {
+    margin-bottom: 2.5vw; /* Espaciado uniforme entre elementos */
   }
 
-  .desde,
-  .target,
-  .description,
-  .includesTitle {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+  /* Eliminamos todos los demás márgenes */
+  .planCard > *,
+  .quoteContent > * {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* ========== TIPOGRAFÍA PARA MÓVIL ========== */
+  .planTitle {
+    font-size: 4vw;
     line-height: 5vw;
+    width: 100%; /* Ocupa todo el ancho disponible */
+    text-align: center;
+  }
+
+  .desde {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    width: 100%;
+    text-align: center;
   }
   
   .price {
-    font-size: 5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 5vw;
     line-height: 6vw;
-    margin-bottom: 3vw;
+    width: 100%;
+    text-align: center;
+  }
+
+  .target,
+  .description,
+  .includesTitle {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    width: 100%;
+    text-align: left; /* Mantiene alineación izquierda para descripción */
+  }
+
+  /* ========== LISTA DE CARACTERÍSTICAS CON ESPACIADO INTELIGENTE ========== */
+  .featuresList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0; /* Sin margen en la lista */
+    /* Sin gap - usamos márgenes específicos solo entre items */
+  }
+
+  /* Márgenes solo entre items de la lista, no después del último */
+  .featuresList > .featureItem:not(:last-child) {
+    margin-bottom: 1.5vw; /* Espaciado uniforme entre items */
   }
 
   .featureItem {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw;
     line-height: 5vw;
-    margin-bottom: 2vw;
     padding-left: 3vw;
+    margin: 0; /* Sin margen por defecto, se aplica solo con :not(:last-child) */
   }
   
+  /* ========== BOTONES SIN MÁRGENES EXTRA ========== */
   .buyButton,
   .calculateButton {
     width: 80%;
-    height: 8vw; /* MÁS GRANDE PARA MÓVILES */
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    height: 8vw;
+    font-size: 3.5vw;
     line-height: 8vw;
     border-radius: 2.5vw;
+    margin: 0; /* ✅ Sin márgenes - el padding de la caja proporciona el espacio */
+    align-self: center; /* Centra el botón */
   }
 
   .quoteTitle {
-    font-size: 4vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 4vw;
     line-height: 5vw;
-    margin-bottom: 3vw;
+    width: 100%;
+    text-align: left;
   }
 
   .quoteDescription {
-    font-size: 3.5vw; /* TAMAÑO MÁS GRANDE PARA MÓVILES */
+    font-size: 3.5vw;
     line-height: 5vw;
-    margin-bottom: 4vw;
+    width: 100%;
+    text-align: center;
   }
 }
