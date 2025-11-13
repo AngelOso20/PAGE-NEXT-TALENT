@@ -34,7 +34,7 @@ export default function HeroSection() {
         
         {/* Subtítulo */}
         <p className={styles.subtitle}>
-          Soluciones en talento humano y tecnología al alcance de cualquier negocio.
+          Soluciones en gestión y tecnología del talento humano al alcance de cualquier negocio.
         </p>
         
         {/* Imagen del trabajador */}

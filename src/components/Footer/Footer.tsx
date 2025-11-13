@@ -21,7 +21,7 @@ export default function Footer() {
         <div className={styles.addressSection}>
           <h3 className={styles.sectionTitle}>Dirección</h3>
           <p className={styles.addressInfo}>
-            Calle 64 B Sur 23 C 27.<br />
+          AV. Carrera 45 # 108a - 50 Edificio Bosch.<br />
             Bogotá, Colombia
           </p>
         </div>
