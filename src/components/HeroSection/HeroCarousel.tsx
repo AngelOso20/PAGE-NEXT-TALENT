@@ -13,6 +13,7 @@ interface CarouselCard {
   buttonText?: string
   buttonLink?: string
   buttonIcon?: string
+  openInNewTab?: boolean
   isEvent?: boolean
   eventDate?: string
   eventLocation?: string
@@ -34,7 +35,8 @@ const carouselData: CarouselCard[] = [
     title: 'Webinar: Nuevas normativas y gestiones laborales 2026',
     description: 'Conoce los cambios clave en la legislación laboral y cómo adaptar tu empresa.',
     buttonText: 'INSCRIBIRME',
-    buttonLink: '#contacto',
+    buttonLink: 'https://scheduler.zoom.us/next-talent-solutions/asesoriaenlinea',
+    openInNewTab: true,
     isEvent: true,
     eventDate: 'Sept 29',
     eventLocation: 'Virtual',
@@ -116,7 +118,12 @@ export default function HeroCarousel() {
 
           {/* Botón de acción */}
           {currentCard.buttonText && (
-            <a href={currentCard.buttonLink} className={styles.actionButton}>
+            <a 
+              href={currentCard.buttonLink} 
+              target={currentCard.openInNewTab ? '_blank' : '_self'}
+              rel={currentCard.openInNewTab ? 'noopener noreferrer' : undefined}
+              className={styles.actionButton}
+            >
               {currentCard.buttonIcon && (
                 <Image
                   src={currentCard.buttonIcon}

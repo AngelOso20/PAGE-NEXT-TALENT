@@ -10,7 +10,7 @@ export default function Footer() {
           <h3 className={styles.sectionTitle}>Contacto</h3>
           <p className={styles.contactInfo}>
             +57 302 490 4740<br />
-            contacto@nexttalentsolutions.com
+            info@nexttalentsolutions.com
           </p>
           <p className={styles.copyright}>
             ©Todos los derechos reservados Next Talent Solutions - 2025
@@ -30,15 +30,25 @@ export default function Footer() {
         <div className={styles.socialSection}>
           <h3 className={styles.sectionTitle}>Síguenos</h3>
           <div className={styles.socialIcons}>
-            <a href="#facebook" className={styles.socialIcon}>
+            <a 
+              href="https://co.linkedin.com/company/next-talent-solutions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+            >
               <Image
-                src="/images/Buttons/Button Facebook.svg"
-                alt="Facebook"
+                src="/images/Buttons/Button LinkedIn.svg"
+                alt="LinkedIn"
                 width={23}
                 height={23}
               />
             </a>
-            <a href="#instagram" className={styles.socialIcon}>
+            <a 
+              href="https://www.instagram.com/nexttalentsolutions/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+            >
               <Image
                 src="/images/Buttons/Button Instagram.svg"
                 alt="Instagram"
@@ -46,10 +56,28 @@ export default function Footer() {
                 height={23}
               />
             </a>
-            <a href="#twitter" className={styles.socialIcon}>
+            <a 
+              href="https://www.facebook.com/NextTalentSolutions/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+            >
+              <Image
+                src="/images/Buttons/Button Facebook.svg"
+                alt="Facebook"
+                width={23}
+                height={23}
+              />
+            </a>
+            <a 
+              href="https://www.youtube.com/@NextTalentSolutions" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.socialIcon}
+            >
               <Image
                 src="/images/Buttons/Button Twitter.svg"
-                alt="Twitter"
+                alt="YouTube"
                 width={23}
                 height={23}
               />
