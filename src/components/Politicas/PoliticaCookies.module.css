@@ -1,0 +1,300 @@
+/* ==========================================
+   POLÍTICA DE COOKIES - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
+.politicaSection {
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  background: #F3F7F9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 94.79vw; /* 1820px = 94.79vw */
+  margin: 0 auto;
+  padding: 0 2.60vw; /* 50px = 2.60vw */
+  box-sizing: border-box;
+}
+
+/* ========== TÍTULO PRINCIPAL ========== */
+
+.title {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 3.5vw; /* 67px = 3.5vw */
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
+  opacity: 1;
+}
+
+/* ========== NOMBRE DE LA EMPRESA ========== */
+
+.companyName {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.56vw; /* 30px = 1.56vw */
+  line-height: 2.08vw; /* 40px = 2.08vw */
+  letter-spacing: 0px;
+  color: #464749;
+  text-align: center;
+  margin: 0 0 0.52vw 0; /* 10px = 0.52vw */
+  opacity: 1;
+}
+
+/* ========== FECHA DE ACTUALIZACIÓN ========== */
+
+.updateDate {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.51vw; /* 29px = 1.51vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  margin: 0 0 3.13vw 0; /* 60px = 3.13vw */
+  opacity: 1;
+}
+
+/* ========== CONTENIDO ========== */
+
+.content {
+  width: 100%;
+  max-width: 70vw; /* Ancho máximo para legibilidad */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ========== TÍTULOS DE SECCIÓN ========== */
+
+.sectionTitle {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.56vw; /* 30px = 1.56vw */
+  line-height: 2.08vw; /* 40px = 2.08vw */
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  margin: 2.60vw 0 1.04vw 0; /* 50px arriba, 20px abajo */
+  opacity: 1;
+}
+
+/* ========== PÁRRAFOS ========== */
+
+.paragraph {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
+  opacity: 1;
+}
+
+.paragraph strong {
+  font-weight: bold;
+}
+
+/* ========== LISTAS ========== */
+
+.list {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  list-style-position: inside;
+  margin: 0 0 1.04vw 0;
+  padding: 0;
+  opacity: 1;
+}
+
+.list li {
+  margin: 0.52vw 0; /* 10px = 0.52vw */
+}
+
+/* ========== TABLA ========== */
+
+.tableContainer {
+  width: 100%;
+  margin: 2.08vw auto; /* 40px = 2.08vw */
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: 'FinalSix', sans-serif;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  color: #464749;
+  text-align: center;
+}
+
+.table th {
+  background: #27A49F;
+  color: #FFFFFF;
+  font-weight: bold;
+  padding: 1.04vw; /* 20px = 1.04vw */
+  border: 0.10vw solid #1a8a85; /* 2px = 0.10vw */
+}
+
+.table td {
+  padding: 1.04vw; /* 20px = 1.04vw */
+  border: 0.10vw solid #E0E0E0; /* 2px = 0.10vw */
+  background: #FFFFFF;
+}
+
+.table tr:nth-child(even) td {
+  background: #F9F9F9;
+}
+
+/* ========== RESPONSIVE - SOLO MÓVILES/TABLETS ========== */
+
+@media (max-width: 1024px) {
+  .politicaSection {
+    padding: 6vw 4vw;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 4vw;
+  }
+
+  .title {
+    font-size: 4vw;
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .companyName {
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+    margin-bottom: 1.5vw;
+  }
+
+  .updateDate {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin-bottom: 4vw;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+    margin: 3vw 0 2vw 0;
+  }
+
+  .paragraph {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .list {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .list li {
+    margin: 1vw 0;
+  }
+
+  .table {
+    font-size: 1.5vw;
+    line-height: 2.5vw;
+  }
+
+  .table th,
+  .table td {
+    padding: 1.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .politicaSection {
+    padding: 8vw 4vw;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 4vw;
+  }
+
+  .title {
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 4vw;
+  }
+
+  .companyName {
+    font-size: 4vw;
+    line-height: 5vw;
+    margin-bottom: 2vw;
+  }
+
+  .updateDate {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    margin-bottom: 6vw;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 4.5vw;
+    line-height: 6vw;
+    margin: 5vw 0 3vw 0;
+  }
+
+  .paragraph {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .list {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .list li {
+    margin: 2vw 0;
+  }
+
+  .table {
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+  }
+
+  .table th,
+  .table td {
+    padding: 2vw;
+  }
+}
+

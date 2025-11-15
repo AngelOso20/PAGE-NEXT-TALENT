@@ -1,0 +1,407 @@
+/* ==========================================
+   POLÍTICA DE PROTECCIÓN DE DATOS PERSONALES - DISEÑO PROPORCIONAL
+   100% basado en viewport (vw) para mantener
+   proporciones visuales idénticas en cualquier zoom
+   Base de diseño: 1920px = 100vw
+   ========================================== */
+
+.politicaSection {
+  width: 100vw;
+  padding: 5.21vw 0; /* 100px = 5.21vw */
+  background: #F3F7F9;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 94.79vw; /* 1820px = 94.79vw */
+  margin: 0 auto;
+  padding: 0 2.60vw; /* 50px = 2.60vw */
+  box-sizing: border-box;
+}
+
+/* ========== TÍTULO PRINCIPAL ========== */
+
+.title {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 2.86vw; /* 55px = 2.86vw */
+  line-height: 3.5vw; /* 67px = 3.5vw */
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  margin: 0 0 1.56vw 0; /* 30px = 1.56vw */
+  opacity: 1;
+}
+
+/* ========== NOMBRE DE LA EMPRESA ========== */
+
+.companyName {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.56vw; /* 30px = 1.56vw */
+  line-height: 2.08vw; /* 40px = 2.08vw */
+  letter-spacing: 0px;
+  color: #464749;
+  text-align: center;
+  margin: 0 0 3.13vw 0; /* 60px = 3.13vw */
+  opacity: 1;
+}
+
+/* ========== CONTENIDO ========== */
+
+.content {
+  width: 100%;
+  max-width: 70vw; /* Ancho máximo para legibilidad */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ========== TÍTULOS DE SECCIÓN ========== */
+
+.sectionTitle {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.56vw; /* 30px = 1.56vw */
+  line-height: 2.08vw; /* 40px = 2.08vw */
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  margin: 2.60vw 0 1.04vw 0; /* 50px arriba, 20px abajo */
+  opacity: 1;
+}
+
+/* ========== TÍTULOS DE SUBSECCIÓN ========== */
+
+.subsectionTitle {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.30vw; /* 25px = 1.30vw */
+  line-height: 1.82vw; /* 35px = 1.82vw */
+  letter-spacing: 0px;
+  color: #27A49F;
+  text-align: center;
+  margin: 2.08vw 0 0.78vw 0; /* 40px arriba, 15px abajo */
+  opacity: 1;
+}
+
+/* ========== TÍTULOS DE SUB-SUBSECCIÓN ========== */
+
+.subsubsectionTitle {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 1.14vw; /* 22px = 1.14vw */
+  line-height: 1.56vw; /* 30px = 1.56vw */
+  letter-spacing: 0px;
+  color: #FB8C05;
+  text-align: center;
+  margin: 1.56vw 0 0.52vw 0; /* 30px arriba, 10px abajo */
+  opacity: 1;
+}
+
+/* ========== PÁRRAFOS ========== */
+
+.paragraph {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  margin: 0 0 1.04vw 0; /* 20px = 1.04vw */
+  opacity: 1;
+}
+
+.paragraph strong {
+  font-weight: bold;
+}
+
+/* ========== LISTAS ========== */
+
+.list {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  list-style-position: inside;
+  margin: 0 0 1.04vw 0;
+  padding: 0;
+  opacity: 1;
+}
+
+.list li {
+  margin: 0.52vw 0; /* 10px = 0.52vw */
+}
+
+/* ========== LISTAS ORDENADAS ========== */
+
+.orderedList {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  list-style-position: inside;
+  margin: 0 0 1.04vw 0;
+  padding: 0;
+  opacity: 1;
+}
+
+.orderedList li {
+  margin: 0.52vw 0; /* 10px = 0.52vw */
+}
+
+/* ========== CAJA DE CONTACTO ========== */
+
+.contactBox {
+  background: #FFFFFF;
+  border-radius: 1.04vw; /* 20px = 1.04vw */
+  padding: 2.08vw; /* 40px = 2.08vw */
+  margin: 2.08vw auto; /* 40px = 2.08vw */
+  max-width: 50vw;
+  box-shadow: 0 0.21vw 1.04vw rgba(0, 0, 0, 0.08); /* 0 4px 20px */
+}
+
+.contactItem {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.99vw; /* 19px = 0.99vw */
+  line-height: 1.61vw; /* 31px = 1.61vw */
+  letter-spacing: 0.024vw; /* 0.47px = 0.024vw */
+  color: #464749;
+  text-align: center;
+  margin: 0 0 1.04vw 0;
+  opacity: 1;
+}
+
+.contactItem:last-child {
+  margin-bottom: 0;
+}
+
+.contactItem strong {
+  font-weight: bold;
+  color: #27A49F;
+}
+
+/* ========== INFORMACIÓN DEL FOOTER ========== */
+
+.footerInfo {
+  margin-top: 3.13vw; /* 60px = 3.13vw */
+  padding-top: 2.08vw; /* 40px = 2.08vw */
+  border-top: 0.10vw solid #E0E0E0; /* 2px = 0.10vw */
+}
+
+.footerText {
+  font-family: 'FinalSix', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.83vw; /* 16px = 0.83vw */
+  line-height: 1.30vw; /* 25px = 1.30vw */
+  letter-spacing: 0.021vw; /* 0.4px = 0.021vw */
+  color: #464749;
+  text-align: center;
+  margin: 0 0 0.52vw 0; /* 10px = 0.52vw */
+  opacity: 1;
+}
+
+.footerText:last-child {
+  margin-bottom: 0;
+}
+
+.footerText strong {
+  font-weight: bold;
+  color: #27A49F;
+}
+
+/* ========== RESPONSIVE - SOLO MÓVILES/TABLETS ========== */
+
+@media (max-width: 1024px) {
+  .politicaSection {
+    padding: 6vw 4vw;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 4vw;
+  }
+
+  .title {
+    font-size: 4vw;
+    line-height: 5vw;
+    margin-bottom: 3vw;
+  }
+
+  .companyName {
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+    margin-bottom: 4vw;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 2.5vw;
+    line-height: 3.5vw;
+    margin: 3vw 0 2vw 0;
+  }
+
+  .subsectionTitle {
+    font-size: 2.2vw;
+    line-height: 3vw;
+    margin: 3vw 0 1.5vw 0;
+  }
+
+  .subsubsectionTitle {
+    font-size: 2vw;
+    line-height: 2.8vw;
+    margin: 2.5vw 0 1vw 0;
+  }
+
+  .paragraph {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .list,
+  .orderedList {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .list li,
+  .orderedList li {
+    margin: 1vw 0;
+  }
+
+  .contactBox {
+    padding: 3vw;
+    border-radius: 2vw;
+    max-width: 90%;
+  }
+
+  .contactItem {
+    font-size: 2vw;
+    line-height: 3vw;
+    margin-bottom: 2vw;
+  }
+
+  .footerInfo {
+    margin-top: 4vw;
+    padding-top: 3vw;
+    border-top-width: 0.2vw;
+  }
+
+  .footerText {
+    font-size: 1.8vw;
+    line-height: 2.5vw;
+    margin-bottom: 1vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .politicaSection {
+    padding: 8vw 4vw;
+  }
+
+  .container {
+    width: 100%;
+    padding: 0 4vw;
+  }
+
+  .title {
+    font-size: 7vw;
+    line-height: 8vw;
+    margin-bottom: 4vw;
+  }
+
+  .companyName {
+    font-size: 4vw;
+    line-height: 5vw;
+    margin-bottom: 6vw;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .sectionTitle {
+    font-size: 4.5vw;
+    line-height: 6vw;
+    margin: 5vw 0 3vw 0;
+  }
+
+  .subsectionTitle {
+    font-size: 4vw;
+    line-height: 5.5vw;
+    margin: 4vw 0 2vw 0;
+  }
+
+  .subsubsectionTitle {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    margin: 3vw 0 1.5vw 0;
+  }
+
+  .paragraph {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .list,
+  .orderedList {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .list li,
+  .orderedList li {
+    margin: 2vw 0;
+  }
+
+  .contactBox {
+    padding: 4vw;
+    border-radius: 2.5vw;
+    max-width: 100%;
+    margin: 4vw auto;
+  }
+
+  .contactItem {
+    font-size: 3.5vw;
+    line-height: 5.5vw;
+    margin-bottom: 3vw;
+  }
+
+  .footerInfo {
+    margin-top: 6vw;
+    padding-top: 4vw;
+    border-top-width: 0.3vw;
+  }
+
+  .footerText {
+    font-size: 3.2vw;
+    line-height: 4.5vw;
+    margin-bottom: 2vw;
+  }
+}
+

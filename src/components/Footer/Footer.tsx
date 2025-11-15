@@ -100,9 +100,17 @@ export default function Footer() {
             <button className={styles.submitButton}>ENVIAR</button>
           </div>
           
-          <a href="#privacidad" className={styles.privacyLink}>
-            Políticas de privacidad
-          </a>
+          <div className={styles.policiesLinks}>
+            <a href="/politicas/politica-de-proteccion-datos" className={styles.policyLink}>
+              Política de Protección de Datos
+            </a>
+            <a href="/politicas/politica-de-cookies" className={styles.policyLink}>
+              Política de Cookies
+            </a>
+            <a href="/politicas/politica-de-etica" className={styles.policyLink}>
+              Política de Ética
+            </a>
+          </div>
         </div>
       </div>
     </footer>

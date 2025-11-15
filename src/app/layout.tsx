@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Footer from '@/components/Footer/Footer'
+import CookieBanner from '@/components/CookieBanner/CookieBanner'
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body>
         {children}
         <Footer />
+        <CookieBanner />
       </body>
     </html>
   )

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import styles from './ServiciosCards.module.css';
-import Image from 'next/image';
+import ServicioCard from './ServicioCard';
 
 const ServiciosCards: React.FC = () => {
   const servicios = [
@@ -77,29 +77,13 @@ const ServiciosCards: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.cardsGrid}>
           {servicios.map((servicio) => (
-            <div key={servicio.id} className={styles.card}>
-              {/* Icono */}
-              <div className={styles.iconContainer}>
-                <Image
-                  src={servicio.icon}
-                  alt={`Icono ${servicio.title}`}
-                  width={79}
-                  height={77}
-                  className={styles.icon}
-                />
-              </div>
-              
-              {/* Título */}
-              <h3 className={styles.title}>{servicio.title}</h3>
-              
-              {/* Descripción */}
-              <p className={styles.description}>{servicio.description}</p>
-              
-              {/* Beneficio */}
-              <p className={styles.benefit}>
-                <span className={styles.benefitLabel}>Beneficio:</span> {servicio.benefit}
-              </p>
-            </div>
+            <ServicioCard
+              key={servicio.id}
+              animationPath={servicio.animation}
+              title={servicio.title}
+              description={servicio.description}
+              benefit={servicio.benefit}
+            />
           ))}
         </div>
       </div>

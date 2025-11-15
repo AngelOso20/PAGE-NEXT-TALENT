@@ -248,6 +248,17 @@
   cursor: pointer;
 }
 
+.policyText {
+  text-decoration: underline;
+  letter-spacing: 0.02vw; /* Más espacio entre letras */
+  color: #27A49F;
+  cursor: pointer;
+}
+
+.policyText:hover {
+  color: #1f8a85;
+}
+
 /* ========== BOTÓN DE ENVIAR ========== */
 
 .submitButton {

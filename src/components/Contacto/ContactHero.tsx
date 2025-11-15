@@ -114,7 +114,15 @@ const ContactHero: React.FC = () => {
                     className={styles.checkbox}
                   />
                   <label htmlFor="politicas" className={styles.checkboxLabel}>
-                    Acepto las políticas de privacidad | Ver política
+                    Acepto la{' '}
+                    <a 
+                      href="/politicas/politica-de-proteccion-datos" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className={styles.policyText}
+                    >
+                      Política de Protección de Datos
+                    </a>
                   </label>
                 </div>
 
