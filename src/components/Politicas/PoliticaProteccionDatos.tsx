@@ -11,7 +11,7 @@ export default function PoliticaProteccionDatos() {
         <div className={styles.content}>
           <h2 className={styles.sectionTitle}>INTRODUCCIÓN</h2>
           <p className={styles.paragraph}>
-            NEXT TALENT SOLUTIONS S.A.S., sociedad legalmente constituida, identificada con el NIT 901.735.303-1 domiciliada en la Calle 64B s 23C 27 de Bogotá D.C., con correo electrónico info@nexttalentsolutions.com, y celular 3024904740, comprometidos con la seguridad de la información personal, y en cumplimiento de las disposiciones contenidas en la Ley 1581 de 2012, su Decreto reglamentario 1377 de 2013, y los artículos 15 y 20 de la Constitución Política de Colombia, se permite presentar a sus usuarios, clientes, colaboradores, contratistas y/o proveedores, empleados y en general a todas las personas que hayan facilitado o que en el futuro faciliten sus datos personales a nuestra Sociedad, el contenido del presente documento, el cual contiene las Políticas de Tratamiento en materia de protección de datos personales y tiene como objeto dar a conocer el tratamiento y la finalidad al que serán sometidos los datos personales contenidos en nuestras bases de datos, los derechos de los titulares, el responsable y el procedimiento para atender las consultas o reclamos del tratamiento de los datos personales, entre otros.
+            NEXT TALENT SOLUTIONS S.A.S., sociedad legalmente constituida, identificada con el NIT 901.735.303-1 domiciliada en la AV. Carrera 45 # 108a - 50 Edificio Bosch. Bogotá, Colombia, con correo electrónico info@nexttalentsolutions.com, y celular 3024904740, comprometidos con la seguridad de la información personal, y en cumplimiento de las disposiciones contenidas en la Ley 1581 de 2012, su Decreto reglamentario 1377 de 2013, y los artículos 15 y 20 de la Constitución Política de Colombia, se permite presentar a sus usuarios, clientes, colaboradores, contratistas y/o proveedores, empleados y en general a todas las personas que hayan facilitado o que en el futuro faciliten sus datos personales a nuestra Sociedad, el contenido del presente documento, el cual contiene las Políticas de Tratamiento en materia de protección de datos personales y tiene como objeto dar a conocer el tratamiento y la finalidad al que serán sometidos los datos personales contenidos en nuestras bases de datos, los derechos de los titulares, el responsable y el procedimiento para atender las consultas o reclamos del tratamiento de los datos personales, entre otros.
           </p>
 
           <h2 className={styles.sectionTitle}>Encargado y responsable del tratamiento de datos personales</h2>
@@ -23,7 +23,7 @@ export default function PoliticaProteccionDatos() {
               <strong>Domicilio:</strong> Bogotá D.C.
             </p>
             <p className={styles.contactItem}>
-              <strong>Dirección:</strong> Calle 64B s 23C 27.
+              <strong>Dirección:</strong> AV. Carrera 45 # 108a - 50 Edificio Bosch.
             </p>
             <p className={styles.contactItem}>
               <strong>Celular:</strong> 3024904740
@@ -146,74 +146,7 @@ export default function PoliticaProteccionDatos() {
             El Aviso de Privacidad por disposición expresa del artículo 15 del Decreto Reglamentario 1377 del 2013 contendrá como mínimo: (i) Los datos sociales de NEXT TALENT SOLUTIONS S.A.S.; (ii) Los medios para que el Titular pueda ponerse en contacto con NEXT TALENT SOLUTIONS S.A.S., (iii) Los medios por los cuales el Titular puede conocer las Políticas de Tratamiento de la Información; (iv) El tipo de Tratamiento que se le dará a los datos proporcionados y la finalidad de los mismos; y (v) Los Derechos que le asisten al Titular y la forma de ejecutarlos.
           </p>
           <p className={styles.paragraph}>
-            <strong>PARÁGRAFO PRIMERO:</strong> NEXT TALENT SOLUTIONS S.A.S., conservará el modelo del Aviso de Privacidad que utilice para dar a conocer a los Titulares de la existencia de las Políticas de Tratamiento de la Información y la forma de acceder a las mismas.
-          </p>
-
-          <h3 className={styles.subsectionTitle}>ARTÍCULO 11. FINALIDAD DE LA RECOLECCIÓN Y TRATAMIENTO DE DATOS</h3>
-          <p className={styles.paragraph}>
-            La Recolección y el Tratamiento de los datos personales de los Titulares se llevarán a cabo con las siguientes finalidades:
-          </p>
-
-          <h4 className={styles.subsubsectionTitle}>CLIENTES</h4>
-          <ul className={styles.list}>
-            <li>Envío de información sobre novedades en productos de la compañía.</li>
-            <li>Realizar estudios de mercado en tendencias y hábitos de consumo.</li>
-            <li>Evaluar la calidad de nuestros productos y el nivel de satisfacción como clientes.</li>
-            <li>Todas aquellas actividades que resulten acordes con el objeto de la sociedad de la compañía y que sean idóneas para ejecutar actividades de mercadeo y publicidad.</li>
-            <li>Ejecutar y cumplir los contratos que celebre la Compañía con Entidades en Colombia o en el extranjero para el cumplimiento de nuestra actividad comercial y la debida prestación de los servicios contratados.</li>
-            <li>Para el control y prevención de fraudes, lavado de activos, financiación del terrorismo o fabricación y/o distribución de armas de destrucción masiva.</li>
-            <li>Elaborar estudios, encuestas, análisis de tendencias de mercado y en general cualquier estudio técnico o de campo relacionado con NEXT TALENT SOLUTIONS S.A.S.</li>
-            <li>Que la Compañía tratante envíe ofertas de sus productos o servicios o comunicaciones comerciales de cualquier clase relacionadas con los mismos, a través de cualquier medio de comunicación, incluyendo, pero sin limitarse a ofertas de productos y servicios de Terceras Compañías.</li>
-            <li>Crear bases de datos de acuerdo a las características y perfiles de los titulares de los Datos Personales.</li>
-            <li>Las demás finalidades necesarias para el desarrollo del objeto social de la compañía y la prestación de sus servicios.</li>
-          </ul>
-
-          <h4 className={styles.subsubsectionTitle}>PROVEEDORES Y OTROS</h4>
-          <ul className={styles.list}>
-            <li>Enviar al correo físico, electrónico, celular o dispositivo móvil, vía mensajes de texto (SMS y/o MMS) o a través de cualquier otro medio análogo y/o digital de comunicación creado o por crearse, información comercial, publicitaria o promocional sobre los productos y/o servicios, eventos y/o promociones de tipo comercial o no de estas, con el fin de impulsar, invitar, dirigir, ejecutar, informar y de manera general, llevar a cabo campañas, promociones o concursos de carácter comercial o publicitario, adelantados por la compañía.</li>
-            <li>Realizar el envío de información relacionada con informes de servicios, facturación, recibos de pago, entre otros documentos relacionados con las relaciones comerciales.</li>
-            <li>Formalizar procesos de contratación y realizar el seguimiento en la prestación de servicios contratados o la entrega de productos o insumos adquiridos.</li>
-            <li>Realizar gestiones administrativas y financieras, relacionadas con los vínculos comerciales.</li>
-            <li>Atender a los requerimientos de autoridades competentes.</li>
-            <li>Atender a obligaciones legales en la conservación de documentos.</li>
-            <li>Para dar trámite y respuesta a las solicitudes, quejas y reclamos presentados por los proveedores.</li>
-            <li>Las demás finalidades necesarias para el desarrollo del objeto social de la compañía y la prestación de sus servicios.</li>
-          </ul>
-
-          <h3 className={styles.subsectionTitle}>ARTÍCULO 7. AUTORIZACIÓN DE DATOS SENSIBLES</h3>
-          <p className={styles.paragraph}>
-            El Tratamiento de datos sensibles está prohibido, a excepción de los casos expresamente contenidos en el artículo 6 de la Ley 1581 de 2012. En caso de que NEXT TALENT SOLUTIONS S.A.S., requiera la recolección y tratamiento de datos sensibles, informará al Titular al momento de su recolección, que el dato que va a suministrar es de catalogado como sensible, la finalidad por la cual se solicita y su derecho a no proporcionarlo por estar en esta categoría.
-          </p>
-          <p className={styles.paragraph}>
-            <strong>PARÁGRAFO. AUTORIZACIÓN DE NIÑOS NIÑAS Y ADOLESCENTES:</strong> Dando cumplimiento al Artículo 7 de la Ley 1581 de 2012, NEXT TALENT SOLUTIONS S.A.S., garantiza el respeto a los derechos prevalentes de los niños, niñas y adolescentes. En este sentido, el tratamiento de datos personales de niños, niñas y adolescentes, está prohibido excepto cuando se trate de datos que sean de naturaleza pública y cuando dicho tratamiento, acorde al artículo 12 del Decreto 1377 de 2013, cumpla con los siguientes parámetros y requisitos:
-          </p>
-          <ol className={styles.orderedList}>
-            <li>Que responda y respete el interés superior de los niños, niñas y adolescentes.</li>
-            <li>Que se asegure el respeto de sus derechos fundamentales.</li>
-          </ol>
-
-          <h3 className={styles.subsectionTitle}>ARTÍCULO 8. FORMA Y MECANISMOS PARA OTORGAR LA AUTORIZACIÓN</h3>
-          <p className={styles.paragraph}>
-            NEXT TALENT SOLUTIONS S.A.S., ha elaborado un documento mediante el cual el Titular manifiesta su autorización, y será puesto en conocimiento del Titular antes del Tratamiento de sus datos. La autorización podrá constar en un documento físico, electrónico o en cualquier otro formato que permita garantizar su posterior consulta.
-          </p>
-          <p className={styles.paragraph}>
-            La autorización por parte del Titular, o de quien esté autorizado para emitirla, garantizará que se ha puesto en conocimiento que los datos personales serán recogidos, almacenados y utilizados para fines determinados e informados.
-          </p>
-
-          <h3 className={styles.subsectionTitle}>ARTÍCULO 9. PRUEBA DE LA AUTORIZACIÓN</h3>
-          <p className={styles.paragraph}>
-            En cumplimiento del artículo 9 de la Ley 1581 de 2012, NEXT TALENT SOLUTIONS S.A.S., conservará la prueba de la Autorización del tratamiento de datos emitida por el Titular para que pueda ser objeto de consulta posterior. Para ello adoptará las medidas necesarias para mantener registros de cuando y como obtuvieron las autorizaciones para el tratamiento de los datos personales de los titulares.
-          </p>
-
-          <h3 className={styles.subsectionTitle}>ARTÍCULO 10. AVISO DE PRIVACIDAD</h3>
-          <p className={styles.paragraph}>
-            Es el documento físico, electrónico o en cualquier otro formato, que es puesto a disposición del Titular para ponerle en conocimiento que NEXT TALENT SOLUTIONS S.A.S., cuenta con las políticas de tratamiento de información y que las mismas le serán aplicables, de igual forma se le informará la forma de acceder a las mismas.
-          </p>
-          <p className={styles.paragraph}>
-            El Aviso de Privacidad por disposición expresa del artículo 15 del Decreto Reglamentario 1377 del 2013 contendrá como mínimo: (i) Los datos sociales de NEXT TALENT SOLUTIONS S.A.S.; (ii) Los medios para que el Titular pueda ponerse en contacto con NEXT TALENT SOLUTIONS S.A.S., (iii) Los medios por los cuales el Titular puede conocer las Políticas de Tratamiento de la Información; (iv) El tipo de Tratamiento que se le dará a los datos proporcionados y la finalidad de los mismos; y (v) Los Derechos que le asisten al Titular y la forma de ejecutarlos.
-          </p>
-          <p className={styles.paragraph}>
-            <strong>PARÁGRAFO PRIMERO:</strong> NEXT TALENT SOLUTIONS S.A.S., conservará el modelo del Aviso de Privacidad que utilice para dar a conocer a los Titulares de la existencia de las Políticas de Tratamiento de la Información y la forma de acceder a las mismas.
+            <strong>PARÁGRAFO PRIMERO.</strong> NEXT TALENT SOLUTIONS S.A.S., conservará el modelo del Aviso de Privacidad que utilice para dar a conocer a los Titulares de la existencia de las Políticas de Tratamiento de la Información y la forma de acceder a las mismas.
           </p>
 
           <h3 className={styles.subsectionTitle}>ARTÍCULO 11. FINALIDAD DE LA RECOLECCIÓN Y TRATAMIENTO DE DATOS</h3>
@@ -437,7 +370,7 @@ export default function PoliticaProteccionDatos() {
 
           <h3 className={styles.subsectionTitle}>ARTÍCULO 24. DESIGNACIÓN</h3>
           <p className={styles.paragraph}>
-            NEXT TALENT SOLUTIONS S.A.S., ha establecido los procedimientos necesarios para dar cumplimiento oportunamente a los requerimientos realizados por los Titulares o sus autorizados, por tal razón ha designado al Señor JOSE ANTONIO BUSTAMANTE SANTOYA, para recepcionar las solicitudes de los titulares, para el ejercicio de los derechos de acceso, consulta, rectificación, actualización, supresión y revocatoria a que se refiere la Ley 1581 de 2012. Para la recepción de consultas, reclamos, quejas sobre el tratamiento de sus datos personales o para el ejercicio de los derechos como usuario o cliente, podrá ponerse en contacto al correo electrónico info@nexttalentsolutions.com o en las instalaciones de la compañía ubicada en la Calle 64B s 23C 27 en la ciudad de Bogotá, o a través otros medios físicos habilitados en las instalaciones del responsable del tratamiento, en sus sucursales en caso de haberlas. En todo caso, NEXT TALENT SOLUTIONS S.A.S., habilitará los medios necesarios para que el titular tenga la posibilidad de ejercer sus derechos a través del mismo medio por el cual fue recogida su información, dejando constancia de la recepción y trámite de la respectiva solicitud.
+            NEXT TALENT SOLUTIONS S.A.S., ha establecido los procedimientos necesarios para dar cumplimiento oportunamente a los requerimientos realizados por los Titulares o sus autorizados, por tal razón ha designado al Señor JOSE ANTONIO BUSTAMANTE SANTOYA, para recepcionar las solicitudes de los titulares, para el ejercicio de los derechos de acceso, consulta, rectificación, actualización, supresión y revocatoria a que se refiere la Ley 1581 de 2012. Para la recepción de consultas, reclamos, quejas sobre el tratamiento de sus datos personales o para el ejercicio de los derechos como usuario o cliente, podrá ponerse en contacto al correo electrónico info@nexttalentsolutions.com o en las instalaciones de la compañía ubicada en la AV. Carrera 45 # 108a - 50 Edificio Bosch. Bogotá, Colombia, o a través otros medios físicos habilitados en las instalaciones del responsable del tratamiento, en sus sucursales en caso de haberlas. En todo caso, NEXT TALENT SOLUTIONS S.A.S., habilitará los medios necesarios para que el titular tenga la posibilidad de ejercer sus derechos a través del mismo medio por el cual fue recogida su información, dejando constancia de la recepción y trámite de la respectiva solicitud.
           </p>
 
           <h3 className={styles.subsectionTitle}>ARTÍCULO 25. IDENTIFICACIÓN DEL RESPONSABLE Y EL ENCARGADO DEL TRATAMIENTO</h3>

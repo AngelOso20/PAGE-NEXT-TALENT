@@ -69,7 +69,7 @@ export default function HeroSection() {
           Agenda tu asesoría sin costo y descubre en 30 minutos cómo cumplir tus obligaciones laborales y la gestión de tu gente.
         </p>
         
-        <a href="https://scheduler.zoom.us/next-talent-solutions/sesion" target="_blank" rel="noopener noreferrer" className={styles.orangeButton}>
+        <a href="https://scheduler.zoom.us/next-talent-solutions/asesoriaenlinea" target="_blank" rel="noopener noreferrer" className={styles.orangeButton}>
           <Image
             src="/images/Buttons/Button Phone.svg"
             alt="Teléfono"

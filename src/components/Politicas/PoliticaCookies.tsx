@@ -33,7 +33,7 @@ export default function PoliticaCookies() {
           </p>
           <p className={styles.paragraph}>
             Next Talent Solutions S.A.S.<br />
-            NIT: 901.766.749-7<br />
+            NIT: 901.735.303-1<br />
             Domicilio: Bogotá D.C., Colombia<br />
             Correo electrónico: info@nexttalentsolutions.com<br />
             Teléfono: +57 3024904740

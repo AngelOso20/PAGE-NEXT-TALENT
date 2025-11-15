@@ -4,7 +4,7 @@ export default function PoliticaEtica() {
   return (
     <section className={styles.politicaSection}>
       <div className={styles.container}>
-        <h1 className={styles.title}>POLÍTICA DE ÉTICA Y CUMPLIMIENTO</h1>
+        <h1 className={styles.title}>CÓDIGO DE ÉTICA Y CUMPLIMIENTO</h1>
         
         <p className={styles.companyName}>Next Talent Solutions S.A.S.</p>
         
@@ -78,7 +78,7 @@ export default function PoliticaEtica() {
 
           <h2 className={styles.sectionTitle}>7. Conductas no permitidas en Next Talent Solutions S.A.S.</h2>
           <p className={styles.paragraph}>
-            Estas disposiciones hacen parte integral de la Política de Ética y Cumplimiento, y su incumplimiento podrá generar sanciones disciplinarias, terminación de contratos o acciones legales según corresponda.
+            Estas disposiciones hacen parte integral del Código de Ética y Cumplimiento, y su incumplimiento podrá generar sanciones disciplinarias, terminación de contratos o acciones legales según corresponda.
           </p>
           <p className={styles.paragraph}>
             Se aplican a todos los colaboradores, socios, contratistas, proveedores, clientes, aliados y candidatos evaluados o vinculados en procesos gestionados por la empresa.
@@ -205,7 +205,7 @@ export default function PoliticaEtica() {
 
           <h2 className={styles.sectionTitle}>10. Revisión y actualización</h2>
           <p className={styles.paragraph}>
-            La Política de Ética y Cumplimiento será revisada anualmente o cuando existan cambios legales, organizacionales o normativos relevantes.
+            El Código de Ética y Cumplimiento será revisado anualmente o cuando existan cambios legales, organizacionales o normativos relevantes.
           </p>
           <p className={styles.paragraph}>
             Las versiones actualizadas serán publicadas en los canales oficiales internos y externos de Next Talent Solutions.

@@ -107,8 +107,8 @@ export default function Footer() {
             <a href="/politicas/politica-de-cookies" className={styles.policyLink}>
               Política de Cookies
             </a>
-            <a href="/politicas/politica-de-etica" className={styles.policyLink}>
-              Política de Ética
+            <a href="/politicas/codigo-de-etica" className={styles.policyLink}>
+              Código de Ética
             </a>
           </div>
         </div>
