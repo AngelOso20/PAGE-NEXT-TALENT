@@ -1,6 +1,8 @@
-import React from 'react';
-import styles from './BlogHero.module.css';
-import Image from 'next/image';
+'use client';
+
+import React from 'react'
+import Image from 'next/image'
+import styles from './BlogHero.module.css'
 
 const BlogHero: React.FC = () => {
   return (
@@ -36,9 +38,9 @@ const BlogHero: React.FC = () => {
               </p>
               
               {/* Botón */}
-              <button className={styles.readMoreBtn}>
+              <a href="/blog/errores-microempresa" className={styles.readMoreBtn}>
                 Saber más +
-              </button>
+              </a>
             </div>
           </div>
         </div>
