@@ -25,67 +25,91 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
     {
       id: 1,
       image: '/images/Blog/Articulo 1.webp',
-      category: 'Gestión de personas',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      filterCategory: 'Gestión de personas'
+      category: 'Información legal',
+      title: 'Resolución 1890 de 2025: registro de incidentes y accidentes mayores',
+      description:
+        'Instalaciones con sustancias peligrosas deben clasificar incidentes por niveles, registrar los de nivel 1 y 2 y reportar accidentes mayores al Ministerio del Trabajo en 24 horas usando la nueva plataforma oficial.',
+      filterCategory: 'Información legal'
     },
     {
       id: 2,
-      image: '/images/Blog/Articulo 2.webp',
-      category: 'Gestión de personas',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      filterCategory: 'Gestión de personas'
+      image: '/images/Blog/Articulo 3.webp',
+      category: 'Información legal',
+      title: 'Ley 2466: cómo ajustar tus contratos de aprendizaje',
+      description:
+        'Aprendices vigentes y nuevos acceden a derechos laborales desde el 25 de junio de 2025; actualiza otrosí, parámetros de PILA, prestaciones en etapa práctica y soporte documental para evitar sanciones.',
+      filterCategory: 'Información legal'
     },
     {
       id: 3,
-      image: '/images/Blog/Articulo 3.webp',
-      category: 'Salud y seguridad',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      filterCategory: 'Salud y seguridad'
+      image: '/images/Blog/Articulo 4.webp',
+      category: 'Información legal',
+      title: 'Decreto 0514: pilares y obligaciones de la reforma pensional',
+      description:
+        'Explica el sistema de cuatro pilares, topes de cotización hasta 2.3 SMMLV para prima media y responsabilidades empresariales de afiliación, reporte de semanas y control de información para evitar sanciones.',
+      filterCategory: 'Información legal'
     },
     {
       id: 4,
-      image: '/images/Blog/Articulo 4.webp',
-      category: 'Eventos',
-      title: 'Webinar: Nuevas normativas y gestiones laborales 2026',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      date: 'Sept 29',
-      filterCategory: 'Eventos'
+      image: '/images/Blog/Articulo 5.webp',
+      category: 'Información legal',
+      title: 'Checklist para implementar la reforma pensional en tu empresa',
+      description:
+        'Acciones inmediatas: capacitar a RR. HH., ajustar nómina y reportes, comunicar cambios a los colaboradores, registrar aportes previos y monitorear circulares del Ministerio del Trabajo.',
+      filterCategory: 'Información legal'
     },
     {
       id: 5,
-      image: '/images/Blog/Articulo 6.webp',
-      category: 'Eventos',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      filterCategory: 'Eventos'
+      image: '/images/Blog/Articulo 2.webp',
+      category: 'Gestión de personas',
+      title: 'Por dónde Debes Empezar la Gestión del RRHH en tu Microempresa',
+      description:
+        'Evalúa tus necesidades de personal, redacta perfiles claros, define procesos de selección ágiles e implementa herramientas básicas de gestión para cimentar cultura, capacitación y cumplimiento normativo desde el día uno.',
+      filterCategory: 'Gestión de personas'
     },
     {
       id: 6,
-      image: '/images/Blog/Articulo 7.webp',
-      category: 'Tecnología',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      filterCategory: 'Tecnología'
+      image: '/images/Blog/Articulo 6.webp',
+      category: 'Información legal',
+      title: 'Requisitos Legales para Gestionar el RRHH en Colombia',
+      description:
+        'Repasa las normas laborales vigentes, modalidades de contrato, pago de prestaciones, seguridad y salud, obligaciones fiscales y protección de datos que toda microempresa debe dominar para evitar sanciones.',
+      filterCategory: 'Información legal'
     },
     {
       id: 7,
-      image: '/images/Blog/Articulo 8.webp',
-      category: 'Eventos',
-      title: 'Charla: Gestión de talento en la era digital y las Inteligencias artificiales',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      date: 'Nov 15',
-      filterCategory: 'Eventos'
+      image: '/images/Blog/Articulo 7.webp',
+      category: 'Gestión de personas',
+      title: 'Beneficios de Generar Empleo en Colombia como Microempresa',
+      description:
+        'Descubre incentivos tributarios, apoyos financieros y el impacto reputacional de crear empleo formal, así como el valor de fortalecer tu capital humano y aportar al desarrollo económico local.',
+      filterCategory: 'Gestión de personas'
     },
     {
       id: 8,
+      image: '/images/Blog/Articulo 8.webp',
+      category: 'Gestión de personas',
+      title: 'Cómo Encontrar Talento Humano Cualificado para tu Microempresa',
+      description:
+        'Define perfiles precisos, diversifica canales de reclutamiento, construye una marca empleadora atractiva y selecciona con rigurosidad para sumar personas alineadas con tu cultura y desafíos.',
+      filterCategory: 'Gestión de personas'
+    },
+    {
+      id: 9,
       image: '/images/Blog/Articulo 9.webp',
+      category: 'Tecnología',
+      title: 'Cómo Optimizar los Recursos con Sistemas No Code',
+      description:
+        'Aprovecha plataformas como SmartSheet, Power Automate o Zapier para automatizar tareas, centralizar proyectos, gestionar clientes y visualizar datos sin programar, elevando la eficiencia operativa.',
+      filterCategory: 'Tecnología'
+    },
+    {
+      id: 10,
+      image: '/images/Blog/Articulo 6.webp',
       category: 'Salud y seguridad',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
+      title: 'Aspectos Clave de la Gestión del Talento en una Microempresa',
+      description:
+        'Prioriza comunicación abierta, flexibilidad, equilibrio vida-trabajo, reconocimiento y planes de desarrollo para sostener equipos motivados y resilientes que cuiden el bienestar integral.',
       filterCategory: 'Salud y seguridad'
     }
   ];

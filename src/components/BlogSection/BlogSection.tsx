@@ -13,28 +13,31 @@ export default function BlogSection() {
   const blogPosts: BlogCard[] = [
     {
       image: '/images/Blog/Articulo 1.webp',
-      category: 'Gestión de personas',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.'
+      category: 'Actualización laboral',
+      title: 'Resolución 1890 de 2025: registro de incidentes y accidentes mayores',
+      description:
+        'Nuevas obligaciones para instalaciones con sustancias peligrosas: clasificar incidentes por niveles, reportar accidentes mayores en 24 horas y medir indicadores anuales para prevenir eventos críticos.'
     },
     {
       image: '/images/Blog/Articulo 3.webp',
-      category: 'Tecnología',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.'
+      category: 'Actualización laboral',
+      title: 'Ley 2466: cómo ajustar tus contratos de aprendizaje',
+      description:
+        'Guía para aplicar la Ley 2466 a contratos vigentes y nuevos: derechos inmediatos para aprendices, valores en PILA, prestaciones en etapa práctica y soporte documental actualizado para evitar sanciones.'
     },
     {
       image: '/images/Blog/Articulo 4.webp',
-      category: 'Información legal',
-      title: 'Donec at tellus porttitor, auctor urna at, scelerisque nibh.',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.'
+      category: 'Actualización laboral',
+      title: 'Decreto 0514: pilares y obligaciones de la reforma pensional',
+      description:
+        'Resumen ejecutivo del nuevo Sistema Integral: cuatro pilares, topes de cotización (2.3 SMMLV), control sobre semanas reportadas y responsabilidades empresariales para asegurar afiliación y evitar sanciones.'
     },
     {
       image: '/images/Blog/Articulo 5.webp',
-      category: 'Eventos',
-      title: 'Webinar: Nuevas normativas y gestiones laborales 2026',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quam quam, sodales eu urna ut, aliquet porttitor quam.',
-      date: { month: 'Sept', day: '29' }
+      category: 'Actualización laboral',
+      title: 'Checklist para implementar la reforma pensional en tu empresa',
+      description:
+        'Acciones inmediatas: capacitar talento humano, ajustar nómina y reportes, informar a colaboradores, documentar aportes previos y mantener vigilancia sobre circulares del Ministerio del Trabajo.'
     }
   ]
 
