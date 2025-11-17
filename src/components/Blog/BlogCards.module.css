@@ -150,8 +150,10 @@
 /* ========== BOTÓN "SABER MÁS" ========== */
 
 .readMoreBtn {
+  display: inline-block;
   background: none;
   border: none;
+  text-decoration: none;
   font-family: 'FinalSix', sans-serif;
   font-style: normal;
   font-weight: normal;

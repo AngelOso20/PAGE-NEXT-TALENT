@@ -12,6 +12,7 @@ interface BlogCard {
   description: string;
   date?: string;
   filterCategory: string;
+  href: string;
 }
 
 interface BlogCardsProps {
@@ -29,7 +30,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Resolución 1890 de 2025: registro de incidentes y accidentes mayores',
       description:
         'Instalaciones con sustancias peligrosas deben clasificar incidentes por niveles, registrar los de nivel 1 y 2 y reportar accidentes mayores al Ministerio del Trabajo en 24 horas usando la nueva plataforma oficial.',
-      filterCategory: 'Información legal'
+      filterCategory: 'Información legal',
+      href: '/blog/resolucion-1890-registro-incidentes'
     },
     {
       id: 2,
@@ -38,7 +40,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Ley 2466: cómo ajustar tus contratos de aprendizaje',
       description:
         'Aprendices vigentes y nuevos acceden a derechos laborales desde el 25 de junio de 2025; actualiza otrosí, parámetros de PILA, prestaciones en etapa práctica y soporte documental para evitar sanciones.',
-      filterCategory: 'Información legal'
+      filterCategory: 'Información legal',
+      href: '/blog/ley-2466-contratos-aprendizaje'
     },
     {
       id: 3,
@@ -47,7 +50,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Decreto 0514: pilares y obligaciones de la reforma pensional',
       description:
         'Explica el sistema de cuatro pilares, topes de cotización hasta 2.3 SMMLV para prima media y responsabilidades empresariales de afiliación, reporte de semanas y control de información para evitar sanciones.',
-      filterCategory: 'Información legal'
+      filterCategory: 'Información legal',
+      href: '/blog/decreto-0514-reforma-pensional'
     },
     {
       id: 4,
@@ -56,7 +60,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Checklist para implementar la reforma pensional en tu empresa',
       description:
         'Acciones inmediatas: capacitar a RR. HH., ajustar nómina y reportes, comunicar cambios a los colaboradores, registrar aportes previos y monitorear circulares del Ministerio del Trabajo.',
-      filterCategory: 'Información legal'
+      filterCategory: 'Información legal',
+      href: '/blog/checklist-reforma-pensional'
     },
     {
       id: 5,
@@ -65,7 +70,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Por dónde Debes Empezar la Gestión del RRHH en tu Microempresa',
       description:
         'Evalúa tus necesidades de personal, redacta perfiles claros, define procesos de selección ágiles e implementa herramientas básicas de gestión para cimentar cultura, capacitación y cumplimiento normativo desde el día uno.',
-      filterCategory: 'Gestión de personas'
+      filterCategory: 'Gestión de personas',
+      href: '/blog/por-donde-empezar-rrhh-microempresa'
     },
     {
       id: 6,
@@ -74,7 +80,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Requisitos Legales para Gestionar el RRHH en Colombia',
       description:
         'Repasa las normas laborales vigentes, modalidades de contrato, pago de prestaciones, seguridad y salud, obligaciones fiscales y protección de datos que toda microempresa debe dominar para evitar sanciones.',
-      filterCategory: 'Información legal'
+      filterCategory: 'Información legal',
+      href: '/blog/requisitos-legales-rrhh-colombia'
     },
     {
       id: 7,
@@ -83,7 +90,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Beneficios de Generar Empleo en Colombia como Microempresa',
       description:
         'Descubre incentivos tributarios, apoyos financieros y el impacto reputacional de crear empleo formal, así como el valor de fortalecer tu capital humano y aportar al desarrollo económico local.',
-      filterCategory: 'Gestión de personas'
+      filterCategory: 'Gestión de personas',
+      href: '/blog/beneficios-generar-empleo-colombia'
     },
     {
       id: 8,
@@ -92,7 +100,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Cómo Encontrar Talento Humano Cualificado para tu Microempresa',
       description:
         'Define perfiles precisos, diversifica canales de reclutamiento, construye una marca empleadora atractiva y selecciona con rigurosidad para sumar personas alineadas con tu cultura y desafíos.',
-      filterCategory: 'Gestión de personas'
+      filterCategory: 'Gestión de personas',
+      href: '/blog/encontrar-talento-cualificado-microempresa'
     },
     {
       id: 9,
@@ -101,7 +110,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Cómo Optimizar los Recursos con Sistemas No Code',
       description:
         'Aprovecha plataformas como SmartSheet, Power Automate o Zapier para automatizar tareas, centralizar proyectos, gestionar clientes y visualizar datos sin programar, elevando la eficiencia operativa.',
-      filterCategory: 'Tecnología'
+      filterCategory: 'Tecnología',
+      href: '/blog/optimizar-recursos-sistemas-no-code'
     },
     {
       id: 10,
@@ -110,7 +120,8 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
       title: 'Aspectos Clave de la Gestión del Talento en una Microempresa',
       description:
         'Prioriza comunicación abierta, flexibilidad, equilibrio vida-trabajo, reconocimiento y planes de desarrollo para sostener equipos motivados y resilientes que cuiden el bienestar integral.',
-      filterCategory: 'Salud y seguridad'
+      filterCategory: 'Salud y seguridad',
+      href: '/blog/aspectos-clave-gestion-talento-microempresa'
     }
   ];
 
@@ -177,9 +188,9 @@ const BlogCards: React.FC<BlogCardsProps> = ({ currentFilter }) => {
               <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{card.title}</h3>
                 <p className={styles.cardDescription}>{card.description}</p>
-                <button className={styles.readMoreBtn}>
+                <a href={card.href} className={styles.readMoreBtn}>
                   Saber más +
-                </button>
+                </a>
               </div>
             </div>
           ))}
