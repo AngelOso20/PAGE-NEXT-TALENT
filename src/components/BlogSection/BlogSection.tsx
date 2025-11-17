@@ -7,6 +7,7 @@ interface BlogCard {
   title: string
   description: string
   date?: { month: string; day: string }
+  href: string
 }
 
 export default function BlogSection() {
@@ -16,28 +17,32 @@ export default function BlogSection() {
       category: 'Actualización laboral',
       title: 'Resolución 1890 de 2025: registro de incidentes y accidentes mayores',
       description:
-        'Nuevas obligaciones para instalaciones con sustancias peligrosas: clasificar incidentes por niveles, reportar accidentes mayores en 24 horas y medir indicadores anuales para prevenir eventos críticos.'
+        'Nuevas obligaciones para instalaciones con sustancias peligrosas: clasificar incidentes por niveles, reportar accidentes mayores en 24 horas y medir indicadores anuales para prevenir eventos críticos.',
+      href: '/blog/resolucion-1890-registro-incidentes'
     },
     {
       image: '/images/Blog/Articulo 3.webp',
       category: 'Actualización laboral',
       title: 'Ley 2466: cómo ajustar tus contratos de aprendizaje',
       description:
-        'Guía para aplicar la Ley 2466 a contratos vigentes y nuevos: derechos inmediatos para aprendices, valores en PILA, prestaciones en etapa práctica y soporte documental actualizado para evitar sanciones.'
+        'Guía para aplicar la Ley 2466 a contratos vigentes y nuevos: derechos inmediatos para aprendices, valores en PILA, prestaciones en etapa práctica y soporte documental actualizado para evitar sanciones.',
+      href: '/blog/ley-2466-contratos-aprendizaje'
     },
     {
       image: '/images/Blog/Articulo 4.webp',
       category: 'Actualización laboral',
       title: 'Decreto 0514: pilares y obligaciones de la reforma pensional',
       description:
-        'Resumen ejecutivo del nuevo Sistema Integral: cuatro pilares, topes de cotización (2.3 SMMLV), control sobre semanas reportadas y responsabilidades empresariales para asegurar afiliación y evitar sanciones.'
+        'Resumen ejecutivo del nuevo Sistema Integral: cuatro pilares, topes de cotización (2.3 SMMLV), control sobre semanas reportadas y responsabilidades empresariales para asegurar afiliación y evitar sanciones.',
+      href: '/blog/decreto-0514-reforma-pensional'
     },
     {
       image: '/images/Blog/Articulo 5.webp',
       category: 'Actualización laboral',
       title: 'Checklist para implementar la reforma pensional en tu empresa',
       description:
-        'Acciones inmediatas: capacitar talento humano, ajustar nómina y reportes, informar a colaboradores, documentar aportes previos y mantener vigilancia sobre circulares del Ministerio del Trabajo.'
+        'Acciones inmediatas: capacitar talento humano, ajustar nómina y reportes, informar a colaboradores, documentar aportes previos y mantener vigilancia sobre circulares del Ministerio del Trabajo.',
+      href: '/blog/checklist-reforma-pensional'
     }
   ]
 
@@ -83,7 +88,7 @@ export default function BlogSection() {
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>{post.title}</h3>
               <p className={styles.cardDescription}>{post.description}</p>
-              <a href="#blog" className={styles.readMore}>Saber más +</a>
+              <a href={post.href} className={styles.readMore}>Saber más +</a>
             </div>
           </article>
         ))}
