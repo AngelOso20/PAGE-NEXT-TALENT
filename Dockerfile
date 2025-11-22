@@ -9,8 +9,8 @@ WORKDIR /app
 # Copia archivos de dependencias
 COPY package*.json ./
 
-# Instala dependencias
-RUN npm ci
+# Instala dependencias (Next.js instalará automáticamente las dependencias SWC correctas para Linux)
+RUN npm install
 
 # Copia el resto de los archivos
 COPY . .
@@ -23,9 +23,6 @@ FROM nginx:alpine
 
 # Copia los archivos estáticos generados
 COPY --from=builder /app/out /usr/share/nginx/html
-
-# Copia configuración personalizada de nginx (opcional)
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Expone el puerto 80
 EXPOSE 80
