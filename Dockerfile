@@ -44,7 +44,7 @@ RUN printf 'server {\n\
     listen 80;\n\
     server_name _;\n\
     root /usr/share/nginx/html;\n\
-    index index.html index.htm;\n\
+    index index.html;\n\
     \n\
     # Deshabilitar listado de directorios (evita error 403)\n\
     autoindex off;\n\
@@ -66,7 +66,11 @@ RUN printf 'server {\n\
     # Ejemplo: /servicios -> /servicios/index.html\n\
     # Esta configuración busca correctamente los index.html en cada carpeta\n\
     location / {\n\
-        # Intenta: archivo exacto, luego directorio con index.html, luego fallback a home\n\
+        # Para rutas como /servicios:\n\
+        # 1. Busca archivo /servicios\n\
+        # 2. Busca directorio /servicios/\n\
+        # 3. Busca /servicios/index.html (esto es lo que Next.js genera)\n\
+        # 4. Fallback a /index.html si nada funciona\n\
         try_files $uri $uri/ $uri/index.html /index.html;\n\
     }\n\
 }\n' > /etc/nginx/conf.d/default.conf
