@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Configuración para export estático
+  output: 'export',
   images: {
-    unoptimized: false,
+    unoptimized: true, // Necesario para export estático
     remotePatterns: [],
   },
   // Configuración para evitar problemas de conexión
@@ -14,4 +16,3 @@ const nextConfig = {
 }
 
 module.exports = nextConfig
-
