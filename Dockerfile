@@ -38,13 +38,16 @@ FROM nginx:alpine
 # Copia archivos estáticos generados
 COPY --from=builder /app/out /usr/share/nginx/html
 
-# Configuración optimizada de nginx para SPA
+# Configuración optimizada de nginx para Next.js estático
 # Usamos printf para crear el archivo de configuración
 RUN printf 'server {\n\
     listen 80;\n\
     server_name _;\n\
     root /usr/share/nginx/html;\n\
-    index index.html;\n\
+    index index.html index.htm;\n\
+    \n\
+    # Deshabilitar listado de directorios (evita error 403)\n\
+    autoindex off;\n\
     \n\
     # Compresión gzip\n\
     gzip on;\n\
@@ -53,14 +56,18 @@ RUN printf 'server {\n\
     gzip_types text/plain text/css text/xml text/javascript application/x-javascript application/xml+rss application/json application/javascript;\n\
     \n\
     # Cache para assets estáticos\n\
-    location ~* \\.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot|webp)$ {\n\
+    location ~* \\.(jpg|jpeg|png|gif|ico|css|js|svg|woff|woff2|ttf|eot|webp|json)$ {\n\
         expires 1y;\n\
         add_header Cache-Control "public, immutable";\n\
     }\n\
     \n\
-    # Rutas de Next.js (SPA routing)\n\
+    # Manejo de rutas de Next.js estático\n\
+    # Next.js con output: export genera cada ruta como carpeta con index.html\n\
+    # Ejemplo: /servicios -> /servicios/index.html\n\
+    # Esta configuración busca correctamente los index.html en cada carpeta\n\
     location / {\n\
-        try_files $uri $uri/ /index.html;\n\
+        # Intenta: archivo exacto, luego directorio con index.html, luego fallback a home\n\
+        try_files $uri $uri/ $uri/index.html /index.html;\n\
     }\n\
 }\n' > /etc/nginx/conf.d/default.conf
 
